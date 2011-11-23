@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+MLE: Learning the Classifier from Data
+</h1>
+
+<div id="introduction">
+    <h2>Introduction </h2>
+    <p> In the previous experiment, we learned about how to generate a classifier, given
+    models for each of the classes, using the Bayes Rule. The next goal is to learn such
+    a classifier, automatically, given a set of labelled samples from each of the possible
+    classes.</p>
+    <p> Before doing this experiment, you should ensure that you have understood the previous
+    experiment on Bayesian Classification as well as the experiment on Mean and Covariance
+    estimateion from Data.</p>
+    <p>The idea behind maximum likelihood parameter estimation is to determine the parameters 
+    that maximize the probability (likelihood) of the sample data. From a statistical point 
+    of view, the method of maximum likelihood is considered to be more robust (with some 
+    exceptions) and yields estimators with good statistical properties. In other words, MLE 
+    methods are versatile and apply to most models and to different types of data. In addition, 
+    they provide efficient methods for quantifying uncertainty through confidence bounds. 
+    Although the methodology for maximum likelihood estimation is simple, the implementation 
+    is mathematically intense. Using today's computer power, however, mathematical complexity
+    is not a big obstacle.
+	</p>
+    <p>
+     The MLE is an important type of estimator for the following reasons:
+	<ol>
+	   <li> <b>1:</b> The MLE implements the likelihood principle.</li>
+	   <li> <b>2:</b> MLEs are often simple and easy to compute. </li>
+	   <li> <b>3:</b> MLEs have asymptotic optimality properties
+	(consistency and efficiency). </li>
+	   <li> <b>4:</b> MLEs are invariant under reparameterization. </li>
+	   <li> <b>5:</b> If an efficient estimator exists, it is the MLE. </li>
+	   <li> <b>6:</b> In signal detection with unknown parameters 
+	        (composite hypothesis testing), MLEs are used in implementing the 
+	        generalized likelihood ratio test (GLRT).</li>
+        </ol>
+    </p>
+
+</div>
+
+<div id="theory">
+    <h2>Theory</h2>
+    <p> As learned from the previous experiment, if we have a generative model for each of
+    the classes, one can devlop a classifier that assigns an unknown sample to one of the
+    possible set of classes. </p>
+    <p>
+    Suppose there is a sample x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> of <i>n</i> iid observations, coming from a distribution 
+    with an unknown pdf ƒ<sub>0</sub>(·). It is however surmised that the function ƒ<sub>0</sub> belongs to a 
+    certain family of distributions { ƒ(·|&theta;), &theta; &isin; &Theta; }, called the parametric model, so 
+    that ƒ<sub>0</sub> = ƒ(·|&theta;<sub>0</sub>). The value &theta;<sub>0</sub> is unknown and is referred to as the "true value" 
+    of the parameter. It is desirable to find some estimator <img src="images/thetahat.png"> which
+    would be as close to the true value &theta;<sub>0</sub> as possible. Both the observed variables x<sub>0</sub> 
+    and the parameter θ can be vectors.
+    </p>
+    <p>
+    To use the method of maximum likelihood, one first specifies the joint density function for all the the observations. For an Independent and Identically distributed distribution, this joint density function will be <br />
+    <img src="images/jointdistributionfunction.png"> 
+    </p>
+    <p>
+    Now we look at this function from a different perspective by considering the observed values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> to be fixed “parameters” of this function, whereas &theta; will be the function’s variable and allowed to vary freely. From this point of view this distribution function will be called the likelihood: 
+    </br>
+    <img src="images/likelihoodfunction.png">
+    </br>
+    </p>
+    <p>
+	In practice it is often more convenient to work with the logarithm of the likelihood function, called the log-likelihood, or its scaled version, called the average log-likelihood:</ br>
+     <img src="images/loglikelihood.png">
+    </p>
+    <p>
+    The method of maximum likelihood estimates &theta;<sub>0</sub> by finding a value of θ that maximizes <img src="images/lhat.png">. This method of estimation is a maximum likelihood estimator (MLE) of &theta;<sub>0</sub>:
+    <img src="images/mletheta.png">
+    </p>
+    <p>
+    A MLE estimate is the same regardless of whether we maximize the likelihood or the log-likelihood function, since log is a monotone transformation. 
+   
+For many models, a maximum likelihood estimator can be found as an explicit function of the observed data x<sub>1</sub>,..., x<sub>n</sub>. For many other models, however, no closed-form solution to the maximization problem is known or available, and a MLE has to be found numerically using optimization methods. For some problems, there may be multiple estimates that maximize the likelihood. For other problems, no maximum likelihood estimate exists (meaning that the log-likelihood function increases without attaining the supremum value).
+    </p>
+    <p>
+    A maximum likelihood estimator coincides with the most probable Bayesian estimator given a uniform prior distribution on the parameters.
+    </p>
+    <h4> Example for a Normal Distribution, Bernoulli distribution  and Poisson distribution:</h4>
+<!--	&#402;(x<sub>1</sub>,......,x<sub>n</sub>)=&Pi;e<sup>-(x-&mu;)<sup>2</sup>/(2&sigma;<sup>2</sup>)</sup>
+                                                  =(2&pi;)<sup>-n/2</sup> -->
+See the page <a href="http://mathworld.wolfram.com/MaximumLikelihood.html" target="_blank">http://mathworld.wolfram.com/MaximumLikelihood.html</a>
+ 	
+</div>
+
+<div id="objective">
+    <h2> Objective </h2>
+    <p>The high level goals of the experiment are:
+        <ol>
+            <li> <b>1:</b> To understand the modelling of a class in terms of density functions and priors.</li>
+            <li> <b>2:</b> To understand the estimation of the parameters of a model from a set of samples.</li>
+            <li> <b>3:</b> To understand the effect of sample size on decision boundary.</li>
+        </ol>
+    </p>
+</div>
+
+
+<div id="procedure">
+    <h2> Procedure </h2>
+    <p> In the .</p>
+    <ol>
+        <li> Select the distribution function using the drop-down menu at top right .</li>
+	<li> Plot the datasets and see the distribution </li>
+        <li> Estimate the maximum likelihood parameters </li>
+	<li> Use Mark all Button to see the classifier </li>
+    </ol>
+
+</div>
+
+<div id="experiment">
+    <h2> Experiment </h2>
+    <a href="../experiment/Exp6.jnlp">Click here to open the Experiment</a>
+</div>
+<div id="quizzes">
+
+    <h2>Quiz</h2>
+    <p> Answer the questions provided at the end of the writeup <a href="RandomVariables.pdf">HERE</a>.
+    Some of the questions require you to do minimal amount of programming. You are encouraged to
+    try out variants of the goals mentioned in the programming questions.
+    </p>
+</div>
+
+<div id="readings">
+    <h2> Further Readings </h2>
+    <ul>
+        <li><b>*</b> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
+        by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001
+        </li>
+        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Random_number_generation">Random Number Generation</a> at Wikipedia
+        </li>
+        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom Number Generators</a> at Wikipedia
+        </li>
+    </ul>
+</div>
+
