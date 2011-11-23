@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+Mean and Covariance
+</h1>
+
+<div id="introduction">
+    <h2>Introduction </h2>
+    <p> The locations at which the samples of a class can appear in the feature space can be
+    statistically modeled using a distribution or density function. There are different
+    properties of the density function that allows us to gain an understanding of the
+    class under consideration. The most popular metrics are the <i>mean</i> and
+    <i>variance</i> (or <i>covariance matrix</i>). In the case of normal densities,
+    these two parameters completely characterize the density itself, and hence are
+    denoted as the parameters of the density: N(mean,cov).</p>
+
+     <p>In this experiment, we will try to gain an understanding of these metrics.
+     Specifically, we need to understand the effect of these parameters on the shape
+     of the data distribution under various assumptions of densities. This will allow
+     us to visualize the nature of distribution, given the mean vector and the covariance matrix.</p>
+</div>
+
+<div id="theory">
+    <h2>Theory</h2>
+    <p>Given samples of a class, x<sub>1</sub>, x<sub>2</sub>, ... x<sub>n</sub>, each
+    being an d-dimensional vector, we define the mean, &#956, and the covariance matrix, &#931
+    are defined as:</p>
+    <p><img src="images/eqnmu.png" height="180"></p>
+    <h3>Properties of &#956 and &#931</h3>
+    <ul>
+        <li>Note that x<sub>i</sub>s are d-dimensional column vectors, and hence the mean, &#956, is
+        also a d-dimensional column vector. The covariance matrix, &#931, is a dxd symmetric square
+        matrix.
+        </li>
+        <li>The mean, &#956 is the centroid of the samples in the feature space.
+        </li>
+        <li>The covariance matrix, &#931 is a positive semi-definite matrix.
+        </li>
+    </ul>
+    </p>
+
+</div>
+
+<div id="objective">
+    <h2> Objective </h2>
+    <p>The high level goals of the experiment are:
+        <ol>
+            <li> <b>1:</b> To understand effect of changing the mean and covariance matrix on the distribution.</li>
+            <li> <b>2:</b> To understand the effect of sampling on estimates of mean and covariance.</li>
+            <li> <b>3:</b> To understand the implications of singularities on the distribution.</li>
+            <li> <b>4:</b> To understand the generation of samples of a normal distribution with specific parameters.</li>
+        </ol>
+    </p>
+</div>
+
+
+<div id="procedure">
+    <h2> Procedure </h2>
+    <p>
+    The pane on the right allows you to specify the mean and covariance matrices for a set
+    of samples in 2-dimensions.</p>
+    <h3>Stage 1:</h3>
+    <ol>
+        <li> Set the default parameters and click the generate button; Observe the
+        dataset for multiple instances of samples. </li>
+        <li> Click the estimate button to compute the mean and covariance of the generated samples;
+        Observe the mismatch between the two. Repeat the process for multiple sets of samples generated
+        from the same distribution and observe the variations in the estimate</li>
+    </ol>
+
+    <h3>Stage 2:</h3>
+    <ol>
+        <li> Repeat the above procedure for the different values for the number of generated samples. </li>
+        <li> Plot a graph between the average error, and number of samples</li>
+        <li> Note down your inferences regarding the graph</li>
+    </ol>
+
+    <h3>Stage 3:</h3>
+    <ol>
+        <li> Generate your own dataset by clicking on the plot area. Note that the distribution
+        need not be similar to a normal density.</li>
+        <li> Estimate the mean and covarance matrices</li>
+        <li> Note down your inferences regarding the error committed if you assume the
+        distribution to be normal.</li>
+    </ol>
+
+</div>
+
+<div id="experiment">
+    <h2> Experiment </h2>
+    <a href="../experiment/Exp2.jnlp">Click here to open the Experiment</a>
+</div>
+<div id="quizzes">
+
+    <h2>Quiz</h2>
+    <p>
+    <b>Q1.</b> Calculate the mean of the following data. <br/><br/>
+	 0.9501, 0.2311, 0.6068, 0.4860, 0.8913, 0.7621, 0.4565, 0.0185, 0.8214, 0.4447<br/><br/>
+	a. 0.5669 b. 0.6669 c. 0.4669 d. 0.5649<br/><br/>
+    <b>Q2.</b> What is the variance of the above data? <br/><br/>
+	a. 0.8930  b. 0.0983 c. 0.0893 d. 0.7813
+	<br/><br/>
+    <b>Q3.</b> calculate the mean of the X <br/><br/>
+<img src=images/mvar2.gif> <br/><br/>
+
+       a. &#91;4.10 2.08 0.604&#93; b. &#91;4.10 0.604 2.08&#93; c.  &#91;2.08  0.604 4.10&#93; d. &#91;20.5 10.4 3.02&#93;<br/><br/>
+    <b>Q4.</b> What is the variance?
+    <br/><br/>
+    <b>Q5.</b> A set of values, <span class="cmmi-10">x</span><sub><span class="cmmi-7">i</span></sub>, has.
+<p>
+<img src=images/quiz30x.png>
+</p>
+and 
+<p>
+<img src=images/quiz31x.png>
+</p>
+
+ What are the sample mean, x, and sample variance, s<sup><span class="cmr-7">2</span></sup>  ?
+</p>
+	<br/><br/>
+    <b>Q6.</b> Which best describes how the data in Scatter Diagram #2 differ from the data in following Scatter Diagram
+
+    <br/><br/>
+	<img src="images/question6.png">
+    <br/><br/>
+	a. The mean of y2 is smaller than the mean of y1<br/>
+	b. The range of x2 is smaller than the range of x1<br/>
+	c. The variance of y2 is smaller than the variance of y1<br/>
+	d. The variables y2 and x2 have a stronger horizontal relationship than y1 and x1<br/>
+	e. Don't know<br/>
+    <br/><br/>
+    <b>Q7.</b> Suppose that within a very large corporation salaries are positively skewed with a mean of $40,000 and a standard deviation of $20,000. Which statement is true for a sample of workers?
+    <br/><br/>
+a. At least 68.3 percent of workers have a salary between $20,000 and $60,000<br/>
+b. At least 75.0 percent of workers have a salary between $20,000 and $60,000<br/>
+c. At least 88.9 percent of workers have a salary below $100,000<br/>
+d. At least 95.4 percent of workers have a salary below $100,000<br/>
+e. Don't know
+    <br/><br/>
+
+    <input type="submit" value="Submit Answers">
+    </p>
+</div>
+
+<div id="readings">
+    <h2> Further Readings </h2>
+    <ul>
+        <li><b>*</b> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
+        by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001
+        </li>
+        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Sample_mean_and_sample_covariance">Sample Mean and Sample Covariance</a> at Wikipedia
+        </li>
+        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Variance">Variance</a> at Wikipedia
+        </li>
+        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Covariance_matrix">Covariance Matrix</a> at Wikipedia
+        </li>
+
+    </ul>
+</div>
+
