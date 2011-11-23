@@ -1,119 +1,350 @@
+<!-- This file needs to be edited by the lab developer to suit
+the requirements of their lab in particular.-->
+
+<!-- Add class="default" to include any element as it is
+specified in default.html. 
+Do not include class="default" to the elements that you want to
+edit -->
+
 <!DOCTYPE html>
+<html>
 <head></head>
-<h1 id="main-title">
-Generating Random Numbers
-</h1>
+<body>
 
-<div id="introduction">
-    <h2>Introduction </h2>
-    <p> Random numbers are the most important ways in which we model noise in real-world
-    processes. The nature of randomness varies according to the actual phenomena that is
-    causing the randomness. For example, if we roll a dice, the result can vary between
-    1 to 6, where all numbers are equally likely. But it we take the sum of rolling two
-    dice, getting a 2 or 12 is less likely than getting a 7. See the image below to have
-    an intuitive understanding as to why this happens. The variations in randomness is
-    modeled using probability distribution functions or probability density functions.</p>
+<div id="experiment"> <!-- The Experiment Document Container-->
 
-    <img src="images/2dice.jpg" alt="Rolling 2 dice" height="400" width="500" />
+  <!-- The lab Header contains the logo and the name of the lab,
+  usually displayed on the top of the page-->
 
-    <p> Nature has its ways of generating randomness. However, computers are designed to
-    be deterministic and hence generating randomness is not a simple task.
-    In this experiment, we will try to gain an understanding of random numbers and
-    how we can generate randomness of different properties (distributions). You need to
-    carefully go through the introduction to random numbers and densities before attempting
-    this experiment.</p>
-</div>
+  <header id="experiment-header" class="default">
+  
+    <div id="experiment-header-logo" class="logo">
+      <!-- Enclose the logo image of your lab or write it in 
+      text-->
+      <img src="../images/logo.jpg" />
+    </div>
 
-<div id="theory">
-    <h2>Theory</h2>
-    <p> As mentioned in the introduction, computers are designed to be deterministic, and
-    cannot generate randomness. Hence to generate a random set of numbers, one of the 
-    following approaches is used:</p>
-    <p>
-    <ul>
-        <li> Use a physical device (sensor) that captures a natural phenomenon, and convert
-        the readings to digital form.
-        </li>
-        <li> Use special functions called <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">
-        Pseudorandom Number Generators</a> to a generate random-looking set of numbers.
-    </ul>
-    </p>
-    The second method is easier and inexpensive, and hence is the most commonly used one.
-    However, if one needs high quality randomness, the first method is often resorted to.
-    One can also use a mixture of the two using measurement of some of the operating system
-    parameters as a seed for randomness. In any case, the random numbers generated will follow
-    a specific distribution. Hence we need to modify the resulting numbers to make it follow
-    the distribution or density function that we desire.</P
+    <div id="experiment-header-heading" class="heading">
+      <!-- Write the name of your lab and link it to the home 
+      page of your lab (h1 tag is preferred while writing your 
+      lab name)-->
+      <a href="../index.html">PR Virtual Lab</a>	
+    </div>
 
-    <p> Carefully go through the writeup provided <a href="RandomVariables.pdf">HERE</a>.
-</div>
+    <!-- Add any additional element you want to add to the lab 
+    header, For example : Help (Enclosing them with suitable 
+    div is recommended)-->
 
-<div id="objective">
-    <h2> Objective </h2>
-    <p>The high level goals of the experiment are:
-        <ol>
-            <li> <b>1:</b> To understand the nature of randomness and how they are characterized.</li>
-            <li> <b>2:</b> To understand the difference between discrete and continuous random numbers.</li>
-            <li> <b>3:</b> To understand the process of generation of random numbers with a desired density/distribution.</li>
-            <li> <b>4:</b> To understand the practical limitations and advantages of randomness generated using algorithms.</li>
-        </ol>
-    </p>
-</div>
+  </header>
 
 
-<div id="procedure">
-    <h2> Procedure </h2>
-    <p> .</p>
-    <h3>Stage 1:</h3>
-    <ol>
-        <li> Set the default parameters and click the generate button; Observe the
-        dataset for multiple instances of samples. </li>
-        <li> Click the estimate button to compute the mean and covariance of the generated samples;
-        Observe the mismatch between the two. Repeat the process for multiple sets of samples generated
-        from the same distribution and observe the variations in the estimate</li>
-    </ol>
+  <!-- The lab article is the main content area where all the 
+  experiment content sits-->
+  <article id="experiment-article">
+  
+    <!-- The lab article has an header, optional navigational 
+    menu, number of sections, an optional sidebar and a closing 
+    footer-->
+     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     </div>
+    
+      <header id="experiment-article-heading" class="heading">
+        <!-- You can add a welcome message or title of the 
+        experiment here -->
+	Generating Random Numbers 
+        <!-- Add any additional element if required with proper 
+        enclosing-->
+      </header>
 
-    <h3>Stage 2:</h3>
-    <ol>
-        <li> Repeat the above procedure for the different values for the number of generated samples. </li>
-        <li> Plot a graph between the average error, and number of samples</li>
-        <li> Note down your inferences regarding the graph</li>
-    </ol>
+      <!-- Navigation menu is useful to organize the view of 
+      multiple sections inside the article-->
+      <nav id="experiment-article-navigation" class="default">
+        <ul id="experiment-article-navigation-menu">
+          <!-- The menu can be dynamically generated to contain 
+          the headings of your sections or instead write the 
+          menu items of your choice individually enclosedu in 
+          <li> tag as shown below-->
+        </ul>
+      </nav>
 
-    <h3>Stage 3:</h3>
-    <ol>
-        <li> Generate your own dataset by clicking on the plot area. Note that the distribution
-        need not be similar to a normal density.</li>
-        <li> Estimate the mean and covarance matrices</li>
-        <li> Note down your inferences regarding the error committed if you assume the
-        distribution to be normal.</li>
-    </ol>
+      <!-- All the sections of your lab or experiment can be 
+      enclosed together with a div element as shown below-->
+      <div id="experiment-article-sections">
 
-</div>
+        <!-- First section of the article-->
+        <section id="experiment-article-section-1">
+          
+          <div id="experiment-article-section-1-icon" 
+          class="icon">
+	    <!-- Enclose the icon image of your lab -->
+	    <img src="../images/introduction.jpg" />
+	  </div>	
+          
+          <!-- The heading for the section can be enclosed in a 
+          div tag. -->
+          <div id="experiment-article-section-1-heading" 
+          class="heading">
+            Introduction
+          </div>
 
-<div id="experiment">
-    <h2> Experiment </h2>
-    <a href="../experiment/Exp4.jnlp">Click here to open the Experiment</a>
-</div>
-<div id="quizzes">
+          <!-- Write the section content inside a paragraph 
+          element, You can also include images with <img> tag -->
+	  <div id="experiment-article-section-1-content" 
+	     class="content">	
+	     <p> Random numbers are the most important ways in which we model noise in real-world
+	     processes. The nature of randomness varies according to the actual phenomena that is
+	     causing the randomness. For example, if we roll a dice, the result can vary between
+	     1 to 6, where all numbers are equally likely. But it we take the sum of rolling two
+	     dice, getting a 2 or 12 is less likely than getting a 7. See the image below to have
+	     an intuitive understanding as to why this happens. The variations in randomness is
+	     modeled using probability distribution functions or probability density functions.</p>
 
-    <h2>Quiz</h2>
-    <p> Answer the questions provided at the end of the writeup <a href="RandomVariables.pdf">HERE</a>.
-    Some of the questions require you to do minimal amount of programming. You are encouraged to
-    try out variants of the goals mentioned in the programming questions.
-    </p>
-</div>
+	     <img src="images/2dice.jpg" alt="Rolling 2 dice" height="400" width="500" />
 
-<div id="readings">
-    <h2> Further Readings </h2>
-    <ul>
-        <li><b>*</b> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
-        by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001
-        </li>
-        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Random_number_generation">Random Number Generation</a> at Wikipedia
-        </li>
-        <li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom Number Generators</a> at Wikipedia
-        </li>
-    </ul>
-</div>
+	     <p> Nature has its ways of generating randomness. However, computers are designed to
+	     be deterministic and hence generating randomness is not a simple task.
+	     In this experiment, we will try to gain an understanding of random numbers and
+	     how we can generate randomness of different properties (distributions). You need to
+	     carefully go through the introduction to random numbers and densities before attempting
+	     this experiment.</p>
+	  </div>
 
+
+	  </section>
+
+	  <!-- Second section of the article-->
+	  <section id="experiment-article-section-2">
+
+	  <div id="experiment-article-section-2-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab. -->
+	     <img src="../images/theory.jpg" />
+	  </div>
+
+	  <!-- The heading for the section can be enclosed in a 
+	  div tag. -->
+	  <div id="experiment-article-section-2-heading" 
+	     class="heading">
+	     Theory
+	  </div>
+
+
+	  <!-- Write the section content inside a paragraph 
+	  element, we can also include images with <img> tag -->
+	  <div id="experiment-article-section-2-content" 
+	     class="content">
+	     <p> As mentioned in the introduction, computers are designed to be deterministic, and
+	     cannot generate randomness. Hence to generate a random set of numbers, one of the 
+	     following approaches is used:</p>
+	     <p>
+	     <ul>
+		<li> Use a physical device (sensor) that captures a natural phenomenon, and convert
+		the readings to digital form.
+		</li>
+		<li> Use special functions called <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">
+		   Pseudorandom Number Generators</a> to a generate random-looking set of numbers.
+	     </ul>
+	     </p>
+	     The second method is easier and inexpensive, and hence is the most commonly used one.
+	     However, if one needs high quality randomness, the first method is often resorted to.
+	     One can also use a mixture of the two using measurement of some of the operating system
+	     parameters as a seed for randomness. In any case, the random numbers generated will follow
+	     a specific distribution. Hence we need to modify the resulting numbers to make it follow
+	     the distribution or density function that we desire.</P
+
+	     <p> Carefully go through the writeup provided <a href="RandomVariables.pdf">HERE</a>.
+
+	  </div>
+	  </section>
+
+
+	  <section id="experiment-article-section-3">
+
+	  <div id="experiment-article-section-3-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab. -->
+	     <img src="../images/objective.jpg" />
+	  </div>
+
+	  <div id="experiment-article-section-3-heading" 
+	     class="heading">
+	     Objective
+	  </div>
+
+	  <div id="experiment-article-section-3-content" 
+	     class="content">
+	     <p>The high level goals of the experiment are:
+	     <ol>
+		<li> <b>1:</b> To understand the nature of randomness and how they are characterized.</li>
+		<li> <b>2:</b> To understand the difference between discrete and continuous random numbers.</li>
+		<li> <b>3:</b> To understand the process of generation of random numbers with a desired density/distribution.</li>
+		<li> <b>4:</b> To understand the practical limitations and advantages of randomness generated using algorithms.</li>
+	     </ol>
+	     </p>
+	  </div>
+	  </section>
+
+
+	  <section id="experiment-article-section-4">
+	  <div id="experiment-article-section-4-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab.-->
+	     <img src="../images/simulation.jpg" />
+	  </div>
+
+	  <div id="experiment-article-section-4-heading" 
+	     class="heading">
+	     Experiment
+	  </div>
+
+	  <div id="experiment-article-section-4-content" 
+	     class="content">
+	     <a href="../experiment/Exp4.jnlp">Click here to open the Experiment</a>
+	  </div>
+
+	  </section>
+
+	  <section id="experiment-article-section-5">
+
+	  <div id="experiment-article-section-5-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab.-->
+	     <img src="../images/manual.jpg" />
+	  </div>
+
+	  <div id="experiment-article-section-5-heading" 
+	     class="heading">
+	     Manual
+	  </div>
+
+	  <div id="experiment-article-section-5-content" 
+	     class="content">
+
+	  </div>
+
+	  </section>
+
+	  <section id="experiment-article-section-6">
+
+	  <div id="experiment-article-section-6-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab.-->
+	     <img src="../images/quizzes.jpg" />
+	  </div>
+
+	  <div id="experiment-article-section-6-heading" 
+	     class="heading">
+	     Quizzes
+	  </div>
+
+	  <div id="experiment-article-section-6-content" 
+	     class="content">
+	     <p> Answer the questions provided at the end of the writeup <a href="RandomVariables.pdf">HERE</a>.
+	     Some of the questions require you to do minimal amount of programming. You are encouraged to
+	     try out variants of the goals mentioned in the programming questions.
+	     </p>
+	  </div>
+	  </section>
+
+	  <section id="experiment-article-section-7">
+	  <div id="experiment-article-section-7-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab. -->
+	     <img src="../images/procedure.jpg" />
+	  </div>
+
+	  <div id="experiment-article-section-7-heading" 
+	     class="heading">
+	     Procedure
+	  </div>
+
+	  <div id="experiment-article-section-7-content" 
+	     class="content">
+	     <p> .</p>
+	     <h3>Stage 1:</h3>
+	     <ol>
+		<li> Set the default parameters and click the generate button; Observe the
+		dataset for multiple instances of samples. </li>
+		<li> Click the estimate button to compute the mean and covariance of the generated samples;
+		Observe the mismatch between the two. Repeat the process for multiple sets of samples generated
+		from the same distribution and observe the variations in the estimate</li>
+	     </ol>
+
+	     <h3>Stage 2:</h3>
+	     <ol>
+		<li> Repeat the above procedure for the different values for the number of generated samples. </li>
+		<li> Plot a graph between the average error, and number of samples</li>
+		<li> Note down your inferences regarding the graph</li>
+	     </ol>
+
+	     <h3>Stage 3:</h3>
+	     <ol>
+		<li> Generate your own dataset by clicking on the plot area. Note that the distribution
+		need not be similar to a normal density.</li>
+		<li> Estimate the mean and covarance matrices</li>
+		<li> Note down your inferences regarding the error committed if you assume the
+		distribution to be normal.</li>
+	     </ol>
+	  </div>
+	  </section>
+
+	  <section id="experiment-article-section-8">
+	  <div id="experiment-article-section-8-icon" 
+	     class="icon">
+	     <!-- Enclose the icon image of your lab.-->
+	     <img src="../images/readings.jpg" />
+	  </div>
+
+	  <div id="experiment-article-section-8-heading" 
+	     class="heading">
+	     Further Readings
+	  </div>
+
+	  <div id="experiment-article-section-8-content" 
+	     class="content">
+	     <ul>
+		<li><b>*</b> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
+		by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001
+		</li>
+		<li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Random_number_generation">Random Number Generation</a> at Wikipedia
+		</li>
+		<li><b>*</b> Article on <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom Number Generators</a> at Wikipedia
+		</li>
+	     </ul>
+
+	  </div>
+
+	  </section>
+
+       </div>
+
+
+       <!-- An article can have a sidebar that contain related 
+       links and additional material (however it is kept optional 
+       at this moment) -->
+       <aside id="lab-article-sidebar" class="default">
+       <!-- put the content that you want to appear in the 
+       sidebar -->	
+       </aside>
+
+
+       <!-- Article footer can display related content and 
+       additional links -->						
+       <footer id="lab-article-footer" class="default">
+       <!-- Put the content that you want to appear here -->
+       </footer>
+
+       </article>
+
+
+       <!-- Links to other labs, about us page can be kept the lab 
+       footer-->
+       <footer id="lab-footer" class="footer">
+       <!-- Put the content here-->
+       <a href="http://virtual-labs.ac.in/nmeict" >Sponsored by MHRD (NME-ICT) </a> | <a
+	  href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
+       </footer>
+    </div>		
+
+ </body>
+</html>
