@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp codebase="http://devel.virtual-labs.ac.in/test/~cse20/experiment//" href="launch.jnlp" spec="1.0+">
+    <information>
+        <title>Exp6</title>
+        <vendor>atif</vendor>
+        <homepage href=""/>
+        <description>Exp6</description>
+        <description kind="short">Exp6</description>
+
+    </information>
+<update check="always"/>
+
+    <resources>
+<j2se version="1.6+"/>
+<jar href="Exp6.jar" main="true"/>
+
+
+    <jar href="lib/jcommon-1.0.16.jar"/>
+<jar href="lib/junit.jar"/>
+<jar href="lib/jfreechart-1.0.13.jar"/>
+</resources>
+    <application-desc main-class="MyPackage.Experiment3">
+
+    </application-desc>
+</jnlp>
