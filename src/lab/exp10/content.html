@@ -49,8 +49,8 @@ edit -->
       <header id="experiment-article-heading" class="heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
-	MLE: Learning the Classifier from Data
-        <!-- Add any additional element if required with proper 
+        Data Clustering: K-means, MST based
+	<!-- Add any additional element if required with proper 
         enclosing-->
       </header>
 
@@ -89,39 +89,12 @@ edit -->
           element, You can also include images with <img> tag -->
 	  <div id="experiment-article-section-1-content" 
 	     class="content">	
-	     <p> In the previous experiment, we learned about how to generate a classifier, given
-	     models for each of the classes, using the Bayes Rule. The next goal is to learn such
-	     a classifier, automatically, given a set of labelled samples from each of the possible
-	     classes.</p>
-	     <p> Before doing this experiment, you should ensure that you have understood the previous
-	     experiment on Bayesian Classification as well as the experiment on Mean and Covariance
-	     estimateion from Data.</p>
-	     <p>The idea behind maximum likelihood parameter estimation is to determine the parameters 
-	     that maximize the probability (likelihood) of the sample data. From a statistical point 
-	     of view, the method of maximum likelihood is considered to be more robust (with some 
-	     exceptions) and yields estimators with good statistical properties. In other words, MLE 
-	     methods are versatile and apply to most models and to different types of data. In addition, 
-	     they provide efficient methods for quantifying uncertainty through confidence bounds. 
-	     Although the methodology for maximum likelihood estimation is simple, the implementation 
-	     is mathematically intense. Using today's computer power, however, mathematical complexity
-	     is not a big obstacle.
-	     </p>
+	     <p>Data Clustering is the process of assigning the objects in the data into groups or clusters in a way that the objects in the same cluster are more similar than those in other clusters. </p>
 	     <p>
-	     The MLE is an important type of estimator for the following reasons:
-	     <ol>
-		<li>  The MLE implements the likelihood principle.</li>
-		<li>  MLEs are often simple and easy to compute. </li>
-		<li>  MLEs have asymptotic optimality properties
-		(consistency and efficiency). </li>
-		<li>  MLEs are invariant under reparameterization. </li>
-		<li>  If an efficient estimator exists, it is the MLE. </li>
-		<li>  In signal detection with unknown parameters 
-		(composite hypothesis testing), MLEs are used in implementing the 
-		generalized likelihood ratio test (GLRT).</li>
-	     </ol>
-	     </p>
-	  </div>
+	     A similarity measure is defined over the data to be clustered to calculate the proximity between pairs of objects. Then a clustering algorithm is chosen to perform the grouping of data. Based on the requirement the algorithm is either a hierarchical or partition based. Suitable algorithm needs to be chosen based on the type and size of data, hardware and software availability.</p>
 
+	     <p>The applications of data clustering are to several exploratory pattern-analysis, decision-making, grouping tasks, machine-learning situations, including data mining, pattern classification, document retrieval and image segmentation.</p>
+	  </div>
 
 	  </section>
 
@@ -146,50 +119,28 @@ edit -->
 	  element, we can also include images with <img> tag -->
 	  <div id="experiment-article-section-2-content" 
 	     class="content">
-	     <p> As learned from the previous experiment, if we have a generative model for each of
-	     the classes, one can devlop a classifier that assigns an unknown sample to one of the
-	     possible set of classes. </p>
-	     <p>
-	     Suppose there is a sample x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> of <i>n</i> iid observations, coming from a distribution 
-	     with an unknown pdf ƒ<sub>0</sub>(·). It is however surmised that the function ƒ<sub>0</sub> belongs to a 
-	     certain family of distributions { ƒ(·|&theta;), &theta; &isin; &Theta; }, called the parametric model, so 
-	     that ƒ<sub>0</sub> = ƒ(·|&theta;<sub>0</sub>). The value &theta;<sub>0</sub> is unknown and is referred to as the "true value" 
-	     of the parameter. It is desirable to find some estimator <img src="images/thetahat.png"> which
-	     would be as close to the true value &theta;<sub>0</sub> as possible. Both the observed variables x<sub>0</sub> 
-	     and the parameter θ can be vectors.
-	     </p>
-	     <p>
-	     To use the method of maximum likelihood, one first specifies the joint density function for all the the observations. For an Independent and Identically distributed distribution, this joint density function will be <br />
-	     <img src="images/jointdistributionfunction.png"> 
-	     </p>
-	     <p>
-	     Now we look at this function from a different perspective by considering the observed values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> to be fixed “parameters” of this function, whereas &theta; will be the function’s variable and allowed to vary freely. From this point of view this distribution function will be called the likelihood: 
-	     </br>
-	     <img src="images/likelihoodfunction.png">
-	     </br>
-	     </p>
-	     <p>
-	     In practice it is often more convenient to work with the logarithm of the likelihood function, called the log-likelihood, or its scaled version, called the average log-likelihood:</ br>
-	     <img src="images/loglikelihood.png">
-	     </p>
-	     <p>
-	     The method of maximum likelihood estimates &theta;<sub>0</sub> by finding a value of θ that maximizes <img src="images/lhat.png">. This method of estimation is a maximum likelihood estimator (MLE) of &theta;<sub>0</sub>:
-	     <img src="images/mletheta.png">
-	     </p>
-	     <p>
-	     A MLE estimate is the same regardless of whether we maximize the likelihood or the log-likelihood function, since log is a monotone transformation. 
+	     <p>In order to elaborate the concept, let us take an example of the library system. The books present in a library will be related to a variety of topics. Books based on similar topics are placed together. Say, some books are on computer programming, some on database systems, some on computer graphics, and so on. Sections are created in the library titled with these topics and the related books are kept in that shelf. Further sub-sections can be created on sub-topics if needed. When a visitor wants to search a book on specific topic he browses that particular section instead of going through all the books in the library.</p>
 
-	     For many models, a maximum likelihood estimator can be found as an explicit function of the observed data x<sub>1</sub>,..., x<sub>n</sub>. For many other models, however, no closed-form solution to the maximization problem is known or available, and a MLE has to be found numerically using optimization methods. For some problems, there may be multiple estimates that maximize the likelihood. For other problems, no maximum likelihood estimate exists (meaning that the log-likelihood function increases without attaining the supremum value).
+	     <p>The data for clustering can get really complex in many of the real world applications. It was relatively simple in the above example.
+	     The data to be clustered needs to be represented in a feature space. Then a suitable distance measure is defined to calculate the dissimilarity between to data points. The well-known dissimilarity measures used are Euclidean distance or Minkowski distance.
 	     </p>
-	     <p>
-	     A maximum likelihood estimator coincides with the most probable Bayesian estimator given a uniform prior distribution on the parameters.
+
+	     <p>We will discuss two clustering techniques - K means and MST based partitioning.</p>
+	     <p><h3>K-means clustering</h3></p>
+	     <p>This is an iterative clustering algorithm typically run with different start states until a satisfactory partitioning is done. The start state being selection of cluster centers. The number of clusters needs to be defined beforehand. The algorithm runs in the following way -</br>
+	     <ul>
+	     <li> Choose k cluster centers to coincide with k randomly chosen data points or k randomly defined points inside the hypervolume containing the data set.</li>
+	     <li> Assign each point to the closest cluster. The squared euclidean distance is used here. Recompute the new cluster centers as the centroids of the resultant clusters.</li>
+	     <li> Repeat this until convergence is achieved, i.e the cluster membership is  stable.</li>
+	     </ul>
 	     </p>
-	     <p>
-	     <h4> Example for a Normal Distribution, Bernoulli distribution  and Poisson distribution:</h4>
-	     <!--	&#402;(x<sub>1</sub>,......,x<sub>n</sub>)=&Pi;e<sup>-(x-&mu;)<sup>2</sup>/(2&sigma;<sup>2</sup>)</sup>
-	     =(2&pi;)<sup>-n/2</sup> -->
-	     See the page <a href="http://mathworld.wolfram.com/MaximumLikelihood.html" target="_blank">http://mathworld.wolfram.com/MaximumLikelihood.html</a>
-	     </p>
+	     <p>Several variants of this algorithm have been reported in the literature. Some attempt to select good initial centers, some permit splitting and merging of the formed clusters for better results.</p>
+	     <p><h3>MST based clustering</h3></p>
+	     <p>This is a graph theoretic clustering algorithm based on construction of minimal spanning trees(MST) of the data. The edge lengths are the squared euclidean distances between the two nodes. Edges with length greater than some threshold are then deleted from the MST to form data clusters.</p>
+	     <p>Many variants of the algorithm exist in the literature attempting to improve clustering results. The implementation in our experiment is from []. First, the MST is constructed on the data points. Then the clustering process is iterated over a range of threshold edge lengths. Each time a ** value is calculated for the clustering result. The final cluster set is the one which has the minimum ** value. </p>
+	     
+
+
 	  </div>
 	  </section>
 
@@ -210,9 +161,10 @@ edit -->
 	     class="content">
 	     <p>The high level goals of the experiment are:
 	     <ol>
-		<li> To understand the modelling of a class in terms of density functions and priors.</li>
-		<li> To understand the estimation of the parameters of a model from a set of samples.</li>
-		<li> To understand the effect of sample size on decision boundary.</li>
+ 	     <li> Understand the idea of data clustering.</li>
+	     <li> Understand how the choice an clustering algorithm is important for desired results.</li>
+	     <li> Understand the described two clustering methods K-means and MST based.</li>
+	     <li> Understand the difference between the two approaches used and the different results that these may give on similar data.</li>
 	     </ol>
 	     </p>
 
@@ -237,7 +189,7 @@ edit -->
 	  <div id="experiment-article-section-4-content" 
 	     class="content">
 	     <p>
-	     <a href="../experiment/Exp6.jnlp">Click here to open the Experiment</a>
+	     <a href="../experiment/Exp10.jnlp">Click here to open the Experiment</a>
 	     </p>
 	  </div>
 
@@ -333,9 +285,7 @@ edit -->
 	     <li> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
 	     by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001
 	     </li>
-	     <li> Article on <a href="http://en.wikipedia.org/wiki/Random_number_generation">Random Number Generation</a> at Wikipedia
-	     </li>
-	     <li> Article on <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom Number Generators</a> at Wikipedia
+	     <li> Article on <a href="http://en.wikipedia.org/wiki/Cluster_analysis">Cluster Analysis</a> at Wikipedia
 	     </li>
 	  </ul>
 	</p>
