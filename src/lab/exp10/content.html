@@ -127,7 +127,8 @@ edit -->
 
 	     <p>We will discuss two clustering techniques - K means and MST based partitioning.</p>
 	     <p><h3>K-means clustering</h3></p>
-	     <p>This is an iterative clustering algorithm typically run with different start states until a satisfactory partitioning is done. The start state being selection of cluster centers. The number of clusters needs to be defined beforehand. The algorithm runs in the following way -</br>
+	     <p>This is an iterative clustering algorithm typically run with different start states until a satisfactory partitioning is done. The start state being selection of cluster centers. The number of clusters needs to be defined beforehand.
+	     </br>The algorithm runs in the following way -</br>
 	     <ul>
 	     <li> Choose k cluster centers to coincide with k randomly chosen data points or k randomly defined points inside the hypervolume containing the data set.</li>
 	     <li> Assign each point to the closest cluster. The squared euclidean distance is used here. Recompute the new cluster centers as the centroids of the resultant clusters.</li>
@@ -137,7 +138,7 @@ edit -->
 	     <p>Several variants of this algorithm have been reported in the literature. Some attempt to select good initial centers, some permit splitting and merging of the formed clusters for better results.</p>
 	     <p><h3>MST based clustering</h3></p>
 	     <p>This is a graph theoretic clustering algorithm based on construction of minimal spanning trees(MST) of the data. The edge lengths are the squared euclidean distances between the two nodes. Edges with length greater than some threshold are then deleted from the MST to form data clusters.</p>
-	     <p>Many variants of the algorithm exist in the literature attempting to improve clustering results. The implementation in our experiment is from []. First, the MST is constructed on the data points. Then the clustering process is iterated over a range of threshold edge lengths. Each time a ** value is calculated for the clustering result. The final cluster set is the one which has the minimum ** value. </p>
+	     <p>Many variants of the algorithm exist in the literature attempting to improve clustering results. The implementation in our experiment is from [Ref #3]. First, the MST is constructed on the data points. Then the clustering process is iterated over a range of threshold edge lengths. Each time ratio of Intra-cluster distance to Inter-cluster distance is calculated for the data points in the clustering result. The final cluster set selected based on the threshold which has the minimum Intra-cluster to Inter-cluster distance ratio.</p>
 	     
 
 
@@ -230,9 +231,7 @@ edit -->
 
 	  <div id="experiment-article-section-6-content" 
 	     class="content">
-	     <p> Answer the questions provided at the end of the writeup <a href="../exp5/RandomVariables.pdf">HERE</a>.
-	     Some of the questions require you to do minimal amount of programming. You are encouraged to
-	     try out variants of the goals mentioned in the programming questions.
+	     <p>To be updated...
 	     </p>
 
 	  </div>
@@ -256,10 +255,11 @@ edit -->
 	     class="content">
 	     <p> In the experiment window,</p>
 	     <ol>
-		<li> Select the distribution function using the drop-down menu at top right .</li>
-		<li> Plot the datasets and see the distribution </li>
-		<li> Estimate the maximum likelihood parameters </li>
-		<li> Use Mark all Button to see the classifier </li>
+		<li> Select the clustering method on the top right.</li>
+		<li> To plot data points and means on the graph - load custom datasets <i>or</i> mark manually <i>or</i> randomly generate using the options in the side pane</li>
+		<li> 'Start' will begin the clustering process.</li>
+		<li> 'Run' will run <i>one</i> iteration of the clustering process. (Applicable for K-means method) </li>
+		<li> 'Finish' will complete the clustering process to reach an optimal solution. (Applicable for K-means method) </li>
 	     </ol>
 	  </div>
 
@@ -282,10 +282,13 @@ edit -->
 	  <div id="experiment-article-section-8-content" 
 	     class="content">
 	     <p>
+	   <ul>
 	     <li> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
-	     by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001
+	     by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001.
 	     </li>
-	     <li> Article on <a href="http://en.wikipedia.org/wiki/Cluster_analysis">Cluster Analysis</a> at Wikipedia
+	     <li> Article on <a href="http://en.wikipedia.org/wiki/Cluster_analysis">Cluster Analysis</a> at Wikipedia.
+	     </li>
+	     <li> An Efficient Minimus Spannig Tree based Clustering Algorithm. <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=5397966">Link</a>.
 	     </li>
 	  </ul>
 	</p>
