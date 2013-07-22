@@ -208,8 +208,7 @@
 	
   <!-- Javascript at the bottom for fast page loading -->
 
-  
-
+  <?php include_once("analyticstracking.php") ?>
   
   <!-- ******** ADD/OVERRIDE JAVASCRIPT FILES HERE ********* -->
   
