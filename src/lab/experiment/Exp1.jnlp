@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- <jnlp  codebase="http://test.virtual-labs.ac.in/test/~cse20/experiment/" href="Exp1.jnlp" spec="1.0+"> -->
-<jnlp href="Exp1.jnlp" spec="1.0+">
+<jnlp  codebase="http://test.virtual-labs.ac.in/labs/cse20/experiment/" href="Exp1.jnlp" spec="1.0+">
     <information>
         <title>Virtual Labs: Pattern Recognition</title>
         <vendor>amit</vendor>
