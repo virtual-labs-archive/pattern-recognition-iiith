@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<jnlp codebase="http://test.virtual-labs.ac.in/labs/cse20/experiment/" href="launch.jnlp" spec="1.0+">
+<jnlp codebase="http://test.virtual-labs.ac.in/labs/cse20/experiment/" href="Exp6.jnlp" spec="1.0+">
     <information>
         <title>Exp6</title>
         <vendor>atif</vendor>
@@ -19,7 +19,7 @@
 <jar href="lib/junit.jar"/>
 <jar href="lib/jfreechart-1.0.13.jar"/>
 </resources>
-    <application-desc main-class="MyPackage.Experiment3">
+    <application-desc main-class="MyPackage.Experiment6">
 
     </application-desc>
 </jnlp>
