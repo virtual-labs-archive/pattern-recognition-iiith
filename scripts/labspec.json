@@ -4,7 +4,7 @@
             "platform": {
                 "arch": "i386", 
                 "build_steps": {
-                    "build": [], 
+                    "build": ["make -C ../src; cd build/experiment/; sudo su; bash s.sh; bash update_links.sh"], 
                     "configure": [], 
                     "post_build": [], 
                     "pre_build": [], 

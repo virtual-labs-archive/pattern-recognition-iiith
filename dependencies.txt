@@ -1,0 +1,3 @@
+All the experiments require:
+jre1.8.0_25
+(for Windows and Linux)
