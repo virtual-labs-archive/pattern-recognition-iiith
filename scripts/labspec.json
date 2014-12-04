@@ -4,7 +4,7 @@
             "platform": {
                 "arch": "i386", 
                 "build_steps": {
-                    "build": ["make -C ../src; cd ../build/experiment/; chmod -R  777 *; bash s.sh; bash update_links.sh"], 
+                    "build": ["make -C ../src; cd ../build/experiment/; chmod -R  777 *; bash s.sh; bash update_links.sh ; cd ../../src"];, 
                     "configure": [], 
                     "post_build": [], 
                     "pre_build": [], 
@@ -67,7 +67,8 @@
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": [], 
+                    "init": ["mv /var/www/index.html /var/www/index.html.default",
+                        "cp -r ../../build/* /var/www/"], 
                     "pause": [], 
                     "publish": [], 
                     "restore": [], 
