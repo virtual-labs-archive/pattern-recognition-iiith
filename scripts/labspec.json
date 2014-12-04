@@ -67,7 +67,7 @@
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": ["mv /var/www/index.html /var/www/index.html.default",
+                    "init": ["mv /var/www/index.html index.html.default",
                         "cp -r ../../build/* /var/www/"], 
                     "pause": [], 
                     "publish": [], 
