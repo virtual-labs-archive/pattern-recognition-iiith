@@ -55,6 +55,7 @@ then
 		rm -r "Exp"$c"/lib"
 	fi
 	archivename="Exp"$c".tar.gz"
+	archivename="Exp"$c".zip"
 	archivefolder="Exp"$c"/"
 	echo $archivefolder
 	echo $archivename
