@@ -74,8 +74,8 @@
                     "publish": [], 
                     "restore": [], 
                     "resume": [], 
-                    "shutdown": [], 
-                    "start": [], 
+                    "shutdown": ["service apache2 stop"], 
+                    "start": ["service apache2 start"], 
                     "stats": [], 
                     "stop": []
                 }, 
