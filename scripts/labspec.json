@@ -75,7 +75,7 @@
                     "restore": [], 
                     "resume": [], 
                     "shutdown": ["service apache2 stop"], 
-                    "start": ["service apache2 start"], 
+                    "start": [], 
                     "stats": [], 
                     "stop": []
                 }, 
