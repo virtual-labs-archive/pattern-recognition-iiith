@@ -1,0 +1,9 @@
+S.no		Test case link
+1. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_01_Usability_smk.org][Pattern Recognition_01_Usability_smk.org]]
+2. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_02_Introduction_smk.org][Pattern Recognition_02_Introduction_smk.org]]
+3. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_03_Prerequesites_smk.org][Pattern Recognition_03_Prerequesites_smk.org]]
+4. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_04_Prerequesites_p1.org][Pattern Recognition_04_Prerequesites_p1.org]]
+5. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_05_Related%20Courses_smk.org][Pattern Recognition_05_Related Courses_smk.org]]
+6. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_06_Software%20Needed_smk.org][Pattern Recognition_06_Software Needed_smk.org]]
+7. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_07_Feedback_smk.org][Pattern Recognition_07_Feedback_smk.org]]
+8. 	[[https://github.com/Virtual-Labs/pattern-recognition-iiith/blob/master/test-cases/integration_test-cases/System/Pattern%20Recognition_08_Feedback_p1.org][Pattern Recognition_08_Feedback_p1.org]]
