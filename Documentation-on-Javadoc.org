@@ -4,11 +4,11 @@
 
 
 
-**Introduction
+** Introduction
 
     - Javadoc is a tool that generates html documentation (similar to the reference pages at java.sun.com) from Javadoc comments in the code.  In this tutorial we will go over how to write basic Javadoc comments and how to use features of Javadoc to generate html documentation.
 
-**Javadoc Comments
+** Javadoc Comments
 
     - Javadoc recognizes special comments  /** .... */ which are highlighted blue by default in Eclipse (regular comments // and /* ... */ are highlighted green).
     - Javadoc allows you to attach descriptions to classes, constructors, fields, interfaces and methods in the generated html documentation by placing Javadoc comments directly before their declaration statements.  
@@ -28,7 +28,7 @@
     	}
     }
 
-**Javadoc Tags
+** Javadoc Tags
 
     - Tags are keywords recognized by Javadoc which define the type of information that follows.
     - Tags come after the description (separated by a new line).
@@ -42,7 +42,7 @@
     
     Example :
 
-    /** Description of MyClass 
+     /** Description of MyClass 
      *
      * @author John Doe
      * @author Jane Doe
@@ -97,7 +97,7 @@
         More complex example with the generated documentation showing version information and private members from all .java files in c:\MySource\ and c:\YourSource\ which references files in c:\MyLib and saves it to c:\MyDoc.
              c:\> Javadoc -version -private -d c:\MyDoc -sourcepathlist c:\MySource;c:\YourSource\ -classpath c:\MyLib
 
-** Javadoc In Eclipse 3.0
+** Javadoc In Eclipse :
 
   - Eclipse can generate Javadoc comments for classes and methods.
   - Place the cursor in the text of class of method declaration.
