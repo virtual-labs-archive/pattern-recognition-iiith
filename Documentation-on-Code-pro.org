@@ -31,8 +31,4 @@ codepro - http://dl.google.com/eclipse/inst/codepro/latest/3.6
 
 
 
-Right click on the file and select CodePro Tools
-
-
-
 
