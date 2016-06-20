@@ -68,14 +68,14 @@
                 "lab_actions": {
                     "backup": [], 
                     "clean": [], 
-                    "init": ["mv /var/www/index.html index.html.default",
-                        "cp -r ../build/* /var/www/"], 
+                    "init": ["mv /var/www/html/index.html index.html.default",
+                        "cp -r ../build/* /var/www/html"], 
                     "pause": [], 
                     "publish": [], 
                     "restore": [], 
                     "resume": [], 
                     "shutdown": ["service apache2 stop"], 
-                    "start": [], 
+                    "start": ["service apache2 start"], 
                     "stats": [], 
                     "stop": []
                 }, 
