@@ -1,0 +1,34 @@
+#+Title:  Documentation on Code Pro
+#+Author: Sravanthi. M
+#+Date:   <2016-04-28 Thursday>
+
+- CodePro Analytix is the premier Java software testing tool for Eclipse developers
+  who are concerned about improving software quality and reducing developments costs 
+  and schedules.
+- The Java software audit features of the tool make it an indispensable 
+  assistant to the developer in reducing errors as the code is being developed and keeping 
+  coding practices in line with organizational guidelines. 
+- The ability to make corrections to the code immediately can dramatically reduce developments 
+  costs and improve the speed of finished product delivery. 
+- Join the ranks of top software industry leaders and the Fortune 500 who have standardized 
+  around CodePro Analytix as the most cost effective fully featured tool in the industry.  
+
+ "https://developers.google.com/java-dev-tools/codepro/doc/
+
+codepro - http://dl.google.com/eclipse/inst/codepro/latest/3.6
+
+1) Go to Eclipse 
+2) Right Click on Help --> Install New Software
+3) Browse for the new software and place the URL 
+4) Click on Finish button.
+5) Installation of Code pro starts.
+6) After installtion process is done it will ask to restart Eclipse.
+7) Select Code pro and import a project into it.
+8) Right click on the project and select code pro tools.
+9) Select Class Diagram.
+10) It will generate Class diagram for the project.
+
+
+
+
+
