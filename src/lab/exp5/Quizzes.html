@@ -99,23 +99,30 @@
 							
 							<!--edit -->
 <h1 class="text-h2-lightblue">Bayesian Classification</h1><div class="content" id="experiment-article-section-6-content">
-<p>
-<b>Q1.</b> The covariance matrix is always
-	     <br/><br/>
-	     a. Square<br/>
-	     b. Positive Semidefinite<br/>
-	     c. Positive Definite<br/>
-	     d. Symmetric <br/>
-	     e. None of the above. <br/>
-<br/><br/>
-	     For each of the properties you selected, describe what would happen if the covariance
-	     matrix does not satisfy that property.
-	     <br/><br/>
-<b>Q2.</b> Describe the possible set of decision boundaries that can be generated using
-	     gaussian density functions in a two class problem.
-	     <br/><br/>
-<!-- <input type="submit" value="Submit Answers"> -->
-</p>
+
+<form method="POST" name="myquiz">
+<!-- <font face="Arial"><big><big>General Knowledge Quiz</big></big></font></p> -->
+<div class="qheader">
+1.  The covariance matrix is always 
+</div>
+<div class="qselections">
+<input type="radio" value="a" name="question1">a) Square <br>
+<input type="radio" value="b" name="question1">b) Positive Semidefinite<br>
+<input type="radio" value="c" name="question1">c) Positive Definite<br>
+<input type="radio" value="d" name="question1">d) Symmetric<br>
+<input type="radio" value="e" name="question1">e) None of the above.<br/>
+For each of the properties you selected, describe what would happen if the covariance matrix does not satisfy that property. 
+</div>
+</form>
+<br/>
+
+<p>2. Describe the possible set of decision boundaries that can be generated using gaussian density functions in a two class problem. </p>
+
+<form>
+<div align="center">
+<input type="button" value="Grade Me!" name="B1" onClick="gradeit()"> <input type="button" value="Reset" name="B2" onClick="document.myquiz.reset()"></div>
+</form>
+
 </div>						</div>
 					</div>
 			</div>
