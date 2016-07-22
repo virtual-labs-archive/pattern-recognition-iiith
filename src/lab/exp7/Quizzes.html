@@ -36,8 +36,7 @@ font:normal 13px Arial;
 }
 </style>
 
-<script src="quizconfig.js">
-</script>
+<script src="quizconfig.js"></script>
 
 <script>
 
@@ -126,47 +125,8 @@ document.cookie="ready=yes"
 							
 							<!--edit -->
 <h1 class="text-h2-lightblue">Data Clustering: K-means, MST based</h1><div class="content" id="experiment-article-section-6-content">
-<!-- <p>
-<ol>
-<li> Let X1 = (4,5), X2 = (1,4), X3 = (0,1) and X4 = (5,0), and consider the following 3 partitions:
-	     <ol>
-<li> D1 = {X1, X2}, D2 = {X3, X4}</li>
-<li> D1 = {X1, X4}, D2 = {X2, X3}</li>
-<li> D1 = {X1, X2, X3}, D2 = {X4}</li>
-</ol>
-	     Which partition is favored by the sum-of-squarred error?
-	     Squarred error for each partition is defined by:
-<img height="50" src="images/q10_sqerror.png" width="100">
-	     Where m<sub>i</sub> is the mean of partition D<sub>i</sub>.
-	     </img></li>
-</ol></p>
-<p>
-<li>
-	     Use the k-means algorithm and Euclidean distance to cluster the following 8 examples into 3 clusters:
-	     A1=(2,10), A2=(2,5), A3=(8,4), A4=(5,8), A5=(7,5), A6=(6,4), A7=(1,2), A8=(4,9).
-	     Suppose that the initial seeds (centers of each cluster) are A1, A4 and A7. Run the k-means algorithm for
-	     1 iteration. At the end of this iteration find:
-	     <ol>
-<li> The new clusters.</li>
-<li> The centers of the new clusters.</li>
-<li> How many more iterations are needed to converge?</li>
-</ol>
-</li>
-</p>
-<p>
-<li>
-	     Which algorithm is most suitable for these data points?
-<img height="200" src="images/q10_points.png" width="200">
-<ol>
-<li>DBSCAN</li>
-<li>K-Means</li>
-</ol>
-</img></li></p>
-</div>						</div>
-					</div>
-			</div> -->
 			<p>
-<form method="POST" name="myquiz">
+<form method="POST" name="myquiz" >
 
 <!-- <font face="Arial"><big><big>General Knowledge Quiz</big></big></font></p> -->
 
@@ -235,7 +195,8 @@ document.cookie="ready=yes"
 
 <form>
 <div align="center">
-<input type="button" value="Grade Me!" name="B1" onClick="gradeit()"> <input type="button" value="Reset" name="B2" onClick="document.myquiz.reset()"></div>
+<input type="button" value="Grade Me!" name="B1" onclick="gradeit()">
+<input type="button" value="Reset" name="B2" onClick="document.myquiz.reset()"></div>
 </form>
 </div>						</div>
 					</div>
