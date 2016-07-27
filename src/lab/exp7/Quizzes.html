@@ -133,9 +133,9 @@ document.cookie="ready=yes"
 <div class="qheader">
 	1. Let X1 = (4,5), X2 = (1,4), X3 = (0,1) and X4 = (5,0), and consider the following 3 partitions:
 	<ol type ="i">
-		<li> D1 = {X1, X2}, D2 = {X3, X4}</li>
-		<li> D1 = {X1, X4}, D2 = {X2, X3}</li>
-		<li> D1 = {X1, X2, X3}, D2 = {X4}</li>
+		<li> i) D1 = {X1, X2}, D2 = {X3, X4}</li>
+		<li> ii) D1 = {X1, X4}, D2 = {X2, X3}</li>
+		<li> iii) D1 = {X1, X2, X3}, D2 = {X4}</li>
 	</ol>
 	Which partition is favored by the sum-of-squarred error?
 	Squarred error for each partition is defined by:<br>
@@ -145,15 +145,32 @@ document.cookie="ready=yes"
 <br/>
 
 <div class="qselections">
-<input type="radio" value="a" name="question1">a) 0.5669 <br>
-<input type="radio" value="b" name="question1">b) 0.6669<br>
-<input type="radio" value="c" name="question1">c) 0.4669<br>
-<input type="radio" value="d" name="question1">d) 0.5649<br>
+<input type="radio" value="a" name="question1">a) i <br>
+<input type="radio" value="b" name="question1">b) ii <br>
+<input type="radio" value="c" name="question1">c) iii <br>
+<input type="radio" value="d" name="question1">d) none <br>
 </div>
 <br/>
 
+
 <div class="qheader">
-	2.Use the k-means algorithm and Euclidean distance to cluster the following 8 examples into 3 clusters:
+	2. Which algorithm is most suitable for these data points?<br/><br/>
+	<img height="200" src="images/q10_points.png" width="200">
+</div>
+<br/>
+<div class="qselections">
+	
+	<input type="radio" value="a" name="question2">a) DBSCAN<<br/>
+	<input type="radio" value="b" name="question2">b) K-Means<br/>
+	<input type="radio" value="c" name="question2">c) Both a and b<br/>
+	<input type="radio" value="d" name="question2">d) None
+</div>
+<br/>
+
+</form>
+
+<div class="qheader">
+	3.Use the k-means algorithm and Euclidean distance to cluster the following 8 examples into 3 clusters:
 	     A1=(2,10), A2=(2,5), A3=(8,4), A4=(5,8), A5=(7,5), A6=(6,4), A7=(1,2), A8=(4,9).
 	     Suppose that the initial seeds (centers of each cluster) are A1, A4 and A7. Run the k-means algorithm for
 	     1 iteration. At the end of this iteration find:
@@ -167,38 +184,19 @@ document.cookie="ready=yes"
 <br/>
 
 <div class="qselections">
-<input type="radio" value="a" name="question2">a) 0.8930 <br>
-<input type="radio" value="b" name="question2">b) 0.0983<br>
-<input type="radio" value="c" name="question2">c) 0.0893<br>
-<input type="radio" value="d" name="question2">d) 0.7813<br>
+<!-- <input type="radio" value="a" name="question2"> -->a) 0.8930 <br>
+<!-- <input type="radio" value="b" name="question2"> -->b) 0.0983<br>
+<!-- <input type="radio" value="c" name="question2"> -->c) 0.0893<br>
+<!-- <input type="radio" value="d" name="question2"> -->d) 0.7813<br>
 </div>
 <br/>
-
-
-<div class="qheader">
-3)Which algorithm is most suitable for these data points?<br/>
-<img height="200" src="images/q10_points.png" width="200">
-<ol>
-	<li>DBSCAN</li>
-	<li>K-Means</li>
-</ol>
-</div>
-
-<div class="qselections">
-<input type="radio" value="a" name="question3">a) [4.10 2.08 0.604]<br>
-<input type="radio" value="b" name="question3">b) [4.10 0.604 2.08]<br>
-<input type="radio" value="c" name="question3">c) [2.08  0.604 4.10]<br>
-<input type="radio" value="d" name="question3">d) [20.5 10.4 3.02]<br>
-</div>
-
-</form>
 
 <form>
 <div align="center">
 <input type="button" value="Grade Me!" name="B1" onClick="gradeit()">
 <input type="button" value="Reset" name="B2" onClick="document.myquiz.reset()"></div>
 </form>
-</div>						</div>
+			</div>
 					</div>
 			</div>
 
