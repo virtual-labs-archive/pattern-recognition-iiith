@@ -1,0 +1,6 @@
+# Pattern Recognition Lab
+The virtual lab on Pattern Recognition is design to supplement a senior undergraduate or graduate level course in Statistical Pattern Recognition. The experiments are designed to improve the clarity in understanding of the basic concepts as well as to enable the student to put them into practical use. It is important that the student goes through the objectives and the underlying theory before carrying out the experiments to get maximum benefit.
+
+The primary reference (textbook) for the topics covered by the experiments is: _Pattern Classification (2nd ed.)_, by R.O. Duda, P.E. Hart and D.G. Stork.
+
+The experiments are designed to expose you to certain concepts. You are encouraged to carry out variants of the suggested experiments and learn from them. Please make sure that you read the background material and experiment procedure before carrying out the experiments. Trying out the experiments before this does not hurt, but having the background will help you understand the results better.
