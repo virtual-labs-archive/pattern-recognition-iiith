@@ -22,7 +22,7 @@ if (typeof Object.create !== "function") {
 (function ($, window, document) {
 
     var Carousel = {
-        init : function (options, el) {
+        init(options, el) {
             var base = this;
 
             base.$elem = $(el);
@@ -62,7 +62,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        logIn : function () {
+        logIn() {
             var base = this;
 
             base.$elem.data("owl-originalStyles", base.$elem.attr("style"));
@@ -76,7 +76,7 @@ if (typeof Object.create !== "function") {
             base.setVars();
         },
 
-        setVars : function () {
+        setVars() {
             var base = this;
             if (base.$elem.children().length === 0) {return false; }
             base.baseClass();
@@ -159,7 +159,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        reload : function () {
+        reload() {
             var base = this;
             window.setTimeout(function () {
                 base.updateVars();
@@ -185,7 +185,7 @@ if (typeof Object.create !== "function") {
             }, 500);
         },
 
-        wrapItems : function () {
+        wrapItems() {
             var base = this;
             base.$userItems.wrapAll("<div class=\"owl-wrapper\">").wrap("<div class=\"owl-item\"></div>");
             base.$elem.find(".owl-wrapper").wrap("<div class=\"owl-wrapper-outer\">");
@@ -193,7 +193,7 @@ if (typeof Object.create !== "function") {
             base.$elem.css("display", "block");
         },
 
-        baseClass : function () {
+        baseClass() {
             var base = this,
                 hasBaseClass = base.$elem.hasClass(base.options.baseClass),
                 hasThemeClass = base.$elem.hasClass(base.options.theme);
@@ -293,7 +293,7 @@ if (typeof Object.create !== "function") {
             $(window).resize(base.resizer);
         },
 
-        updatePosition : function () {
+        updatePosition() {
             var base = this;
             base.jumpTo(base.currentItem);
             if (base.options.autoPlay !== false) {
@@ -301,7 +301,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        appendItemsSizes : function () {
+        appendItemsSizes() {
             var base = this,
                 roundPages = 0,
                 lastItem = base.itemsAmount - base.options.items;
@@ -321,7 +321,7 @@ if (typeof Object.create !== "function") {
             });
         },
 
-        appendWrapperSizes : function () {
+        appendWrapperSizes() {
             var base = this,
                 width = base.$owlItems.length * base.itemWidth;
 
@@ -345,7 +345,7 @@ if (typeof Object.create !== "function") {
             base.itemWidth = Math.round(base.$elem.width() / base.options.items);
         },
 
-        max : function () {
+        max() {
             var base = this,
                 maximum = ((base.itemsAmount * base.itemWidth) - base.options.items * base.itemWidth) * -1;
             if (base.options.items > base.itemsAmount) {
@@ -359,11 +359,11 @@ if (typeof Object.create !== "function") {
             return maximum;
         },
 
-        min : function () {
+        min() {
             return 0;
         },
 
-        loops : function () {
+        loops() {
             var base = this,
                 prev = 0,
                 elWidth = 0,
@@ -402,7 +402,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        buildButtons : function () {
+        buildButtons() {
             var base = this,
                 buttonsWrapper = $("<div class=\"owl-buttons\"/>");
             base.owlControls.append(buttonsWrapper);
@@ -435,7 +435,7 @@ if (typeof Object.create !== "function") {
             });
         },
 
-        buildPagination : function () {
+        buildPagination() {
             var base = this;
 
             base.paginationWrapper = $("<div class=\"owl-pagination\"/>");
@@ -490,7 +490,7 @@ if (typeof Object.create !== "function") {
             }
             base.checkPagination();
         },
-        checkPagination : function () {
+        checkPagination() {
             var base = this;
             if (base.options.pagination === false) {
                 return false;
@@ -528,7 +528,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        updateControls : function () {
+        updateControls() {
             var base = this;
             base.updatePagination();
             base.checkNavigation();
@@ -548,7 +548,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        next : function (speed) {
+        next(speed) {
             var base = this;
 
             if (base.isTransition) {
@@ -568,7 +568,7 @@ if (typeof Object.create !== "function") {
             base.goTo(base.currentItem, speed);
         },
 
-        prev : function (speed) {
+        prev(speed) {
             var base = this;
 
             if (base.isTransition) {
@@ -592,7 +592,7 @@ if (typeof Object.create !== "function") {
             base.goTo(base.currentItem, speed);
         },
 
-        goTo : function (position, speed, drag) {
+        goTo (position, speed, drag) {
             var base = this,
                 goToPixel;
 
@@ -656,7 +656,7 @@ if (typeof Object.create !== "function") {
             base.afterGo();
         },
 
-        jumpTo : function (position) {
+        jumpTo(position) {
             var base = this;
             if (typeof base.options.beforeMove === "function") {
                 base.options.beforeMove.apply(this, [base.$elem]);
