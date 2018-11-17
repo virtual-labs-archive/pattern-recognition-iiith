@@ -106,7 +106,7 @@ a.active {
 	overflow: visible;
 	margin-left: 0px !important;
 	padding-bottom: 10px !important;
-	padding-top: 10px !important;
+	padding-top: 10px ;
 }
 
 .menu-a
@@ -115,7 +115,7 @@ a.active {
 	font-family: Calibri !important;
   color: #2C99CD !important;
   padding-left: 10px !important;
-  padding-bottom: 5px !important;
+  padding-bottom: 5px ;
   padding-top: 5px !important;
   padding-right: 10px !important;
   
@@ -227,7 +227,7 @@ a.active {
 	}
 	.border-right-green-dotted
 	{
-		margin-top: 60px !important;
+		margin-top: 60px ;
 	}
 }
 
@@ -312,11 +312,11 @@ a.active {
 	}
 	.aboutus-col-8
 	{
-		padding-right: 15px !important;
+		padding-right: 15px ;
 	}
 	.footer-div
 	{
-	background-size: cover !important;
+	background-size: cover ;
 	 }
 	 
 	 .lab-list-col-10
@@ -431,7 +431,7 @@ a.active {
 }
 .col-md-2-5-1-l:HOVER, .col-md-2-5-1-withbg:HOVER
 {
-		background-color: #e4e4e4 !important;	
+		background-color: #e4e4e4 ;	
 }
 
 .border-right-green-dotted
@@ -444,12 +444,12 @@ a.active {
 
 a:focus
 {
-	color: #72AB44 !important;
+	color: #72AB44 ;
 }
 
 .featured-labs
 {
-	min-height: 208px !important;
+	min-height: 208px;
 	/*overflow: hidden;
  	text-overflow: ellipsis;
  	display: -webkit-box;
@@ -839,7 +839,7 @@ a:focus
 
 	.banner-text-medium
 	{
-		font-size: 1.2em !important;
+		font-size: 1.2em ;
 	}
 	
 	.banner-text-big
@@ -918,7 +918,7 @@ a:focus
 @media only screen and (max-width: 767px) { 
 	.banner-caption-div
 	{
-	  position: relative !important;
+	  position: relative ;
 	}		
 }
 
@@ -996,7 +996,7 @@ a:focus
 
 	.banner-text-medium
 	{
-		font-size: 1.7em !important;
+		font-size: 1.7em ;
 	}
 	
 	.banner-text-big
