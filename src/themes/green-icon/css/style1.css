@@ -111,8 +111,8 @@ a.active {
 
 .menu-a
 {
-	font-size: 18px !important;
-	font-family: Calibri !important;
+	font-size: 18px ;
+	font-family: Calibri ;
   color: #2C99CD ;
   padding-left: 10px !important;
   padding-bottom: 5px ;
@@ -190,8 +190,8 @@ a.active {
 	
 	.custom-toggle
 	{
-		margin-bottom: 0px !important;
-		margin-top: 12% !important;
+		margin-bottom: 0px ;
+		margin-top: 12% ;
 	}
 	
 	
@@ -243,12 +243,12 @@ a.active {
    
    .menu-ul
 	{
-		margin-top: 0px !important;
+		margin-top: 0px ;
 	}
 	
 	.menu-li-active
 	{
-		  background-color: white !important;
+		  background-color: white ;
 	}
 	
 	.menu-a-active
@@ -326,7 +326,7 @@ a.active {
 	 
 	.featured-labs-main-div
 	{
-		margin-top: -35px !important;	
+		margin-top: -35px ;	
 	}
 }
 
