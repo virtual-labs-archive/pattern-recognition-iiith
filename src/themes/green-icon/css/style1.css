@@ -136,7 +136,7 @@ a.active {
 
 .menu-li:HOVER
 {
-	background-color: #77BB41 !important;
+	background-color: #77BB41 ;
 }
 
 .menu-a:HOVER
@@ -268,7 +268,7 @@ a.active {
 @media only screen and (min-width: 768px) and (max-width: 991px) { 
     .menu-a
 	{
-		font-size: 1.4em !important;
+		font-size: 1.4em ;
 	}
 	
 	.main-logo
@@ -288,7 +288,7 @@ a.active {
 	
 	.banner-text-big
 	{
-		font-size: 2.0em !important;
+		font-size: 2.0em ;
 	}
 	
 }
@@ -411,7 +411,7 @@ a.active {
 {
 	margin-left: 0px ;
 	margin-right: 0px ;
-	padding-left: 15px !important;
+	padding-left: 15px ;
 }
 .border-bottom-img
 {
@@ -752,7 +752,7 @@ a:focus
 
 	.banner-text-small
 	 {
-		font-size: 0.8em !important;
+		font-size: 0.8em ;
   	 }
 
 	.banner-text-medium
