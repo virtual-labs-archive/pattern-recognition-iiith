@@ -32,7 +32,7 @@ if (typeof Object.create !== "function") {
             base.loadContent();
         },
 
-        loadContent : function () {
+        loadContent() {
             var base = this, url;
 
             function getData(data) {
@@ -94,7 +94,7 @@ if (typeof Object.create !== "function") {
             base.onStartup();
         },
 
-        onStartup : function () {
+        onStartup() {
             var base = this;
             base.updateItems();
             base.calculateAll();
@@ -127,7 +127,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        eachMoveUpdate : function () {
+        eachMoveUpdate() {
             var base = this;
 
             if (base.options.lazyLoad === true) {
@@ -143,7 +143,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        updateVars : function () {
+        updateVars() {
             var base = this;
             if (typeof base.options.beforeUpdate === "function") {
                 base.options.beforeUpdate.apply(this, [base.$elem]);
@@ -166,7 +166,7 @@ if (typeof Object.create !== "function") {
             }, 0);
         },
 
-        watchVisibility : function () {
+        watchVisibility() {
             var base = this;
 
             if (base.$elem.is(":visible") === false) {
@@ -207,7 +207,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        updateItems : function () {
+        updateItems() {
             var base = this, width, i;
 
             if (base.options.responsive === false) {
@@ -268,7 +268,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        response : function () {
+        response() {
             var base = this,
                 smallDelay,
                 lastWindowWidth;
@@ -332,7 +332,7 @@ if (typeof Object.create !== "function") {
             base.appendItemsSizes();
         },
 
-        calculateAll : function () {
+        calculateAll () {
             var base = this;
             base.calculateWidth();
             base.appendWrapperSizes();
@@ -340,7 +340,7 @@ if (typeof Object.create !== "function") {
             base.max();
         },
 
-        calculateWidth : function () {
+        calculateWidth() {
             var base = this;
             base.itemWidth = Math.round(base.$elem.width() / base.options.items);
         },
@@ -389,7 +389,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        buildControls : function () {
+        buildControls() {
             var base = this;
             if (base.options.navigation === true || base.options.pagination === true) {
                 base.owlControls = $("<div class=\"owl-controls\"/>").toggleClass("clickable", !base.browser.isTouch).appendTo(base.$elem);
@@ -449,7 +449,7 @@ if (typeof Object.create !== "function") {
             });
         },
 
-        updatePagination : function () {
+        updatePagination() {
             var base = this,
                 counter,
                 lastPage,
@@ -505,7 +505,7 @@ if (typeof Object.create !== "function") {
             });
         },
 
-        checkNavigation : function () {
+        checkNavigation() {
             var base = this;
 
             if (base.options.navigation === false) {
@@ -541,7 +541,7 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        destroyControls : function () {
+        destroyControls () {
             var base = this;
             if (base.owlControls) {
                 base.owlControls.remove();
