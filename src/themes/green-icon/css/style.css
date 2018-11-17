@@ -356,13 +356,13 @@ margin-top:120px;
 	overflow: visible;
 	margin-left: 0px !important;
 	padding-bottom: 10px !important;
-	padding-top: 10px !important;
+	padding-top: 10px ;
 }
 
 .menu-a
 {
 	font-size: 14px !important;
-	font-family: 'Raleway' !important;
+	font-family: 'Raleway';
   color: #2C99CD !important;
   padding-left: 10px !important;
   padding-bottom: 5px !important;
@@ -386,7 +386,7 @@ margin-top:120px;
 
 .menu-li:HOVER
 {
-	background-color: #77BB41 !important;
+	background-color: #77BB41;
 }
 
 .menu-a:HOVER
@@ -477,7 +477,7 @@ margin-top:120px;
 	}
 	.border-right-green-dotted
 	{
-		margin-top: 60px !important;
+		margin-top: 60px ;
 	}
 }
 
@@ -493,12 +493,12 @@ margin-top:120px;
 
    .menu-ul
 	{
-		margin-top: 0px !important;
+		margin-top: 0px ;
 	}
 
 	.menu-li-active
 	{
-		  background-color: white !important;
+		  background-color: white ;
 	}
 
 	.menu-a-active
@@ -577,7 +577,7 @@ margin-top:120px;
 
 	.featured-labs-main-div
 	{
-		margin-top: -35px !important;
+		margin-top: -35px ;
 	}
 }
 
@@ -1050,7 +1050,7 @@ font-size: 30px;
 
 	.banner-text-big
 	{
-		font-size: 1.2em !important;
+		font-size: 1.2em ;
 	}
 
 	.banner-text
