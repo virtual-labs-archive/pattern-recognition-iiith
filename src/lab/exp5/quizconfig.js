@@ -48,7 +48,7 @@ win2.document.open()
 win2.document.write("<title>Solution</title>")
 win2.document.write("<body bgcolor="#FFFFFF">")
 win2.document.write("<center><h3>Solution to Quiz</h3></center>")
-win2.document.write('<center><font face="Arial">')
+win2.document.write("<center><font face="Arial">")
 for (i=1;i<=totalquestions;i++){
 for (temp=0;temp<incorrect.length;temp++){
 if (i==incorrect[temp])
