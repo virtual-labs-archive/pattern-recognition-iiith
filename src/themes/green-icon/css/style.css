@@ -232,7 +232,7 @@ font-weight: bold;
 }
 .container-fluid form li .datepicker
 {
-	cursor:pointer !important;
+	cursor:pointer ;
 	float:left;
 	height:16px;
 	margin:.1em 5px 0 0;
@@ -363,7 +363,7 @@ margin-top:120px;
 {
 	font-size: 14px ;
 	font-family: 'Raleway';
-  color: #2C99CD !important;
+  color: #2C99CD ;
   padding-left: 10px !important;
   padding-bottom: 5px ;
   padding-top: 5px !important;
@@ -373,7 +373,7 @@ margin-top:120px;
 
 .menu-a-active
 {
-	color: white !important;
+	color: white ;
 }
 
 .menu-li
@@ -426,7 +426,7 @@ margin-top:120px;
 
 	.custom-toggle
 	{
-		margin-bottom: 0px !important;
+		margin-bottom: 0px ;
 		margin-top: 27px !important;
 	}
 }
@@ -508,7 +508,7 @@ margin-top:120px;
 
 	.search-ul
 	{
-		display: none !important;
+		display: none ;
 	}
 
 
@@ -533,7 +533,7 @@ margin-top:120px;
 
 	.banner-text-medium
 	{
-		font-size: 1.7em !important;
+		font-size: 1.7em ;
 	}
 
 	.banner-text-big
@@ -660,7 +660,7 @@ margin-top:120px;
 {
 	margin-left: 0px ;
 	margin-right: 0px ;
-	padding-left: 15px !important;
+	padding-left: 15px ;
 }
 .border-bottom-img
 {
@@ -697,7 +697,7 @@ margin-top:120px;
 }
 a:focus
 {
-	color: #72AB44 !important;
+	color: #72AB44 ;
 }
 
 .featured-labs
@@ -791,7 +791,7 @@ font-size: 30px;
 
 .nounderline:HOVER
 {
-	text-decoration: none !important;
+	text-decoration: none ;
 }
 .text-normal-gray-medium
 {
@@ -1006,7 +1006,7 @@ font-size: 30px;
 
 	.banner-text-big
 	{
-		font-size: 1.1em !important;
+		font-size: 1.1em ;
 	}
 
 	.banner-text
@@ -1040,7 +1040,7 @@ font-size: 30px;
 @media only screen and (min-width: 400px) and (max-width: 500px) {
 	.banner-text-small
 	 {
-		font-size: 0.9em !important;
+		font-size: 0.9em ;
   	 }
 
 	.banner-text-medium
@@ -1162,7 +1162,7 @@ font-size: 30px;
 @media only screen and (max-width: 767px) {
 	.banner-caption-div
 	{
-	  position: relative !important;
+	  position: relative ;
 	}
 }
 
