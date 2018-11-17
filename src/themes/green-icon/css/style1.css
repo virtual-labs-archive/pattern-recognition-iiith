@@ -113,11 +113,11 @@ a.active {
 {
 	font-size: 18px !important;
 	font-family: Calibri !important;
-  color: #2C99CD !important;
+  color: #2C99CD ;
   padding-left: 10px !important;
   padding-bottom: 5px ;
   padding-top: 5px !important;
-  padding-right: 10px !important;
+  padding-right: 10px ;
   
 }
 
@@ -141,7 +141,7 @@ a.active {
 
 .menu-a:HOVER
 {
-	color: white !important;	
+	color: white ;	
 }
 .menu-li-active
 {
@@ -177,7 +177,7 @@ a.active {
 	.custom-toggle
 	{
 		margin-bottom: 0px !important;
-		margin-top: 27px !important;
+		margin-top: 27px ;
 	}
 }
 
@@ -253,7 +253,7 @@ a.active {
 	
 	.menu-a-active
 	{
-		color: #2C99CE !important;
+		color: #2C99CE ;
 	}
 	
 	.search-ul
@@ -409,8 +409,8 @@ a.active {
 
 .featured-labs-div
 {
-	margin-left: 0px !important;
-	margin-right: 0px !important;
+	margin-left: 0px ;
+	margin-right: 0px ;
 	padding-left: 15px !important;
 }
 .border-bottom-img
@@ -426,7 +426,7 @@ a.active {
 
 .broad-labs-a:HOVER
 {
-	text-decoration: none !important;
+	text-decoration: none;
 
 }
 .col-md-2-5-1-l:HOVER, .col-md-2-5-1-withbg:HOVER
@@ -585,7 +585,7 @@ a:focus
   left: -45px;
   top: 55px; 
   position: absolute;
-   background: none !important;
+   background: none ;
 }
  
   #owl-partner-institutions .owl-controls .owl-buttons .owl-prev
@@ -655,7 +655,7 @@ a:focus
 }
 
 .sidebar-a:HOVER, .text-h3-darkblue:HOVER {
-	color: #ff6600 !important;
+	color: #ff6600 ;
 }
 
 .lab-list-row-div
@@ -834,7 +834,7 @@ a:focus
 @media only screen and (min-width: 501px) and (max-width: 767px) {
 	.banner-text-small
 	 {
-		font-size: 0.9em !important;
+		font-size: 0.9em ;
   	 }
 
 	.banner-text-medium
