@@ -361,13 +361,13 @@ margin-top:120px;
 
 .menu-a
 {
-	font-size: 14px !important;
+	font-size: 14px ;
 	font-family: 'Raleway';
   color: #2C99CD !important;
   padding-left: 10px !important;
-  padding-bottom: 5px !important;
+  padding-bottom: 5px ;
   padding-top: 5px !important;
-  padding-right: 10px !important;
+  padding-right: 10px ;
 
 }
 
@@ -466,7 +466,7 @@ margin-top:120px;
 
 	.featured-labs-div
 	{
-		background: none !important;
+		background: none ;
 	}
 }
 
@@ -503,7 +503,7 @@ margin-top:120px;
 
 	.menu-a-active
 	{
-		color: #2C99CE !important;
+		color: #2C99CE ;
 	}
 
 	.search-ul
@@ -658,8 +658,8 @@ margin-top:120px;
 
 .featured-labs-div
 {
-	margin-left: 0px !important;
-	margin-right: 0px !important;
+	margin-left: 0px ;
+	margin-right: 0px ;
 	padding-left: 15px !important;
 }
 .border-bottom-img
@@ -996,7 +996,7 @@ font-size: 30px;
 
 	.banner-text-small
 	 {
-		font-size: 0.8em !important;
+		font-size: 0.8em ;
   	 }
 
 	.banner-text-medium
