@@ -105,7 +105,7 @@ a.active {
 	height: auto;
 	overflow: visible;
 	margin-left: 0px !important;
-	padding-bottom: 10px !important;
+	padding-bottom: 10px ;
 	padding-top: 10px ;
 }
 
@@ -114,9 +114,9 @@ a.active {
 	font-size: 18px ;
 	font-family: Calibri ;
   color: #2C99CD ;
-  padding-left: 10px !important;
+  padding-left: 10px ;
   padding-bottom: 5px ;
-  padding-top: 5px !important;
+  padding-top: 5px ;
   padding-right: 10px ;
   
 }
@@ -258,7 +258,7 @@ a.active {
 	
 	.search-ul
 	{
-		display: none !important;
+		display: none ;
 	}
 	
 
@@ -801,7 +801,7 @@ a:focus
 
 	.banner-text-medium
 	{
-		font-size: 1.1em !important;
+		font-size: 1.1em ;
 	}
 	
 	.banner-text-big
