@@ -111,13 +111,13 @@ background: #FFF1AF;
 
 .container-fluid .calender  tbody td.hilite {
 padding: 1px 1px 1px 1px;
-background:#444 !important;
-color:#fff !important;
+background:#444 ;
+color:#fff ;
 }
 
 .container-fluid .calender  tbody td.active {
 color:#fff;
-background: #529214 !important;
+background: #529214 ;
 padding: 2px 2px 0px 2px;
 }
 
@@ -355,7 +355,7 @@ margin-top:120px;
 	height: auto;
 	overflow: visible;
 	margin-left: 0px !important;
-	padding-bottom: 10px !important;
+	padding-bottom: 10px ;
 	padding-top: 10px ;
 }
 
@@ -562,7 +562,7 @@ margin-top:120px;
 	}
 	.aboutus-col-8
 	{
-		padding-right: 15px !important;
+		padding-right: 15px;
 	}
 	.footer-div
 	{
@@ -1245,7 +1245,7 @@ font-size: 30px;
 
 	.banner-text-big
 	{
-		font-size: 2.0em !important;
+		font-size: 2.0em ;
 	}
 
 	.banner-text
