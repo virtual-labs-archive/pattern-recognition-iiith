@@ -12,7 +12,7 @@ var totalquestions=5
 var correctchoices=new Array()
 correctchoices[1]="a" //question 1 solution
 correctchoices[2]="a" //question 2 solution, and so on.
-correctchoices[3]='a'
+correctchoices[3]="a"
 correctchoices[4]="c"
 correctchoices[5]="e"
 
