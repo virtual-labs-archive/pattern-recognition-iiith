@@ -1,9 +1,3 @@
-/***********************************************
-* JavaScriptKit.com Multiple Choice Quiz Script (http://www.javascriptkit.com)
-* Copyright 2003 JavaScript Kit- http://www.javascriptkit.com
-* This notice and footnote must stay intact for use
-* Visit JavaScript Kit (http://www.javascriptkit.com/) for full source code
-***********************************************/
 
 //Enter total number of questions:
 var totalquestions=5
