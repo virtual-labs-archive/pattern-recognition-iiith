@@ -7,7 +7,11 @@
 
 //Enter total number of questions:
 var totalquestions=1
-var q
+var q=1
+var c=0
+var i=1
+var temp=0
+var actualchoices=new Array(200)
 //Enter the solutions corresponding to each question:
 var correctchoices=new Array()
 correctchoices[1]='b' //question 1 solution
@@ -19,25 +23,31 @@ var incorrect=null
 for (q=1;q<=totalquestions;q++){
 	var thequestion=eval("document.myquiz.question"+q)
 	for (c=0;c<thequestion.length;c++){
-		if (thequestion[c].checked==true)
+		if (thequestion[c].checked==true){
 		actualchoices[q]=thequestion[c].value
 		}
+	}
 		
 	if (actualchoices[q]!=correctchoices[q]){ //process an incorrect choice
-		if (incorrect==null)
+		if (incorrect==null){
 		incorrect=q
-		else
+		}
+		else{
 		incorrect+="/"+q
 		}
 	}
+	}
 
-if (incorrect==null)
+if (incorrect==null){
 incorrect="a/b"
+}
 document.cookie='q='+incorrect
-if (document.cookie=='')
+if (document.cookie==''){
 alert("Your browser does not accept cookies. Please adjust your browser settings.")
-else
+}
+	else{
 window.location="results.htm"
+}
 }
 
 
@@ -51,15 +61,17 @@ win2.document.write('<center><h3>Solution to Quiz</h3></center>')
 win2.document.write('<center><font face="Arial">')
 for (i=1;i<=totalquestions;i++){
 for (temp=0;temp<incorrect.length;temp++){
-if (i==incorrect[temp])
+if (i==incorrect[temp]){
 wrong=1
+}
 }
 if (wrong==1){
 win2.document.write("Question "+i+"="+correctchoices[i].fontcolor("red")+"<br>")
 wrong=0
 }
-else
+else{
 win2.document.write("Question "+i+"="+correctchoices[i]+"<br>")
+}
 }
 win2.document.write('</center></font>')
 win2.document.write("<h5>Note: The solutions in red are the ones to the questions you had incorrectly answered.</h5>")
