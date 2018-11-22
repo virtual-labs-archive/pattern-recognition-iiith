@@ -11,6 +11,7 @@ var q=1;
 var c=0;
 var i=1;
 var temp=0;
+var incorrect=null;
 var actualchoices=new Array(200);
 //Enter the solutions corresponding to each question:
 var correctchoices=new Array();
@@ -19,7 +20,7 @@ correctchoices[1]='b' //question 1 solution
 /////Don't edit beyond here//////////////////////////
 
 function gradeit(){
-var incorrect=null;
+
 for (q=1;q<=totalquestions;q++){
 	var thequestion=eval("document.myquiz.question"+q)
 	for (c=0;c<thequestion.length;c++){
@@ -38,7 +39,7 @@ for (q=1;q<=totalquestions;q++){
 	}
 	}
 
-if (incorrect==null){
+if (incorrect===null){
 incorrect="a/b"
 }
 document.cookie='q='+incorrect
