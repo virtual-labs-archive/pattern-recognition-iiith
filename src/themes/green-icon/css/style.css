@@ -356,19 +356,20 @@ margin-top:120px;
 	overflow: visible;
 	margin-left: 0px !important;
 	padding-bottom: 10px !important;
-	padding-top: 10px !important;
+	padding-top: 10px;
 }
 
 .menu-a
 {
 	font-size: 14px !important;
-	font-family: 'Raleway' !important;
-  color: #2C99CD !important;
-  padding-left: 10px !important;
+	font-family: 'Raleway';
+  color: #2C99CD;
+ /* padding-left: 10px !important;
   padding-bottom: 5px !important;
   padding-top: 5px !important;
   padding-right: 10px !important;
-
+*/
+	padding: 5px 10px;
 }
 
 .menu-a-active
@@ -391,7 +392,7 @@ margin-top:120px;
 
 .menu-a:HOVER
 {
-	color: white !important;
+	color: white;
 }
 .menu-li-active
 {
@@ -427,7 +428,7 @@ margin-top:120px;
 	.custom-toggle
 	{
 		margin-bottom: 0px !important;
-		margin-top: 27px !important;
+		margin-top: 27px;
 	}
 }
 
@@ -441,7 +442,7 @@ margin-top:120px;
 	.custom-toggle
 	{
 		margin-bottom: 0px !important;
-		margin-top: 12% !important;
+		margin-top: 12%;
 	}
 
 
@@ -493,22 +494,22 @@ margin-top:120px;
 
    .menu-ul
 	{
-		margin-top: 0px !important;
+		margin-top: 0px;
 	}
 
 	.menu-li-active
 	{
-		  background-color: white !important;
+		  background-color: white;
 	}
 
 	.menu-a-active
 	{
-		color: #2C99CE !important;
+		color: #2C99CE;
 	}
 
 	.search-ul
 	{
-		display: none !important;
+		display: none;
 	}
 
 
@@ -528,17 +529,17 @@ margin-top:120px;
 
 	.banner-text-small
 	 {
-		font-size: 1.2em !important;
+		font-size: 1.2em;
   	 }
 
 	.banner-text-medium
 	{
-		font-size: 1.7em !important;
+		font-size: 1.7em;
 	}
 
 	.banner-text-big
 	{
-		font-size: 2.0em !important;
+		font-size: 2.0em;
 	}
 
 }
@@ -577,7 +578,7 @@ margin-top:120px;
 
 	.featured-labs-main-div
 	{
-		margin-top: -35px !important;
+		margin-top: -35px;
 	}
 }
 
@@ -659,8 +660,8 @@ margin-top:120px;
 .featured-labs-div
 {
 	margin-left: 0px !important;
-	margin-right: 0px !important;
-	padding-left: 15px !important;
+	margin-right: 0px;
+	padding-left: 15px;
 }
 .border-bottom-img
 {
@@ -721,7 +722,7 @@ a:focus
 
 .text-a-lightgreen:HOVER
 {
-	color: #72AB44 !important;
+	color: #72AB44;
 }
 
 .text-a-white
@@ -826,7 +827,7 @@ font-size: 30px;
   margin-top: 2px;
 }
 
-//To move navigation buttons outside use these settings:
+/*To move navigation buttons outside use these settings:*/
 
 #owl-demo .owl-controls .owl-buttons div, #owl-partner-institutions .owl-controls .owl-buttons div{
   position: absolute;
@@ -844,14 +845,14 @@ font-size: 30px;
   	left: -45px;
   top: 20px;
   position: absolute;
-   background: none !important;
+   background: none;
   }
 
 #owl-demo .owl-controls .owl-buttons .owl-next{
   right: -45px;
   top: 55px;
   position: absolute;
-   background: none !important;
+   background: none;
 }
 
 #owl-partner-institutions .owl-controls .owl-buttons .owl-next
@@ -859,7 +860,7 @@ font-size: 30px;
 	 right: -45px;
   top: 20px;
   position: absolute;
-   background: none !important;
+   background: none;
 }
 
 #owl-demo .owl-controls .owl-pagination, #owl-partner-institutions .owl-controls .owl-pagination
@@ -1001,12 +1002,12 @@ font-size: 30px;
 
 	.banner-text-medium
 	{
-		font-size: 0.9em !important;
+		font-size: 0.9em;
 	}
 
 	.banner-text-big
 	{
-		font-size: 1.1em !important;
+		font-size: 1.1em;
 	}
 
 	.banner-text
@@ -1045,12 +1046,12 @@ font-size: 30px;
 
 	.banner-text-medium
 	{
-		font-size: 1.1em !important;
+		font-size: 1.1em;
 	}
 
 	.banner-text-big
 	{
-		font-size: 1.2em !important;
+		font-size: 1.2em;
 	}
 
 	.banner-text
@@ -1083,12 +1084,12 @@ font-size: 30px;
 
 	.banner-text-medium
 	{
-		font-size: 1.2em !important;
+		font-size: 1.2em;
 	}
 
 	.banner-text-big
 	{
-		font-size: 1.4em !important;
+		font-size: 1.4em;
 	}
 	.banner-text
 	{
@@ -1235,12 +1236,12 @@ font-size: 30px;
 
 	.banner-text-small
 	 {
-		font-size: 1.2em !important;
+		font-size: 1.2em;
   	 }
 
 	.banner-text-medium
 	{
-		font-size: 1.7em !important;
+		font-size: 1.7em;
 	}
 
 	.banner-text-big
