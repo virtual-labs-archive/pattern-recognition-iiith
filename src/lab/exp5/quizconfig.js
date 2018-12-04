@@ -17,7 +17,7 @@ correctchoices[1]="b" //question 1 solution
 function gradeit(){
 var incorrect=null
 for (q=1;q<=totalquestions;q++){
-	var thequestion=eval("document.myquiz.question"+q)
+	var thequestion=document.myquiz.question[q]
 	for (c=0;c<thequestion.length;c++){
 		if (thequestion[c].checked===true)
 		actualchoices[q]=thequestion[c].value
