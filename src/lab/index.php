@@ -8,9 +8,10 @@ $html = file_get_html('./content.html');
 		//$section = $_GET['section'];
 		//if(!isset($section))
 			//{$section="Introduction";}
-			
-			if(!isset($_GET["section"])) $section = "Introduction"; 
-			else $section = $_GET["section"];
+			if(!isset($_GET["section"],$_GET["section_nonce"])&& wp_verify_nonce( sanitize_key( $_GET["section_nonce"] ), "section_action" )) 
+$section = "Introduction";  
+else   
+$section = sanitize_text_field( wp_unslash( $_GET["section"])); 
         // Find all images
         $labheaderheading =$html->getElementById("lab-header-heading")->innertext;
         $labarticleheading =$html->getElementById("lab-article-heading")->innertext;
