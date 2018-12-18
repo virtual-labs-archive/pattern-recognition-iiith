@@ -62,7 +62,7 @@ define('DEFAULT_BR_TEXT', "\r\n");
 // -----------------------------------------------------------------------------
 // get html dom from file
 // $maxlen is defined in the code as PHP_STREAM_COPY_ALL which is defined as -1.
-function file_get_html($url, $use_include_path = false, $context=null, $offset = -1, $maxLen=-1, $lowercase = true, $forceTagsClosed=true, $target_charset = DEFAULT_TARGET_CHARSET, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT)
+function file_get_html($url, $use_include_path = false, $context=null, $offset = -1, $lowercase = true, $forceTagsClosed=true, $target_charset = DEFAULT_TARGET_CHARSET, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT)
 {
     // We DO force the tags to be terminated.
     $dom = new simple_html_dom(null, $lowercase, $forceTagsClosed, $target_charset, $defaultBRText);
@@ -93,7 +93,7 @@ function str_get_html($str, $lowercase=true, $forceTagsClosed=true, $target_char
 }
 
 // dump html dom tree
-function dump_html_tree($node, $show_attr=true, $deep=0)
+function dump_html_tree($node)
 {
     $node->dump($node);
 }
@@ -895,7 +895,7 @@ class simple_html_dom {
     }
 
     // prepare HTML data and init everything
-    protected function prepare($str, $lowercase=true, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT) {
+    protected function prepare($str, $lowercase=true, $stripRN=true) {
         $this->clear();
 
         // set the length of content before we do anything to it.
