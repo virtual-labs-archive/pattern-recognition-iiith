@@ -40,9 +40,9 @@ if (typeof Object.create !== "function") {
                 if (typeof base.options.jsonSuccess === "function") {
                     base.options.jsonSuccess.apply(this, [data]);
                 } else {
-                    for (i in data.owl) {
+                   data.owl.forEach(function(data.owl) {
                         if (data.owl.hasOwnProperty(i)) {
-                            content += data.owl[i].item;
+                            content += data.owl.item;
                         }
                     }
                     base.$elem.html(content);
@@ -207,7 +207,8 @@ if (typeof Object.create !== "function") {
             }
         },
 
-        updateItems : function () {
+        updateItems : function () 
+        {
             var base = this, width, i;
 
             if (base.options.responsive === false) {
@@ -233,9 +234,9 @@ if (typeof Object.create !== "function") {
                 //Reorder array by screen size
                 base.options.itemsCustom.sort(function (a, b) {return a[0] - b[0]; });
 
-                for (i = 0; i < base.options.itemsCustom.length; i += 1) {
-                    if (base.options.itemsCustom[i][0] <= width) {
-                        base.options.items = base.options.itemsCustom[i][1];
+                  base.options.itemsCustom.forEach(function(base.options.itemsCustom) 
+                    if (base.options.itemsCustom <= width) {
+                        base.options.items = base.options.itemsCustom;
                     }
                 }
 
@@ -266,7 +267,7 @@ if (typeof Object.create !== "function") {
             if (base.options.items > base.itemsAmount && base.options.itemsScaleUp === true) {
                 base.options.items = base.itemsAmount;
             }
-        },
+        };
 
         response : function () {
             var base = this,
@@ -379,10 +380,10 @@ if (typeof Object.create !== "function") {
                 base.positionsInArray.push(-elWidth);
 
                 if (base.options.scrollPerPage === true) {
-                    item = $(base.$owlItems[i]);
+                  item = $(base.$owlItems.getElementById(i));
                     roundPageNum = item.data("owl-roundPages");
                     if (roundPageNum !== prev) {
-                        base.pagesInArray[prev] = base.positionsInArray[i];
+                        base.pagesInArray.getElementById(prev) = base.positionsInArray.getElementById(i);
                         prev = roundPageNum;
                     }
                 }
@@ -612,15 +613,15 @@ if (typeof Object.create !== "function") {
             if (base.options.transitionStyle !== false && drag !== "drag" && base.options.items === 1 && base.browser.support3d === true) {
                 base.swapSpeed(0);
                 if (base.browser.support3d === true) {
-                    base.transition3d(base.positionsInArray[position]);
+                   base.transition3d(base.positionsInArray.getElementById(position));
                 } else {
-                    base.css2slide(base.positionsInArray[position], 1);
+                       base.transition3d(base.positionsInArray.getElementById(position));
                 }
                 base.afterGo();
                 base.singleItemTransition();
                 return false;
             }
-            goToPixel = base.positionsInArray[position];
+          goToPixel = base.positionsInArray.getElementById(position);
 
             if (base.browser.support3d === true) {
                 base.isCss3Finish = false;
