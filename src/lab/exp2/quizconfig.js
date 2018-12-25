@@ -78,7 +78,7 @@ win2.document.write('<title>Solution</title>')
 win2.document.write('<body bgcolor="#FFFFFF">')
 win2.document.write('<center><h3>Solution to Quiz</h3></center>')
 win2.document.write('<center><font face="Arial">')
-checkSolution(win2)
+checkSolution(win2);
 win2.document.write('</center></font>')
 win2.document.write("<h5>Note: The solutions in red are the ones to the questions you had incorrectly answered.</h5>")
 win2.document.close()
