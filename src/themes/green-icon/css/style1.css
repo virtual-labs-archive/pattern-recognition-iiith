@@ -114,7 +114,7 @@ a.active {
 	font-size: 18px !important;
 	font-family: Calibri !important;
   color: #2C99CD !important;
-	padding : 5px 10px !important;
+	padding : 5px 10px;
 }
 
 .menu-a-active
