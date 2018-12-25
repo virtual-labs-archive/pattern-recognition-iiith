@@ -15,42 +15,54 @@ correctchoices[2]='b' //question 2 solution, and so on.
 
 
 /////Don't edit beyond here//////////////////////////
+function checkChoice(incorrect,q)
+{
+	if (actualchoices[q]!==correctchoices[q])
+		{ 		//process an incorrect choice
+			if (incorrect===null)
+			{
+				incorrect=q
+			}
+			else{
+				incorrect+="/"+q
+			}
+		}
+	return incorrect;
+}
 function checkQuestions(incorrect)
 {
-	var q,c
-	for (q=1;q<=totalquestions;q++){
-	var thequestion=document.myquiz.question[q]
-	for (c=0;c<thequestion.length;c++){
-		if (thequestion[c].checked===true)
-			actualchoices[q]=thequestion[c].value
-		}
-		
-	if (actualchoices[q]!==correctchoices[q]){ //process an incorrect choice
-		if (incorrect==null)
-		incorrect=q
-		else
-		incorrect+="/"+q
-		}
+	var q,c;
+	for (q=1;q<=totalquestions;q++)
+	{
+		var thequestion=document.myquiz.question[q]
+		for (c=0;c<thequestion.length;c++)
+		{
+			if (thequestion[c].checked===true)
+				actualchoices[q]=thequestion[c].value
+		}	
+		incorrect=checkChoice(incorrect,q);
 	}
 	return incorrect;
-
 };
 
 function checkCookies()
 {
-	document.cookie='q='+incorrect
+	document.cookie='q='+incorrect;
 	if (document.cookie==='')
 		alert("Your browser does not accept cookies. Please adjust your browser settings.")
 	else
 		window.location="results.htm"
 };
 
-function gradeit(){
-var incorrect=null
-incorrect=checkQuestions(incorrect);
-if (incorrect==null)
-incorrect="a/b"
-checkCookies();
+function gradeit()
+{
+	var incorrect=null
+	incorrect=checkQuestions(incorrect);
+	if (incorrect===null)
+	{
+		incorrect="a/b"
+	}
+	checkCookies();
 }
 
 function checkWin2(win2)
@@ -58,15 +70,15 @@ function checkWin2(win2)
 	var i,temp,wrong;
 	for (i=1;i<=totalquestions;i++){
 		for (temp=0;temp<incorrect.length;temp++){
-			if (i==incorrect[temp])
-				wrong=1
+			if (i===incorrect[temp]){
+				wrong=1;}
 		}
-		if (wrong==1){
-			win2.document.write("Question "+i+"="+correctchoices[i].fontcolor("red")+"<br>")
-			wrong=0
+		if (wrong===1){
+			win2.document.write("Question "+i+"="+correctchoices[i].fontcolor("red")+"<br>");
+			wrong=0;
 		}
 		else
-			win2.document.write("Question "+i+"="+correctchoices[i]+"<br>")
+			win2.document.write("Question "+i+"="+correctchoices[i]+"<br>");
 	}
 }
 function showsolution(){
