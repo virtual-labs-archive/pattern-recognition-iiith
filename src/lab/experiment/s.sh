@@ -60,7 +60,7 @@ then
 	echo $archivename
 	tar -zcvf $archivename $archivefolder
 	#tar -zcvf "kaveri.tar.gz" "Exp"$c"/"
-	zip -r "Exp$c.zip" "Exp"$c"/"
+	zip -r "Exp$c.zip" "Exp$c/"
 	cd ../..
 fi
 done
