@@ -1,0 +1,4 @@
+# Feature Representation
+The respresentation of an object in computer plays the most critical role in our ability to distinguish it as a member of a class, and differentiate it from samples of other classes. In this experiment, we will carry out a sequence of tasks that reveals the nature of different features and its effect on the feature space representation. You will also be able to craft your own features and see how it affects the representation and the classification performance.
+
+Objects in real world are complex multi-dimensional entities, characterized by their shape, color, texture, weight, chemical and physical composition, etc. In a feature representation, each object is reduced to a specific set of measurements that the designer deems to be important for the purpose of solving the (classification) problem. In this experiment, we will explore the use of

@@ -1,0 +1,2 @@
+#Pattern Recognition Lab
+The present lab is aligned with courses such as Introduction to Data Structures, Data Structures in C/C++, and the like. The experiments touch on most topics covered in such courses in most curricula.
