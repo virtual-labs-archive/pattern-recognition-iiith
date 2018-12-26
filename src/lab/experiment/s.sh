@@ -20,7 +20,7 @@ then
 		#ls
 		cd ../..
 	else	
-		if [ `ls -A "compressed_files/"$c` ]
+		if [ $(ls -A "compressed_files/"$c) ]
 		then 	
 			echo "not empty, deleting your files in the location"
 		fi
