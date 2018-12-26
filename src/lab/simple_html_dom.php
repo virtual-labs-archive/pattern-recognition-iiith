@@ -913,7 +913,7 @@ class simple_html_dom {
         $this->noise = array();
         $this->nodes = array();
         $this->lowercase = $lowercase;
-        $this->default_br_text = $defaultBRText;
+       
         $this->root = new simple_html_dom_node($this);
         $this->root->tag = 'root';
         $this->root->_[HDOM_INFO_BEGIN] = -1;
