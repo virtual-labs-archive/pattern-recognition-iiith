@@ -18,7 +18,7 @@ body
 #container
 {
 	margin:0 auto;
-	padding:0
+	padding:0;
 	width:100%;	
 }
 
@@ -30,7 +30,7 @@ body
 
 #lab-header-logo, #experiment-header-logo
 {
-	
+	/*some code......*/
 }
 
 #lab-header-logo img, #experiment-header-logo img
@@ -201,7 +201,7 @@ nav#lab-article-navigation ul li a:focus, nav#experiment-article-navigation ul l
 	text-decoration: underline;
 	color: #961b25;/* dusty read */
 }
-.content img
+.content img ,pre
 {
 	/*width:800px;
 	height:400px;*/
@@ -209,11 +209,11 @@ nav#lab-article-navigation ul li a:focus, nav#experiment-article-navigation ul l
 	padding-bottom:10px;
 }
 
-.content pre
+/*.content pre
 {
 	padding-left:40px;
 	padding-bottom:10px;
-}
+}*/
 .content embed
 {
 	width:800px;
@@ -232,10 +232,26 @@ nav#lab-article-navigation ul li a:focus, nav#experiment-article-navigation ul l
 	background: -webkit-gradient(linear, left top, left bottom, 
 	                              from(#faa51a), to(#f47a20));
 	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	display: inline-block;
+  	outline: none;
+  	font-size: 16px;
+  	cursor: pointer;
+  	text-align: center;
+  	text-decoration: none;
+  	line-height: 100%;
+  	padding: .55em 2em .55em;
+  	text-transform: uppercase;
+  	-webkit-border-radius: 0.5em;
+  	-moz-border-radius: 0.5em;
+  	border-radius: 0.5em;
+  	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  	box-shadow: 0 1px 2px rgba(0,0,0,.2);
   
 }
 .button:hover 
 {
+	text-decoration: none;
 	background: #f47c20;
 	background: -webkit-gradient(linear, left top, left bottom, 
 	                              from(#f88e11), to(#f06015));
@@ -245,13 +261,15 @@ nav#lab-article-navigation ul li a:focus, nav#experiment-article-navigation ul l
 
 .button:active 
 {
+	position: relative;
+  	top: 1px;
 	background: -webkit-gradient(linear, left top, left bottom, 
                               from(#f47a20), to(#faa51a));
     background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 }
  
 /* basic styles for button size, padding, etc. */
-.button 
+/*.button 
 {
 	display: inline-block;
   	outline: none;
@@ -278,7 +296,7 @@ nav#lab-article-navigation ul li a:focus, nav#experiment-article-navigation ul l
 	position: relative;
   	top: 1px;
 }
-
+*/
 
 .content table
 {

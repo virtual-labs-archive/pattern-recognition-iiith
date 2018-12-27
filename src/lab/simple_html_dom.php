@@ -62,7 +62,7 @@ define('DEFAULT_BR_TEXT', "\r\n");
 // -----------------------------------------------------------------------------
 // get html dom from file
 // $maxlen is defined in the code as PHP_STREAM_COPY_ALL which is defined as -1.
-function file_get_html($url, $use_include_path = false, $context=null, $offset = -1, $maxLen=-1, $lowercase = true, $forceTagsClosed=true, $target_charset = DEFAULT_TARGET_CHARSET, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT)
+function file_get_html($url, $use_include_path = false, $context=null, $offset = -1, $lowercase = true, $forceTagsClosed=true, $target_charset = DEFAULT_TARGET_CHARSET, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT)
 {
     // We DO force the tags to be terminated.
     $dom = new simple_html_dom(null, $lowercase, $forceTagsClosed, $target_charset, $defaultBRText);
@@ -93,7 +93,7 @@ function str_get_html($str, $lowercase=true, $forceTagsClosed=true, $target_char
 }
 
 // dump html dom tree
-function dump_html_tree($node, $show_attr=true, $deep=0)
+function dump_html_tree($node)
 {
     $node->dump($node);
 }
@@ -150,7 +150,7 @@ class simple_html_dom_node {
         if ($show_attr && count($this->attr)>0)
         {
             echo '(';
-            foreach ($this->attr as $k=>$v)
+            foreach ($this->attr as $k)
                 echo "[$k]=>\"".$this->$k.'", ';
             echo ')';
         }
@@ -814,7 +814,7 @@ class simple_html_dom {
 
     // load html from string
     function load($str, $lowercase=true, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT) {
-        global $debugObject;
+        
 
         // prepare
         $this->prepare($str, $lowercase, $stripRN, $defaultBRText);
@@ -895,7 +895,7 @@ class simple_html_dom {
     }
 
     // prepare HTML data and init everything
-    protected function prepare($str, $lowercase=true, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT) {
+    protected function prepare($str, $lowercase=true, $stripRN=true) {
         $this->clear();
 
         // set the length of content before we do anything to it.
@@ -913,7 +913,7 @@ class simple_html_dom {
         $this->noise = array();
         $this->nodes = array();
         $this->lowercase = $lowercase;
-        $this->default_br_text = $defaultBRText;
+       
         $this->root = new simple_html_dom_node($this);
         $this->root->tag = 'root';
         $this->root->_[HDOM_INFO_BEGIN] = -1;
@@ -962,7 +962,7 @@ class simple_html_dom {
             if (!empty($el))
             {
                 $fullvalue = $el->content;
-                if (is_object($debugObject)) {$debugObject->debugLog(2, 'meta content-type tag found' . $fullValue);}
+                if (is_object($debugObject)) {$debugObject->debugLog(2, 'meta content-type tag found');}
 
                 if (!empty($fullvalue))
                 {
@@ -985,7 +985,7 @@ class simple_html_dom {
         if (empty($charset))
         {
             // Have php try to detect the encoding from the text given to us.
-            $charset = mb_detect_encoding($this->root->plaintext . "ascii", $encoding_list = array( "UTF-8", "CP1252" ) );
+            $charset = mb_detect_encoding($this->root->plaintext . "ascii");
             if (is_object($debugObject)) {$debugObject->debugLog(2, 'mb_detect found: ' . $charset);}
 
             // and if this doesn't work...  then we need to just wrongheadedly assume it's UTF-8 so that we can move on - cause this will usually give us most of what we need...
