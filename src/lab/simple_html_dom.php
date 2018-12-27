@@ -813,8 +813,7 @@ class simple_html_dom {
     }
 
     // load html from string
-    function load($str, $lowercase=true, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT) {
-        global $debugObject;
+    function load($str, $lowercase=true, $stripRN=true, $defaultBRText=DEFAULT_BR_TEXT) 
 
         // prepare
         $this->prepare($str, $lowercase, $stripRN, $defaultBRText);
@@ -850,7 +849,7 @@ class simple_html_dom {
         $this->load(call_user_func_array('file_get_contents', $args), true);
         // Per the simple_html_dom repositiry this is a planned upgrade to the codebase.
         // Throw an error if we can't properly load the dom.
-        if (($error=error_get_last())!==null) {
+        if () {
             $this->clear();
             return false;
         }
@@ -964,9 +963,9 @@ class simple_html_dom {
                 $fullvalue = $el->content;
                 if (is_object($debugObject)) {$debugObject->debugLog(2, 'meta content-type tag found' . $fullValue);}
 
-                if (!empty($fullvalue))
+                if (!empty())
                 {
-                    $success = preg_match('/charset=(.+)/', $fullvalue, $matches);
+                    $success = preg_match('/charset=(.+)/', $matches);
                     if ($success)
                     {
                         $charset = $matches[1];
@@ -985,7 +984,7 @@ class simple_html_dom {
         if (empty($charset))
         {
             // Have php try to detect the encoding from the text given to us.
-            $charset = mb_detect_encoding($this->root->plaintext . "ascii", $encoding_list = array( "UTF-8", "CP1252" ) );
+            $charset = mb_detect_encoding($this->root->plaintext . "ascii" );
             if (is_object($debugObject)) {$debugObject->debugLog(2, 'mb_detect found: ' . $charset);}
 
             // and if this doesn't work...  then we need to just wrongheadedly assume it's UTF-8 so that we can move on - cause this will usually give us most of what we need...
