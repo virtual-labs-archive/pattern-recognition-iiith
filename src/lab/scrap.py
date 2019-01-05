@@ -6,7 +6,6 @@ def writefile(fname,s,s1,heading):
 	f=open(fname, 'w+')
 	f.write(template)
 	f.seek(0)
-	
 	content = f.read()
 	content=content.replace('Disciplines and Domains',breadcrumb)
 	f.seek(0)
@@ -15,7 +14,6 @@ def writefile(fname,s,s1,heading):
 	f.seek(0)
 	content=f.read()
 	k=content.index('<div class="col-md-10 lab-list-col-10">')
-	
 	t1=content.index('<!--edit1-->')
 	print t1
 	f.seek(t1+13)
@@ -84,19 +82,16 @@ while sectionNumber<=len(sectionno):
 		tag1='Prerequisites'
 	att ='lab-article-section-'+str(sectionNumber)+'-content'
 	tagger = soup.findAll('div', attrs={'id':att,'class':'content'})
-	
 	tag+=str(tagger[0])
 	tag=tag.replace('<div class="content" id="'+att+'">','<div>')
 	#print tag
 	#print st
-	
 	writefile(tag1+'.html',tag,st,heading)
 	#print sectionNumber
 	sectionNumber=sectionNumber+1
 f=open("Feedback.html",'w+')
 f.write(template)
 f.seek(0)
-	
 content = f.read()
 content=content.replace('Disciplines and Domains',breadcrumb)
 f.seek(0)
@@ -105,7 +100,6 @@ f.write(content)
 f.seek(0)
 content=f.read()
 k=content.index('<div class="col-md-10 lab-list-col-10">')
-	
 t1=content.index('<!--edit1-->')
 print t1
 f.seek(t1+13)
