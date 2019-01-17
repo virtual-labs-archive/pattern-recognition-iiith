@@ -89,7 +89,7 @@
 	<!-- Write the name of your lab and link it to the home 
 	page of your lab (h1 tag is preferred while writing your 
 			lab name)-->
-	<a href="<?php echo $lab_url?>"> <?php echo $labheaderheading?></a>	
+	<a href="<?php echo esc_url($lab_url)?>"> <?php echo esc_html($labheaderheading)?></a>	
 	</div>
 
 	<!-- Add any additional element you want to add to the lab 
@@ -103,7 +103,7 @@
 	experiment content sits-->
 	<article id="experiment-article">
 
-	<div class="breadcrumb" id="experiment-article-breadcrumb"><a href="<?php echo esc_url( $vlab_url )?>">Home</a><a></a> &gt; <a href="<?php echo $lab_url?>">Pattern Recognition Lab</a>    </div>
+	<div class="breadcrumb" id="experiment-article-breadcrumb"><a href="<?php echo esc_url( $vlab_url )?>">Home</a><a></a> &gt; <a href="<?php echo esc_url($lab_url)?>">Pattern Recognition Lab</a>    </div>
 	  
 	<!-- The lab article has an header, optional navigational 
 	menu, number of sections, an optional sidebar and a closing 
