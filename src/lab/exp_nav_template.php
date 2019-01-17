@@ -12,9 +12,9 @@
           	<?php foreach ($nav as $n) {?>
 		        <li> <a href="http://localhost/xampp/vlab/index.php?section= <?php $n['heading']; ?> ">
 			<!-- Enclose the icon image of your lab -->
-				<?php echo $n['img']?> 
+				<?php echo esc_html($n['img'])?> 
 			<br>
-			<?php echo $n['heading']?>
+			<?php echo esc_html($n['heading'])?>
 			 </a></li>
 			<?php }?>
 	
