@@ -55,7 +55,7 @@ else
 {
 	if(nooptionselected == 5)
 	{
-		alert("Please enter all options before submitting !!!")
+		alert("Please enter the answer for all questions before submitting !!!")
 	}
 	else
 	window.location="results.htm"
