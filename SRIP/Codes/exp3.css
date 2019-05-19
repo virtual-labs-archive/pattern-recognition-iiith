@@ -1,0 +1,26 @@
+.box{
+	width: 8%;
+	float:left;
+	margin: 0px;
+	text-align: center;
+	min-height: 380px;
+    position:relative;
+}
+button{
+        position: absolute;
+        bottom: 10px;
+        left:5%;
+        right:5%;
+
+}
+#container{
+	width: 90%;
+	margin: auto;
+}
+
+p1{
+	width: 30px;
+  	border: 1px gray;
+  	padding: 50px;
+  	margin: 20px;
+}
