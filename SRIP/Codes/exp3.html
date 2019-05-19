@@ -1,57 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="exp3.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	<link rel="stylesheet" href="exp3.css">
 </head>
-
 <body>
 
-<h2> Add Data</h2>
-<section id="container">
-	<div class="box">
-		<button>Add Class</button>
+
+<!-- Graphs Layout -->
+<div class="row">           
+	<div class="graph">
+		<canvas id="graph1" width="1600" height="900"></canvas>
 	</div>
-	<div class="box">
-			<button>Add Class</button>
+	  
+	<div class="graph">
 	</div>
-	<div class="box">
-		<button>Clear</button>
+</div>
+
+
+<!-- 1st row Input Output Layout -->
+<div class="row">
+  	<div class="column0 side">
+	    <h3>Add Data</h3>
+	    <div class="w3-container">
+	  		<input type="button" class="w3-button w3-black" value="Add Class">
+	  		<button class="button">Add Class</button>
+			<button class="button">Clear</button>
+		</div>
+  	</div>
+  
+  	<div class="column0 side">
+    <h3>Steps</h3>
+	    <div class="w3-container">
+	  		<input type="button" class="w3-button w3-black" value="Start">
+	  		<button class="button">Step</button>
+			<button class="button">Step 100</button>
+		</div>
+  	</div>
+  
+  	<div class="column0 right">
+    	<h3>Learning Parameter</h3>
+    	<select>
+  			<option value="1">1</option>
+  			<option value="1/k">1/k</option>
+  			<option value="1/k^2">1/k^2</option>
+  			<option value="1/2^k">1/2^k</option>
+  			<option value="k">k</option>
+		</select>
 	</div>
-</section>
+</div>
 
 
-<h2> Steps </h2>
-<section id="container">
-	<div class="box">
-		<button>Start</button>
+<!-- 2nd row Input Output Layout -->
+<div class="row">
+	<div class="column1">
+		<h3>Status</h3>
+		<p> Status </p>
 	</div>
-	<div class="box">
-			<button>Step</button>
+	  
+	<div class="column1">
+		<h3>Value of a</h3>
+	    <p>[]</p>
 	</div>
-	<div class="box">
-		<button>Step 100</button>
-	</div>
-</section>
+</div>
 
-
-
-
-<p1 class="lp">
-<p>Learning Parameter</p>
-<form id="myForm">
-<select id="learningParameter">
-  <option>1</option>
-  <option>1/k</option>
-  <option>1/k^2</option>
-  <option>1/2^k</option>
-  <option>k</option>
-</select>
-</form>
-</p1>
-
-<script>
-document.getElementById("demo").innerHTML = document.getElementById("learningParameter").form.id;
-</script>
+<!-- Script file -->
+<script src="exp3.js"></script>
 
 </body>
 </html>

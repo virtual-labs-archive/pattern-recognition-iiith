@@ -1,26 +1,72 @@
-.box{
-	width: 8%;
-	float:left;
-	margin: 0px;
-	text-align: center;
-	min-height: 380px;
-    position:relative;
-}
-button{
-        position: absolute;
-        bottom: 10px;
-        left:5%;
-        right:5%;
-
-}
-#container{
-	width: 90%;
-	margin: auto;
+* {
+  box-sizing: border-box;
 }
 
-p1{
-	width: 30px;
-  	border: 1px gray;
-  	padding: 50px;
-  	margin: 20px;
+body {
+  margin: 0;
+}
+
+/*Graphs Layout */
+.graph {
+  float: left;
+  width: 50%;
+  padding: 15px;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) {
+  .graph {
+    width: 100%;
+  }
+}
+
+/* 1st row Input Output Layout */
+.column0 {
+  float: left;
+  padding: 10px;
+}
+
+.column0.side {
+  width: 37.5%;
+}
+
+.column0.right {
+  width: 25%;
+}
+
+@media screen and (max-width: 600px) {
+  .column0.side, .column0.right {
+    width: 100%;
+  }
+}
+
+.button{
+	margin:5px;
+}
+
+
+/* 2nd row Input Output Layout */
+.column1 {
+  float: left;
+  width: 37.5%;
+  padding: 15px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width:600px) {
+  .column1 {
+    width: 100%;
+  }
 }
