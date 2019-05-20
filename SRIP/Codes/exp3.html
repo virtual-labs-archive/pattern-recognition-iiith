@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Pattern Recognition: Experiment 3- Perceptron</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -16,6 +17,7 @@
 	</div>
 	  
 	<div class="graph">
+		<canvas id="graph2" width="1600" height="900"></canvas>
 	</div>
 </div>
 
@@ -25,18 +27,19 @@
   	<div class="column0 side">
 	    <h3>Add Data</h3>
 	    <div class="w3-container">
-	  		<input type="button" class="w3-button w3-black" value="Add Class">
 	  		<button class="button">Add Class</button>
-			<button class="button">Clear</button>
+	  		<button class="button">Add Class</button>
+			<button class="button" onclick="changeStatusClear()">Clear</button>
 		</div>
   	</div>
   
   	<div class="column0 side">
     <h3>Steps</h3>
 	    <div class="w3-container">
-	  		<input type="button" class="w3-button w3-black" value="Start">
-	  		<button class="button">Step</button>
-			<button class="button">Step 100</button>
+	  		<button class="button" id ="Start" onclick="start()">Start</button>
+
+	  		<button class="button" id = "Step" onclick="changeStatusStep()">Step</button>
+			<button class="button" id = "Step100" onclick="changeStatusStep100()">Step 100</button>
 		</div>
   	</div>
   
@@ -57,7 +60,8 @@
 <div class="row">
 	<div class="column1">
 		<h3>Status</h3>
-		<p> Status </p>
+		<div id="column1"></div>
+		<div id="column2"></div>
 	</div>
 	  
 	<div class="column1">
