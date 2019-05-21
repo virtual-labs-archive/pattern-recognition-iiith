@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<title>Pattern Recognition: Experiment 3- Perceptron</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,37 +14,37 @@
 <!-- Graphs Layout -->
 <div class="row">           
 	<div class="graph">
-		<canvas id="graph1" width="1600" height="900"></canvas>
+		<canvas id="graph-1" width="1600" height="900"></canvas>
 	</div>
 	  
 	<div class="graph">
-		<canvas id="graph2" width="1600" height="900"></canvas>
+		<canvas id="graph-2" width="1600" height="900"></canvas>
 	</div>
 </div>
 
 
 <!-- 1st row Input Output Layout -->
 <div class="row">
-  	<div class="column0 side">
+  	<div class="column-0 side">
 	    <h3>Add Data</h3>
 	    <div class="w3-container">
-	  		<button class="button">Add Class</button>
-	  		<button class="button">Add Class</button>
+	  		<button class="button" onclick="addClass1()">Add Class 1</button>
+	  		<button class="button" onclick="addClass2()">Add Class 2</button>
 			<button class="button" onclick="changeStatusClear()">Clear</button>
 		</div>
   	</div>
   
-  	<div class="column0 side">
+  	<div class="column-0 side">
     <h3>Steps</h3>
 	    <div class="w3-container">
-	  		<button class="button" id ="Start" onclick="start()">Start</button>
+	  		<button class="button" id ="start" onclick="start()">Start</button>
 
-	  		<button class="button" id = "Step" onclick="changeStatusStep()">Step</button>
-			<button class="button" id = "Step100" onclick="changeStatusStep100()">Step 100</button>
+	  		<button class="button" id = "step" onclick="changeStatusStep()">Step</button>
+			<button class="button" id = "step-100" onclick="changeStatusStep100()">Step 100</button>
 		</div>
   	</div>
   
-  	<div class="column0 right">
+  	<div class="column-0 right">
     	<h3>Learning Parameter</h3>
     	<select>
   			<option value="1">1</option>
@@ -58,17 +59,32 @@
 
 <!-- 2nd row Input Output Layout -->
 <div class="row">
-	<div class="column1">
+	<div class="column-1">
 		<h3>Status</h3>
-		<div id="column1"></div>
-		<div id="column2"></div>
+		<div id="column-1"></div>
+		<div id="column-2"></div>
 	</div>
 	  
-	<div class="column1">
+	<div class="column-1">
 		<h3>Value of a</h3>
 	    <p>[]</p>
 	</div>
 </div>
+
+
+<div class="row">
+	<div class= column-1 id="input-data-from-user-class1">
+		X Value:
+    	<input id="xValue" type="number" step="any" placeholder="Enter X-Value class 1">
+    	<button id="renderButton">Add DataPoint</button>
+    </div>
+    <div class= column-1 id="input-data-from-user-class2">
+		X Value:
+    	<input id="xValue" type="number" step="any" placeholder="Enter X-Value class 2">
+    	<button id="renderButton">Add DataPoint</button>
+    </div>
+</div>
+
 
 <!-- Script file -->
 <script src="exp3.js"></script>
