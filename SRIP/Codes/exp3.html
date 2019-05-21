@@ -5,10 +5,11 @@
 	<title>Pattern Recognition: Experiment 3- Perceptron</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+   	<script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 	<link rel="stylesheet" href="exp3.css">
 </head>
-<body>
+<body> 
 
 
 <!-- Graphs Layout -->
@@ -74,20 +75,20 @@
 
 <div class="row">
 	<div class= column-1 id="input-data-from-user-class1">
-		X Value:
+		X Value- Class 1:
     	<input id="xValue" type="number" step="any" placeholder="Enter X-Value class 1">
-    	<button id="renderButton">Add DataPoint</button>
+    	<button id="addButton" onclick="addDataPoints()">Add DataPoint</button>
     </div>
-    <div class= column-1 id="input-data-from-user-class2">
-		X Value:
+    <!--<div class= column-1 id="input-data-from-user-class2">
+		X Value- Class 2:
     	<input id="xValue" type="number" step="any" placeholder="Enter X-Value class 2">
-    	<button id="renderButton">Add DataPoint</button>
-    </div>
+    	<button id="renderButton" onclick="addDataPoint()">Add DataPoint</button>
+    </div>-->
 </div>
 
 
 <!-- Script file -->
-<script src="exp3.js"></script>
+<script type="text/javascript" src="exp3.js"></script>
 
 </body>
 </html>
