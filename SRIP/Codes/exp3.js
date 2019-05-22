@@ -1,7 +1,11 @@
 /*Creating Graph 1*/
 var color = Chart.helpers.color;
 var xaxis = [-1.00, -0.75, -0.50, -0.25, 0.00, 0.25, 0.50, 0.75, 1.00];
+var data1=[]; //for class 1
+var data2=[]; //for class 2
 
+
+//Initializing the graph
 function generateData() {
 	var data = [];
 	data.push({
@@ -11,16 +15,26 @@ function generateData() {
 	return data;
 }
 
-
-function addDataPoints() {
-	var data=[];
+//Manually adding data points for class 1
+function addDataPoints1() {
     xValue = Number(document.getElementById("xValue").value);
-    data.push({
+    data1.push({
         x: xValue,
     });
-	return data;
-
+    console.log(data1); //Ctrl+Shift+J
+	return data1; //seeing the output in console window
 }
+
+//Manually adding data points for class 2
+function addDataPoints2() {
+    xValue = Number(document.getElementById("xValue").value);
+    data2.push({
+        x: xValue,
+    });
+    console.log(data2); //Ctrl+Shift+J
+	return data2; //seeing the output in console window
+}
+
 
 var myChart1 = {
 	datasets: [{
@@ -45,42 +59,27 @@ window.onload = function(){
 	})
 }
 
-document.getElementById('addButton').addEventListener('click', function() {
+document.getElementById('add-Data-Point').addEventListener('click', function() {
 	myChart1.datasets.forEach(function(dataset) {
-	dataset.data = dataset.data.map(function() {
-	return {
-			x: randomScalingFactor(),
-			y: '0'
-			};
-		});
+	dataset.data.push(data1);
 	});
-	window.myScatter.update();
+	window.myScatter.update()
 });
 
 
 
 
 
-
-
+//after clicking Add Class 1 button, Add Data Point button is made visible
 function addClass1(){
 	document.getElementById("input-data-from-user-class1").style.visibility="visible";
 }
 
+//after clicking Add Class 2 button, Add Data Point button is made visible
 function addClass2(){
 	document.getElementById("input-data-from-user-class2").style.visibility="visible";
 }
 
-
-function addDataPoints() {
-    xValue = Number(document.getElementById("xValue").value);
-    dps.push({
-        x: xValue,
-    });
-	myChart1.destroy();
-	myChart1 = new Chart(ctx, { type: 'scatter', dataset: dps});
-
-}
 
 
 /*Creating Graph 2 */ 
@@ -95,13 +94,13 @@ var myChart2 = new Chart(ctx, {
 });
 
 
+
 /* On clicking the Start button*/
 function start(){
 	document.getElementById('step').style.visibility="visible";
 	document.getElementById('step-100').style.visibility="visible";
-
-	
 }
+
 
 /* On clicking the Step button*/
 function changeStatusStep(){
@@ -110,6 +109,7 @@ function changeStatusStep(){
 	document.getElementById('step-100').style.visibility="hidden";
 }
 
+
 /* On clicking the Step100 button*/
 function changeStatusStep100(){
 	document.getElementById("column-2").innerHTML = "Classes Separated, iterations:2";
@@ -117,12 +117,16 @@ function changeStatusStep100(){
 	document.getElementById('step-100').style.visibility="hidden";
 }
 
+
 /* On clicking the Clear button*/
-function changeStatusClear(){
+function Clear(){
 	document.getElementById("column-1").innerHTML = "";
 	document.getElementById("column-2").innerHTML = "";
 	document.getElementById("input-data-from-user-class1").style.visibility="hidden";
 	document.getElementById("input-data-from-user-class2").style.visibility="hidden";
-	myChart1.reset();
+	data1 = [];
+	data2 = [];
+	console.log(data1);
+	console.log(data2);
 }
 
