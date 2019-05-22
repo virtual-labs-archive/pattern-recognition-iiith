@@ -1,6 +1,7 @@
 /*Creating Graph 1*/
 var color = Chart.helpers.color;
 var xaxis = [-1.00, -0.75, -0.50, -0.25, 0.00, 0.25, 0.50, 0.75, 1.00];
+var finaldata = [];  //dataset for Perceptron
 var data1=[]; //for class 1
 var data2=[]; //for class 2
 
@@ -17,9 +18,13 @@ function generateData() {
 
 //Manually adding data points for class 1
 function addDataPoints1() {
-    xValue = Number(document.getElementById("xValue").value);
+    xValue1 = Number(document.getElementById("xValue1").value);
+    finaldata.push({
+        x: xValue1,
+    });
+    console.log(finaldata);
     data1.push({
-        x: xValue,
+        x: xValue1,
     });
     console.log(data1); //Ctrl+Shift+J
 	return data1; //seeing the output in console window
@@ -27,9 +32,13 @@ function addDataPoints1() {
 
 //Manually adding data points for class 2
 function addDataPoints2() {
-    xValue = Number(document.getElementById("xValue").value);
+    xValue2 = Number(document.getElementById("xValue2").value);
+    finaldata.push({
+        x: xValue2,
+    });
+    console.log(finaldata);
     data2.push({
-        x: xValue,
+        x: xValue2,
     });
     console.log(data2); //Ctrl+Shift+J
 	return data2; //seeing the output in console window
@@ -37,37 +46,35 @@ function addDataPoints2() {
 
 
 var myChart1 = {
-	datasets: [{
-		label: 'Class 1',
-				borderColor: window.chartColors.red,
-				backgroundColor: color(window.chartColors.red).alpha(0.2).rgbString(),
-				data: generateData()
-			}, {
-				label: 'Class 2',
-				borderColor: window.chartColors.blue,
-				backgroundColor: color(window.chartColors.blue).alpha(0.2).rgbString(),
-				data: generateData()
-	}]  
+	type: 'scatter',
+	data:{
+		datasets: [{
+			label: 'Class 1',
+			backgroundColor: window.chartColors.red,
+			borderColor: window.chartColors.red,
+			data: generateData()
+		}, {
+			label: 'Class 2',
+			backgroundColor: window.chartColors.blue,
+			borderColor: window.chartColors.blue,
+			data: generateData()
+		}]  
+	}
 };
 
 
 window.onload = function(){
-	var ctx = document.getElementById("graph-1");
-	window.myScatter = Chart.Scatter(ctx, {
-		label: xaxis,
-		data: myChart1
-	})
+	var ctx = document.getElementById("graph-1").getContext('2d');
+	window.myScatter = new Chart(ctx, myChart1);
 }
 
-document.getElementById('add-Data-Point').addEventListener('click', function() {
-	myChart1.datasets.forEach(function(dataset) {
+/*document.getElementById('add-Data-Point').addEventListener('click', function() {
+	myChart1.data.datasets.forEach(function(dataset) {
 	dataset.data.push(data1);
 	});
-	window.myScatter.update()
-});
-
-
-
+	window.myScatter.update();
+	
+});*/
 
 
 //after clicking Add Class 1 button, Add Data Point button is made visible
@@ -82,7 +89,7 @@ function addClass2(){
 
 
 
-/*Creating Graph 2 */ 
+/*Creating Graph 2*/  
 var ctx = document.getElementById("graph-2");
 var myChart2 = new Chart(ctx, {
 	type: 'scatter',
@@ -92,6 +99,16 @@ var myChart2 = new Chart(ctx, {
   	}
   
 });
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -119,14 +136,17 @@ function changeStatusStep100(){
 
 
 /* On clicking the Clear button*/
-function Clear(){
+document.getElementById('clear').addEventListener('click', function() {
 	document.getElementById("column-1").innerHTML = "";
 	document.getElementById("column-2").innerHTML = "";
 	document.getElementById("input-data-from-user-class1").style.visibility="hidden";
 	document.getElementById("input-data-from-user-class2").style.visibility="hidden";
 	data1 = [];
 	data2 = [];
+	finaldata = [];
 	console.log(data1);
 	console.log(data2);
-}
+	console.log(finaldata);
+	window.myScatter.reset();
+})
 
