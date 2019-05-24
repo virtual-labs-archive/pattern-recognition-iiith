@@ -1,9 +1,14 @@
-/*Creating Graph 1*/
 var color = Chart.helpers.color;
 var xaxis = [-1.00, -0.75, -0.50, -0.25, 0.00, 0.25, 0.50, 0.75, 1.00];
-var finaldata = [];  //dataset for Perceptron
+var finaldata = {};  //dataset for Perceptron
 var data1=[]; //for class 1
+var count1=0; //count of all points of class 1
 var data2=[]; //for class 2
+var count2=0; //count of all points of class 2
+var learningParameter;
+var dataArray = [];
+var q1=0;
+var q2=0;
 
 
 //Initializing the graph
@@ -19,13 +24,9 @@ function generateData() {
 //Manually adding data points for class 1
 function addDataPoints1() {
     xValue1 = Number(document.getElementById("xValue1").value);
-    finaldata.push({
-        x: xValue1,
-    });
-    console.log(finaldata);
-    data1.push({
-        x: xValue1,
-    });
+    data1[q1] = xValue1;
+    q1++;
+    count1++;
     console.log(data1); //Ctrl+Shift+J
 	return data1; //seeing the output in console window
 }
@@ -33,17 +34,16 @@ function addDataPoints1() {
 //Manually adding data points for class 2
 function addDataPoints2() {
     xValue2 = Number(document.getElementById("xValue2").value);
-    finaldata.push({
-        x: xValue2,
-    });
-    console.log(finaldata);
-    data2.push({
-        x: xValue2,
-    });
+    data2[q2] = xValue2;
+    q2++;
+    count2++;
     console.log(data2); //Ctrl+Shift+J
 	return data2; //seeing the output in console window
 }
 
+
+
+//Graph 1 creation
 
 var myChart1 = {
 	type: 'scatter',
@@ -100,23 +100,61 @@ var myChart2 = new Chart(ctx, {
   
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* On clicking the Start button*/
+/*to run the Perceptron Algorithm
+ On clicking the Start button*/
 function start(){
 	document.getElementById('step').style.visibility="visible";
 	document.getElementById('step-100').style.visibility="visible";
+	learningParameter = document.getElementById("learning-parameter").value;
+	for(var j=0;j<data1.length;j++){
+		finaldata[j] = data1[j];
+		
+	}
+	
+	var jc=data1.length;
+	for(var i=0;i<data2.length;i++){
+		finaldata[jc] = data2[i];
+		jc++;
+	}
+
+//Making 2D array
+	for(var i = 0; i<(count1+count2); i++) {
+        dataArray[i] = [];
+        dataArray[i][0] = finaldata[i];
+        if(i<count1){
+        	dataArray[i][1] = 1.00;
+        	dataArray[i][2] = 1;
+        }
+        else{
+        	dataArray[i][1] = -1.00;
+        	dataArray[i][2] = 2;
+        }
+    }
+  	
+  
+	perceptronFunc(finaldata);
 }
+
+function perceptronFunc(finaldata){
+	var weights=[0, 0];
+	var bias=1;
+	for(var i=0; i<(count1+count2); i++) {
+		var activation = 0;
+		for(var j=0; j<2; j++){
+			activation = activation + (weights[j] * dataArray[i][j]);
+			if((activation<=0 && dataArray[i][2]>0)||(activation>0 && dataArray[i][2]<0)){
+				weights[0] = weights[0] + learningParameter*dataArray[i][2]*dataArray[i][0];
+				weights[1] = weights[1] + learningParameter*dataArray[i][2]*dataArray[i][1];
+			}
+			
+		}
+	}
+	console.log(weights);
+
+	console.log(dataArray);
+	console.log(activation);
+}
+
 
 
 /* On clicking the Step button*/
@@ -143,6 +181,10 @@ document.getElementById('clear').addEventListener('click', function() {
 	document.getElementById("input-data-from-user-class2").style.visibility="hidden";
 	data1 = [];
 	data2 = [];
+	finaldata = [];
+	dataArray = [];
+	q1=0;
+	q2=0;
 	finaldata = [];
 	console.log(data1);
 	console.log(data2);

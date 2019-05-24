@@ -8,6 +8,7 @@
    	<script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 	<script src="https://www.chartjs.org/samples/latest/utils.js"></script>
 	<link rel="stylesheet" href="exp3.css">
+	
 </head>
 <body> 
 
@@ -26,6 +27,19 @@
 
 <!-- 1st row Input Output Layout -->
 <div class="row">
+
+	<div class="column-0 right">
+    	<h3>Learning Parameter</h3>
+    	<select id="learning-parameter">
+  			<option value="1">1</option>
+  			<option value="1/k">1/k</option>
+  			<option value="1/k^2">1/k^2</option>
+  			<option value="1/2^k">1/2^k</option>
+  			<option value="k">k</option>
+		</select>
+	</div>
+
+
   	<div class="column-0 side">
 	    <h3>Add Data</h3>
 	    <div class="w3-container">
@@ -45,16 +59,6 @@
 		</div>
   	</div>
   
-  	<div class="column-0 right">
-    	<h3>Learning Parameter</h3>
-    	<select>
-  			<option value="1">1</option>
-  			<option value="1/k">1/k</option>
-  			<option value="1/k^2">1/k^2</option>
-  			<option value="1/2^k">1/2^k</option>
-  			<option value="k">k</option>
-		</select>
-	</div>
 </div>
 
 
