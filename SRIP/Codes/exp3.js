@@ -127,13 +127,29 @@ function start(){
         }
         else{
         	dataArray[i][1] = -1.00;
-        	dataArray[i][2] = 2;
+        	dataArray[i][2] = -1;
         }
     }
-  	
-  
 	perceptronFunc(finaldata);
 }
+
+
+
+
+/*document.getElementById('start').addEventListener('click', function() {
+	for(var g=0; g<(count1); g++){
+	myChart1.data.datasets.forEach(function(label) {
+		label.data.push(data1[g]);
+	});
+	window.myScatter.update();
+	
+});
+*/
+
+
+
+
+
 
 function perceptronFunc(finaldata){
 	var weights=[0, 0];
@@ -141,7 +157,7 @@ function perceptronFunc(finaldata){
 	for(var i=0; i<(count1+count2); i++) {
 		var activation = 0;
 		for(var j=0; j<2; j++){
-			activation = activation + (weights[j] * dataArray[i][j]);
+			activation = activation + (weights[j] * dataArray[i][j]) + bias;
 			if((activation<=0 && dataArray[i][2]>0)||(activation>0 && dataArray[i][2]<0)){
 				weights[0] = weights[0] + learningParameter*dataArray[i][2]*dataArray[i][0];
 				weights[1] = weights[1] + learningParameter*dataArray[i][2]*dataArray[i][1];
