@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+
+window.onload = function () {
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title: {
+		text: "Random Number Generation"
+	},
+	
+	axisX: {
+		title: "X-Axis"
+	},
+	
+	axisY: {
+		title: "Y-Axis",
+		interval:0.5
+	},
+	
+	legend: {
+		cursor: "pointer",
+		itemclick: toggleDataSeries
+	},
+
+	data: [{
+		type: "scatter",
+		name: "Class 1",
+		showInLegend: true,
+		toolTipContent: "<span style=\"color:#4F81BC \">{name}</span><br>Active Users: {x}<br>CPU Utilization: {y}%",
+		dataPoints: [
+			{ x: 3, y: 2 },
+			{ x: 4, y: 3 }
+		]
+	},
+	{
+		type: "scatter",
+		name: "Class 2",
+		showInLegend: true,
+		markerType: "triangle",
+		toolTipContent: "<span style=\"color:#C0504E \">{name}</span><br>Active Users: {x}<br>CPU Utilization: {y}%",
+		dataPoints: [
+			{ x: -4, y: -3 },
+			{ x: -3, y: -2 }
+		]
+	},
+	{
+		type: "scatter",
+		name: "Class 3",
+		showInLegend: true,
+		markerType: "square",
+		toolTipContent: "<span style=\"color:#C0504E \">{name}</span><br>Active Users: {x}<br>CPU Utilization: {y}%",
+		dataPoints: [
+			{ x: 2, y: -4 },
+			{ x: 3, y: -2 }
+		]
+	},
+	{
+		type: "scatter",
+		name: "Class 4",
+		showInLegend: true,
+		markerType: "cross",
+		toolTipContent: "<span style=\"color:#C0504E \">{name}</span><br>Active Users: {x}<br>CPU Utilization: {y}%",
+		dataPoints: [
+			{ x: -7, y: 3 },
+			{ x: -4, y: 6 }
+		]
+	},
+	{
+		type: "scatter",
+		name: "test",
+		showInLegend: true,
+		markerType: "triangle",
+		toolTipContent: "<span style=\"color:#C0504E \">{name}</span><br>Active Users: {x}<br>CPU Utilization: {y}%",
+		dataPoints: [
+			{ x: 1, y:1  },
+			{ x: 2, y:2  }
+		]
+	}]
+});
+chart.render();
+
+function toggleDataSeries(e) {
+	if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+		e.dataSeries.visible = false;
+	} else {
+		e.dataSeries.visible = true;
+	}
+	e.chart.render();
+}
+
+}
+
+function disable() {
+  document.getElementById("mySelect").disabled=true;
+}
+function enable() {
+  document.getElementById("mySelect").disabled=false;
+}
+
+function disableElement() {
+  document.getElementById("btn01").disabled = true;
+}
+
+</script>
+</head>
+
+<body>
+
+<div id="chartContainer" style="height: 370px; width: 100%;">
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</div>
+
+Load Custom Datasets
+<form>
+<select id="mySelect">
+  <option>T1</option>
+  <option>T2</option>
+  <option>T3</option>
+  <option>T4</option>
+</select>
+<input type="button" onclick="enable()" value="Load">
+</form><br>
+
+Mark Points
+<form>
+<input type="button" id="btn01" value="Test Points">
+<button onclick="disableElement()">Clear</button>
+</form><br>
+
+Classification DDAG
+<form>
+<input type="button" id="btn01" value="Start">
+<input type="button" id="btn01" value="Next">
+<br>
+Current Classifier:
+<br>
+Current Class:
+</form>
+
+</body>
+</html>
