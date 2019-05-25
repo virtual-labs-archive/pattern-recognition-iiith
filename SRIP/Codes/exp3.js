@@ -95,7 +95,10 @@ function addClass2(){
 var ctx = document.getElementById("graph-2");
 var myChart2 = new Chart(ctx, {
 	type: "scatter",
-  	data: {labels: xaxis, dataset: []}
+  	data: {
+  		labels: xaxis, 
+  		dataset: []
+  	}
   });
 
 
