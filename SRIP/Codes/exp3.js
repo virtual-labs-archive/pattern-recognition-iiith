@@ -20,6 +20,7 @@ function generateData() {
 	return data;
 }
 
+
 //Manually adding data points for class 1
 function addDataPoints1() {
 	var xValue1;
@@ -27,9 +28,10 @@ function addDataPoints1() {
     data1[q1] = xValue1;
     q1++;
     count1++;
-    console.log(data1); //Ctrl+Shift+J
+    //console.log(data1); //Ctrl+Shift+J
 	return data1; //seeing the output in console window
 }
+
 
 //Manually adding data points for class 2
 function addDataPoints2() {
@@ -38,14 +40,13 @@ function addDataPoints2() {
     data2[q2] = xValue2;
     q2++;
     count2++;
-    console.log(data2); //Ctrl+Shift+J
+    //console.log(data2); //Ctrl+Shift+J
 	return data2; //seeing the output in console window
 }
 
 
 
 //Graph 1 creation
-
 var myChart1 = {
 	type: "scatter",
 	data:{
@@ -83,6 +84,7 @@ function addClass1(){
 	document.getElementById("input-data-from-user-class1").style.visibility="visible";
 }
 
+
 //after clicking Add Class 2 button, Add Data Point button is made visible
 function addClass2(){
 	document.getElementById("input-data-from-user-class2").style.visibility="visible";
@@ -103,7 +105,7 @@ var myChart2 = new Chart(ctx, {
 
 
 
-
+//Perceptron function
 function perceptronFunc(finaldata){
 	var weights=[0, 0];
 	var bias=1;
@@ -118,16 +120,8 @@ function perceptronFunc(finaldata){
 			
 		}
 	}
-	console.log(weights);
-
-	console.log(dataArray);
 	console.log(activation);
 }
-
-
-
-
-
 
 
 /*to run the Perceptron Algorithm
@@ -165,25 +159,6 @@ function start(){
 
 
 
-
-/*document.getElementById('start').addEventListener('click', function() {
-	for(var g=0; g<(count1); g++){
-	myChart1.data.datasets.forEach(function(label) {
-		label.data.push(data1[g]);
-	});
-	window.myScatter.update();
-	
-});
-*/
-
-
-
-
-
-
-
-
-
 /* On clicking the Step button*/
 function changeStatusStep(){
 	document.getElementById("column-1").innerHTML = "iterations:2";
@@ -213,9 +188,6 @@ document.getElementById("clear").addEventListener("click", function() {
 	q1=0;
 	q2=0;
 	finaldata = [];
-	console.log(data1);
-	console.log(data2);
-	console.log(finaldata);
-	window.myScatter.reset();
+	//window.myScatter.reset();
 })
 
