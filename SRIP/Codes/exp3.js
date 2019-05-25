@@ -75,7 +75,6 @@ window.onload = function(){
 	dataset.data.push(data1);
 	});
 	window.myScatter.update();
-	
 });*/
 
 
@@ -95,13 +94,9 @@ function addClass2(){
 /*Creating Graph 2*/  
 var ctx = document.getElementById("graph-2");
 var myChart2 = new Chart(ctx, {
-	type: 'scatter',
-  	data: {
-    	labels: xaxis,
-    	dataset: []
-  	}
-  
-});
+	type: "scatter",
+  	data: {labels: xaxis, dataset: []}
+  });
 
 
 
