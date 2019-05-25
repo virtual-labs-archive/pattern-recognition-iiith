@@ -1,3 +1,4 @@
+var xaxis = [-1.0 ,-0.75, -0.50, -0.25, 0.0, 0.25, 0.50, 0.75, 1.0];
 var finaldata = {};  //dataset for Perceptron
 var data1=[]; //for class 1
 var count1=0; //count of all points of class 1
