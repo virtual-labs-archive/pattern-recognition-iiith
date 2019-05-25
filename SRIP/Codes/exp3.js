@@ -96,8 +96,8 @@ var ctx = document.getElementById("graph-2");
 var myChart2 = new Chart(ctx, {
 	type: "scatter",
   	data: {
-  		labels: xaxis, 
-  		dataset: []
+  	labels: xaxis, 
+  	dataset: []
   	}
   });
 
