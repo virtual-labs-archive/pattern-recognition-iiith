@@ -1,5 +1,3 @@
-var color = Chart.helpers.color;
-var xaxis = [-1.00, -0.75, -0.50, -0.25, 0.00, 0.25, 0.50, 0.75, 1.00];
 var finaldata = {};  //dataset for Perceptron
 var data1=[]; //for class 1
 var count1=0; //count of all points of class 1
@@ -15,14 +13,15 @@ var q2=0;
 function generateData() {
 	var data = [];
 	data.push({
-			x: '0',
-			y: '0'
+			x: "0",
+			y: "0"
 		});
 	return data;
 }
 
 //Manually adding data points for class 1
 function addDataPoints1() {
+	var xValue1;
     xValue1 = Number(document.getElementById("xValue1").value);
     data1[q1] = xValue1;
     q1++;
@@ -33,6 +32,7 @@ function addDataPoints1() {
 
 //Manually adding data points for class 2
 function addDataPoints2() {
+	var xValue2;
     xValue2 = Number(document.getElementById("xValue2").value);
     data2[q2] = xValue2;
     q2++;
@@ -49,12 +49,12 @@ var myChart1 = {
 	type: 'scatter',
 	data:{
 		datasets: [{
-			label: 'Class 1',
+			label: "Class 1",
 			backgroundColor: window.chartColors.red,
 			borderColor: window.chartColors.red,
 			data: generateData()
 		}, {
-			label: 'Class 2',
+			label: "Class 2",
 			backgroundColor: window.chartColors.blue,
 			borderColor: window.chartColors.blue,
 			data: generateData()
@@ -64,7 +64,7 @@ var myChart1 = {
 
 
 window.onload = function(){
-	var ctx = document.getElementById("graph-1").getContext('2d');
+	var ctx = document.getElementById("graph-1");
 	window.myScatter = new Chart(ctx, myChart1);
 }
 
@@ -100,11 +100,40 @@ var myChart2 = new Chart(ctx, {
   
 });
 
+
+
+
+function perceptronFunc(finaldata){
+	var weights=[0, 0];
+	var bias=1;
+	for(var c=0; c<(count1+count2); c++) {
+		var activation = 0;
+		for(var d=0; d<2; d++){
+			activation = activation + (weights[d] * dataArray[c][d]) + bias;
+			if((activation<=0 && dataArray[c][2]>0)||(activation>0 && dataArray[c][2]<0)){
+				weights[0] = weights[0] + learningParameter*dataArray[c][2]*dataArray[c][0];
+				weights[1] = weights[1] + learningParameter*dataArray[c][2]*dataArray[c][1];
+			}
+			
+		}
+	}
+	console.log(weights);
+
+	console.log(dataArray);
+	console.log(activation);
+}
+
+
+
+
+
+
+
 /*to run the Perceptron Algorithm
  On clicking the Start button*/
 function start(){
-	document.getElementById('step').style.visibility="visible";
-	document.getElementById('step-100').style.visibility="visible";
+	document.getElementById("step").style.visibility="visible";
+	document.getElementById("step-100").style.visibility="visible";
 	learningParameter = document.getElementById("learning-parameter").value;
 	for(var j=0;j<data1.length;j++){
 		finaldata[j] = data1[j];
@@ -151,25 +180,6 @@ function start(){
 
 
 
-function perceptronFunc(finaldata){
-	var weights=[0, 0];
-	var bias=1;
-	for(var i=0; i<(count1+count2); i++) {
-		var activation = 0;
-		for(var j=0; j<2; j++){
-			activation = activation + (weights[j] * dataArray[i][j]) + bias;
-			if((activation<=0 && dataArray[i][2]>0)||(activation>0 && dataArray[i][2]<0)){
-				weights[0] = weights[0] + learningParameter*dataArray[i][2]*dataArray[i][0];
-				weights[1] = weights[1] + learningParameter*dataArray[i][2]*dataArray[i][1];
-			}
-			
-		}
-	}
-	console.log(weights);
-
-	console.log(dataArray);
-	console.log(activation);
-}
 
 
 
