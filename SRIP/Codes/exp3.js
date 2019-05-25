@@ -47,7 +47,7 @@ function addDataPoints2() {
 //Graph 1 creation
 
 var myChart1 = {
-	type: 'scatter',
+	type: "scatter",
 	data:{
 		datasets: [{
 			label: "Class 1",
@@ -187,21 +187,21 @@ function start(){
 /* On clicking the Step button*/
 function changeStatusStep(){
 	document.getElementById("column-1").innerHTML = "iterations:2";
-	document.getElementById('step').style.visibility="hidden";
-	document.getElementById('step-100').style.visibility="hidden";
+	document.getElementById("step").style.visibility="hidden";
+	document.getElementById("step-100").style.visibility="hidden";
 }
 
 
 /* On clicking the Step100 button*/
 function changeStatusStep100(){
 	document.getElementById("column-2").innerHTML = "Classes Separated, iterations:2";
-	document.getElementById('step').style.visibility="hidden";
-	document.getElementById('step-100').style.visibility="hidden";
+	document.getElementById("step").style.visibility="hidden";
+	document.getElementById("step-100").style.visibility="hidden";
 }
 
 
 /* On clicking the Clear button*/
-document.getElementById('clear').addEventListener('click', function() {
+document.getElementById("clear").addEventListener("click", function() {
 	document.getElementById("column-1").innerHTML = "";
 	document.getElementById("column-2").innerHTML = "";
 	document.getElementById("input-data-from-user-class1").style.visibility="hidden";
