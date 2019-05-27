@@ -237,6 +237,11 @@ document.getElementById("clear").addEventListener("click", function() {
 	count1=0;
 	count2=0;
 	finaldata = [];
+	weights = [0, 0];
+	bias=1;
+	c=0;
+	d=0;
+	activation = 0;
+	k = 0.05;
 	//window.myScatter.reset();
 });
-
