@@ -12,6 +12,8 @@ var weights=[0, 0];
 var bias=1;
 var c=0, d=0;
 var activation = 0;
+var k = 0.05;
+
 
 //Initializing the graph
 function generateData() {
