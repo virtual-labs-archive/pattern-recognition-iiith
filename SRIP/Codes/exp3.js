@@ -1,10 +1,8 @@
 var xaxis = [-1.0 ,-0.75, -0.50, -0.25, 0.0, 0.25, 0.50, 0.75, 1.0];
 var finaldata = [];  //dataset for Perceptron
 var data1=[]; //for class 1
-
 var count1=0; //count of all points of class 1
 var data2=[]; //for class 2
-
 var count2=0; //count of all points of class 2
 var learningParameter;
 var dataArray = [];
@@ -67,8 +65,6 @@ function addDataPoints2y() {
 } 
 
 
-
-
 //Graph 1 creation
 var myChart1 = {
 	type: "scatter",
@@ -113,7 +109,6 @@ function addClass2(){
 }
 
 
-
 /*Creating Graph 2*/  
 var ctx = document.getElementById("graph-2");
 var myChart2 = new Chart(ctx, {
@@ -125,16 +120,15 @@ var myChart2 = new Chart(ctx, {
   });
 
 
-
 //Perceptron function
 function perceptronFunc(dataArray){
 	var weights=[0, 0];
 	var bias=1;
 	var c=0, d=0;
+	var activation = 0;
 	//var n_epoch=20;
 	//for(var epoch=0; epoch<n_epoch; epoch++){
 		for(c=0; c<((count1+count2)/2); c++) {
-			var activation = 0;
 			for(d=0; d<2; d++){
 				activation = activation + (weights[d] * dataArray[c][d]) + bias;
 				if((activation<1 && dataArray[c][2]==1)||(activation>0 && dataArray[c][2]==0)){
@@ -228,5 +222,5 @@ document.getElementById("clear").addEventListener("click", function() {
 	q2=0;
 	finaldata = [];
 	//window.myScatter.reset();
-})
+});
 
