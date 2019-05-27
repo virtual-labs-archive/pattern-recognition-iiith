@@ -143,7 +143,7 @@ function perceptronTrainWeights(dataArray, learningParameter){
 	var n_epoch = 5;
 	var prediction = 0;
 	for(var epoch=0; epoch<n_epoch; epoch++){
-		sum_error = 0;
+		sumError = 0;
 		for(c=0; c<dataArray.length; c++) {
 			prediction = predict(c, weights);
 			error=dataArray[c][2] - prediction;
