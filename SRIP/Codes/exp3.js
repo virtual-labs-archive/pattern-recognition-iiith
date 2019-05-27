@@ -125,27 +125,32 @@ var myChart2 = new Chart(ctx, {
 
 //Perceptron function
 function predict(c, weights){
-	for(d=0; d<2; d++)
+	for(d=0; d<2; d++){
 		activation = activation + (weights[d] * dataArray[c][d]) + bias;
-	if(activation>=0.0)
+	}
+	if(activation>=0.0){
 		return 1.0;
-	else
+	}
+	else{
 		return 0.0;	
+	}
 
 }
 function perceptronTrainWeights(dataArray, learningParameter){
 	var j=0;
-	var sum_error=0.0;
-	var error=0.0;
-	var n_epoch=5;
+	var sumError = 0;
+	var error = 0;
+	var n_epoch = 5;
+	var prediction = 0;
 	for(var epoch=0; epoch<n_epoch; epoch++){
-		sum_error=0.0;
+		sum_error = 0;
 		for(c=0; c<dataArray.length; c++) {
 			prediction = predict(c, weights);
 			error=dataArray[c][2] - prediction;
-			sum_error += error*2;
-			for(j=0; j<2; j++)
+			sumError += error*2;
+			for(j=0; j<2; j++){
 				weights[j] = weights[j] + (learningParameter * error * dataArray[c][j]);
+			}
 		}	
 	}
 	return weights;	
