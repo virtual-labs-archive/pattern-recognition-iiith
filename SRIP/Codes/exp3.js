@@ -8,7 +8,10 @@ var learningParameter;
 var dataArray = [];
 var q1=0;
 var q2=0;
-
+var weights=[0, 0];
+var bias=1;
+var c=0, d=0;
+var activation = 0;
 
 //Initializing the graph
 function generateData() {
@@ -121,27 +124,31 @@ var myChart2 = new Chart(ctx, {
 
 
 //Perceptron function
-function perceptronFunc(dataArray){
-	var weights=[0, 0];
-	var bias=1;
-	var c=0, d=0;
-	var activation = 0;
-	//var n_epoch=20;
-	//for(var epoch=0; epoch<n_epoch; epoch++){
-		for(c=0; c<((count1+count2)/2); c++) {
-			for(d=0; d<2; d++){
-				activation = activation + (weights[d] * dataArray[c][d]) + bias;
-				if((activation<1 && dataArray[c][2]==1)||(activation>0 && dataArray[c][2]==0)){
-					weights[0] = weights[0] + learningParameter*dataArray[c][2]*dataArray[c][0];
-					weights[1] = weights[1] + learningParameter*dataArray[c][2]*dataArray[c][1];
-				}
-			
-			}
-		}
-	//}
-	
-	console.log(dataArray);
-	console.log(weights);
+function predict(c, weights){
+	for(d=0; d<2; d++)
+		activation = activation + (weights[d] * dataArray[c][d]) + bias;
+	if(activation>=0.0)
+		return 1.0;
+	else
+		return 0.0;	
+
+}
+function perceptronTrainWeights(dataArray, learningParameter){
+	var j=0;
+	var sum_error=0.0;
+	var error=0.0;
+	var n_epoch=5;
+	for(var epoch=0; epoch<n_epoch; epoch++){
+		sum_error=0.0;
+		for(c=0; c<dataArray.length; c++) {
+			prediction = predict(c, weights);
+			error=dataArray[c][2] - prediction;
+			sum_error += error*2;
+			for(j=0; j<2; j++)
+				weights[j] = weights[j] + (learningParameter * error * dataArray[c][j]);
+		}	
+	}
+	return weights;	
 }
 
 
@@ -186,9 +193,9 @@ function start(){
 		a++;
 		i++;
 	}
-	console.log(finaldata);
-	console.log(dataArray);
-	perceptronFunc(dataArray);
+	
+	perceptronTrainWeights(dataArray, learningParameter);
+	console.log(weights);
 }
 
 
@@ -220,6 +227,8 @@ document.getElementById("clear").addEventListener("click", function() {
 	dataArray = [];
 	q1=0;
 	q2=0;
+	count1=0;
+	count2=0;
 	finaldata = [];
 	//window.myScatter.reset();
 });
