@@ -202,7 +202,7 @@ function start(){
 	}
 	
 	perceptronTrainWeights(dataArray, learningParameter);
-	document.getElementById("weights-return").innerHTML=weights;
+	document.getElementById("weights-return").textContent=weights;
 	console.log(weights);
 }
 
