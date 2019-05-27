@@ -130,11 +130,12 @@ var myChart2 = new Chart(ctx, {
 function perceptronFunc(dataArray){
 	var weights=[0, 0];
 	var bias=1;
+	var c=0, d=0;
 	//var n_epoch=20;
 	//for(var epoch=0; epoch<n_epoch; epoch++){
-		for(var c=0; c<((count1+count2)/2); c++) {
+		for(c=0; c<((count1+count2)/2); c++) {
 			var activation = 0;
-			for(var d=0; d<2; d++){
+			for(d=0; d<2; d++){
 				activation = activation + (weights[d] * dataArray[c][d]) + bias;
 				if((activation<1 && dataArray[c][2]==1)||(activation>0 && dataArray[c][2]==0)){
 					weights[0] = weights[0] + learningParameter*dataArray[c][2]*dataArray[c][0];
@@ -157,8 +158,9 @@ function start(){
 	document.getElementById("step-100").style.visibility="visible";
 	learningParameter = document.getElementById("learning-parameter").value;
 	
+	var i=0;
 
-	for(var i=0; i<(count1+count2); i++){
+	for(i=0; i<(count1+count2); i++){
 		if(i<count1)
 			finaldata[i] = data1[i];
 		else
@@ -169,7 +171,7 @@ function start(){
 
 	var conut=0;
 	//2D final array
-	for(var i=0; i<count1/2; i++){
+	for(i=0; i<count1/2; i++){
 		dataArray[i] = [];
 		dataArray[i][0] = finaldata[conut];
 		conut++;
@@ -178,7 +180,7 @@ function start(){
 		dataArray[i][2] = 1;
 	}
 
-	var i=count1/2;
+	i=count1/2;
 	var a=0;
 	while(a!=count2/2){
 		dataArray[i] = [];
