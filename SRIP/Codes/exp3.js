@@ -1,4 +1,4 @@
-var xaxis = [-1.0 ,-0.75, -0.50, -0.25, 0.0, 0.25, 0.50, 0.75, 1.0];
+//var xaxis = [-1.0 ,-0.75, -0.50, -0.25, 0.0, 0.25, 0.50, 0.75, 1.0];
 var finaldata = [];  //dataset for Perceptron
 var chart1data = [];
 var chart2data = [];
@@ -108,7 +108,7 @@ var myChart1 = {
 window.onload = function(){
 	var ctx = document.getElementById("graph-1");
 	window.myScatter = new Chart(ctx, myChart1);
-}
+};
 
 /*document.getElementById('add-Data-Point').addEventListener('click', function() {
 	myChart1.data.datasets.forEach(function(dataset) {
@@ -157,7 +157,7 @@ function perceptronTrainWeights(dataArray, learningParameter){
 	var error = 1;
 	var n_epoch = 5;
 	var prediction = 0;
-	while(error>0){
+	for(var epoch=0; epoch<n_epoch; epoch++){
 		sumError = 0;
 		for(c = 0; c < dataArray.length; c++) {
 			prediction = predict(c, weights);
