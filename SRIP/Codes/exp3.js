@@ -15,7 +15,7 @@ var bias = 1;
 var c = 0, d = 0;
 var activation = 0;
 var k = 0.05;
-
+var n_epoch = 5;
 
 //Initializing the graph
 function generateData() {
@@ -195,7 +195,6 @@ function perceptronTrainWeights(dataArray, learningParameter){
 	var j = 0;
 	var sumError = 0;
 	var error = 1;
-	var n_epoch = 5;
 	var prediction = 0;
 	for(var epoch=0; epoch<n_epoch; epoch++){
 		sumError = 0;
@@ -261,7 +260,7 @@ function start(){
 
 /* On clicking the Step button*/
 function changeStatusStep(){
-	document.getElementById("column-1").innerHTML = "iterations:2";
+	document.getElementById("column-1").textContent = "iterations: " + n_epoch;
 	document.getElementById("step").style.visibility = "hidden";
 	document.getElementById("step-100").style.visibility = "hidden";
 }
@@ -269,7 +268,7 @@ function changeStatusStep(){
 
 /* On clicking the Step100 button*/
 function changeStatusStep100(){
-	document.getElementById("column-2").innerHTML = "Classes Separated, iterations:2";
+	document.getElementById("column-2").innerHTML = "Classes Separated, iterations: " + n_epoch;
 	document.getElementById("step").style.visibility = "hidden";
 	document.getElementById("step-100").style.visibility = "hidden";
 }
