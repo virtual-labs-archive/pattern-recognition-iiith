@@ -136,6 +136,47 @@ var myChart2 = new Chart(ctx, {
   });
 
 
+
+
+function plotGraph(){
+	console.log(-bias/weights[0]);
+	console.log(-bias/weights[1]);
+	console.log(chart1data);
+	console.log(chart2data);
+	var ptx = document.getElementById("graph-2");
+	window.myLine = new Chart(ptx, {
+		type: "scatter",
+		data: {
+			//labels: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+			datasets: [{
+  				label: "Perceptron Line",
+				borderColor: window.chartColors.green,
+  				data: [{
+  					x: (-bias/weights[0]),
+    				y: 0
+				},{
+    				x: 0,
+    				y: (-bias/weights[1])
+  				}]/*}, {
+  					label: "Class 1",
+					backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+					data: chart1data
+  				},{
+  					label: "Class 2",
+					backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+					data: chart2data*/
+			}]
+		},
+		options: {
+			responsive: true
+		}
+	});
+}
+
+
+
 //Perceptron function
 function predict(c, weights){
 	for(d = 0; d < 2; d++){
@@ -213,27 +254,8 @@ function start(){
 	}
 	
 	perceptronTrainWeights(dataArray, learningParameter);
-	console.log(chart1data);
-	console.log(chart2data);
 	document.getElementById("weights-return").textContent = weights;
-	var ctx = document.getElementById("graph-2");
-	var myChart2 = new Chart(ctx, {
-		type: "line",
-  		data: {
-  			datasets: [{
-  			label: "Perceptron Line",
-  			data: [{
-  				x: 0,
-    			y: (-bias/weights[1])
-			},{
-    			x: (-bias/weights[0]),
-    			y: 0
-  			}],
-  			}]
-  		}
-  	});
-	
-	console.log(weights);
+	plotGraph();
 }
 
 
