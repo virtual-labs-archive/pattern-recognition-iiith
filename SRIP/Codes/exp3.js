@@ -147,7 +147,6 @@ function plotGraph(){
 	window.myLine = new Chart(ptx, {
 		type: "scatter",
 		data: {
-			//labels: [-10, -9, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 			datasets: [{
   				label: "Perceptron Line",
 				borderColor: window.chartColors.green,
@@ -157,7 +156,7 @@ function plotGraph(){
 				},{
     				x: 0,
     				y: (-bias/weights[1])
-  				}]/*}, {
+  				}]}, {
   					label: "Class 1",
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
@@ -166,7 +165,7 @@ function plotGraph(){
   					label: "Class 2",
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
-					data: chart2data*/
+					data: chart2data
 			}]
 		},
 		options: {
