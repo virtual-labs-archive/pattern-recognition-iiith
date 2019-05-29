@@ -279,6 +279,7 @@ function changeStatusStep100(){
 document.getElementById("clear").addEventListener("click", function() {
 	document.getElementById("column-1").innerHTML = "";
 	document.getElementById("column-2").innerHTML = "";
+	document.getElementById("weights-return").textContent = "";
 	document.getElementById("input-data-from-user-class1").style.visibility = "hidden";
 	document.getElementById("input-data-from-user-class2").style.visibility = "hidden";
 	data1 = [];
