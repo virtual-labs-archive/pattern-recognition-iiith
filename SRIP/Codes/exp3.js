@@ -156,7 +156,7 @@ function plotGraph(){
 				},{
     				x: 0,
     				y: (-bias/weights[1])
-  				}]}, {
+  				}]},{
   					label: "Class 1",
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
