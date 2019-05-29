@@ -34,7 +34,7 @@ function addDataPoints1x() {
     xValue1 = Number(document.getElementById("xValue1").value);
     data1[q1] = xValue1;
     chart1data.push({
-    	x: xValue1
+    x: xValue1
     });
     q1++;
     count1++;
@@ -48,7 +48,7 @@ function addDataPoints1y() {
 	yValue1 = Number(document.getElementById("yValue1").value);
     data1[q1] = yValue1;
     chart1data.push({
-    	y: yValue1
+    y: yValue1
     });
     q1++;
     count1++;
@@ -63,11 +63,11 @@ function addDataPoints2x() {
     xValue2 = Number(document.getElementById("xValue2").value);
     data2[q2] = xValue2;
     chart2data.push({
-    	x: xValue2
+    x: xValue2
     });
     q2++;
     count2++;
-    console.log(data2); //Ctrl+Shift+J
+    //console.log(data2); //Ctrl+Shift+J
 	return data2; //seeing the output in console window
 }
 
@@ -77,11 +77,11 @@ function addDataPoints2y() {
 	yValue2 = Number(document.getElementById("yValue2").value);
     data2[q2] = yValue2;
     chart2data.push({
-    	y: yValue2
+    y: yValue2
     });
     q2++;
     count2++;
-   	console.log(data2); 
+   	//console.log(data2); 
    	return data2;
 } 
 
@@ -218,17 +218,17 @@ function start(){
 	document.getElementById("weights-return").textContent = weights;
 	var ctx = document.getElementById("graph-2");
 	var myChart2 = new Chart(ctx, {
-		type: 'line',
+		type: "line",
   		data: {
   			datasets: [{
-  				label: "Perceptron Line",
-  				data: [{
-  					x: 0,
-    				y: (-bias/weights[1])
-				},{
-    				x: (-bias/weights[0]),
-    				y: 0
-  				}],
+  			label: "Perceptron Line",
+  			data: [{
+  				x: 0,
+    			y: (-bias/weights[1])
+			},{
+    			x: (-bias/weights[0]),
+    			y: 0
+  			}],
   			}]
   		}
   	});
