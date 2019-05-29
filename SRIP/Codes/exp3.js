@@ -15,7 +15,7 @@ var bias = 1;
 var c = 0, d = 0;
 var activation = 0;
 var k = 0.05;
-var n_epoch = 5;
+var nEpoch = 5;
 
 //Initializing the graph
 function generateData() {
@@ -196,7 +196,7 @@ function perceptronTrainWeights(dataArray, learningParameter){
 	var sumError = 0;
 	var error = 1;
 	var prediction = 0;
-	for(var epoch=0; epoch<n_epoch; epoch++){
+	for(var epoch=0; epoch<nEpoch; epoch++){
 		sumError = 0;
 		for(c = 0; c < dataArray.length; c++) {
 			prediction = predict(c, weights);
@@ -260,7 +260,7 @@ function start(){
 
 /* On clicking the Step button*/
 function changeStatusStep(){
-	document.getElementById("column-1").textContent = "iterations: " + n_epoch;
+	document.getElementById("column-1").textContent = "iterations: " + nEpoch;
 	document.getElementById("step").style.visibility = "hidden";
 	document.getElementById("step-100").style.visibility = "hidden";
 }
@@ -268,7 +268,7 @@ function changeStatusStep(){
 
 /* On clicking the Step100 button*/
 function changeStatusStep100(){
-	document.getElementById("column-2").innerHTML = "Classes Separated, iterations: " + n_epoch;
+	document.getElementById("column-2").textContent = "Classes Separated, iterations: " + nEpoch;
 	document.getElementById("step").style.visibility = "hidden";
 	document.getElementById("step-100").style.visibility = "hidden";
 }
@@ -276,8 +276,8 @@ function changeStatusStep100(){
 
 /* On clicking the Clear button*/
 document.getElementById("clear").addEventListener("click", function() {
-	document.getElementById("column-1").innerHTML = "";
-	document.getElementById("column-2").innerHTML = "";
+	document.getElementById("column-1").textContent = "";
+	document.getElementById("column-2").textContent = "";
 	document.getElementById("weights-return").textContent = "";
 	document.getElementById("input-data-from-user-class1").style.visibility = "hidden";
 	document.getElementById("input-data-from-user-class2").style.visibility = "hidden";
