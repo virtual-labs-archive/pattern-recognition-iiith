@@ -51,14 +51,14 @@ function addDataPoints1y() {
     });
     q1++;
     count1++;
-   	return data1;
+    return data1;
 } 
 
 
 //Manually adding data points for class 2
 function addDataPoints2x() {
 	var xValue2;
-    xValue2 = Number(document.getElementById("xValue2").value);
+	xValue2 = Number(document.getElementById("xValue2").value);
     data2[q2] = xValue2;
     chart2data.push({
     x: xValue2
@@ -78,7 +78,7 @@ function addDataPoints2y() {
     });
     q2++;
     count2++;
-   	return data2;
+    return data2;
 } 
 
 //Graph 1 creation
@@ -139,24 +139,24 @@ function plotGraph(){
 		type: "scatter",
 		data: {
 			datasets: [{
-  				label: "Perceptron Line",
-				borderColor: window.chartColors.green,
-  				data: [{
-  					x: (-bias/weights[0]),
-    				y: 0
-				},{
-    				x: 0,
-    				y: (-bias/weights[1])
-  				}]},{
-  					label: "Class 1",
-					backgroundColor: window.chartColors.red,
-					borderColor: window.chartColors.red,
-					data: chart1data
-  				},{
-  					label: "Class 2",
-					backgroundColor: window.chartColors.blue,
-					borderColor: window.chartColors.blue,
-					data: chart2data
+  			label: "Perceptron Line",
+			borderColor: window.chartColors.green,
+  			data: [{
+  			x: (-bias/weights[0]),
+    		y: 0
+			},{
+    		x: 0,
+    		y: (-bias/weights[1])
+  			}]},{
+  			label: "Class 1",
+			backgroundColor: window.chartColors.red,
+			borderColor: window.chartColors.red,
+			data: chart1data
+  			},{
+  			label: "Class 2",
+			backgroundColor: window.chartColors.blue,
+			borderColor: window.chartColors.blue,
+			data: chart2data
 			}]
 		},
 		options: {
