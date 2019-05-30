@@ -167,17 +167,8 @@ function plotGraph(){
 }
 
 
+//Function to create 2D array of the points
 function create2Darray(){
-	var i = 0;
-	for(i = 0; i < (count1 + count2); i++){
-		if(i < count1){
-			finaldata[i] = data1[i];
-		}
-		else{
-			finaldata[i] = data2[i - count1];
-		}
-	}
-
 	var conut = 0;
 	//2D final array
 	for(i = 0; i < count1 / 2; i++){
@@ -204,10 +195,7 @@ function create2Darray(){
 }
 
 
-
-
-
-	//Perceptron function
+//Perceptron function
 function predict(c, weights){
 	for(d = 0; d < 2; d++){
 		activation = activation + (weights[d] * dataArray[c][d]) + bias;
@@ -248,6 +236,16 @@ function start(){
 	document.getElementById("step").style.visibility = "visible";
 	document.getElementById("step-100").style.visibility = "visible";
 	learningParameter = document.getElementById("learning-parameter").value;
+	
+	var i = 0;
+	for(i = 0; i < (count1 + count2); i++){
+		if(i < count1){
+			finaldata[i] = data1[i];
+		}
+		else{
+			finaldata[i] = data2[i - count1];
+		}
+	}
 	
 	create2Darray();
 	
