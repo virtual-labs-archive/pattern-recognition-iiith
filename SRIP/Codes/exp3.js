@@ -3,19 +3,20 @@ var finaldata = [];  //dataset for Perceptron
 var chart1data = [];
 var chart2data = [];
 var data1 = []; //for class 1
-var count1 = parseInt("0"); //count of all points of class 1
+var count1 = parseInt("0", 10); //count of all points of class 1
 var data2 = []; //for class 2
-var count2 = 0; //count of all points of class 2
+var count2 = pareseInt("0", 10); //count of all points of class 2
 var learningParameter;
 var dataArray = [];
-var q1 = parseInt("0");
-var q2 = parseInt("0");
+var q1 = parseInt("0", 10);
+var q2 = parseInt("0", 10);
 var weights = [0, 0];
-var bias = 1;
-var c = 0, d = 0;
-var activation = 0;
+var bias = parseInt("1", 10);
+var c = parseInt("0", 10);
+var d = parseInt("0", 10);
+var activation = parseInt("0", 10);
 var k = 0.05;
-var nEpoch = 5;
+var nEpoch = parseInt("5", 10);;
 
 //Initializing the graph
 function generateData() {
