@@ -5,7 +5,7 @@ var chart2data = [];
 var data1 = []; //for class 1
 var count1 = parseInt("0", 10); //count of all points of class 1
 var data2 = []; //for class 2
-var count2 = pareseInt("0", 10); //count of all points of class 2
+var count2 = parseInt("0", 10); //count of all points of class 2
 var learningParameter;
 var dataArray = [];
 var q1 = parseInt("0", 10);
@@ -16,7 +16,7 @@ var c = parseInt("0", 10);
 var d = parseInt("0", 10);
 var activation = parseInt("0", 10);
 var k = 0.05;
-var nEpoch = parseInt("5", 10);;
+var nEpoch = parseInt("5", 10);
 
 //Initializing the graph
 function generateData() {
