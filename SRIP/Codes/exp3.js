@@ -32,7 +32,7 @@ function generateData() {
 function addDataPoints1x() {
 	var xValue1;
     xValue1 = Number(document.getElementById("xValue1").value);
-    data1[q1] = xValue1;
+    data1[parseInt(q1)] = xValue1;
     chart1data.push({
     x: xValue1
     });
