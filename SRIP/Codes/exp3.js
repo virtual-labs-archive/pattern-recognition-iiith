@@ -11,11 +11,11 @@ var dataArray = [];
 var q1 = parseInt("0", 10);
 var q2 = parseInt("0", 10);
 var weights = [0, 0];
-var bias = parseInt("1", 10);
+var bias = parseFloat("1");
 var c = parseInt("0", 10);
 var d = parseInt("0", 10);
-var activation = parseInt("0", 10);
-var k = 0.05;
+var activation = parseFloat("0");
+var k = parseFloat("0.05");
 var nEpoch = parseInt("5", 10);
 
 //Initializing the graph
