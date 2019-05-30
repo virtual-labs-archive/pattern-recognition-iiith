@@ -221,10 +221,12 @@ function start(){
 	var i = 0;
 
 	for(i = 0; i < (count1 + count2); i++){
-		if(i < count1)
+		if(i < count1){
 			finaldata[i] = data1[i];
-		else
+		}
+		else{
 			finaldata[i] = data2[i - count1];
+		}
 	}
 
 	var conut = 0;
@@ -240,7 +242,7 @@ function start(){
 
 	i = count1 / 2;
 	var a = 0;
-	while(a != count2 / 2){
+	while(a != (count2 / 2)){
 		dataArray[i] = [];
 		dataArray[i][0] = finaldata[conut];
 		conut++;
