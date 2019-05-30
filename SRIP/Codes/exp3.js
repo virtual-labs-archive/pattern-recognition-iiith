@@ -242,7 +242,7 @@ function start(){
 
 	i = count1 / 2;
 	var a = 0;
-	while(a != (count2 / 2)){
+	while(a !== (count2 / 2)){
 		dataArray[i] = [];
 		dataArray[i][0] = finaldata[conut];
 		conut++;
