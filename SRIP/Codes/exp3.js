@@ -38,7 +38,7 @@ function addDataPoints1x() {
     });
     q1++;
     count1++;
-    Console.log(data1); //Ctrl+Shift+J
+    //console.log(data1); //Ctrl+Shift+J
 	return data1; //seeing the output in console window
 }
 
@@ -52,7 +52,7 @@ function addDataPoints1y() {
     });
     q1++;
     count1++;
-   	Console.log(data1); 
+   	//console.log(data1); 
    	return data1;
 } 
 
@@ -67,7 +67,7 @@ function addDataPoints2x() {
     });
     q2++;
     count2++;
-    //Console.log(data2); //Ctrl+Shift+J
+    //console.log(data2); //Ctrl+Shift+J
 	return data2; //seeing the output in console window
 }
 
@@ -81,7 +81,7 @@ function addDataPoints2y() {
     });
     q2++;
     count2++;
-   	//Console.log(data2); 
+   	//console.log(data2); 
    	return data2;
 } 
 
@@ -139,10 +139,10 @@ var myChart2 = new Chart(ctx, {
 
 
 function plotGraph(){
-	Console.log(-bias/weights[0]);
-	Console.log(-bias/weights[1]);
-	Console.log(chart1data);
-	Console.log(chart2data);
+	//console.log(-bias/weights[0]);
+	//console.log(-bias/weights[1]);
+	//console.log(chart1data);
+	//console.log(chart2data);
 	var ptx = document.getElementById("graph-2");
 	window.myLine = new Chart(ptx, {
 		type: "scatter",
