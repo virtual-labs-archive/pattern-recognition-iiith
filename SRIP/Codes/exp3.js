@@ -3,13 +3,13 @@ var finaldata = [];  //dataset for Perceptron
 var chart1data = [];
 var chart2data = [];
 var data1 = []; //for class 1
-var count1 = 0; //count of all points of class 1
+var count1 = parseInt("0"); //count of all points of class 1
 var data2 = []; //for class 2
 var count2 = 0; //count of all points of class 2
 var learningParameter;
 var dataArray = [];
-var q1 = 0;
-var q2 = 0;
+var q1 = parseInt("0");
+var q2 = parseInt("0");
 var weights = [0, 0];
 var bias = 1;
 var c = 0, d = 0;
@@ -32,7 +32,7 @@ function generateData() {
 function addDataPoints1x() {
 	var xValue1;
     xValue1 = Number(document.getElementById("xValue1").value);
-    data1[parseInt(q1)] = xValue1;
+    data1[q1] = xValue1;
     chart1data.push({
     x: xValue1
     });
