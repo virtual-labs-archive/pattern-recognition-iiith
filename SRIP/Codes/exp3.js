@@ -167,6 +167,46 @@ function plotGraph(){
 }
 
 
+function create2Darray(){
+	var i = 0;
+	for(i = 0; i < (count1 + count2); i++){
+		if(i < count1){
+			finaldata[i] = data1[i];
+		}
+		else{
+			finaldata[i] = data2[i - count1];
+		}
+	}
+
+	var conut = 0;
+	//2D final array
+	for(i = 0; i < count1 / 2; i++){
+		dataArray[i] = [];
+		dataArray[i][0] = finaldata[conut];
+		conut++;
+		dataArray[i][1] = finaldata[conut];
+		conut++;
+		dataArray[i][2] = 1;
+	}
+
+	i = count1 / 2;
+	var a = 0;
+	while(a !== (count2 / 2)){
+		dataArray[i] = [];
+		dataArray[i][0] = finaldata[conut];
+		conut++;
+		dataArray[i][1] = finaldata[conut];
+		conut++;
+		dataArray[i][2] = 0;
+		a++;
+		i++;
+	}
+}
+
+
+
+
+
 	//Perceptron function
 function predict(c, weights){
 	for(d = 0; d < 2; d++){
@@ -209,40 +249,7 @@ function start(){
 	document.getElementById("step-100").style.visibility = "visible";
 	learningParameter = document.getElementById("learning-parameter").value;
 	
-	var i = 0;
-
-	for(i = 0; i < (count1 + count2); i++){
-		if(i < count1){
-			finaldata[i] = data1[i];
-		}
-		else{
-			finaldata[i] = data2[i - count1];
-		}
-	}
-
-	var conut = 0;
-	//2D final array
-	for(i = 0; i < count1 / 2; i++){
-		dataArray[i] = [];
-		dataArray[i][0] = finaldata[conut];
-		conut++;
-		dataArray[i][1] = finaldata[conut];
-		conut++;
-		dataArray[i][2] = 1;
-	}
-
-	i = count1 / 2;
-	var a = 0;
-	while(a !== (count2 / 2)){
-		dataArray[i] = [];
-		dataArray[i][0] = finaldata[conut];
-		conut++;
-		dataArray[i][1] = finaldata[conut];
-		conut++;
-		dataArray[i][2] = 0;
-		a++;
-		i++;
-	}
+	create2Darray();
 	
 	perceptronTrainWeights(dataArray, learningParameter);
 	document.getElementById("weights-return").textContent = weights;
