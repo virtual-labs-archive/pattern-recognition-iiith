@@ -139,26 +139,26 @@ function plotGraph(){
 	window.myLine = new Chart(ptx, {
 		type: "scatter",
 		data: {
-			datasets: [{
-  			label: "Perceptron Line",
-			borderColor: window.chartColors.green,
-  			data: [{
-  			x: (-bias/weights[0]),
-    		y: 0
-			},{
-    		x: 0,
-    		y: (-bias/weights[1])
-  			}]},{
-  			label: "Class 1",
-			backgroundColor: window.chartColors.red,
-			borderColor: window.chartColors.red,
-			data: chart1data
-  			},{
-  			label: "Class 2",
-			backgroundColor: window.chartColors.blue,
-			borderColor: window.chartColors.blue,
-			data: chart2data
-			}]
+		datasets: [{
+  		label: "Perceptron Line",
+		borderColor: window.chartColors.green,
+  		data: [{
+  		x: (-bias/weights[0]),
+    	y: 0
+		},{
+    	x: 0,
+    	y: (-bias/weights[1])
+  		}]},{
+  		label: "Class 1",
+		backgroundColor: window.chartColors.red,
+		borderColor: window.chartColors.red,
+		data: chart1data
+  		},{
+  		label: "Class 2",
+		backgroundColor: window.chartColors.blue,
+		borderColor: window.chartColors.blue,
+		data: chart2data
+		}]
 		},
 		options: {
 			responsive: true
