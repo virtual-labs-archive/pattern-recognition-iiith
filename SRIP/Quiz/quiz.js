@@ -1,5 +1,4 @@
 function submitQuiz() {
-	//console.log('submitted');
 
 	// get each answer score
 	function answerScore (qName) {
