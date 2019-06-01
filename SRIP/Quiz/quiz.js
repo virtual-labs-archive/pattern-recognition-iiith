@@ -1,5 +1,5 @@
 function submitQuiz() {
-	console.log('submitted');
+	//console.log('submitted');
 
 	// get each answer score
 	function answerScore (qName) {
@@ -17,11 +17,8 @@ function submitQuiz() {
 
 	// calc score with answerScore function
 		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
-		console.log("CalcScore: " + calcScore); // it works!
-
 	// function to return correct answer string
 		function correctAnswer (correctStringNo, qNumber) {
-			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
 			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
 				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
 			}
