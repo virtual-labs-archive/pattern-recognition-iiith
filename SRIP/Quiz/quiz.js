@@ -19,21 +19,21 @@ function submitQuiz() {
 	// function to return correct answer string
 		function correctAnswer (correctStringNo, qNumber) {
 			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
-				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
+				(document.getElementById(correctStringNo).textContent) + "</strong>");
 			}
 
 	// print correct answers only if wrong (calls correctAnswer function)
 		if (answerScore("q1") === 0) {
-			document.getElementById("correctAnswer1").innerHTML = correctAnswer("correctString1", 1);
+			document.getElementById("correctAnswer1").textContent = correctAnswer("correctString1", 1);
 		}
 		if (answerScore("q2") === 0) {
-			document.getElementById("correctAnswer2").innerHTML = correctAnswer("correctString2", 2);
+			document.getElementById("correctAnswer2").textContent = correctAnswer("correctString2", 2);
 		}
 		if (answerScore("q3") === 0) {
-			document.getElementById("correctAnswer3").innerHTML = correctAnswer("correctString3", 3);
+			document.getElementById("correctAnswer3").textContent = correctAnswer("correctString3", 3);
 		}
 		if (answerScore("q4") === 0) {
-			document.getElementById("correctAnswer4").innerHTML = correctAnswer("correctString4", 4);
+			document.getElementById("correctAnswer4").textContent = correctAnswer("correctString4", 4);
 		}
 
 	// calculate "possible score" integer
@@ -48,9 +48,9 @@ function submitQuiz() {
 		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
 	// if 4/4, "perfect score!"
 		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
-		};
-		document.getElementById("userScore").innerHTML = showScore;
+			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>";
+		}
+		document.getElementById("userScore").textContent = showScore;
 	}
 
 $(document).ready(function() {
