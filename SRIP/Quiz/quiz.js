@@ -19,11 +19,11 @@ function submitQuiz() {
 
 	// calc score with answerScore function
 		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
-		console.log("CalcScore: " + calcScore); // it works!
+		//console.log("CalcScore: " + calcScore); // it works!
 
 	// function to return correct answer string
 		function correctAnswer (correctStringNo, qNumber) {
-			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
+			//console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
 			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
 				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
 			}
@@ -65,10 +65,10 @@ $(document).ready(function() {
 		$(this).addClass('hide');
 	});
 
-});// scripts here:
+});
 
 	function submitQuiz() {
-		console.log('submitted');
+		//console.log('submitted');
 
 	// get each answer score
 		function answerScore (qName) {
@@ -89,11 +89,11 @@ $(document).ready(function() {
 
 	// calc score with answerScore function
 		var calcScore = (answerScore('q1') + answerScore('q2') + answerScore('q3') + answerScore('q4'));
-		console.log("CalcScore: " + calcScore); // it works!
+		//console.log("CalcScore: " + calcScore); // it works!
 
 	// function to return correct answer string
 		function correctAnswer (correctStringNo, qNumber) {
-			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
+			//console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
 			return ("The correct answer for question " + qNumber + ": &nbsp;<strong>" +
 				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
 			}
@@ -122,7 +122,6 @@ $(document).ready(function() {
 
 	// show score as "score/possible score"
 		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
-	// if 4/4, "perfect score!"
 		if (calcScore === questionCounter) {
 			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>" + String.fromCodePoint(0x1F3C6) +String.fromCodePoint(0x1F973)
 
