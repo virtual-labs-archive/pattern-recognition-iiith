@@ -1,9 +1,6 @@
-// scripts here:
+function submitQuiz() {
 
-	function submitQuiz() {
-		console.log('submitted');
-
-	// get each answer score
+	// get each answer 
 		function answerScore (qName) {
 			var radiosNo = document.getElementsByName(qName);
 
@@ -97,7 +94,7 @@ $(document).ready(function() {
 	// function to return correct answer string
 		function correctAnswer (correctStringNo, qNumber) {
 			console.log("qNumber: " + qNumber);  // logs 1,2,3,4 after called below
-			return ("The correct answer for question #" + qNumber + ": &nbsp;<strong>" +
+			return ("The correct answer for question " + qNumber + ": &nbsp;<strong>" +
 				(document.getElementById(correctStringNo).innerHTML) + "</strong>");
 			}
 
@@ -127,7 +124,8 @@ $(document).ready(function() {
 		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
 	// if 4/4, "perfect score!"
 		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>" + String.fromCodePoint(0x1F600)
+
 		};
 		document.getElementById('userScore').innerHTML = showScore;
 	}
