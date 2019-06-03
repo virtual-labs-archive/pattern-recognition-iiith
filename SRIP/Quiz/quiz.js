@@ -124,7 +124,6 @@ $(document).ready(function() {
 		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
 		if (calcScore === questionCounter) {
 			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>" + String.fromCodePoint(0x1F3C6) +String.fromCodePoint(0x1F973)
-
 		};
 		document.getElementById('userScore').innerHTML = showScore;
 	}
