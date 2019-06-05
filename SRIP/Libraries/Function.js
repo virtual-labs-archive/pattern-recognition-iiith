@@ -1,4 +1,3 @@
-var i=0;
 var ctx = document.getElementById('myChart').getContext('2d');
 function load() 
 {
@@ -20,7 +19,6 @@ script();
       document.getElementById("t10").value=1;
       document.getElementById("t11").value=0;
       document.getElementById("t12").value=1;
-      //var ct = document.getElementById('myChart').getContext('2d');
       ctx.beginPath();
       ctx.arc(grid_size *1,-grid_size * 0,grid_size *(1/2), 0, Math.PI * 2, true);
       ctx.stroke();
@@ -28,7 +26,6 @@ script();
       ctx.arc(grid_size *0,-grid_size * 0, grid_size *(1/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
-      i++;
       } 
     else if (x=="T2")
     {
@@ -44,7 +41,6 @@ script();
       document.getElementById("t10").value=1;
       document.getElementById("t11").value=-0.5;
       document.getElementById("t12").value=1;
-      i++;
     }  
     else if (x=="T3")
     {
@@ -67,7 +63,6 @@ script();
       ctx.arc(grid_size *0,-grid_size * 0, grid_size *(2/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
-      i++;  
     }  
     else
     {
@@ -87,8 +82,6 @@ script();
       ctx.arc(grid_size *0,-grid_size * 0, grid_size *(1/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
-      i++;
     }  
 }
-
 document.getElementById("b1").addEventListener('click',load);
