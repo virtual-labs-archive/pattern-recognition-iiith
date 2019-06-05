@@ -1,6 +1,7 @@
-var grid_size = 25;
-var x_axis_distance_grid_lines = 13;
-var y_axis_distance_grid_lines = 5;
+
+var grid_size = 50;
+var x_axis_distance_grid_lines = 6;
+var y_axis_distance_grid_lines = 6;
 var x_axis_starting_point = { number: 1};
 var y_axis_starting_point = { number: 1};
 
@@ -18,6 +19,8 @@ var num_lines_x = Math.floor(canvas_height/grid_size);
 
 // no of horizontal grid lines
 var num_lines_y = Math.floor(canvas_width/grid_size);
+function script()
+{
 // Draw grid lines along X-axis
 for(var i=0; i<=num_lines_x; i++)
  {
@@ -77,8 +80,8 @@ for(i=1; i<(num_lines_y - y_axis_distance_grid_lines); i++) {
 
     // Text value at that point
     ctx.font = '9px Arial';
-    ctx.textAlign = 'start';
-    ctx.fillText(x_axis_starting_point.number*i, grid_size*i-2, 15);
+    ctx.textAlign = 'center';
+    ctx.fillText(x_axis_starting_point.number*i, grid_size*i, 15);
 }
 // Ticks marks along the negative X-axis
 for(i=1; i<y_axis_distance_grid_lines; i++) {
@@ -93,8 +96,8 @@ for(i=1; i<y_axis_distance_grid_lines; i++) {
 
     // Text value at that point
     ctx.font = '9px Arial';
-    ctx.textAlign = 'end';
-    ctx.fillText(-x_axis_starting_point.number*i, -grid_size*i+3, 15);
+    ctx.textAlign = 'center';
+    ctx.fillText(-x_axis_starting_point.number*i, -grid_size*i, 15);
 }
 
 // Ticks marks along the positive Y-axis
@@ -111,8 +114,8 @@ for(i=1; i<(num_lines_x - x_axis_distance_grid_lines); i++) {
 
     // Text value at that point
     ctx.font = '9px Arial';
-    ctx.textAlign = 'start';
-    ctx.fillText(-y_axis_starting_point.number*i, 8, grid_size*i+3);
+    ctx.textAlign = 'center';
+    ctx.fillText(-y_axis_starting_point.number*i, -15, grid_size*i+3);
 }
 
 // Ticks marks along the negative Y-axis
@@ -129,6 +132,9 @@ for(i=1; i<x_axis_distance_grid_lines; i++) {
 
     // Text value at that point
     ctx.font = '9px Arial';
-    ctx.textAlign = 'start';
-    ctx.fillText(y_axis_starting_point.number*i, 8, -grid_size*i+3);
+    ctx.textAlign = 'center';
+    ctx.fillText(y_axis_starting_point.number*i, -15, -grid_size*i+3);
 }
+}
+script();
+
