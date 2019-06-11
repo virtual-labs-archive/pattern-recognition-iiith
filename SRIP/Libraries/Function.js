@@ -1,13 +1,22 @@
 var ctx = document.getElementById('myChart').getContext('2d');
+var previous_x="NIL";
 function load() 
 {
   //x is the value selected by user from the list
 var x=document.getElementById("s1").value;
-ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);
-ctx.translate(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines);
-script();
 	 if(x=="T1")
       {
+        if(previous_x=="T2")
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines,canvas.width,canvas.height);
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines);          
+        }
+        else
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);     
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines);
+        }
+      script();
       document.getElementById("t1").value=1;
       document.getElementById("t2").value=0;
       document.getElementById("t3").value=0;
@@ -27,9 +36,21 @@ script();
       ctx.arc(grid_size *0,-grid_size * 0, grid_size *(1/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
+      previous_x=x;
       } 
     else if (x=="T2")
     {
+      if(previous_x=="T2")
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines,canvas.width,canvas.height);
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines);          
+        }
+        else
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);     
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines);
+        }
+      script_for_T2_dataset();
       document.getElementById("t1").value=0;
       document.getElementById("t2").value=0;
       document.getElementById("t3").value=0;
@@ -42,9 +63,45 @@ script();
       document.getElementById("t10").value=1;
       document.getElementById("t11").value=-0.5;
       document.getElementById("t12").value=1;
+      ctx.beginPath();
+      ctx.ellipse(0,0,grid_size*(1/2),25*(1/2),0.5, 0, 2 * Math.PI);
+      ctx.strokeStyle= "red";
+      ctx.stroke();
+      var ct= document.getElementById('myChart').getContext('2d');
+      ct.beginPath();
+      ct.moveTo(-grid_size*0.42,-25*.6);
+      ct.lineTo(grid_size*0.42,25*0.6);
+      ct.moveTo(-grid_size*0.22,25*0.26);
+      ct.lineTo(grid_size*0.22,-25*0.26);
+      ct.closePath();
+      ct.strokeStyle= "red";
+      ct.stroke();
+      ctx.beginPath();
+      ctx.ellipse(0,0,grid_size*(1/2),25*(1/2),-0.5, 0, 2 * Math.PI);
+      ctx.strokeStyle="black";
+      ctx.stroke();
+      ct.beginPath();
+      ct.moveTo(-grid_size*0.42,25*.6);
+      ct.lineTo(grid_size*0.42,-25*0.6);
+      ct.moveTo(-grid_size*0.22,-25*0.26);
+      ct.lineTo(grid_size*0.22,25*0.26);
+      ct.closePath();
+      ct.stroke();
+      previous_x=x;
     }  
     else if (x=="T3")
     {
+      if(previous_x=="T2")
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines,canvas.width,canvas.height);
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines);          
+        }
+        else
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);     
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines);
+        }
+      script();
       document.getElementById("t1").value=0;
       document.getElementById("t2").value=0;
       document.getElementById("t3").value=0;
@@ -64,9 +121,21 @@ script();
       ctx.arc(grid_size *0,-grid_size * 0, grid_size *(2/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
+      previous_x=x;
     }  
     else
     {
+      if(previous_x=="T2")
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines,canvas.width,canvas.height);
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines);          
+        }
+        else
+        {
+          ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);     
+          ctx.translate(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines);
+        }
+      script();
       document.getElementById("t1").value=2;
       document.getElementById("t2").value=1;
       document.getElementById("t3").value=0;
@@ -80,9 +149,21 @@ script();
       document.getElementById("t11").value=0;
       document.getElementById("t12").value=1;
       ctx.beginPath();
+      ctx.ellipse(grid_size*2,-grid_size*1,grid_size*(2/2),grid_size*(1/2),-0.5, 0, 2 * Math.PI);
+      ctx.stroke();
+      var ct= document.getElementById('myChart').getContext('2d');
+      ct.beginPath();
+      ct.moveTo(grid_size*1.8,-grid_size*1.45);
+      ct.lineTo(grid_size*2.15,-grid_size*0.5);
+      ct.moveTo(grid_size*1.1,-grid_size*0.55);
+      ct.lineTo(grid_size*2.9,-grid_size*1.4);
+      ct.closePath();
+      ct.stroke();
+      ctx.beginPath();
       ctx.arc(grid_size *0,-grid_size * 0, grid_size *(1/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
+      previous_x=x;
     }  
 }
 function generate()
