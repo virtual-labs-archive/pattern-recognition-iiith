@@ -14,13 +14,14 @@ var canvas_width = canvas.width;
 // canvas height
 var canvas_height = canvas.height;
 
-// no of vertical grid lines
+function script()
+{
+    // no of vertical grid lines
 var num_lines_x = Math.floor(canvas_height/grid_size);
 
 // no of horizontal grid lines
 var num_lines_y = Math.floor(canvas_width/grid_size);
-function script()
-{
+
 // Draw grid lines along X-axis
 for(var i=0; i<=num_lines_x; i++)
  {
@@ -134,6 +135,129 @@ for(i=1; i<x_axis_distance_grid_lines; i++) {
     ctx.font = '9px Arial';
     ctx.textAlign = 'center';
     ctx.fillText(y_axis_starting_point.number*i, -15, -grid_size*i+3);
+}
+}
+function script_for_T2_dataset()
+{
+    // no of vertical grid lines
+var num_lines_x = Math.floor(canvas_height/25);
+
+// no of horizontal grid lines
+var num_lines_y = Math.floor(canvas_width/25);
+
+// Draw grid lines along X-axis
+for(var i=0; i<=num_lines_x; i++)
+ {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    
+    // If line represents X-axis draw in different color
+    if(i == x_axis_distance_grid_lines) 
+        ctx.strokeStyle = "#000000";
+    else
+        ctx.strokeStyle = "#e9e9e9";
+    
+    if(i == num_lines_x) {
+        ctx.moveTo(0, 25*i);
+        ctx.lineTo(canvas_width,25*i);
+    }
+    else {
+        ctx.moveTo(0, 25*i+0.5);
+        ctx.lineTo(canvas_width, 25*i+0.5);
+    }
+    ctx.stroke();
+}
+// Draw grid lines along Y-axis
+for(i=0; i<=num_lines_y; i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    
+    // If line represents X-axis draw in different color
+    if(i == y_axis_distance_grid_lines) 
+        ctx.strokeStyle = "#000000";
+    else
+        ctx.strokeStyle = "#e9e9e9";
+    
+    if(i == num_lines_y) {
+        ctx.moveTo(grid_size*i, 0);
+        ctx.lineTo(grid_size*i, canvas_height);
+    }
+    else {
+        ctx.moveTo(grid_size*i+0.5, 0);
+        ctx.lineTo(grid_size*i+0.5, canvas_height);
+    }
+    ctx.stroke();
+}
+// Translate to the new origin. Now Y-axis of the canvas is opposite to the Y-axis of the graph. So the y-coordinate of each element will be negative of the actual
+ctx.translate(y_axis_distance_grid_lines*grid_size, x_axis_distance_grid_lines*25);
+
+// Ticks marks along the positive X-axis
+for(i=1; i<(num_lines_y - y_axis_distance_grid_lines); i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(grid_size*i+0.5, -3);
+    ctx.lineTo(grid_size*i+0.5, 3);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(x_axis_starting_point.number*i, grid_size*i, 15);
+}
+// Ticks marks along the negative X-axis
+for(i=1; i<y_axis_distance_grid_lines; i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-grid_size*i+0.5, -3);
+    ctx.lineTo(-grid_size*i+0.5, 3);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(-x_axis_starting_point.number*i, -grid_size*i, 15);
+}
+
+// Ticks marks along the positive Y-axis
+// Positive Y-axis of graph is negative Y-axis of the canvas
+for(i=1; i<(num_lines_x - x_axis_distance_grid_lines); i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-3, 25*i+0.5);
+    ctx.lineTo(3, 25*i+0.5);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(-y_axis_starting_point.number*i, -15, 25*i+3);
+}
+
+// Ticks marks along the negative Y-axis
+// Negative Y-axis of graph is positive Y-axis of the canvas
+for(i=1; i<x_axis_distance_grid_lines; i++) {
+    ctx.beginPath();
+    ctx.lineWidth = 1;
+    ctx.strokeStyle = "#000000";
+
+    // Draw a tick mark 6px long (-3 to 3)
+    ctx.moveTo(-3, -25*i+0.5);
+    ctx.lineTo(3, -25*i+0.5);
+    ctx.stroke();
+
+    // Text value at that point
+    ctx.font = '9px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(y_axis_starting_point.number*i, -15, -25*i+3);
 }
 }
 script();
