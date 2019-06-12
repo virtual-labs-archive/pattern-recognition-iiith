@@ -8,9 +8,7 @@ body{
 
 font-family: Arial;
 
-padding: 10px;
-
-background-color: #f1f1f1;
+padding: 50px;
 
 }
 
@@ -37,23 +35,9 @@ padding-left: 20px;
 
 }
 
-.graph {
-
-float: left;
-
-width: 50%;
-
-padding: 15px;
-
-max-width: 800px;
-
-margin: 50px auto;
-
-}
-
 .card {
 
-background-color: white;
+background-color: #f1f1f1;
 
 padding: 20px;
 

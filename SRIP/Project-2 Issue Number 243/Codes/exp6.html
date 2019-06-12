@@ -1,56 +1,60 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+
 <head>
-
-	<title>MLE: Learning the classifier from data</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="exp6.css">
-	
+    <link rel="stylesheet" type="text/css" href="exp6.css">
+    <script type="text/javascript" src="exp6.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
-<body> 
 
-<script type="text/javascript" src="exp6.js"></script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
-<!-- Graphs Layout -->
-<div class="row"> 
-	<div class="leftcolumn">          
-		<div class="graph">
-			<canvas id="chartContainer" width="1600" height="900"></canvas> 
+<body>
+	<div class="leftcolumn">
+		<div id="chartContainer" style="height: 400px; width: 600px;">
 		</div>
 	</div>
 
+
 	<div class="rightcolumn">
-    	<div class="card">
-      		<h2>Distribution Function</h2>
-      		<p> Select Distribution Function</p>
-      		<select id="distribution-function">
-  				<option value="Gaussian/ Normal Distribution">Gaussian/ Normal Distribution</option>
-  				<option value="Uniform Distribution">Uniform Distribution</option>
-  			</select>
-        </div>
-
-    	<div class="card">
-      		<h3>Mark Points</h3>
+		<div class="card">
+    		<h2>Distribution Function</h2>
+      		<p> Select Distribution Function
+	      		<select id="distribution-function">
+	  				<option value="Gaussian/ Normal Distribution">Gaussian/ Normal Distribution</option>
+	  				<option value="Uniform Distribution">Uniform Distribution</option>
+	  			</select>
+  			</p>
     	</div>
 
     	<div class="card">
-      		<h3>Add Data</h3>
-	    	<div class="w3-container">
-	  			<button class="button" onclick="addClass1()">Add Class 1</button>
-	  			<button class="button" onclick="addClass2()">Add Class 2</button>
-				<button class="button" id="clear">Clear</button>
-				<p>
-					<button class="button" onclick="calculateMLE()">Calculate MLE</button>
-	  				<button class="button" onclick="markAll()">Mark All</button>
-	  			</p>
-			</div>
+      		<h2>Mark Points</h2>
+      		<h4>Class 1</h4>
+      			<p>Mean: <input id="mean1" type="number" step="any"> <input id="mean2" type="number" step="any"></p>
+    			<p>Covariance: <input id="cov" type="number" step="any"> <input id="cov" type="number" step="any">
+    			<p> <input id="cov" type="number" step="any"> <input id="cov" type="number" step="any"></p>
+      		
+    		<h4>Class 2</h4>
+      			<p> Mean: <input id="mean1" type="number" step="any"> <input id="mean2" type="number" step="any"></p>
+    			<p> Covariance: <input id="cov" type="number" step="any"> <input id="cov" type="number" step="any">
+    			<p> <input id="cov" type="number" step="any"> <input id="cov" type="number" step="any"></p>
+      		
+
     	</div>
-  	</div>
-</div>
 
+		<div class="card">
+			<h2>Add Data</h2>
+    		X Value: <input id="xValue" type="number" step="any" placeholder="Enter X-Value">
+    		Y Value: <input id="yValue" type="number" step="any" placeholder="Enter Y-Value">
+    		<button id="renderButton1">Add Class 1 </button>
+    		<button id="renderButton2">Add Class 2 </button>
+    		<button class="button" id="clear">Clear</button>
+			<p>
+				<button class="button" onclick="calculateMLE()">Calculate MLE</button>
+	  			<button class="button" onclick="markAll()">Mark All</button>
+	  		</p>
+    	</div>
 
-
+    </div>
+         
 </body>
+
 </html>
