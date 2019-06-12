@@ -1,0 +1,139 @@
+* {
+
+box-sizing: border-box;
+
+}
+
+
+body {
+
+margin: 0;
+
+}
+
+
+/*Graphs Layout */
+.graph {
+
+float: left;
+
+width: 50%;
+
+padding: 15px;
+
+max-width: 800px;
+
+margin: 50px auto;
+
+}
+
+
+
+.row:after {
+
+content: "";
+
+display: table;
+
+clear: both;
+
+}
+
+
+@media screen and (max-width:600px) {
+
+.graph {
+
+width: 100%;
+
+}
+
+}
+
+
+/* 1st row Input Output Layout */
+.column-0 {
+
+float: left;
+
+padding: 10px;
+
+}
+
+
+.column-0.side {
+
+width: 37.5%;
+
+}
+
+
+.column-0.right {
+
+width: 25%;
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+.column-0.side, .column-0.right {
+
+width: 100%;
+
+}
+
+}
+
+
+.button{
+	margin:5px;
+}
+
+
+/* 2nd row Input Output Layout */
+.column-1 {
+
+float: left;
+
+width: 37.5%;
+
+padding: 15px;
+
+}
+
+
+.row:after {
+
+content: "";
+
+display: table;
+
+clear: both;
+
+}
+
+
+@media screen and (max-width:600px) {
+
+.column-1 {
+
+width: 100%;
+
+}
+
+}
+
+
+#input-data-from-user-class1{
+
+visibility: hidden;
+
+}
+
+
+#input-data-from-user-class2{
+
+visibility: hidden;
+
+}
