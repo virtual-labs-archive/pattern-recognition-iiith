@@ -1,13 +1,19 @@
 <html>
 <head>
-<script  language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<link rel="stylesheet" type="text/css" href="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Codes\Styles.css">
+<title>Pattern Recognition
+</title>
 </head>
 <body>
-<div class="container">
-<canvas id='myChart' height="600" width="600">
+<h1>
+	<center>Bayesian Classification
+	</center>
+</h1>
+<div class="container" onclick="markpoints(event)">
+<canvas id='myChart'  height="600" width="600">
 </canvas>
 </div>
-<script src="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Libraries\Script.js" language="javascript" type="text/javascript">
+<script src="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Codes\Script.js" language="javascript" type="text/javascript">
 </script>
 <div class="container2">
 <canvas id="Values" height="50" width="600">
@@ -38,6 +44,14 @@ document.write("<br>"+"Load Custom Datasets"+"<br>"+"<br>"+"Dataset");
 <br>
 Mark Points<br>
 <br>
+<div class="slidecontainer" width="600">
+  <input type="range" min="0" max="600" value="0" class="slider" id="myRange">
+  <p>
+  	<b>
+  	<pre>Class 1												Class 2 </pre>
+  </b>
+</p>
+</div>
 <button type="button" id="b2">Mark</button>
 <button type="button" id="b3">Mark All</button>
 <button type="button" id="b4">Clear</button>
@@ -77,6 +91,7 @@ Generate Random Values<br>
 		<td><button id="b6">Resize Axes</button></td>
 	</tr>	
 </table>
-<script type="text/javascript" src="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Libraries\Function.js" language="javascript"></script>
+<script type="text/javascript" src="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Codes\Function.js" language="javascript">
+</script>
 </body>
 </html>
