@@ -1,4 +1,3 @@
-
 var grid_size = 50;
 var x_axis_distance_grid_lines = 6;
 var y_axis_distance_grid_lines = 6;
@@ -16,7 +15,8 @@ var canvas_height = canvas.height;
 
 function script()
 {
-    // no of vertical grid lines
+    ctx.fillStyle="#000000";
+     // no of vertical grid lines
 var num_lines_x = Math.floor(canvas_height/grid_size);
 
 // no of horizontal grid lines
@@ -139,6 +139,7 @@ for(i=1; i<x_axis_distance_grid_lines; i++) {
 }
 function script_for_T2_dataset()
 {
+     ctx.fillStyle="#000000";
     // no of vertical grid lines
 var num_lines_x = Math.floor(canvas_height/25);
 
