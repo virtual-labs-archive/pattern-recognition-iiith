@@ -1,10 +1,13 @@
 var ctx = document.getElementById('myChart').getContext('2d');
 var previous_x="NIL";
+var flag=-1;
+//flag is the variable which tells which function among load and generate was atlast called. 
 function load() 
 {
   //x is the value selected by user from the list
+flag=0;
 var x=document.getElementById("s1").value;
-	 if(x=="T1")
+   if(x=="T1")
       {
         if(previous_x=="T2")
         {
@@ -168,6 +171,7 @@ var x=document.getElementById("s1").value;
 }
 function generate()
 {
+  flag=1;
   ctx.clearRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);
   ctx.translate(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines);
   script();
@@ -213,5 +217,88 @@ function generate()
 
   }
 }
+function mark_all_points()
+{
+  var slider_value=document.getElementById("myRange").value;
+  var x=document.getElementById("s1").value;
+  load();
+  if(x=="T2")
+  {
+    // Add behind elements.
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.fillStyle= "#A9A9A9";
+    ctx.fillRect(-grid_size* y_axis_distance_grid_lines,-25*x_axis_distance_grid_lines,slider_value,canvas.height);
+   var x_coordinate=(Number(-(grid_size* y_axis_distance_grid_lines))+Number(slider_value));
+   ctx.fillStyle="#CD5C5C";
+    ctx.fillRect(x_coordinate,-25*x_axis_distance_grid_lines,canvas.width,canvas.height);
+  }
+  else
+  {
+    // Add behind elements.
+    ctx.globalCompositeOperation = 'destination-over';
+    ctx.fillStyle= "#A9A9A9";
+    ctx.fillRect(-grid_size* y_axis_distance_grid_lines,-grid_size*x_axis_distance_grid_lines,slider_value,canvas.height);
+    var x_coordinate=(Number(-(grid_size* y_axis_distance_grid_lines))+Number(slider_value));
+    ctx.fillStyle="#CD5C5C";
+    ctx.fillRect(x_coordinate,-grid_size*x_axis_distance_grid_lines,canvas.width,canvas.height);
+  }
+}
+function Clear()
+{
+  flag2=-1;
+  if(flag==0)
+    load();
+  else(flag==1)
+    generate();
+}
+var flag2=-1;
+function markpoints(event)
+{
+  if(flag!=-1 && flag2==0)
+  {
+  var x_coordinate=event.clientX;
+  var y_coordinate=event.clientY;
+  var x=document.getElementById("s1").value;
+  if(x=="T2")
+  {
+    x_coordinate=Number(x_coordinate)-310;
+    y_coordinate=Number(y_coordinate)-225;
+    if(x_coordinate%2==0)
+     {
+      ctx.fillStyle = "black";
+      ctx.fillRect(x_coordinate,y_coordinate,10,10);
+     }
+    else
+     {
+      ctx.fillStyle = "red";
+      ctx.fillRect(x_coordinate,y_coordinate,10,10); 
+     }
+  }
+  else
+  {
+    x_coordinate=Number(x_coordinate)-310;
+    y_coordinate=Number(y_coordinate)-380;
+    if(x_coordinate%2==0)
+     {
+      ctx.fillStyle = "black";
+      ctx.fillRect(x_coordinate,y_coordinate,10,10);
+     }
+    else
+     {
+      ctx.fillStyle = "red";
+      ctx.fillRect(x_coordinate,y_coordinate,10,10); 
+     }
+  }
+  }
+}
+function mark(event)
+{
+ flag2=0;
+ markpoints(event);
+}
 document.getElementById("b1").addEventListener('click',load);
 document.getElementById("b5").addEventListener('click',generate);
+document.getElementById("b3").addEventListener('click',mark_all_points);
+document.getElementById("b4").addEventListener('click',Clear);
+document.getElementById("b2").addEventListener('click',mark);
+
