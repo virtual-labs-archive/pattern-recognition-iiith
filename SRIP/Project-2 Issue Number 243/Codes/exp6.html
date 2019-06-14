@@ -2,6 +2,7 @@
 <html>
 
 <head>
+	<title>MLE: Learning the Classifier from Data</title>
     <link rel="stylesheet" type="text/css" href="exp6.css">
     <script type="text/javascript" src="exp6.js"></script>
     <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
@@ -19,8 +20,8 @@
     		<h2>Distribution Function</h2>
       		<p> Select Distribution Function
 	      		<select id="distribution-function">
-	  				<option value="Gaussian/ Normal Distribution">Gaussian/ Normal Distribution</option>
-	  				<option value="Uniform Distribution">Uniform Distribution</option>
+	  				<option value="0">Gaussian/ Normal Distribution</option>
+	  				<option value="1">Uniform Distribution</option>
 	  			</select>
   			</p>
     	</div>
@@ -29,13 +30,13 @@
       		<h2>Mark Points</h2>
       		<h4>Class 1</h4>
       			<p> Mean: <output id="mean1x"> </output>  <output id="mean1y"> </output> </p>
-    			<p> Covariance: <output id="cov"> </output>  <ouput id="cov"> </ouput> </p>
-    			<p> <output id="cov"></output>  <output id="cov"> </output> </p>
+    			<p> Covariance: <output id="c11-1"> </output>  <ouput id="c12-1"> </ouput> </p>
+    			<p> <output id="c21-1"></output>  <output id="c22-1"> </output> </p>
       		
     		<h4>Class 2</h4>
       			<p> Mean: <output id="mean2x"> </output>  <output id="mean2y"> </output> </p>
-    			<p> Covariance: <output id="cov"> </output>  <output id="cov"> </output> </p>
-    			<p> <output id="cov"></output>  <output id="cov"> </output> </p>
+    			<p> Covariance: <output id="c11-2"> </output>  <output id="c12-2"> </output> </p>
+    			<p> <output id="c21-2"></output>  <output id="c22-2"> </output> </p>
     	</div>
 
 		<div class="card">
