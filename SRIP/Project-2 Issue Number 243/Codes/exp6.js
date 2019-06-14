@@ -180,8 +180,9 @@ window.onload = function() {
             if (series2[i2].y < ymin2) {
                 ymin2 = series2[i2].y;
             }
-            if (!series2[i2].y > ymax2)
+            if (!series2[i2].y > ymax2){
                 continue;
+            }
             ymax2 = series2[i2].y;
         }
 
@@ -281,8 +282,9 @@ window.onload = function() {
                         });
                         chart.render();
                     }
-                    if (p1 !== p2 || p1 === 0.0) 
+                    if (p1 !== p2 || p1 === 0.0) {
                         continue;
+                    }
                     series2.push({
                         x: i,
                         y: j
