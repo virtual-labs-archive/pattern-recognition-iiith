@@ -47,8 +47,8 @@ window.onload = function() {
         });
 
     function addDataPointsAndRender1() {
-        xValue = Number(document.getElementById("xValue").value);
-        yValue = Number(document.getElementById("yValue").value);
+        var xValue = Number(document.getElementById("xValue").value);
+        var yValue = Number(document.getElementById("yValue").value);
         series1.push({
             x: xValue,
             y: yValue
@@ -113,8 +113,9 @@ window.onload = function() {
             if (series1[i1].y < ymin1) {
                 ymin1 = series1[i1].y;
             }
-            if (!series1[i1].y > ymax1) 
+            if (!series1[i1].y > ymax1){
                 continue;
+            }
             ymax1 = series1[i1].y;
         }
 
@@ -301,13 +302,13 @@ window.onload = function() {
     
     function prob1(x, y){
         var r = 0.0;
-        if(distributionFunction == 0){
+        if(distributionFunction === 0){
             var sigmax = Math.sqrt(covariance22Val1);
             var sigmay = Math.sqrt(covariance11Val1);
             var rho = covariance12Val1 / (sigmax * sigmay);
             rho = 0.0;
             r = 1.0 / (6.283185307179586 * sigmax * sigmay * Math.sqrt(1.0 - rho * rho)) * Math.exp(-1.0 / (2.0 * (1.0 - rho * rho)) * (Math.pow(y - xmeanClass1, 2.0) / covariance11Val1 + Math.pow(x - ymeanClass1, 2.0) / covariance22Val1 - 2.0 * rho * (y - xmeanClass1) * (x - ymeanClass1) / (sigmax * sigmay)));
-            if (distributionFunction == 1 && x <= xmax1 && x >= xmin1 && y <= ymax1 && y >= ymin1) {
+            if (distributionFunction === 1 && x <= xmax1 && x >= xmin1 && y <= ymax1 && y >= ymin1) {
                 r = s1Size;
             }
             console.log(r);
@@ -318,14 +319,14 @@ window.onload = function() {
 
     function prob2(x, y) {
         var r = 0.0;
-        if (distributionFunction == 0) {
+        if (distributionFunction === 0) {
             var sigmax = Math.sqrt(covariance22Val2);
             var sigmay = Math.sqrt(covariance11Val2);
             var rho = covariance12Val2 / (sigmax * sigmay);
             rho = 0.0; 
             r = 1.0 / (6.283185307179586 * sigmax * sigmay * Math.sqrt(1.0 - rho * rho)) * Math.exp(-1.0 / (2.0 * (1.0 - rho * rho)) * (Math.pow(y - xmeanClass2, 2.0) / covariance11Val2 + Math.pow(x - ymeanClass2, 2.0) / covariance22Val2 - 2.0 * rho * (y - xmeanClass2) * (x - ymeanClass2) / (sigmax * sigmay)));
         }
-        if (distributionFunction == 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2) {
+        if (distributionFunction === 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2) {
             r = s2Size;
         }
         console.log(r);
@@ -341,6 +342,6 @@ window.onload = function() {
     clearButton.addEventListener("click", clear)
     var calculateMLE = document.getElementById("calculate-mle");
     calculateMLE.addEventListener("click", addcalculateMLE);
-    var markAll=document.getElementById("mark-all");
+    var markAll = document.getElementById("mark-all");
     markAll.addEventListener("click", addmarkAll);
 }
