@@ -24,11 +24,12 @@ window.onload = function() {
     var s2Size = 0;
 
     var chart = new CanvasJS.Chart("chartContainer", {
+        title: {text: "Chart"},
         axisX:{
-            title: "X-axis"
+            title: "X-axis",
         },
         axisY: {
-            title: "Y-axis"
+            title: "Y-axis",
         },
         data: [{
             showInLegend: true,           
@@ -57,8 +58,8 @@ window.onload = function() {
     }
     
     function addDataPointsAndRender2() {
-        xValue = Number(document.getElementById("xValue").value);
-        yValue = Number(document.getElementById("yValue").value);
+        var xValue = Number(document.getElementById("xValue").value);
+        var yValue = Number(document.getElementById("yValue").value);
         series2.push({
             x: xValue,
             y: yValue
@@ -100,7 +101,7 @@ window.onload = function() {
             xmeanClass1 += series1[i1].x;
             ymeanClass1 += series1[i1].y;
         
-            if (distributionFunction === 1) {
+            if (distributionFunction == 1) {
                 l1gammax += series1[i1].x;
                 l1gammay += series1[i1].y;
             }
@@ -119,14 +120,14 @@ window.onload = function() {
             ymax1 = series1[i1].y;
         }
 
-        if (distributionFunction === 1) {
+        if (distributionFunction == 1) {
             l1gammax /= series1.length;
             l1gammay /= series1.length;
         }
 
         xmeanClass1 = xmeanClass1 / series1.length;
         ymeanClass1 = ymeanClass1 / series1.length;
-        if (distributionFunction === 0) {
+        if (distributionFunction == 0) {
             document.getElementById("mean1x").innerHTML = xmeanClass1;
             document.getElementById("mean1y").innerHTML = ymeanClass1;
         }
@@ -145,14 +146,14 @@ window.onload = function() {
         covariance22Val1 = covariance22Val1 / series1.length - ymeanClass1 * ymeanClass1;
         covariance12Val1 = covariance12Val1 / series1.length - xmeanClass1 * ymeanClass1;
         
-        if (distributionFunction === 0) {
+        if (distributionFunction == 0) {
             document.getElementById("c11-1").innerHTML = covariance11Val1;
             document.getElementById("c12-1").innerHTML = covariance12Val1;
             document.getElementById("c21-1").innerHTML = covariance12Val1;
             document.getElementById("c22-1").innerHTML = covariance22Val1;
         }
 
-        if (distributionFunction === 1) {
+        if (distributionFunction == 1) {
             document.getElementById("c11-1").innerHTML = "";
             document.getElementById("c12-1").innerHTML = "";
             document.getElementById("c21-1").innerHTML = "";
@@ -168,7 +169,7 @@ window.onload = function() {
             xmeanClass2 += series2[i2].x;
             ymeanClass2 += series2[i2].y;
         
-            if (distributionFunction === 1) {
+            if (distributionFunction == 1) {
                 l2gammax += series2[i2].x;
                 l2gammay += series2[i2].y;
             }
@@ -187,14 +188,14 @@ window.onload = function() {
             ymax2 = series2[i2].y;
         }
 
-        if (distributionFunction === 1) {
+        if (distributionFunction == 1) {
             l2gammax /= series2.length;
             l2gammay /= series2.length;
         }
 
         xmeanClass2 = xmeanClass2 / series2.length;
         ymeanClass2 = ymeanClass2 / series2.length;
-        if (distributionFunction === 0) {
+        if (distributionFunction == 0) {
             document.getElementById("mean2x").innerHTML = xmeanClass2;
             document.getElementById("mean2y").innerHTML = ymeanClass2;
         }
@@ -213,14 +214,14 @@ window.onload = function() {
         covariance22Val2 = covariance22Val2 / series2.length - ymeanClass2 * ymeanClass2;
         covariance12Val2 = covariance12Val2 / series2.length - xmeanClass2 * ymeanClass2;
         
-        if (distributionFunction === 0) {
+        if (distributionFunction == 0) {
             document.getElementById("c11-2").innerHTML = covariance11Val2;
             document.getElementById("c12-2").innerHTML = covariance12Val2;
             document.getElementById("c21-2").innerHTML = covariance12Val2;
             document.getElementById("c22-2").innerHTML = covariance22Val2;
         }
 
-        if (distributionFunction === 1) {
+        if (distributionFunction == 1) {
             document.getElementById("c11-1").innerHTML = "";
             document.getElementById("c12-1").innerHTML = "";
             document.getElementById("c21-1").innerHTML = "";
@@ -231,7 +232,9 @@ window.onload = function() {
             document.getElementById("c22-2").innerHTML = "";
         }
         s2Size = series2.length;
-
+        console.log(xmeanClass1);
+        console.log(series1);
+        console.log(series2);
     }  
     
     function addmarkAll() {
@@ -239,11 +242,11 @@ window.onload = function() {
         var p1;
         var p2;
         var i;
-        var series1=[];
+        var series1 = [];
         var series2 = [];
-        var l = -1;
-        var r = 1;
-        if(distributionFunction === 0){
+        var l = -5;
+        var r = 5;
+        if(distributionFunction == 0){
             for(i = l; i < r; i += (r - l) / 100.0){
                 for (j = l; j < r; j += (r - l) / 100.0) {
                     p1 = prob1(j, i);
@@ -252,20 +255,17 @@ window.onload = function() {
                             x: i,
                             y: j
                         });
-                        chart.render();
                         continue;
                     }
                     series2.push({
                         x: i,
                         y: j
                     });
-                    chart.render();
                 }
             }
-            //chart.render();
         }
 
-        if (distributionFunction === 1) {
+        if (distributionFunction == 1) {
             for (i = l; i < r; i += (r - l) / 100.0) {
                 for (j = l; j < r; j += (r - l) / 100.0) {
                     p1 = prob1(j, i);
@@ -274,41 +274,39 @@ window.onload = function() {
                             x: i,
                             y: j
                         });
-                        chart.render();
                     }
                     if (p2 > p1) {
                         series2.push({
                             x: i,
                             y: j
                         });
-                        chart.render();
                     }
-                    if (p1 !== p2 || p1 === 0.0) {
+                    if (p1 != p2 || p1 == 0.0) {
                         continue;
                     }
                     series2.push({
                         x: i,
                         y: j
                     });
-                    chart.render();
                 }
             }
-            //chart.render();
         }
         console.log(series1);
         console.log(series2);
+        console.log(distributionFunction);
+        chart1up(series1, series2);
         
     }
     
     function prob1(x, y){
         var r = 0.0;
-        if(distributionFunction === 0){
+        if(distributionFunction == 0){
             var sigmax = Math.sqrt(covariance22Val1);
             var sigmay = Math.sqrt(covariance11Val1);
             var rho = covariance12Val1 / (sigmax * sigmay);
             rho = 0.0;
             r = 1.0 / (6.283185307179586 * sigmax * sigmay * Math.sqrt(1.0 - rho * rho)) * Math.exp(-1.0 / (2.0 * (1.0 - rho * rho)) * (Math.pow(y - xmeanClass1, 2.0) / covariance11Val1 + Math.pow(x - ymeanClass1, 2.0) / covariance22Val1 - 2.0 * rho * (y - xmeanClass1) * (x - ymeanClass1) / (sigmax * sigmay)));
-            if (distributionFunction === 1 && x <= xmax1 && x >= xmin1 && y <= ymax1 && y >= ymin1) {
+            if (distributionFunction == 1 && x <= xmax1 && x >= xmin1 && y <= ymax1 && y >= ymin1) {
                 r = s1Size;
             }
             console.log(r);
@@ -319,20 +317,29 @@ window.onload = function() {
 
     function prob2(x, y) {
         var r = 0.0;
-        if (distributionFunction === 0) {
+        if (distributionFunction == 0) {
             var sigmax = Math.sqrt(covariance22Val2);
             var sigmay = Math.sqrt(covariance11Val2);
             var rho = covariance12Val2 / (sigmax * sigmay);
             rho = 0.0; 
             r = 1.0 / (6.283185307179586 * sigmax * sigmay * Math.sqrt(1.0 - rho * rho)) * Math.exp(-1.0 / (2.0 * (1.0 - rho * rho)) * (Math.pow(y - xmeanClass2, 2.0) / covariance11Val2 + Math.pow(x - ymeanClass2, 2.0) / covariance22Val2 - 2.0 * rho * (y - xmeanClass2) * (x - ymeanClass2) / (sigmax * sigmay)));
         }
-        if (distributionFunction === 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2) {
+        if (distributionFunction == 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2) {
             r = s2Size;
         }
         console.log(r);
         return r;
     }
 
+    function chart1up(series1, series2){
+        chart.options.title.text = "Updated Chart";
+        chart.options.data[0].type = "area";
+        chart.options.data[0].dataPoints = series1;
+        chart.options.data[1].type = "area";
+        chart.options.data[1].dataPoints = series2;
+        chart.render();
+        console.log('heloooocjdijfos');
+    }
 
     var addClass1 = document.getElementById("add-class-1");
     addClass1.addEventListener("click", addDataPointsAndRender1);
