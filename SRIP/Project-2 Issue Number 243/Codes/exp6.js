@@ -232,25 +232,25 @@ window.onload = function() {
             document.getElementById("c22-2").innerHTML = "";
         }
         s2Size = series2.length;
-        console.log(xmeanClass1);
-        console.log(series1);
-        console.log(series2);
+        console.log(s1Size);
+        console.log(s2Size);
     }  
     
     function addmarkAll() {
-        var j;
-        var p1;
-        var p2;
-        var i;
+        var j=0;
+        var p1=0.0;
+        var p2=0.0;
+        var i=0;
         var series1 = [];
         var series2 = [];
-        var l = -5;
-        var r = 5;
+        var l = -1;
+        var r = 1;
         if(distributionFunction == 0){
             for(i = l; i < r; i += (r - l) / 100.0){
                 for (j = l; j < r; j += (r - l) / 100.0) {
                     p1 = prob1(j, i);
-                    if (p1 > (p2 = prob2(j, i))) {
+                    p2 = prob2(j, i);
+                    if (p1 > p2) {
                         series1.push({
                             x: i,
                             y: j
@@ -266,21 +266,26 @@ window.onload = function() {
         }
 
         if (distributionFunction == 1) {
-            for (i = l; i < r; i += (r - l) / 100.0) {
+            for(i = l; i < r; i += (r - l) / 100.0){
                 for (j = l; j < r; j += (r - l) / 100.0) {
-                    p1 = prob1(j, i);
-                    if (p1 > (p2 = prob2(j, i))) {
+                    p1 = 6;//prob1(j, i);
+                    console.log(p1);
+                    p2 = 5;//prob2(j, i);
+                    console.log(p2);
+                    if (p1 > p2) {
                         series1.push({
                             x: i,
                             y: j
                         });
                     }
+                    console.log(series1);
                     if (p2 > p1) {
                         series2.push({
                             x: i,
                             y: j
                         });
                     }
+                    console.log(series2);
                     if (p1 != p2 || p1 == 0.0) {
                         continue;
                     }
@@ -288,12 +293,11 @@ window.onload = function() {
                         x: i,
                         y: j
                     });
+                    console.log(series2);
                 }
             }
         }
-        console.log(series1);
-        console.log(series2);
-        console.log(distributionFunction);
+
         chart1up(series1, series2);
         
     }
@@ -306,13 +310,11 @@ window.onload = function() {
             var rho = covariance12Val1 / (sigmax * sigmay);
             rho = 0.0;
             r = 1.0 / (6.283185307179586 * sigmax * sigmay * Math.sqrt(1.0 - rho * rho)) * Math.exp(-1.0 / (2.0 * (1.0 - rho * rho)) * (Math.pow(y - xmeanClass1, 2.0) / covariance11Val1 + Math.pow(x - ymeanClass1, 2.0) / covariance22Val1 - 2.0 * rho * (y - xmeanClass1) * (x - ymeanClass1) / (sigmax * sigmay)));
-            if (distributionFunction == 1 && x <= xmax1 && x >= xmin1 && y <= ymax1 && y >= ymin1) {
-                r = s1Size;
-            }
-            console.log(r);
-        return r;
         }
-        
+        if (distributionFunction == 1 && x <= xmax1 && x >= xmin1 && y <= ymax1 && y >= ymin1) {
+            r = s1Size;
+        }
+        return r;        
     }
 
     function prob2(x, y) {
@@ -327,7 +329,6 @@ window.onload = function() {
         if (distributionFunction == 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2) {
             r = s2Size;
         }
-        console.log(r);
         return r;
     }
 
