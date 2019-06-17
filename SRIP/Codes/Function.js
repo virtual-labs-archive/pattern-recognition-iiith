@@ -1,4 +1,8 @@
-var ctx = document.getElementById('myChart').getContext('2d');
+var GridSize = 50;
+var XAxisDistanceGridLines = 6;
+var YAxisDistanceGridLines = 6;
+var canvas = document.getElementById("myChart");
+var ctx = canvas.getContext('2d');
 var PreviousX="NIL";
 var flag=-1;
 //flag is the variable which tells which function among load and generate was atlast called. 
@@ -53,7 +57,7 @@ var x=document.getElementById("s1").value;
           ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);     
           ctx.translate(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines);
         }
-      ScriptForT2Dataset();
+      scriptForT2Dataset();
       document.getElementById("t1").value=0;
       document.getElementById("t2").value=0;
       document.getElementById("t3").value=0;
@@ -167,11 +171,11 @@ var x=document.getElementById("s1").value;
       PreviousX=x;
     }  
 }
-function GenerateForT2Dataset()
+function generateForT2Dataset()
 {
   ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
     ctx.translate(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);
-    ScriptForT2Dataset();
+    scriptForT2Dataset();
   var value1=document.getElementById("t1").value;
   var value2=document.getElementById("t2").value;
   var value3=document.getElementById("t3").value;
@@ -707,10 +711,10 @@ function generate()
 }
 else
 {
-  GenerateForT2Dataset();
+  generateForT2Dataset();
 }
 }
-function MarkAllPoints()
+function markAllPoints()
 {
   var slider_value=document.getElementById("myRange").value;
   var x=document.getElementById("s1").value;
@@ -736,7 +740,7 @@ function MarkAllPoints()
     ctx.fillRect(x_coordinate,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
 }
-function Clear()
+function clear()
 {
   flag2=-1;
   if(flag===0)
@@ -789,7 +793,7 @@ function mark(event)
  flag2=0;
  markpoints(event);
 }
-function ResizeAxis() 
+function resizeAxis() 
 {
   var x=document.getElementById('s1').value;
   if(x==='T2')
@@ -806,8 +810,8 @@ function ResizeAxis()
 }
 document.getElementById("b1").addEventListener('click',load);
 document.getElementById("b5").addEventListener('click',generate);
-document.getElementById("b3").addEventListener('click',MarkAllPoints);
-document.getElementById("b4").addEventListener('click',Clear);
+document.getElementById("b3").addEventListener('click',markAllPoints);
+document.getElementById("b4").addEventListener('click',clear);
 document.getElementById("b2").addEventListener('click',mark);
-document.getElementById("b6").addEventListener('click',ResizeAxis);
+document.getElementById("b6").addEventListener('click',resizeAxis);
 
