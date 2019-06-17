@@ -68,13 +68,7 @@ window.onload = function() {
     }
     
     function clear(){
-        series1 = []; 
-        series2 = []; 
-        xmeanClass1 = 0.0;
-        ymeanClass1 = 0.0;
-        xmeanClass2 = 0.0;
-        ymeanClass2 = 0.0;
-        chart.render();
+        //helllo
     }
 
     function addcalculateMLE() {
@@ -102,8 +96,8 @@ window.onload = function() {
             ymeanClass1 += series1[i1].y;
         
             if (distributionFunction == 1) {
-                l1gammax += series1[i1].x;
-                l1gammay += series1[i1].y;
+                l1gammax += Math.log(series1[i1].x);
+                l1gammay += Math.log(series1[i1].y);
             }
             if (series1[i1].x < xmin1) {
                 xmin1 = series1[i1].x;
@@ -170,8 +164,8 @@ window.onload = function() {
             ymeanClass2 += series2[i2].y;
         
             if (distributionFunction == 1) {
-                l2gammax += series2[i2].x;
-                l2gammay += series2[i2].y;
+                l2gammax += Math.log(series2[i2].x);
+                l2gammay += Math.log(series2[i2].y);
             }
             if (series2[i2].x < xmin2) {
                 xmin2 = series2[i2].x;
@@ -241,8 +235,8 @@ window.onload = function() {
         var p1=0.0;
         var p2=0.0;
         var i=0;
-        var series1 = [];
-        var series2 = [];
+        series1 = [];
+        series2 = [];
         var l = -1;
         var r = 1;
         if(distributionFunction == 0){
@@ -268,9 +262,9 @@ window.onload = function() {
         if (distributionFunction == 1) {
             for(i = l; i < r; i += (r - l) / 100.0){
                 for (j = l; j < r; j += (r - l) / 100.0) {
-                    p1 = 6;//prob1(j, i);
+                    p1 = prob1(j, i);
                     console.log(p1);
-                    p2 = 5;//prob2(j, i);
+                    p2 = prob2(j, i);
                     console.log(p2);
                     if (p1 > p2) {
                         series1.push({
