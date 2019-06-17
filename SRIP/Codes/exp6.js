@@ -67,9 +67,9 @@ window.onload = function() {
         chart.render();
     }
     
-    function clear(){
+    //function clear(){
         //helllo
-    }
+    //}
 
     function addcalculateMLE() {
         distributionFunction = document.getElementById("distribution-function").value;
@@ -271,6 +271,8 @@ window.onload = function() {
         chart.options.data[1].type = "area";
         chart.options.data[1].dataPoints = series21;
         chart.render();
+        document.getElementById("calculate-mle").disabled = true;
+        document.getElementById("mark-all").disabled = true;
         //console.log('heloooocjdijfos');
     }
 
@@ -349,8 +351,8 @@ window.onload = function() {
     addClass1.addEventListener("click", addDataPointsAndRender1);
     var addClass2 = document.getElementById("add-class-2");
     addClass2.addEventListener("click", addDataPointsAndRender2);
-    var clearButton = document.getElementById("clear");
-    clearButton.addEventListener("click", clear)
+    //var clearButton = document.getElementById("clear");
+    //clearButton.addEventListener("click", clear)
     var calculateMLE = document.getElementById("calculate-mle");
     calculateMLE.addEventListener("click", addcalculateMLE);
     var markAll = document.getElementById("mark-all");
