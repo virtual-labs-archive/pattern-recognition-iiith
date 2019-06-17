@@ -720,13 +720,13 @@ function markAllPoints()
   var SliderValue=document.getElementById("myRange").value;
   var x=document.getElementById("s1").value;
   load();
+  var XCoordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(SliderValue));
   if(x==="T2")
   {
     // Add behind elements.
     ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle= "#A9A9A9";
     ctx.fillRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,SliderValue,canvas.height);
-   var XCoordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(SliderValue));
    ctx.fillStyle="#CD5C5C";
     ctx.fillRect(XCoordinate,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
@@ -736,7 +736,6 @@ function markAllPoints()
     ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle= "#A9A9A9";
     ctx.fillRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,SliderValue,canvas.height);
-    var XCoordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(SliderValue));
     ctx.fillStyle="#CD5C5C";
     ctx.fillRect(XCoordinate,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
@@ -757,7 +756,7 @@ function markpoints(event)
   if(flag!==-1 && flag2===0)
   {
   var XCoordinate=event.clientX;
-  varYCoordinate=event.clientY;
+  var YCoordinate=event.clientY;
   var x=document.getElementById("s1").value;
   if(x==="T2")
   {
