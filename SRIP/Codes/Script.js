@@ -141,7 +141,7 @@ for(i=1; i<XAxisDistanceGridLines; i++) {
     ctx.fillText(YAxisStartingPoint.number*i, -15, -((GridSize*i)+3));
 }
 }
-function ScriptForT2Dataset()
+function scriptForT2Dataset()
 {
     var i=0;
      ctx.fillStyle="#000000";
