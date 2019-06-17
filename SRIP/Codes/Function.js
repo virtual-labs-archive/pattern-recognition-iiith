@@ -2,10 +2,11 @@ var GridSize = 50;
 var XAxisDistanceGridLines = 6;
 var YAxisDistanceGridLines = 6;
 var canvas = document.getElementById("myChart");
-var ctx = canvas.getContext('2d');
+var ctx = canvas.getContext("2d");
 var PreviousX="NIL";
 var flag=-1;
 //flag is the variable which tells which function among load and generate was atlast called. 
+var flag2=-1;
 function load() 
 {
   //x is the value selected by user from the list
@@ -197,7 +198,7 @@ function generateForT2Dataset()
    {
     load();
    }
-   else if(value5===value10 && value5>'0')
+   else if(value5===value10 && value5>"0")
    {
     ctx.beginPath();
     ctx.arc(GridSize *value1,-25 * value2,GridSize *(value5/2), 0, Math.PI * 2, true);
@@ -328,7 +329,7 @@ function generateForT2Dataset()
    {
     load();
    }
-   else if(value7===value12 && value7>'0')
+   else if(value7===value12 && value7>"0")
    {
     ctx.beginPath();
     ctx.arc(GridSize *value3,-25 * value4,GridSize *(value7/2), 0, Math.PI * 2, true);
@@ -716,74 +717,76 @@ else
 }
 function markAllPoints()
 {
-  var slider_value=document.getElementById("myRange").value;
+  var SliderValue=document.getElementById("myRange").value;
   var x=document.getElementById("s1").value;
   load();
   if(x==="T2")
   {
     // Add behind elements.
-    ctx.globalCompositeOperation = 'destination-over';
+    ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle= "#A9A9A9";
-    ctx.fillRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,slider_value,canvas.height);
-   var x_coordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(slider_value));
+    ctx.fillRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,SliderValue,canvas.height);
+   var XCoordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(SliderValue));
    ctx.fillStyle="#CD5C5C";
-    ctx.fillRect(x_coordinate,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
+    ctx.fillRect(XCoordinate,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
   else
   {
     // Add behind elements.
-    ctx.globalCompositeOperation = 'destination-over';
+    ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle= "#A9A9A9";
-    ctx.fillRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,slider_value,canvas.height);
-    var x_coordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(slider_value));
+    ctx.fillRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,SliderValue,canvas.height);
+    var XCoordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(SliderValue));
     ctx.fillStyle="#CD5C5C";
-    ctx.fillRect(x_coordinate,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);
+    ctx.fillRect(XCoordinate,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
 }
 function clear()
 {
   flag2=-1;
-  if(flag===0)
+  if(flag===0){
     load();
-  else(flag===1)
+  }
+  else if(flag===1){
     generate();
+  }
 }
-var flag2=-1;
+
 function markpoints(event)
 {
   if(flag!==-1 && flag2===0)
   {
-  var x_coordinate=event.clientX;
-  var y_coordinate=event.clientY;
+  var XCoordinate=event.clientX;
+  varYCoordinate=event.clientY;
   var x=document.getElementById("s1").value;
   if(x==="T2")
   {
-    x_coordinate=Number(x_coordinate)-310;
-    y_coordinate=Number(y_coordinate)-225;
-    if(x_coordinate%2===0)
+    XCoordinate=Number(XCoordinate)-310;
+   YCoordinate=Number(YCoordinate)-225;
+    if(XCoordinate%2===0)
      {
       ctx.fillStyle = "black";
-      ctx.fillRect(x_coordinate,y_coordinate,10,10);
+      ctx.fillRect(XCoordinate,YCoordinate,10,10);
      }
     else
      {
       ctx.fillStyle = "red";
-      ctx.fillRect(x_coordinate,y_coordinate,10,10); 
+      ctx.fillRect(XCoordinate,YCoordinate,10,10); 
      }
   }
   else
   {
-    x_coordinate=Number(x_coordinate)-310;
-    y_coordinate=Number(y_coordinate)-380;
-    if(x_coordinate%2===0)
+    XCoordinate=Number(XCoordinate)-310;
+   YCoordinate=Number(YCoordinate)-380;
+    if(XCoordinate%2===0)
      {
       ctx.fillStyle = "black";
-      ctx.fillRect(x_coordinate,y_coordinate,10,10);
+      ctx.fillRect(XCoordinate,YCoordinate,10,10);
      }
     else
      {
       ctx.fillStyle = "red";
-      ctx.fillRect(x_coordinate,y_coordinate,10,10); 
+      ctx.fillRect(XCoordinate,YCoordinate,10,10); 
      }
   }
   }
@@ -795,8 +798,8 @@ function mark(event)
 }
 function resizeAxis() 
 {
-  var x=document.getElementById('s1').value;
-  if(x==='T2')
+  var x=document.getElementById("s1").value;
+  if(x==="T2")
   {
     ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,GridSize* (Number(YAxisDistanceGridLines)-1),canvas.height); 
    ctx.clearRect(-GridSize* YAxisDistanceGridLines,25,canvas.width,canvas.height);
@@ -808,10 +811,10 @@ function resizeAxis()
   }
           
 }
-document.getElementById("b1").addEventListener('click',load);
-document.getElementById("b5").addEventListener('click',generate);
-document.getElementById("b3").addEventListener('click',markAllPoints);
-document.getElementById("b4").addEventListener('click',clear);
-document.getElementById("b2").addEventListener('click',mark);
-document.getElementById("b6").addEventListener('click',resizeAxis);
+document.getElementById("b1").addEventListener("click",load);
+document.getElementById("b5").addEventListener("click",generate);
+document.getElementById("b3").addEventListener("click",markAllPoints);
+document.getElementById("b4").addEventListener("click",clear);
+document.getElementById("b2").addEventListener("click",mark);
+document.getElementById("b6").addEventListener("click",resizeAxis);
 
