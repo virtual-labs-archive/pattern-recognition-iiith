@@ -148,10 +148,10 @@ window.onload = function() {
         }
 
         if (distributionFunction == 1) {
-            document.getElementById("c11-1").innerHTML = "";
-            document.getElementById("c12-1").innerHTML = "";
-            document.getElementById("c21-1").innerHTML = "";
-            document.getElementById("c22-1").innerHTML = "";
+            document.getElementById("c11-1").innerHTML = covariance11Val1;
+            document.getElementById("c12-1").innerHTML = covariance12Val1;
+            document.getElementById("c21-1").innerHTML = covariance12Val1;
+            document.getElementById("c22-1").innerHTML = covariance22Val1;
         }
         s1Size = series1.length;
 
@@ -216,14 +216,10 @@ window.onload = function() {
         }
 
         if (distributionFunction == 1) {
-            document.getElementById("c11-1").innerHTML = "";
-            document.getElementById("c12-1").innerHTML = "";
-            document.getElementById("c21-1").innerHTML = "";
-            document.getElementById("c22-1").innerHTML = "";
-            document.getElementById("c11-2").innerHTML = "";
-            document.getElementById("c12-2").innerHTML = "";
-            document.getElementById("c21-2").innerHTML = "";
-            document.getElementById("c22-2").innerHTML = "";
+            document.getElementById("c11-2").innerHTML = covariance11Val2;
+            document.getElementById("c12-2").innerHTML = covariance12Val2;
+            document.getElementById("c21-2").innerHTML = covariance12Val2;
+            document.getElementById("c22-2").innerHTML = covariance22Val2;
         }
         s2Size = series2.length;
     }  
