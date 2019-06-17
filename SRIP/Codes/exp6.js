@@ -75,14 +75,14 @@ window.onload = function() {
         distributionFunction = document.getElementById("distribution-function").value;
         var i1 = 0;
         var i2 = 0; 
-        xmin1 = 100.0;
-        ymin1 = 100.0;
-        xmin2 = 100.0;
-        ymin2 = 100.0;
-        xmax1 = -100.0;
-        ymax1 = -100.0;
-        xmax2 = -100.0;
-        ymax2 = -100.0;
+        xmin1 = -100.0;
+        ymin1 = -100.0;
+        xmin2 = -100.0;
+        ymin2 = -100.0;
+        xmax1 = 100.0;
+        ymax1 = 100.0;
+        xmax2 = 100.0;
+        ymax2 = 100.0;
         xmeanClass1 = 0.0;
         ymeanClass1 = 0.0;
         xmeanClass2 = 0.0;
@@ -252,7 +252,7 @@ window.onload = function() {
             rho = 0.0; 
             r = 1.0 / (6.283185307179586 * sigmax * sigmay * Math.sqrt(1.0 - rho * rho)) * Math.exp(-1.0 / (2.0 * (1.0 - rho * rho)) * (Math.pow(y - xmeanClass2, 2.0) / covariance11Val2 + Math.pow(x - ymeanClass2, 2.0) / covariance22Val2 - 2.0 * rho * (y - xmeanClass2) * (x - ymeanClass2) / (sigmax * sigmay)));
         }
-        if (distributionFunction == 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2) {
+        if (distributionFunction == 1 && x <= xmax2 && x >= xmin2 && y <= ymax2 && y >= ymin2){
             r = s2Size;
         }
         return r;
@@ -268,6 +268,16 @@ window.onload = function() {
         //console.log('heloooocjdijfos');
     }
 
+    function chart2up(series11, series21){
+        chart.options.title.text = "Updated Chart";
+        chart.options.data[0].type = "area";
+        chart.options.data[0].dataPoints = series11;
+        chart.options.data[1].type = "area";
+        chart.options.data[1].dataPoints = series21;
+        chart.render();
+        //console.log('heloooocjdijfos');
+    }
+
     function addmarkAll() {
         var j=0;
         var p1=0.0;
@@ -275,8 +285,10 @@ window.onload = function() {
         var i=0;
         series1 = [];
         series2 = [];
-        var l = -1;
-        var r = 1;
+        var series11 = [];
+        var series21 = [];
+        var l = -5;
+        var r = 5;
         if(distributionFunction == 0){
             for(i = l; i < r; i += (r - l) / 100.0){
                 for (j = l; j < r; j += (r - l) / 100.0) {
@@ -295,42 +307,45 @@ window.onload = function() {
                     });
                 }
             }
+            chart1up(series1, series2);
         }
 
         if (distributionFunction == 1) {
             for(i = l; i < r; i += (r - l) / 100.0){
                 for (j = l; j < r; j += (r - l) / 100.0) {
+                	console.log(i);
+                	console.log(j);
                     p1 = prob1(j, i);
                     console.log(p1);
                     p2 = prob2(j, i);
                     console.log(p2);
                     if (p1 > p2) {
-                        series1.push({
+                        series11.push({
                             x: i,
                             y: j
                         });
                     }
-                    console.log(series1);
+                    console.log(series11);
                     if (p2 > p1) {
-                        series2.push({
+                        series21.push({
                             x: i,
                             y: j
                         });
                     }
-                    console.log(series2);
                     if (p1 != p2 || p1 == 0.0) {
                         continue;
                     }
-                    series2.push({
+                    series21.push({
                         x: i,
                         y: j
                     });
-                    console.log(series2);
+                    console.log(series21);
                 }
             }
+            chart2up(series11, series21);
         }
 
-        chart1up(series1, series2);
+        
         
     }
     
