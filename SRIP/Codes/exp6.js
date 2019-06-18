@@ -121,7 +121,7 @@ window.onload = function() {
 
         xmeanClass1 = xmeanClass1 / series1.length;
         ymeanClass1 = ymeanClass1 / series1.length;
-        if (distributionFunction == 0) {
+        if (distributionFunction == 0 || distributionFunction == 1) {
             document.getElementById("mean1x").innerHTML = xmeanClass1;
             document.getElementById("mean1y").innerHTML = ymeanClass1;
         }
@@ -189,7 +189,7 @@ window.onload = function() {
 
         xmeanClass2 = xmeanClass2 / series2.length;
         ymeanClass2 = ymeanClass2 / series2.length;
-        if (distributionFunction == 0) {
+        if (distributionFunction == 0 || distributionFunction == 1) {
             document.getElementById("mean2x").innerHTML = xmeanClass2;
             document.getElementById("mean2y").innerHTML = ymeanClass2;
         }
