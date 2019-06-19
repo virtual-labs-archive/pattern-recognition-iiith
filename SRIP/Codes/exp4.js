@@ -67,9 +67,9 @@ window.onload = function() {
         	chart.options.data[1].dataPoints = series12;
         	chart.options.data[2].dataPoints = series13;
         	chart.options.data[3].dataPoints = series14;
-        	chart.render();	
-        }	
-	}
+        	chart.render();
+        }
+    }
 
 	function addDataPointsAndRender() {
         var xValue = Number(document.getElementById("xValue").value);
