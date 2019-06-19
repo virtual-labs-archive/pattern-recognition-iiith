@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Quiz on Experiment- MLE: Learning the Classifier from Data</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="quiz.css">
+	<script type="text/javascript" src="quiz.js"></script>
+	
+</head>
+
+<body>
+  <h2 class="quizHeader">Take a Quiz!</h2>
+  
+	<table>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">1. In order to find the maximum likelihood estimator (MLE) of a parameter, we find the likelihood function, maximize it with respect to θ, and solve for θ. What steps do we do to maximize the likelihood function, and solve for θ? </p>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">We take the derivative of the likelihood function with respect to θ, set it equal to zero, and solve for θ.</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>We set the likelihood function equal to zero, and solve for θ.</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Take the natural log of the likelihood function, set it equal to zero, and solve for θ.</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>We take the integral of the likelihood function with respect to θ, set it equal to zero, and solve for θ.</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">2. The main disadvantage of maximum likelihood methods is that they are </p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>mathematically less folded</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">computationally intense</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>mathematically less complex</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>computationally lucid</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3. The maximum likelihood estimate can be estimated for</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Normal Distribution</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Poisson Distribution</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Bernoulli Distribution</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">All of the above</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>None of the above</label>
+	    	</ul>
+		</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">4. What is difference between Normal distribution and Uniform distribution?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Normal has finite support, uniform has infinite support</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Normal has every allowable value equally likely, uniform has a single most likely value</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">Uniform has a piecewise constant density, normal has a continuous bell shaped density</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Both distributions arise from the central limit theorem</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	</table>
+
+  	<div class="submitter">
+        <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+    </div>
+  
+<!--show only wrong answers on submit-->
+    <div class="quizAnswers" id="correctAnswer1"></div>
+	    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+	</div>
+
+</body>
+</html>

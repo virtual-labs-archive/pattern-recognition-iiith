@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Generation of Random Variables</title>
+    <link rel="stylesheet" type="text/css" href="exp4.css">
+    <script type="text/javascript" src="exp4.js"></script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+	<div class="leftcolumn">
+		<div id="chartContainer" style="height: 400px; width: 600px;">
+		</div>
+	</div>
+
+
+	<div class="rightcolumn">
+		<div class="card">
+    		<h2>Load Custom Datasets</h2>
+      		<p> Class 1
+	      		<select id="load-dataset">
+              <option> </option>
+  	  				<option value="1">T1</option>
+  	  				<!--<option value="2">T2</option>
+              <option value="3">T3</option>
+              <option value="4">T4</option>-->
+	  			  </select>
+            <button id="load">Load </button>
+  			 </p>
+    	</div>
+
+    	<div class="card">
+        <h2>Mark Points</h2>
+        X Value: <input id="xValue" type="number" step="any" placeholder="Enter X-Value">
+        Y Value: <input id="yValue" type="number" step="any" placeholder="Enter Y-Value">
+      	<button id="test-points"> Add Test Points </button>
+    	</div>
+
+		<div class="card">
+			<h2>Classification DDAG</h2>
+    	<button id="start">Start </button>
+    	<button id="next">Next </button>
+			<p>
+				<p id="current-classifier">Current Classifier: </p>
+	  		<p id="current-class">Current Class: </p>
+	  	</p>
+    </div>
+  </div>
+         
+</body>
+</html>
