@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Quiz on Experiment- Bayesian Classification</title>
+	<link rel="stylesheet" href="Quiz.css">
+	<script type="text/javascript" src="Quiz.js"></script>
+	
+</head>
+
+<body>
+  <h1 class="Header">Lets Quiz!</h1>
+	<table>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">1.Bayesian classifiers is:-</p>
+	    	<ul>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1" for="A class of learning algorithm that tries to find an optimum classification of a set of examples using the probabilistic theory.">A class of learning algorithm that tries to find an optimum classification of a set of examples using the probabilistic theory.</label>
+	    	<br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Any mechanism employed by a learning system to constrain the search space of a hypothesis</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>An approach to the design of learning algorithms that is inspired by the fact that when people encounter new situations, they often explain them by reference to familiar experiences, adapting the explanations to fit the new situation</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>None of these</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">2. What does the bayesian network provides?</p>
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Partial description of the domain</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2" for="Complete description of the domain">Complete description of the domain</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label> Complete description of the problem</label>
+	        <br>
+	         <input class="answer" type="radio" name="q2" value="0">
+	        <label>None of the mentioned</label>
+	    	</ul>
+	  	</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">3. How the bayesian network can be used to answer any query?</p>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label> Full distribution</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3" for="Joint distribution">Joint distribution</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>Partial distribution</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>All of the mentioned</label>
+	    	</ul>
+		</div>
+	  </td>
+	</tr>
+	<tr>
+	  <td>
+	  	<div>
+	  		<p class="question">4.What is the consequence between a node and its predecessors while creating bayesian network?</p>
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Functionally dependent</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4" for="Conditionally independent">Conditionally independent</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Dependant</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Both Conditionally dependant & Dependant</label>
+    		</ul>
+	  	</div>
+	  </td>
+	</tr>
+	</table>
+
+  	<div class="submitter">
+        <input class="quizSubmit" id="submitButton" onClick="submitQuiz()" type="submit" value="Submit" />
+    </div>
+  
+<!--show only wrong answers on submit-->
+    <div class="quizAnswers" id="correctAnswer1"></div>
+	    <div class="quizAnswers" id="correctAnswer2"></div>
+    <div class="quizAnswers" id="correctAnswer3"></div>
+    <div class="quizAnswers" id="correctAnswer4"></div>
+
+<!--show score upon submit-->
+    <div>
+    	<h2 class="quizScore" id="userScore"></h2>
+    </div>
+	</div>
+
+</body>
+</html>
