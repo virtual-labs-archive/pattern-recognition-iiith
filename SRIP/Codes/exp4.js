@@ -18,6 +18,9 @@ window.onload = function() {
 	var series44 = [];*/
 	var ans = [];
 
+	var ddag_1;
+	var ddag_2;
+
 	var chart = new CanvasJS.Chart("chartContainer", {
         title: {text: "Chart"},
         axisX:{
@@ -47,13 +50,13 @@ window.onload = function() {
         },{
             showInLegend: true,           
             legendText: "Class 4",
-            color: "yellow",
+            color: "gold",
             type: "scatter",
             dataPoints: 0
         },{
             showInLegend: true,           
             legendText: "Test",
-            color: "pink",
+            color: "deeppink",
             type: "scatter",
             dataPoints: 0
         }]
@@ -83,11 +86,55 @@ window.onload = function() {
     }
 
     function startDDAG(){
-
+    	ddag_1 = 1;
+    	ddag_2 = 4;
+    	document.getElementById("current-classifier").innerHTML = "Current Classifier: " + ddag_1 + " vs " + ddag_2;
+    	var x = classify(ddag_1 - 1, ddag_2 - 1);
+    	//console.log(x);
+    	document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + (x > 0.0 ? ddag_2 : ddag_1);
+    	if(x > 0.0){
+    		ddag_2 = ddag_2 - 1;
+    	}
+    	else{
+    		ddag_1 = ddag_1 + 1;
+    	}
+    	document.getElementById("next").disabled = false;
     }
 
     function nextDDAG(){
+    	document.getElementById("current-classifier").innerHTML = "Current Classifier: " + ddag_1 + " vs " + ddag_2;
+    	var x = classify(ddag_1 - 1, ddag_2 - 1);
+    	document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + (x > 0.0 ? ddag_2 : ddag_1);
+    	if(x > 0.0){
+    		ddag_2 = ddag_2 - 1;
+    	}
+    	else{
+    		ddag_1 = ddag_1 + 1;
+    	}
+    	if(ddag_1 == ddag_2){
+    		document.getElementById("next").disabled = true;
+    		document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + ddag_1;
+    	}
+    }
 
+    function classify(x1, x2){
+        if(loadDataset == 1){
+            if(x1==0&&x2==3){
+                data = [[0.3,0.2], [0.4, 0.3], [-0.4, -0.3], [-0.3, -0.2]];
+                labels = [1, 1, 2, 2];
+                svm = new svmjs.SVM();
+                svm.train(data, labels, {C: 1.0}); 
+                testdata = [[-0.4, 0.6]];
+        testlabels = svm.predict(testdata);
+        console.log(testlabels); 
+        return testlabels;
+            }
+        }
+        /*data = [[0.3,0.2], [0.4, 0.3], [-0.4, -0.3], [-0.3, -0.2], [0.2, -0.4], [0.3, -0.2], [-0.4, 0.6], [-0.7, 0.3]];
+        labels = [1, 1, 2, 2, 3, 3, 4, 4];
+        svm = new svmjs.SVM();
+        svm.train(data, labels, {C: 1.0}); // C is a parameter to SVM*/
+        
     }
 
 	var load = document.getElementById("load");
