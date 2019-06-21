@@ -1,8 +1,8 @@
 var GridSize = 50;
-var XAxisDistanceGridLines = 10;
-var YAxisDistanceGridLines = 8;
-var XAxisStartingPoint = { number: 0.25};
-var YAxisStartingPoint = { number: 0.25};
+var XAxisDistanceGridLines = 15;
+var YAxisDistanceGridLines = 10;
+var XAxisStartingPoint = { number: 0.125};
+var YAxisStartingPoint = { number: 0.125};
 
 var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext("2d");
