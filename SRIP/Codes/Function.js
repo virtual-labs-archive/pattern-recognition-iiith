@@ -1,12 +1,13 @@
 var GridSize = 50;
-var XAxisDistanceGridLines = 6;
-var YAxisDistanceGridLines = 6;
+var XAxisDistanceGridLines = 10;
+var YAxisDistanceGridLines = 8;
 var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext("2d");
 var PreviousX="NIL";
 var flag=-1;
 //flag is the variable which tells which function among load and generate was atlast called. 
 var flag2=-1;
+var flag3=-1;
 function load() 
 {
   //x is the value selected by user from the list
@@ -16,13 +17,13 @@ var x=document.getElementById("s1").value;
       {
         if(PreviousX==="T2")
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
         }
         else
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);     
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines);
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,canvas.width,canvas.height);     
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines);
         }
       script();
       document.getElementById("t1").value=1;
@@ -38,10 +39,10 @@ var x=document.getElementById("s1").value;
       document.getElementById("t11").value=0;
       document.getElementById("t12").value=1;
       ctx.beginPath();
-      ctx.arc(GridSize *1,-GridSize * 0,GridSize *(1/2), 0, Math.PI * 2, true);
+      ctx.arc((GridSize/0.25) *1,-(GridSize/0.25) * 0,(GridSize/0.25) *(1/2), 0, Math.PI * 2, true);
       ctx.stroke();
       ctx.beginPath();
-      ctx.arc(GridSize *0,-GridSize * 0, GridSize *(1/2), 0, Math.PI * 2, true);
+      ctx.arc((GridSize/0.25) *0,-(GridSize/0.25) * 0, (GridSize/0.25) *(1/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
       PreviousX=x;
@@ -50,13 +51,13 @@ var x=document.getElementById("s1").value;
     {
       if(PreviousX==="T2")
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
         }
         else
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);     
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines);
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,canvas.width,canvas.height);     
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines);
         }
       scriptForT2Dataset();
       document.getElementById("t1").value=0;
@@ -72,42 +73,54 @@ var x=document.getElementById("s1").value;
       document.getElementById("t11").value=-0.5;
       document.getElementById("t12").value=1;
       ctx.beginPath();
-      ctx.ellipse(0,0,GridSize*(1/2),25*(1/2),0.5, 0, 2 * Math.PI);
+      ctx.ellipse(0,0,(GridSize/0.25)*(1/2),(25/0.25)*(1/2),0.5, 0, 2 * Math.PI);
       ctx.strokeStyle= "red";
       ctx.stroke();
-      var ct= document.getElementById('myChart').getContext('2d');
-      ct.beginPath();
-      ct.moveTo(-GridSize*0.42,-25*0.6);
-      ct.lineTo(GridSize*0.42,25*0.6);
-      ct.moveTo(-GridSize*0.22,25*0.26);
-      ct.lineTo(GridSize*0.22,-25*0.26);
-      ct.closePath();
-      ct.strokeStyle= "red";
-      ct.stroke();
+      // var ct= document.getElementById('myChart').getContext('2d');
+      // ct.beginPath();
+      // ct.moveTo(-(GridSize/0.25)*0.42,-25*0.6);
+      // ct.lineTo((GridSize/0.25)*0.42,25*0.6);
+      // ct.moveTo(-(GridSize/0.25)*0.22,25*0.26);
+      // ct.lineTo((GridSize/0.25)*0.22,-25*0.26);
+      // ct.closePath();
+      // ct.strokeStyle= "red";
+      // ct.stroke();
       ctx.beginPath();
-      ctx.ellipse(0,0,GridSize*(1/2),25*(1/2),-0.5, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*0,-(GridSize/0.25)*0,0,(25/0.25)*(1/2),0.5, 0, 2 * Math.PI);
+       ctx.stroke();
+       ctx.beginPath();
+       ctx.ellipse((GridSize/0.25)*0,-(GridSize/0.25)*0,(GridSize/0.25)*(1/2),0,0.5, 0, 2 * Math.PI);
+       ctx.stroke();
+      ctx.beginPath();
+      ctx.ellipse(0,0,(GridSize/0.25)*(1/2),(25/0.25)*(1/2),-0.5, 0, 2 * Math.PI);
       ctx.strokeStyle="black";
       ctx.stroke();
-      ct.beginPath();
-      ct.moveTo(-GridSize*0.42,25*0.6);
-      ct.lineTo(GridSize*0.42,-25*0.6);
-      ct.moveTo(-GridSize*0.22,-25*0.26);
-      ct.lineTo(GridSize*0.22,25*0.26);
-      ct.closePath();
-      ct.stroke();
+      // ct.beginPath();
+      // ct.moveTo(-(GridSize/0.25)*0.42,25*0.6);
+      // ct.lineTo((GridSize/0.25)*0.42,-25*0.6);
+      // ct.moveTo(-(GridSize/0.25)*0.22,-25*0.26);
+      // ct.lineTo((GridSize/0.25)*0.22,25*0.26);
+      // ct.closePath();
+      // ct.stroke();
+      ctx.beginPath();
+       ctx.ellipse((GridSize/0.25)*0,-(GridSize/0.25)*0,0,(25/0.25)*(1/2),-0.5, 0, 2 * Math.PI);
+       ctx.stroke();
+       ctx.beginPath();
+       ctx.ellipse((GridSize/0.25)*0,-(GridSize/0.25)*0,(GridSize/0.25)*(1/2),0,-0.5, 0, 2 * Math.PI);
+       ctx.stroke();
       PreviousX=x;
     }  
     else if (x==="T3")
     {
       if(PreviousX==="T2")
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
         }
         else
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);     
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines);
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,canvas.width,canvas.height);     
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines);
         }
       script();
       document.getElementById("t1").value=0;
@@ -123,10 +136,10 @@ var x=document.getElementById("s1").value;
       document.getElementById("t11").value=0;
       document.getElementById("t12").value=2;
       ctx.beginPath();
-      ctx.arc(GridSize *0,-GridSize * 0,GridSize *(1/2), 0, Math.PI * 2, true);
+      ctx.arc((GridSize/0.25) *0,-(GridSize/0.25) * 0,(GridSize/0.25) *(1/2), 0, Math.PI * 2, true);
       ctx.stroke();
       ctx.beginPath();
-      ctx.arc(GridSize *0,-GridSize * 0, GridSize *(2/2), 0, Math.PI * 2, true);
+      ctx.arc((GridSize/0.25) *0,-(GridSize/0.25) * 0, (GridSize/0.25) *(2/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
       PreviousX=x;
@@ -135,13 +148,13 @@ var x=document.getElementById("s1").value;
     {
       if(PreviousX==="T2")
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);          
         }
         else
         {
-          ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);     
-          ctx.translate(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines);
+          ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,canvas.width,canvas.height);     
+          ctx.translate(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines);
         }
       script();
       document.getElementById("t1").value=2;
@@ -157,16 +170,16 @@ var x=document.getElementById("s1").value;
       document.getElementById("t11").value=0;
       document.getElementById("t12").value=1;
       ctx.beginPath();
-      ctx.ellipse(GridSize*2,-GridSize*1,GridSize*(2/2),GridSize*(1/2),-0.5, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*2,-(GridSize/0.25)*1,(GridSize/0.25)*(2/2),(GridSize/0.25)*(1/2),-0.5, 0, 2 * Math.PI);
       ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*2,-GridSize*1,0,GridSize*(1/2),-0.5, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*2,-(GridSize/0.25)*1,0,(GridSize/0.25)*(1/2),-0.5, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*2,-GridSize*1,GridSize*(2/2),0,-0.5, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*2,-(GridSize/0.25)*1,(GridSize/0.25)*(2/2),0,-0.5, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-      ctx.arc(GridSize *0,-GridSize * 0, GridSize *(1/2), 0, Math.PI * 2, true);
+      ctx.arc((GridSize/0.25) *0,-(GridSize/0.25) * 0, (GridSize/0.25) *(1/2), 0, Math.PI * 2, true);
       ctx.strokeStyle= "red";
       ctx.stroke();
       PreviousX=x;
@@ -174,8 +187,8 @@ var x=document.getElementById("s1").value;
 }
 function generateForT2Dataset()
 {
-  ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
-    ctx.translate(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);
+  ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
+    ctx.translate(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines);
     scriptForT2Dataset();
   var value1=document.getElementById("t1").value;
   var value2=document.getElementById("t2").value;
@@ -201,7 +214,7 @@ function generateForT2Dataset()
    else if(value5===value10 && value5>"0")
    {
     ctx.beginPath();
-    ctx.arc(GridSize *value1,-25 * value2,GridSize *(value5/2), 0, Math.PI * 2, true);
+    ctx.arc((GridSize/0.25) *value1,-(25/0.25) * value2,(GridSize/0.25) *(value5/2), 0, Math.PI * 2, true);
     ctx.stroke();
    }
    else
@@ -212,13 +225,13 @@ function generateForT2Dataset()
       if(value5<value10)
       {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),25*(value5/2),0, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),(25/0.25)*(value5/2),0, 0, 2 * Math.PI);
         ctx.stroke();
       }
       else
       {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value5/2),25*(value10/2),0, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value5/2),(25/0.25)*(value10/2),0, 0, 2 * Math.PI);
        ctx.stroke();
      
       }
@@ -228,19 +241,19 @@ function generateForT2Dataset()
     if(value5>value10)
      {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),25*(value5/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),(25/0.25)*(value5/2),0, 0, 2 * Math.PI);
       ctx.stroke();
      }
      else
       {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),25*(value5/2),-value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),(25/0.25)*(value5/2),-value6, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,0,25*(value5/2),-value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,0,(25/0.25)*(value5/2),-value6, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),0,-value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value6, 0, 2 * Math.PI);
        ctx.stroke();
      }
    }
@@ -249,19 +262,19 @@ function generateForT2Dataset()
     if(value5<value10)
     {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value5/2),25*(value10/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value5/2),(25/0.25)*(value10/2),0, 0, 2 * Math.PI);
       ctx.stroke();
     }
     else
     {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),25*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),(25/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,0,25*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,0,(25/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke();
     }
    }
@@ -272,25 +285,25 @@ function generateForT2Dataset()
       if(value10>value5)
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),25*(value5/2),-value9, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),(25/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,0,25*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,0,(25/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke();
        }
        else
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value5/2),25*(value10/2),-value9, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value5/2),(25/0.25)*(value10/2),-value9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,0,25*(value10/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,0,(25/0.25)*(value10/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value5/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value5/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke();
        }
        
@@ -300,25 +313,25 @@ function generateForT2Dataset()
        if(value5>value10)
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),25*(value5/2),-value9, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),(25/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,0,25*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,0,(25/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value10/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke(); 
        }
        else
        {
          ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value5/2),25*(value10/2),value6, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value5/2),(25/0.25)*(value10/2),value6, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,0,25*(value10/2),value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,0,(25/0.25)*(value10/2),value6, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-25*value2,GridSize*(value5/2),0,value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(25/0.25)*value2,(GridSize/0.25)*(value5/2),0,value6, 0, 2 * Math.PI);
        ctx.stroke(); 
        }
      }
@@ -332,7 +345,7 @@ function generateForT2Dataset()
    else if(value7===value12 && value7>"0")
    {
     ctx.beginPath();
-    ctx.arc(GridSize *value3,-25 * value4,GridSize *(value7/2), 0, Math.PI * 2, true);
+    ctx.arc((GridSize/0.25) *value3,-(25/0.25) * value4,(GridSize/0.25) *(value7/2), 0, Math.PI * 2, true);
     ctx.strokeStyle= "red";
     ctx.stroke();
    }
@@ -344,14 +357,14 @@ function generateForT2Dataset()
       if(value7<value12)
       {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),25*(value7/2),0, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),(25/0.25)*(value7/2),0, 0, 2 * Math.PI);
         ctx.strokeStyle= "red";
         ctx.stroke();
       }
       else
       {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value7/2),25*(value12/2),0, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value7/2),(25/0.25)*(value12/2),0, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
      
@@ -362,22 +375,22 @@ function generateForT2Dataset()
     if(value7>value12)
      {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),25*(value7/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),(25/0.25)*(value7/2),0, 0, 2 * Math.PI);
       ctx.strokeStyle= "red";
       ctx.stroke();
      }
      else
      {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),25*(value7/2),-value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),(25/0.25)*(value7/2),-value8, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,0,25*(value7/2),-value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,0,(25/0.25)*(value7/2),-value8, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),0,-value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),0,-value8, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
      }
@@ -387,21 +400,21 @@ function generateForT2Dataset()
     if(value7<value12)
     {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value7/2),25*(value12/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value7/2),(25/0.25)*(value12/2),0, 0, 2 * Math.PI);
       ctx.stroke();
     }
     else
     {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),25*(value7/2),-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),(25/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,0,25*(value7/2),-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,0,(25/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),0,-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),0,-value11, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
     }
@@ -411,30 +424,30 @@ function generateForT2Dataset()
      if(value7>value12)
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),25*(value7/2),-value11, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),(25/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
         ctx.strokeStyle="red";
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,0,25*(value7/2),-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,0,(25/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value12/2),0,-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value12/2),0,-value11, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
        ctx.stroke(); 
        }
        else
        {
          ctx.beginPath();
-        ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value7/2),25*(value12/2),value8, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value7/2),(25/0.25)*(value12/2),value8, 0, 2 * Math.PI);
         ctx.strokeStyle="red";
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,0,25*(value12/2),value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,0,(25/0.25)*(value12/2),value8, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
         ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-25*value4,GridSize*(value7/2),0,value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(25/0.25)*value4,(GridSize/0.25)*(value7/2),0,value8, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
         ctx.stroke(); 
        }
@@ -449,8 +462,8 @@ function generate()
   flag=1;
   if(x!=="T2")
   {
-    ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);
-    ctx.translate(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines);
+    ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,canvas.width,canvas.height);
+    ctx.translate(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines);
     script();
   var value1=document.getElementById("t1").value;
   var value2=document.getElementById("t2").value;
@@ -472,7 +485,7 @@ function generate()
    if(value5===value10 && value5>'0' && value5!==1)
    {
     ctx.beginPath();
-    ctx.arc(GridSize *value1,-GridSize * value2,GridSize *(value5/2), 0, Math.PI * 2, true);
+    ctx.arc((GridSize/0.25) *value1,-(GridSize/0.25) * value2,(GridSize/0.25) *(value5/2), 0, Math.PI * 2, true);
     ctx.stroke();
    }
    else
@@ -483,13 +496,13 @@ function generate()
       if(value5<value10)
       {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),GridSize*(value5/2),0, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),(GridSize/0.25)*(value5/2),0, 0, 2 * Math.PI);
         ctx.stroke();
       }
       else
       {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value5/2),GridSize*(value10/2),0, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value5/2),(GridSize/0.25)*(value10/2),0, 0, 2 * Math.PI);
        ctx.stroke();
      
       }
@@ -499,19 +512,19 @@ function generate()
     if(value5>value10)
      {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),GridSize*(value5/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),(GridSize/0.25)*(value5/2),0, 0, 2 * Math.PI);
       ctx.stroke();
      }
      else
       {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),GridSize*(value5/2),-value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),(GridSize/0.25)*(value5/2),-value6, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,0,GridSize*(value5/2),-value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,0,(GridSize/0.25)*(value5/2),-value6, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),0,-value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value6, 0, 2 * Math.PI);
        ctx.stroke();
      }
    }
@@ -520,19 +533,19 @@ function generate()
     if(value5<value10)
     {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value5/2),GridSize*(value10/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value5/2),(GridSize/0.25)*(value10/2),0, 0, 2 * Math.PI);
       ctx.stroke();
     }
     else
     {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),GridSize*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),(GridSize/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,0,GridSize*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,0,(GridSize/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke();
     }
    }
@@ -543,25 +556,25 @@ function generate()
       if(value10>value5)
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),GridSize*(value5/2),-value9, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),(GridSize/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,0,GridSize*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,0,(GridSize/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke();
        }
        else
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value5/2),GridSize*(value10/2),-value9, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value5/2),(GridSize/0.25)*(value10/2),-value9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,0,GridSize*(value10/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,0,(GridSize/0.25)*(value10/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value5/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value5/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke();
        }
        
@@ -571,25 +584,25 @@ function generate()
        if(value5>value10)
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),GridSize*(value5/2),-value9, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),(GridSize/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,0,GridSize*(value5/2),-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,0,(GridSize/0.25)*(value5/2),-value9, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value10/2),0,-value9, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value10/2),0,-value9, 0, 2 * Math.PI);
        ctx.stroke(); 
        }
        else
        {
          ctx.beginPath();
-        ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value5/2),GridSize*(value10/2),value6, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value5/2),(GridSize/0.25)*(value10/2),value6, 0, 2 * Math.PI);
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,0,GridSize*(value10/2),value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,0,(GridSize/0.25)*(value10/2),value6, 0, 2 * Math.PI);
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value1,-GridSize*value2,GridSize*(value5/2),0,value6, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value1,-(GridSize/0.25)*value2,(GridSize/0.25)*(value5/2),0,value6, 0, 2 * Math.PI);
        ctx.stroke(); 
        }
      }
@@ -599,7 +612,7 @@ function generate()
    if(value7===value12 && value7>'0' && value7!==1)
    {
     ctx.beginPath();
-    ctx.arc(GridSize *value3,-GridSize * value4,GridSize *(value7/2), 0, Math.PI * 2, true);
+    ctx.arc((GridSize/0.25) *value3,-(GridSize/0.25) * value4,(GridSize/0.25) *(value7/2), 0, Math.PI * 2, true);
     ctx.strokeStyle= "red";
     ctx.stroke();
    }
@@ -611,14 +624,14 @@ function generate()
       if(value7<value12)
       {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),GridSize*(value7/2),0, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),(GridSize/0.25)*(value7/2),0, 0, 2 * Math.PI);
         ctx.strokeStyle= "red";
         ctx.stroke();
       }
       else
       {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value7/2),GridSize*(value12/2),0, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value7/2),(GridSize/0.25)*(value12/2),0, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
      
@@ -629,22 +642,22 @@ function generate()
     if(value7>value12)
      {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),GridSize*(value7/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),(GridSize/0.25)*(value7/2),0, 0, 2 * Math.PI);
       ctx.strokeStyle= "red";
       ctx.stroke();
      }
      else
      {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),GridSize*(value7/2),-value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),(GridSize/0.25)*(value7/2),-value8, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,0,GridSize*(value7/2),-value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,0,(GridSize/0.25)*(value7/2),-value8, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),0,-value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),0,-value8, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
      }
@@ -654,21 +667,21 @@ function generate()
     if(value7<value12)
     {
       ctx.beginPath();
-      ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value7/2),GridSize*(value12/2),0, 0, 2 * Math.PI);
+      ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value7/2),(GridSize/0.25)*(value12/2),0, 0, 2 * Math.PI);
       ctx.stroke();
     }
     else
     {
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),GridSize*(value7/2),-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),(GridSize/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,0,GridSize*(value7/2),-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,0,(GridSize/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),0,-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),0,-value11, 0, 2 * Math.PI);
        ctx.strokeStyle= "red";
        ctx.stroke();
     }
@@ -678,30 +691,30 @@ function generate()
      if(value7>value12)
        {
         ctx.beginPath();
-        ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),GridSize*(value7/2),-value11, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),(GridSize/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
         ctx.strokeStyle="red";
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,0,GridSize*(value7/2),-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,0,(GridSize/0.25)*(value7/2),-value11, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
        ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value12/2),0,-value11, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value12/2),0,-value11, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
        ctx.stroke(); 
        }
        else
        {
          ctx.beginPath();
-        ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value7/2),GridSize*(value12/2),value8, 0, 2 * Math.PI);
+        ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value7/2),(GridSize/0.25)*(value12/2),value8, 0, 2 * Math.PI);
         ctx.strokeStyle="red";
         ctx.stroke();
         ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,0,GridSize*(value12/2),value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,0,(GridSize/0.25)*(value12/2),value8, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
         ctx.stroke();
        ctx.beginPath();
-       ctx.ellipse(GridSize*value3,-GridSize*value4,GridSize*(value7/2),0,value8, 0, 2 * Math.PI);
+       ctx.ellipse((GridSize/0.25)*value3,-(GridSize/0.25)*value4,(GridSize/0.25)*(value7/2),0,value8, 0, 2 * Math.PI);
        ctx.strokeStyle="red";
         ctx.stroke(); 
        }
@@ -720,13 +733,13 @@ function markAllPoints()
   var SliderValue=document.getElementById("myRange").value;
   var x=document.getElementById("s1").value;
   load();
-  var XCoordinate=(Number(-(GridSize* YAxisDistanceGridLines))+Number(SliderValue));
+  var XCoordinate=(Number(-((GridSize)* YAxisDistanceGridLines))+Number(SliderValue));
   if(x==="T2")
   {
     // Add behind elements.
     ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle= "#A9A9A9";
-    ctx.fillRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,SliderValue,canvas.height);
+    ctx.fillRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,SliderValue,canvas.height);
    ctx.fillStyle="#CD5C5C";
     ctx.fillRect(XCoordinate,-25*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
@@ -735,14 +748,15 @@ function markAllPoints()
     // Add behind elements.
     ctx.globalCompositeOperation = "destination-over";
     ctx.fillStyle= "#A9A9A9";
-    ctx.fillRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,SliderValue,canvas.height);
+    ctx.fillRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,SliderValue,canvas.height);
     ctx.fillStyle="#CD5C5C";
-    ctx.fillRect(XCoordinate,-GridSize*XAxisDistanceGridLines,canvas.width,canvas.height);
+    ctx.fillRect(XCoordinate,-(GridSize)*XAxisDistanceGridLines,canvas.width,canvas.height);
   }
 }
 function clear()
 {
   flag2=-1;
+  flag3=-1;
   if(flag===0){
     load();
   }
@@ -750,18 +764,22 @@ function clear()
     generate();
   }
 }
-
+function marker(event)
+{
+  flag3=0;
+  markpoints(event);
+}
 function markpoints(event)
 {
-  if(flag!==-1 && flag2===0)
+  if(flag!==-1 && flag2===0 && flag3===0)
   {
   var XCoordinate=event.clientX;
   var YCoordinate=event.clientY;
   var x=document.getElementById("s1").value;
   if(x==="T2")
   {
-    XCoordinate=Number(XCoordinate)-310;
-   YCoordinate=Number(YCoordinate)-225;
+    XCoordinate=Number(XCoordinate)-410;
+   YCoordinate=Number(YCoordinate)-273;
     if(XCoordinate%2===0)
      {
       ctx.fillStyle = "black";
@@ -775,8 +793,8 @@ function markpoints(event)
   }
   else
   {
-    XCoordinate=Number(XCoordinate)-310;
-   YCoordinate=Number(YCoordinate)-380;
+    XCoordinate=Number(XCoordinate)-410;
+   YCoordinate=Number(YCoordinate)-523;
     if(XCoordinate%2===0)
      {
       ctx.fillStyle = "black";
@@ -800,13 +818,13 @@ function resizeAxis()
   var x=document.getElementById("s1").value;
   if(x==="T2")
   {
-    ctx.clearRect(-GridSize* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,GridSize* (Number(YAxisDistanceGridLines)-1),canvas.height); 
-   ctx.clearRect(-GridSize* YAxisDistanceGridLines,25,canvas.width,canvas.height);
+    ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-25*XAxisDistanceGridLines,(GridSize)* (Number(YAxisDistanceGridLines)-1),canvas.height); 
+   ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,25,canvas.width,canvas.height);
   }
   else
   {
-   ctx.clearRect(-GridSize* YAxisDistanceGridLines,-GridSize*XAxisDistanceGridLines,GridSize* (Number(YAxisDistanceGridLines)-1),canvas.height); 
-   ctx.clearRect(-GridSize* YAxisDistanceGridLines,GridSize,canvas.width,canvas.height);
+   ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,-(GridSize)*XAxisDistanceGridLines,(GridSize)* (Number(YAxisDistanceGridLines)-1),canvas.height); 
+   ctx.clearRect(-(GridSize)* YAxisDistanceGridLines,(GridSize),canvas.width,canvas.height);
   }
           
 }
