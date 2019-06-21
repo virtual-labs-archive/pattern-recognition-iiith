@@ -1,19 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<link rel="stylesheet" type="text/css" href="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Codes\Styles.css">
-<title>Pattern Recognition
+<link rel="stylesheet" type="text/css" href="Styles.css">
+<title>Pattern Recognition:Bayesian Classification
 </title>
 </head>
 <body>
-<h1>
-	<center>Bayesian Classification
-	</center>
-</h1>
-<div class="container" onclick="markpoints(event)">
-<canvas id='myChart'  height="600" width="600">
+<div class="container" onclick="marker(event)">
+<canvas id='myChart'  height="800" width="1600">
 </canvas>
 </div>
-<script src="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Codes\Script.js" language="javascript" type="text/javascript">
+<script src="Script.js" language="javascript" type="text/javascript">
 </script>
 <div class="container2">
 <canvas id="Values" height="50" width="600">
@@ -45,10 +42,10 @@ document.write("<br>"+"Load Custom Datasets"+"<br>"+"<br>"+"Dataset");
 Mark Points<br>
 <br>
 <div class="slidecontainer" width="600">
-  <input type="range" min="0" max="600" value="0" class="slider" id="myRange">
+  <input type="range" min="0" max="1600" value="0" class="slider" id="myRange">
   <p>
   	<b>
-  	<pre>Class 1												Class 2 </pre>
+  	<pre>Class 1												             Class 2 </pre>
   </b>
 </p>
 </div>
@@ -91,7 +88,7 @@ Generate Random Values<br>
 		<td><button id="b6">Resize Axes</button></td>
 	</tr>	
 </table>
-<script type="text/javascript" src="F:\SRIP Experiment Pattern Recogition\pattern-recognition-iiith\SRIP\Codes\Function.js" language="javascript">
+<script type="text/javascript" src="Function.js" language="javascript">
 </script>
 </body>
 </html>
