@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="Styles.css">
 <title>Pattern Recognition:Bayesian Classification
 </title>
 </head>
 <body>
 <div class="container" onclick="marker(event)">
-<canvas id='myChart'  height="800" width="1600">
+<canvas id='myChart'  height="1600" width="1600">
 </canvas>
 </div>
 <script src="Script.js" language="javascript" type="text/javascript">
@@ -49,7 +51,8 @@ Mark Points<br>
   </b>
 </p>
 </div>
-<button type="button" id="b2">Mark</button>
+<button type="button" id="b2">Mark points for Class 1</button>
+<button type="button" id="b2a">Mark points for Class 2</button>
 <button type="button" id="b3">Mark All</button>
 <button type="button" id="b4">Clear</button>
 <br>
@@ -87,8 +90,11 @@ Generate Random Values<br>
 	<tr>
 		<td><button id="b6">Resize Axes</button></td>
 	</tr>	
+	<tr>
+		<td><button id="b7">Generate Bayesian Classification for both classes</button></td>
 </table>
 <script type="text/javascript" src="Function.js" language="javascript">
 </script>
+<div id="result"></div>
 </body>
 </html>
