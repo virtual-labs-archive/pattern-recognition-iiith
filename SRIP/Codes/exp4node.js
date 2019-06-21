@@ -1,5 +1,5 @@
-var http = require('http');
-var fs = require('fs');
+var http = require("http");
+var fs = require("fs");
 
 var server = http.createServer(function(req, res){
 	//console.log("Request was made: " + req.url);
@@ -11,7 +11,7 @@ var server = http.createServer(function(req, res){
 var url = require("url");
 var path = require("path");
 
-var server = http.createServer(function(request, response) {
+server = http.createServer(function(request, response) {
     var pathname = url.parse(request.url).pathname;
     var ext = path.extname(pathname);
     if(ext){
@@ -28,7 +28,7 @@ var server = http.createServer(function(request, response) {
         response.write(fs.readFileSync("exp4.html", "utf8"));
     }
     response.end();
-}) 
+}); 
 
 server.listen(3000);
-console.log("HIIIIIIIIIIIIIII");
+//console.log("HIIIIIIIIIIIIIII");
