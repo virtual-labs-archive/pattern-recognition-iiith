@@ -18,9 +18,9 @@ server = http.createServer(function(request, response) {
         if(ext === ".css"){
             response.writeHead(200, {"Content-Type": "text/css"});
         }
-        else if(ext === ".js"){
+        /*else if(ext === ".js"){
             response.writeHead(200, {"Content-Type": "text/javascript"});
-        }
+        }*/
         response.write(fs.readFileSync(__dirname + pathname, "utf8"));
     }
     else{
@@ -30,5 +30,9 @@ server = http.createServer(function(request, response) {
     response.end();
 }); 
 
-server.listen(3000);
+
 //console.log("HIIIIIIIIIIIIIII");
+
+
+
+server.listen(3000);

@@ -118,22 +118,6 @@ window.onload = function() {
     }
 
     function classify(x1, x2){
-        if(loadDataset == 1){
-            if(x1==0&&x2==3){
-                data = [[0.3,0.2], [0.4, 0.3], [-0.4, -0.3], [-0.3, -0.2]];
-                labels = [1, 1, 2, 2];
-                svm = new svmjs.SVM();
-                svm.train(data, labels, {C: 1.0}); 
-                testdata = [[-0.4, 0.6]];
-        testlabels = svm.predict(testdata);
-        console.log(testlabels); 
-        return testlabels;
-            }
-        }
-        /*data = [[0.3,0.2], [0.4, 0.3], [-0.4, -0.3], [-0.3, -0.2], [0.2, -0.4], [0.3, -0.2], [-0.4, 0.6], [-0.7, 0.3]];
-        labels = [1, 1, 2, 2, 3, 3, 4, 4];
-        svm = new svmjs.SVM();
-        svm.train(data, labels, {C: 1.0}); // C is a parameter to SVM*/
         
     }
 
