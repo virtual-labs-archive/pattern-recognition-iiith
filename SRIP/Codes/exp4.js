@@ -115,7 +115,7 @@ window.onload = function() {
             }
             
         }
-        if(loadDataset === 2){
+        /*if(loadDataset === 2){
             
         }
         if(loadDataset === 3){
@@ -123,7 +123,7 @@ window.onload = function() {
         }
         if(loadDataset === 4){
             
-        }
+        }*/
     }
 
     function startDDAG(){
@@ -134,7 +134,7 @@ window.onload = function() {
         if(result === 1){
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
         }
-    	else if(result === 2){
+        else if(result === 2){
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 1;
         }
         document.getElementById("next").disabled = false;
@@ -155,5 +155,3 @@ window.onload = function() {
     var next = document.getElementById("next");
     next.addEventListener("click", nextDDAG);
 };
-
-
