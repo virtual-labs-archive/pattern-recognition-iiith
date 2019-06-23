@@ -32,7 +32,4 @@ server = http.createServer(function(request, response) {
 
 
 //console.log("HIIIIIIIIIIIIIII");
-
-
-
 server.listen(3000);
