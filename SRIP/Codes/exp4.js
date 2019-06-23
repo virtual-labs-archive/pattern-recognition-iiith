@@ -47,25 +47,25 @@ window.onload = function() {
 
 	function datasetLoad(){
         loadDataset = document.getElementById("load-dataset").value;
-        if(loadDataset == 1){
+        if(loadDataset === 1){
         	chart.options.data[0].dataPoints = series11;
         	chart.options.data[1].dataPoints = series12;
         	chart.render();
         }
 
-        if(loadDataset == 2){
+        if(loadDataset === 2){
             chart.options.data[0].dataPoints = series21;
             chart.options.data[1].dataPoints = series22;
             chart.render();
         }
 
-        if(loadDataset == 3){
+        if(loadDataset === 3){
             chart.options.data[0].dataPoints = series31;
             chart.options.data[1].dataPoints = series32;
             chart.render();
         }
 
-        if(loadDataset == 4){
+        if(loadDataset === 4){
             chart.options.data[0].dataPoints = series41;
             chart.options.data[1].dataPoints = series42;
             chart.render();
@@ -83,26 +83,8 @@ window.onload = function() {
         chart.render();
     }
 
-    function startDDAG(){
-    	ddag_1 = 1;
-    	ddag_2 = 2;
-    	document.getElementById("current-classifier").innerHTML = "Current Classifier: " + ddag_1 + " vs " + ddag_2;
-        result = classify();
-        if(result == 1)
-            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
-    	else if(result == 2)
-            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 1;
-        document.getElementById("next").disabled = false;
-    }
-
-    function nextDDAG(){
-    	document.getElementById("current-classifier").innerHTML = "Current Classifier: " + ddag_1 + " vs " + ddag_2;
-    	document.getElementById("next").disabled = true;
-    	document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + result;
-    }
-
     function classify(){
-        if(loadDataset == 1){
+        if(loadDataset === 1){
             var i = 0;
             var j = 0;
             var a1 = 0;
@@ -125,21 +107,43 @@ window.onload = function() {
                     c2 += Math.sqrt((a2 * a2) + (b2 * b2));
                 }            
             }
-            if(c2<c1)
+            if(c2<c1){
                 return 2;
-            else
+            }
+            else{
                 return 1;
+            }
             
         }
-        if(loadDataset == 2){
+        if(loadDataset === 2){
             
         }
-        if(loadDataset == 3){
+        if(loadDataset === 3){
             
         }
-        if(loadDataset == 4){
+        if(loadDataset === 4){
             
         }
+    }
+
+    function startDDAG(){
+    	ddag_1 = 1;
+    	ddag_2 = 2;
+    	document.getElementById("current-classifier").innerHTML = "Current Classifier: " + ddag_1 + " vs " + ddag_2;
+        result = classify();
+        if(result === 1){
+            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
+        }
+    	else if(result === 2){
+            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 1;
+        }
+        document.getElementById("next").disabled = false;
+    }
+
+    function nextDDAG(){
+    	document.getElementById("current-classifier").innerHTML = "Current Classifier: " + ddag_1 + " vs " + ddag_2;
+    	document.getElementById("next").disabled = true;
+    	document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + result;
     }
 
 	var load = document.getElementById("load");
