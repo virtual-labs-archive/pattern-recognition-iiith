@@ -22,40 +22,40 @@ function quit(){
 }
 
 //start the quiz
-function give_ques(quesindex){
+function giveQues(quesindex){
 	ques.textContent = quesindex + 1 + ". " + questions[quesindex][0];
 	opt1.textContent = questions[quesindex][1];
 	opt2.textContent = questions[quesindex][2];
 	opt3.textContent = questions[quesindex][3];
 	opt4.textContent = questions[quesindex][4];
 	return;
-};
+}
 
-give_ques(0);
+giveQues(0);
 
 //next question
 function nextques(){
-	var selected_ans = document.querySelector("input[type=radio]:checked");
-	if(!selected_ans){
+	var selectedAns = document.querySelector("input[type=radio]:checked");
+	if(!selectedAns){
 		alert("SELECT AN OPTION");
 		return;
 	}
 
-	if(selected_ans.value == questions[quesindex][5]){
+	if(selectedAns.value == questions[quesindex][5]){
 		score = score + 1;
 	}
-	selected_ans.checked = false;
+	selectedAns.checked = false;
 	quesindex++;
 	if(quesindex == tques - 1){
 		nextbutton.textContent = "Finish";
 	}
 	var f = score / tques;
- 	if(quesindex == tques){
+	if(quesindex == tques){
 		q.style.display = "none";
         quiz.style.display = "none";
         result.style.display = "";
         result.textContent = "SCORED: " + score + " out of 25 " + String.fromCodePoint(0x1F3C6) +String.fromCodePoint(0x1F973);
         return;
 	}
-    give_ques(quesindex);
+    giveQues(quesindex);
 }
