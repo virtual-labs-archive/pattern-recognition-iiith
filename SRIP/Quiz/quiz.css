@@ -106,9 +106,7 @@ color: #f6f6f6;
 #next
 {
 
-font-family: 'Macondo', cursive; 
-
-background-color: : #4CAF50;
+background-color: #4CAF50;
 
 width:10%;
 
@@ -118,7 +116,7 @@ border: 1px solid #00038c;
 
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
-cursor: pointer;;
+cursor: pointer;
 
 float: right;
 
@@ -128,7 +126,7 @@ padding: 10px 10px;
 
 #next:hover{
 
-background-color:rgb(106, 90, 205)
+background-color:rgb(106, 90, 205);
 
 }
 
@@ -141,13 +139,13 @@ right: 0;
 
 bottom: 0;
 
-background-color: : #4CAF50;
+background-color: #4CAF50;
 
 border: 1px solid #00038c;
 
 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 
-cursor: pointer;;
+cursor: pointer;
 
 float: right;
 
@@ -157,7 +155,7 @@ padding: 5px 5px;
 
 #quit:hover{
 
-background-color:rgb(106, 90, 205)
+background-color:rgb(106, 90, 205);
 
 }
 
