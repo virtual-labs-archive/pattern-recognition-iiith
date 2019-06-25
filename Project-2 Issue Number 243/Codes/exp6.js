@@ -89,7 +89,7 @@ window.onload = function() {
         ymeanClass2 = 0.0;
         var l1gammax = 0.0;
         var l1gammay = 0.0;
-
+        
     //FINDING THE MEAN FOR X-VALUE AND Y-VALUE OF CLASS 1
         for(i1 = 0; i1 < series1.length; i1++){
             xmeanClass1 += series1[i1].x;
