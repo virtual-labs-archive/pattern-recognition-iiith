@@ -1,6 +1,6 @@
 var GridSize = 50;
-var XAxisDistanceGridLines = 15;
-var YAxisDistanceGridLines = 10;
+var XAxisDistanceGridLines = 14;
+var YAxisDistanceGridLines = 6;
 var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext("2d");
 var PreviousX="NIL";
