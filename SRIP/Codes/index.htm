@@ -4,12 +4,16 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="Styles.css">
+<!-- <script src="Script.js"></script> -->
 <title>Pattern Recognition:Bayesian Classification
 </title>
 </head>
 <body>
+<table>
+	<tr>
+		<td>
 <div class="container" onclick="marker(event)">
-<canvas id='myChart'  height="1600" width="1600">
+<canvas id='myChart'  height="1000" width="1100">
 </canvas>
 </div>
 <script src="Script.js" language="javascript" type="text/javascript">
@@ -29,6 +33,8 @@
 	 ctx.fillText("Class2",365,35);
 </script>
 </div>
+</td>
+<td>
 <script>
 document.write("<br>"+"Load Custom Datasets"+"<br>"+"<br>"+"Dataset");
 </script>
@@ -47,7 +53,7 @@ Mark Points<br>
   <input type="range" min="0" max="1600" value="0" class="slider" id="myRange">
   <p>
   	<b>
-  	<pre>Class 1												             Class 2 </pre>
+  	<pre>Class 1				 		 Class 2 </pre>
   </b>
 </p>
 </div>
@@ -96,5 +102,8 @@ Generate Random Values<br>
 <script type="text/javascript" src="Function.js" language="javascript">
 </script>
 <div id="result"></div>
+</td>
+</tr>
+</table>
 </body>
 </html>
