@@ -1,6 +1,6 @@
 var GridSize = 50;
-var XAxisDistanceGridLines = 15;
-var YAxisDistanceGridLines = 10;
+var XAxisDistanceGridLines = 14;
+var YAxisDistanceGridLines = 6;
 var XAxisStartingPoint = { number: 0.125};
 var YAxisStartingPoint = { number: 0.125};
 
