@@ -22,8 +22,10 @@ window.onload = function() {
     var series44 = [];
 	
 	var ans = [];
-	var ddag_1;
-	var ddag_2;
+	var ddag1;
+	var ddag2;
+    var ddag3;
+    var ddag4;
     var result;
 
 	var chart = new CanvasJS.Chart("chartContainer", {
@@ -183,14 +185,13 @@ window.onload = function() {
     function startDDAG(){
         result = classify();
         console.log(result);
-    	ddag_1 = 1;
-        ddag_2 = 1;
-        ddag_3 = 1;
-        ddag_4 = 1;
+    	ddag1 = 1;
+        ddag2 = 1;
+        ddag3 = 1;
+        ddag4 = 1;
         if(result == 1){
             document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 2;
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
-            ddag_2 = 3;
         }
     	else if(result == 2){
             document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 1 + " vs " + result;
@@ -208,44 +209,44 @@ window.onload = function() {
     }
 
     function nextDDAG(){
-        if(result == 1 && ddag_1 == 1){
-    	   document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 3;
-           document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 3;
-           ddag_1 += ddag_1;
+        if(result == 1 && ddag1 == 1){
+            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 3;
+            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 3;
+            ddag1 += ddag1;
         }
-        else if(result == 2 && ddag_2 == 1){
-           document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 3;
-           document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 3;
-           ddag_2 += ddag_2;
+        else if(result == 2 && ddag2 == 1){
+            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 3;
+            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 3;
+            ddag2 += ddag2;
         }
-        else if(result == 3 && ddag_3 == 1){
-           document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 2 + " vs " + result;
-           document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
-           ddag_3 += ddag_3;
+        else if(result == 3 && ddag3 == 1){
+            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 2 + " vs " + result;
+            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
+            ddag3 += ddag3;
         }
         else if(result == 4 && ddag_4 == 1){
-           document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 2 + " vs " + result;
-           document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
-           ddag_4 += ddag_4;
+            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 2 + " vs " + result;
+            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
+            ddag4 += ddag4;
         }
 
 //final iteration
-        else if(result == 1 && ddag_1 == 2){
+        else if(result == 1 && ddag1 == 2){
            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 4;
            document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + result;
            document.getElementById("next").disabled = true;
         }
-        else if(result == 2 && ddag_2 == 2){
+        else if(result == 2 && ddag2 == 2){
            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 4;
            document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + result;
            document.getElementById("next").disabled = true;
         }
-        else if(result == 3 && ddag_3 == 2){
+        else if(result == 3 && ddag3 == 2){
            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 4;
            document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + result;
            document.getElementById("next").disabled = true;
         }
-        else if(result == 4 && ddag_4 == 2){
+        else if(result == 4 && ddag4 == 2){
            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 3 + " vs " + result;
            document.getElementById("current-class").innerHTML = "Current Class: " + " Classified as " + result;
            document.getElementById("next").disabled = true;
