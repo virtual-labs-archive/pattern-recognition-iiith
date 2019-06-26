@@ -75,9 +75,9 @@ window.onload = function() {
         if(loadDataset == 1){
         	chart.options.data[0].dataPoints = series11;
         	chart.options.data[1].dataPoints = series12;
-            chart.options.data[2].dataPoints = series13;
-            chart.options.data[3].dataPoints = series14;
-            chart.render();
+        	chart.options.data[2].dataPoints = series13;
+        	chart.options.data[3].dataPoints = series14;
+        	chart.render();
         }
 
         if(loadDataset == 2){
@@ -116,6 +116,24 @@ window.onload = function() {
         chart.render();
     }
 
+    function compare(c1, c2, c3, c4){
+    	if(c1 < c2 && c1 < c3 && c1 < c4){
+    		return 1;
+    	}
+    	if(c2 < c1 && c2 < c3 && c2 < c4){
+    		return 2;
+    	}
+    	if(c3 < c1 && c3 < c2 && c3 < c4){
+    		return 3;
+    	}
+    	if(c4 < c1 && c4 < c3 && c4 < c3){
+    		return 4;
+    	}
+    	else{
+    		return 1;
+    	}
+    }
+
     function classify(){
 // first dataset
         if(loadDataset == 1){
@@ -133,6 +151,7 @@ window.onload = function() {
             var a4 = 0;
             var b4 = 0;
             var c4 = 0;
+            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series11[i].x - ans[j].x;
@@ -149,21 +168,8 @@ window.onload = function() {
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
                 }
             }
-            if(c1 < c2 && c1 < c3 && c1 < c4){
-                return 1;
-            }
-            if(c2 < c1 && c2 < c3 && c2 < c4){
-                return 2;
-            }
-            if(c3 < c1 && c3 < c2 && c3 < c4){
-                return 3;
-            }
-            if(c4 < c1 && c4 < c3 && c4 < c3){
-                return 4;
-            }
-            else{
-                return 1;
-            }  
+            p = compare(c1, c2, c3, c4);
+            return p; 
         }
 
 //second dataset
@@ -182,6 +188,7 @@ window.onload = function() {
             var a4 = 0;
             var b4 = 0;
             var c4 = 0;
+            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series21[i].x - ans[j].x;
@@ -198,21 +205,8 @@ window.onload = function() {
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
                 }
             }
-            if(c1 < c2 && c1 < c3 && c1 < c4){
-                return 1;
-            }
-            if(c2 < c1 && c2 < c3 && c2 < c4){
-                return 2;
-            }
-            if(c3 < c1 && c3 < c2 && c3 < c4){
-                return 3;
-            }
-            if(c4 < c1 && c4 < c3 && c4 < c3){
-                return 4;
-            }
-            else{
-                return 1;
-            }
+            p = compare(c1, c2, c3, c4);
+            return p;
         }
 
 //third dataset
@@ -231,6 +225,7 @@ window.onload = function() {
             var a4 = 0;
             var b4 = 0;
             var c4 = 0;
+            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series31[i].x - ans[j].x;
@@ -247,21 +242,8 @@ window.onload = function() {
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
                 }
             }
-            if(c1 < c2 && c1 < c3 && c1 < c4){
-                return 1;
-            }
-            if(c2 < c1 && c2 < c3 && c2 < c4){
-                return 2;
-            }
-            if(c3 < c1 && c3 < c2 && c3 < c4){
-                return 3;
-            }
-            if(c4 < c1 && c4 < c3 && c4 < c3){
-                return 4;
-            }
-            else{
-                return 1;
-            }
+            p = compare(c1, c2, c3, c4);
+            return p;
         }
 
 //fourth dataset
@@ -280,6 +262,7 @@ window.onload = function() {
             var a4 = 0;
             var b4 = 0;
             var c4 = 0;
+            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series41[i].x - ans[j].x;
@@ -296,21 +279,8 @@ window.onload = function() {
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
                 }
             }
-            if(c1 < c2 && c1 < c3 && c1 < c4){
-                return 1;
-            }
-            if(c2 < c1 && c2 < c3 && c2 < c4){
-                return 2;
-            }
-            if(c3 < c1 && c3 < c2 && c3 < c4){
-                return 3;
-            }
-            if(c4 < c1 && c4 < c3 && c4 < c3){
-                return 4;
-            }
-            else{
-                return 1;
-            }
+            p = compare(c1, c2, c3, c4);
+            return p;
         }
     }
 
