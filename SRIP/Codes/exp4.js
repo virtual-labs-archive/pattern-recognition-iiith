@@ -132,22 +132,22 @@ window.onload = function() {
     }
 
 	function compare(c1, c2, c3, c4){
-    	if(c1 < c2 && c1 < c3 && c1 < c4){
-    		return 1;
-    	}
-    	if(c2 < c1 && c2 < c3 && c2 < c4){
-    		return 2;
-    	}
-    	if(c3 < c1 && c3 < c2 && c3 < c4){
-    		return 3;
-    	}
-    	if(c4 < c1 && c4 < c3 && c4 < c3){
-    		return 4;
-    	}
-    	else{
-    		return 1;
-    	}
-    }
+		if(c1 < c2 && c1 < c3 && c1 < c4){
+			return 1;
+		}
+		if(c2 < c1 && c2 < c3 && c2 < c4){
+			return 2;
+		}
+		if(c3 < c1 && c3 < c2 && c3 < c4){
+			return 3;
+		}
+		if(c4 < c1 && c4 < c3 && c4 < c3){
+			return 4;
+		}
+		else{
+			return 1;
+		}
+	}
 
     function classify(){
 // first dataset
@@ -296,7 +296,7 @@ window.onload = function() {
     			document.getElementById("next").disabled = true;
     		}
     	}
-
+    	
     	if(result == 4){
     		if(ddag4 === 1){
     			document.getElementById("current-classifier").textContent = "Current Classifier: " + 2 + " vs " + result;
