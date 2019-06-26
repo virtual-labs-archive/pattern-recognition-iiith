@@ -77,7 +77,7 @@ window.onload = function() {
         	chart.options.data[1].dataPoints = series12;
             chart.options.data[2].dataPoints = series13;
             chart.options.data[3].dataPoints = series14;
-        	chart.render();
+            chart.render();
         }
 
         if(loadDataset == 2){
