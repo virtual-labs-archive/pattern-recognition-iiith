@@ -164,13 +164,13 @@ window.onload = function() {
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
             }
-            else if(c2 < c1 && c2 < c3 && c2 < c4){
+            if(c2 < c1 && c2 < c3 && c2 < c4){
                 return 2;
             }
-            else if(c3 < c1 && c3 < c2 && c3 < c4){
+            if(c3 < c1 && c3 < c2 && c3 < c4){
                 return 3;
             }
-            else if(c4 < c1 && c4 < c3 && c4 < c3){
+            if(c4 < c1 && c4 < c3 && c4 < c3){
                 return 4;
             }
             else{
@@ -225,13 +225,13 @@ window.onload = function() {
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
             }
-            else if(c2 < c1 && c2 < c3 && c2 < c4){
+            if(c2 < c1 && c2 < c3 && c2 < c4){
                 return 2;
             }
-            else if(c3 < c1 && c3 < c2 && c3 < c4){
+            if(c3 < c1 && c3 < c2 && c3 < c4){
                 return 3;
             }
-            else if(c4 < c1 && c4 < c3 && c4 < c3){
+            if(c4 < c1 && c4 < c3 && c4 < c3){
                 return 4;
             }
             else{
@@ -286,13 +286,13 @@ window.onload = function() {
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
             }
-            else if(c2 < c1 && c2 < c3 && c2 < c4){
+            if(c2 < c1 && c2 < c3 && c2 < c4){
                 return 2;
             }
-            else if(c3 < c1 && c3 < c2 && c3 < c4){
+            if(c3 < c1 && c3 < c2 && c3 < c4){
                 return 3;
             }
-            else if(c4 < c1 && c4 < c3 && c4 < c3){
+            if(c4 < c1 && c4 < c3 && c4 < c3){
                 return 4;
             }
             else{
@@ -347,13 +347,13 @@ window.onload = function() {
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
             }
-            else if(c2 < c1 && c2 < c3 && c2 < c4){
+            if(c2 < c1 && c2 < c3 && c2 < c4){
                 return 2;
             }
-            else if(c3 < c1 && c3 < c2 && c3 < c4){
+            if(c3 < c1 && c3 < c2 && c3 < c4){
                 return 3;
             }
-            else if(c4 < c1 && c4 < c3 && c4 < c3){
+            if(c4 < c1 && c4 < c3 && c4 < c3){
                 return 4;
             }
             else{
