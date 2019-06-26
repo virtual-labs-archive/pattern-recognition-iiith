@@ -364,7 +364,7 @@ window.onload = function() {
 
     function startDDAG(){
         result = classify();
-        console.log(result);
+        //console.log(result);
         ddag1 = 1;
         ddag2 = 1;
         ddag3 = 1;
