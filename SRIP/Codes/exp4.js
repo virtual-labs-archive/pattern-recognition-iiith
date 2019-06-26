@@ -28,6 +28,22 @@ window.onload = function() {
     var ddag4;
     var result;
 
+    var i = 0;
+    var j = 0;
+    var a1 = 0;
+    var b1 = 0;
+    var c1 = 0;
+    var a2 = 0;
+    var b2 = 0;
+    var c2 = 0;
+    var a3 = 0;
+    var b3 = 0;
+    var c3 = 0;
+    var a4 = 0;
+    var b4 = 0;
+    var c4 = 0;
+    var p = 0;
+
 	var chart = new CanvasJS.Chart("chartContainer", {
         title: {text: "Chart"},
         axisX:{
@@ -71,16 +87,15 @@ window.onload = function() {
 
 
 	function datasetLoad(){
-        loadDataset = document.getElementById("load-dataset").value;
-        if(loadDataset == 1){
-        	chart.options.data[0].dataPoints = series11;
-        	chart.options.data[1].dataPoints = series12;
-        	chart.options.data[2].dataPoints = series13;
-        	chart.options.data[3].dataPoints = series14;
-        	chart.render();
-        }
-
-        if(loadDataset == 2){
+		loadDataset = document.getElementById("load-dataset").value;
+		if(loadDataset == 1){
+			chart.options.data[0].dataPoints = series11;
+			chart.options.data[1].dataPoints = series12;
+			chart.options.data[2].dataPoints = series13;
+			chart.options.data[3].dataPoints = series14;
+			chart.render();
+		}
+		if(loadDataset == 2){
             chart.options.data[0].dataPoints = series21;
             chart.options.data[1].dataPoints = series22;
             chart.options.data[2].dataPoints = series23;
@@ -137,21 +152,6 @@ window.onload = function() {
     function classify(){
 // first dataset
         if(loadDataset == 1){
-            var i = 0;
-            var j = 0;
-            var a1 = 0;
-            var b1 = 0;
-            var c1 = 0;
-            var a2 = 0;
-            var b2 = 0;
-            var c2 = 0;
-            var a3 = 0;
-            var b3 = 0;
-            var c3 = 0;
-            var a4 = 0;
-            var b4 = 0;
-            var c4 = 0;
-            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series11[i].x - ans[j].x;
@@ -174,21 +174,6 @@ window.onload = function() {
 
 //second dataset
         if(loadDataset == 2){
-            var i = 0;
-            var j = 0;
-            var a1 = 0;
-            var b1 = 0;
-            var c1 = 0;
-            var a2 = 0;
-            var b2 = 0;
-            var c2 = 0;
-            var a3 = 0;
-            var b3 = 0;
-            var c3 = 0;
-            var a4 = 0;
-            var b4 = 0;
-            var c4 = 0;
-            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series21[i].x - ans[j].x;
@@ -211,21 +196,6 @@ window.onload = function() {
 
 //third dataset
         if(loadDataset == 3){
-            var i = 0;
-            var j = 0;
-            var a1 = 0;
-            var b1 = 0;
-            var c1 = 0;
-            var a2 = 0;
-            var b2 = 0;
-            var c2 = 0;
-            var a3 = 0;
-            var b3 = 0;
-            var c3 = 0;
-            var a4 = 0;
-            var b4 = 0;
-            var c4 = 0;
-            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series31[i].x - ans[j].x;
@@ -248,21 +218,6 @@ window.onload = function() {
 
 //fourth dataset
         if(loadDataset == 4){
-            var i = 0;
-            var j = 0;
-            var a1 = 0;
-            var b1 = 0;
-            var c1 = 0;
-            var a2 = 0;
-            var b2 = 0;
-            var c2 = 0;
-            var a3 = 0;
-            var b3 = 0;
-            var c3 = 0;
-            var a4 = 0;
-            var b4 = 0;
-            var c4 = 0;
-            var p = 0;
             for(i = 0; i<2; i++){
                 for(j = 0; j < ans.length; j++){
                     a1 = series41[i].x - ans[j].x;
