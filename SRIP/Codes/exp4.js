@@ -259,7 +259,7 @@ window.onload = function() {
 
     function nextDDAG(){
     	if(result == 1){
-    		if(ddag1 == 1){
+    		if(ddag1 === 1){
             	document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 3;
             	document.getElementById("current-class").textContent = "Current Class: " + " Not " + 3;
             	ddag1 += ddag1;
@@ -272,7 +272,7 @@ window.onload = function() {
     	}
 
     	if(result == 2){
-    		if(ddag2 == 1){
+    		if(ddag2 === 1){
     			document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 3;
     			document.getElementById("current-class").textContent = "Current Class: " + " Not " + 3;
     			ddag2 += ddag2;
@@ -285,7 +285,7 @@ window.onload = function() {
     	}
         
         if(result == 3){
-    		if(ddag3 == 1){
+    		if(ddag3 === 1){
     			document.getElementById("current-classifier").textContent = "Current Classifier: " + 2 + " vs " + result;
     			document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
     			ddag3 += ddag3;
@@ -298,7 +298,7 @@ window.onload = function() {
     	}
 
     	if(result == 4){
-    		if(ddag3 == 1){
+    		if(ddag3 === 1){
     			document.getElementById("current-classifier").textContent = "Current Classifier: " + 2 + " vs " + result;
     			document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
     			ddag3 += ddag3;
@@ -309,39 +309,6 @@ window.onload = function() {
     			document.getElementById("next").disabled = true;
     		}
     	}
-        /*else if(result == 2 && ddag2 == 1){
-            document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 3;
-            document.getElementById("current-class").textContent = "Current Class: " + " Not " + 3;
-            ddag2 += ddag2;
-        }
-        else if(result == 3 && ddag3 == 1){
-            document.getElementById("current-classifier").textContent = "Current Classifier: " + 2 + " vs " + result;
-            document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
-            ddag3 += ddag3;
-        }
-        else if(result == 4 && ddag4 == 1){
-            document.getElementById("current-classifier").textContent = "Current Classifier: " + 2 + " vs " + result;
-            document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
-            ddag4 += ddag4;
-        }
-
-//final iteration
-        
-        else if(result == 2 && ddag2 == 2){
-           document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 4;
-           document.getElementById("current-class").textContent = "Current Class: " + " Classified as " + result;
-           document.getElementById("next").disabled = true;
-        }
-        else if(result == 3 && ddag3 == 2){
-           document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 4;
-           document.getElementById("current-class").textContent = "Current Class: " + " Classified as " + result;
-           document.getElementById("next").disabled = true;
-        }
-        else if(result == 4 && ddag4 == 2){
-           document.getElementById("current-classifier").textContent = "Current Classifier: " + 3 + " vs " + result;
-           document.getElementById("current-class").textContent = "Current Class: " + " Classified as " + result;
-           document.getElementById("next").disabled = true;
-       }*/
    }
 
 	var load = document.getElementById("load");
