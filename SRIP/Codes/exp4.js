@@ -298,10 +298,10 @@ window.onload = function() {
     	}
 
     	if(result == 4){
-    		if(ddag3 === 1){
+    		if(ddag4 === 1){
     			document.getElementById("current-classifier").textContent = "Current Classifier: " + 2 + " vs " + result;
     			document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
-    			ddag3 += ddag3;
+    			ddag4 += ddag4;
     		}
     		else{
     			document.getElementById("current-classifier").textContent = "Current Classifier: " + 3 + " vs " + result;
