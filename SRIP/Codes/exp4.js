@@ -138,28 +138,16 @@ window.onload = function() {
                     a1 = series11[i].x - ans[j].x;
                     b1 = series11[i].y - ans[j].y;
                     c1 += Math.sqrt((a1 * a1) + (b1 * b1));
-                }
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a2 = series12[i].x - ans[j].x;
                     b2 = series12[i].y - ans[j].y;
                     c2 += Math.sqrt((a2 * a2) + (b2 * b2));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a3 = series13[i].x - ans[j].x;
                     b3 = series13[i].y - ans[j].y;
                     c3 += Math.sqrt((a3 * a3) + (b3 * b3));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a4 = series14[i].x - ans[j].x;
                     b4 = series14[i].y - ans[j].y;
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
-                }            
+                }
             }
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
@@ -199,28 +187,16 @@ window.onload = function() {
                     a1 = series21[i].x - ans[j].x;
                     b1 = series21[i].y - ans[j].y;
                     c1 += Math.sqrt((a1 * a1) + (b1 * b1));
-                }
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a2 = series22[i].x - ans[j].x;
                     b2 = series22[i].y - ans[j].y;
                     c2 += Math.sqrt((a2 * a2) + (b2 * b2));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a3 = series23[i].x - ans[j].x;
                     b3 = series23[i].y - ans[j].y;
                     c3 += Math.sqrt((a3 * a3) + (b3 * b3));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a4 = series24[i].x - ans[j].x;
                     b4 = series24[i].y - ans[j].y;
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
-                }            
+                }
             }
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
@@ -260,28 +236,16 @@ window.onload = function() {
                     a1 = series31[i].x - ans[j].x;
                     b1 = series31[i].y - ans[j].y;
                     c1 += Math.sqrt((a1 * a1) + (b1 * b1));
-                }
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a2 = series32[i].x - ans[j].x;
                     b2 = series32[i].y - ans[j].y;
                     c2 += Math.sqrt((a2 * a2) + (b2 * b2));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a3 = series33[i].x - ans[j].x;
                     b3 = series33[i].y - ans[j].y;
                     c3 += Math.sqrt((a3 * a3) + (b3 * b3));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a4 = series34[i].x - ans[j].x;
                     b4 = series34[i].y - ans[j].y;
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
-                }            
+                }
             }
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
@@ -321,28 +285,16 @@ window.onload = function() {
                     a1 = series41[i].x - ans[j].x;
                     b1 = series41[i].y - ans[j].y;
                     c1 += Math.sqrt((a1 * a1) + (b1 * b1));
-                }
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a2 = series42[i].x - ans[j].x;
                     b2 = series42[i].y - ans[j].y;
                     c2 += Math.sqrt((a2 * a2) + (b2 * b2));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a3 = series43[i].x - ans[j].x;
                     b3 = series43[i].y - ans[j].y;
                     c3 += Math.sqrt((a3 * a3) + (b3 * b3));
-                }            
-            }
-            for(i = 0; i<2; i++){
-                for(j = 0; j < ans.length; j++){
                     a4 = series44[i].x - ans[j].x;
                     b4 = series44[i].y - ans[j].y;
                     c4 += Math.sqrt((a4 * a4) + (b4 * b4));
-                }            
+                }
             }
             if(c1 < c2 && c1 < c3 && c1 < c4){
                 return 1;
