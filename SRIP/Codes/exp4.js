@@ -11,15 +11,15 @@ window.onload = function() {
 	var series23 = [{x: -2, y: -4}, {x: -3, y: -4}];
 	var series24 = [{x: -4, y: 2}, {x: -5, y: 2}];
 //third dataset
-    var series31 = [{x: 0.3, y: 0.2}, {x: 0.4, y: 0.3}];
-    var series32 = [{x: -0.4, y: -0.3}, {x: -0.3, y: -0.2}];
-    var series33 = [{x: 0.2, y: -0.4}, {x: 0.3, y: -0.2}];
-    var series34 = [{x: -0.4, y: 0.6}, {x: -0.7, y: 0.3}];
+    var series31 = [{x: -13, y: -7}, {x: -12, y: -5}];
+    var series32 = [{x: -2, y: -1}, {x: -3, y: -2}];
+    var series33 = [{x: -2, y: -17}, {x: -1, y: -19}];
+    var series34 = [{x: -17, y: -15}, {x: -13, y: -16}];
 //fourth dataset
-    var series41 = [{x: -13, y: -7}, {x: -12, y: -5}];
-    var series42 = [{x: -2, y: -1}, {x: -3, y: -2}];
-    var series43 = [{x: -2, y: -17}, {x: -1, y: -19}];
-    var series44 = [{x: -17, y: -15}, {x: -13, y: -16}];
+    var series41 = [{x: 0.3, y: 0.2}, {x: 0.4, y: 0.3}];
+    var series42 = [{x: -0.4, y: -0.3}, {x: -0.3, y: -0.2}];
+    var series43 = [{x: 0.2, y: -0.4}, {x: 0.3, y: -0.2}];
+    var series44 = [{x: -0.4, y: 0.6}, {x: -0.7, y: 0.3}];
 	
 	var ans = [];
 	var ddag1;
