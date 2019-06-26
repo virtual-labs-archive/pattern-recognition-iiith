@@ -240,20 +240,20 @@ window.onload = function() {
     }
 
     function startDDAG(){
-        result = classify();
-        //console.log(result);
-        ddag1 = 1;
-        ddag2 = 1;
-        ddag3 = 1;
-        ddag4 = 1;
-        if(result == 1){
-            document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 2;
-            document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
-        }
-        if(result == 2 || result == 3 || result == 4){
-        	document.getElementById("current-classifier").textContent = "Current Classifier: " + 1 + " vs " + result;
-        	document.getElementById("current-class").textContent = "Current Class: " + " Not " + 1;
-        }
+    	result = classify();
+    	//console.log(result);
+    	ddag1 = 1;
+    	ddag2 = 1;
+    	ddag3 = 1;
+    	ddag4 = 1;
+    	if(result == 1){
+    		document.getElementById("current-classifier").textContent = "Current Classifier: " + result + " vs " + 2;
+    		document.getElementById("current-class").textContent = "Current Class: " + " Not " + 2;
+    	}
+    	if(result == 2 || result == 3 || result == 4){
+    		document.getElementById("current-classifier").textContent = "Current Classifier: " + 1 + " vs " + result;
+    		document.getElementById("current-class").textContent = "Current Class: " + " Not " + 1;
+    	}
     }
     
     function nextDDAG(){
