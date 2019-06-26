@@ -364,7 +364,7 @@ window.onload = function() {
 
     function startDDAG(){
         result = classify();
-        //console.log(result);
+        console.log(result);
         ddag1 = 1;
         ddag2 = 1;
         ddag3 = 1;
@@ -373,15 +373,7 @@ window.onload = function() {
             document.getElementById("current-classifier").innerHTML = "Current Classifier: " + result + " vs " + 2;
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
         }
-    	else if(result == 2){
-            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 1 + " vs " + result;
-            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 1;
-        }
-        else if(result == 3){
-            document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 1 + " vs " + result;
-            document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 1;
-        }
-        else if(result == 4){
+    	if(result == 2 || result == 3 || result == 4){
             document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 1 + " vs " + result;
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 1;
         }
@@ -404,7 +396,7 @@ window.onload = function() {
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
             ddag3 += ddag3;
         }
-        else if(result == 4 && ddag_4 == 1){
+        else if(result == 4 && ddag4 == 1){
             document.getElementById("current-classifier").innerHTML = "Current Classifier: " + 2 + " vs " + result;
             document.getElementById("current-class").innerHTML = "Current Class: " + " Not " + 2;
             ddag4 += ddag4;
