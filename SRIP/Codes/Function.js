@@ -869,26 +869,26 @@ function markpoints(event)
   var x=document.getElementById("s1").value;
   if(x==="T1")
   {
-   XCoordinate=Number(XCoordinate)-340;
-   YCoordinate=Number(YCoordinate)-445;
+   XCoordinate=Number(XCoordinate)-300;
+   YCoordinate=Number(YCoordinate)-400;
    ctx.fillRect(XCoordinate,YCoordinate,10,10);
   }
   else if(x==="T2")
   {
-   XCoordinate=Number(XCoordinate)-570;
-   YCoordinate=Number(YCoordinate)-465;
+   XCoordinate=Number(XCoordinate)-530;
+   YCoordinate=Number(YCoordinate)-415;
    ctx.fillRect(XCoordinate,YCoordinate,10,10); 
   }
   else if(x==="T3")
   {
-   XCoordinate=Number(XCoordinate)-370;
-   YCoordinate=Number(YCoordinate)-420;
+   XCoordinate=Number(XCoordinate)-330;
+   YCoordinate=Number(YCoordinate)-370;
    ctx.fillRect(XCoordinate,YCoordinate,10,10); 
   }
   else
   {
-  XCoordinate=Number(XCoordinate)-340;
-  YCoordinate=Number(YCoordinate)-520;
+  XCoordinate=Number(XCoordinate)-300;
+  YCoordinate=Number(YCoordinate)-470;
   ctx.fillRect(XCoordinate,YCoordinate,10,10); 
   }
   }
