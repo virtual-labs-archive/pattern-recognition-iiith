@@ -1,5 +1,5 @@
-var XAxisStartingPoint = { number: 0.125};
-var YAxisStartingPoint = { number: 0.125};
+// var XAxisStartingPoint = { number: 0.125};
+// var YAxisStartingPoint = { number: 0.125};
 
 var canvas = document.getElementById("myChart");
 var ctx = canvas.getContext("2d");
@@ -10,12 +10,14 @@ var CanvasWidth = canvas.width;
 // canvas height
 var CanvasHeight = canvas.height;
 
-function script()
+function script(XAxisStartingPoint,YAxisStartingPoint)
 {
     var GridSize = 50;
     var XAxisDistanceGridLines =10;
     var YAxisDistanceGridLines = 2;
     ctx.fillStyle="#000000";
+    XAxisStartingPoint=Number(XAxisStartingPoint);
+    YAxisStartingPoint=Number(YAxisStartingPoint);
      // no of vertical grid lines
 var NumLinesX = Math.floor(CanvasHeight/GridSize);
 
@@ -86,7 +88,7 @@ for(i=1; i<(NumLinesY - YAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(XAxisStartingPoint.number*i, GridSize*i, 15);
+    ctx.fillText(XAxisStartingPoint*i, GridSize*i, 15);
 }
 // Ticks marks along the negative X-axis
 for(i=1; i<YAxisDistanceGridLines; i++) {
@@ -102,7 +104,7 @@ for(i=1; i<YAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-XAxisStartingPoint.number*i, -GridSize*i, 15);
+    ctx.fillText(-XAxisStartingPoint*i, -GridSize*i, 15);
 }
 
 // Ticks marks along the positive Y-axis
@@ -120,7 +122,7 @@ for(i=1; i<(NumLinesX - XAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-YAxisStartingPoint.number*i, -15, (GridSize*i)+3);
+    ctx.fillText(-YAxisStartingPoint*i, -15, (GridSize*i)+3);
 }
 
 // Ticks marks along the negative Y-axis
@@ -138,15 +140,17 @@ for(i=1; i<XAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(YAxisStartingPoint.number*i, -15, -((GridSize*i)+3));
+    ctx.fillText(YAxisStartingPoint*i, -15, -((GridSize*i)+3));
 }
 }
-function scriptForT2Dataset()
+function scriptForT2Dataset(XAxisStartingPoint,YAxisStartingPoint)
 {
     var i=0;
     var GridSize=50;
     var XAxisDistanceGridLines =14;
     var YAxisDistanceGridLines = 10;
+    XAxisStartingPoint=Number(XAxisStartingPoint);
+    YAxisStartingPoint=Number(YAxisStartingPoint);
      ctx.fillStyle="#000000";
     // no of vertical grid lines
 var NumLinesX = Math.floor(CanvasHeight/25);
@@ -219,7 +223,7 @@ for(i=1; i<(NumLinesY - YAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(XAxisStartingPoint.number*i, GridSize*i, 15);
+    ctx.fillText(XAxisStartingPoint*i, GridSize*i, 15);
 }
 // Ticks marks along the negative X-axis
 for(i=1; i<YAxisDistanceGridLines; i++) {
@@ -235,7 +239,7 @@ for(i=1; i<YAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-XAxisStartingPoint.number*i, -GridSize*i, 15);
+    ctx.fillText(-XAxisStartingPoint*i, -GridSize*i, 15);
 }
 
 // Ticks marks along the positive Y-axis
@@ -253,7 +257,7 @@ for(i=1; i<(NumLinesX - XAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-YAxisStartingPoint.number*i, -15, 25*i+3);
+    ctx.fillText(-YAxisStartingPoint*i, -15, 25*i+3);
 }
 
 // Ticks marks along the negative Y-axis
@@ -271,16 +275,18 @@ for(i=1; i<XAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(YAxisStartingPoint.number*i, -15, -25*i+3);
+    ctx.fillText(YAxisStartingPoint*i, -15, -25*i+3);
 }
 }
-function scriptForT1Dataset()
+function scriptForT1Dataset(XAxisStartingPoint,YAxisStartingPoint)
 {
     var i=0;
     var GridSize=55;
     var XAxisDistanceGridLines =6;
     var YAxisDistanceGridLines = 5;
     ctx.fillStyle="#000000";
+    XAxisStartingPoint=Number(XAxisStartingPoint);
+    YAxisStartingPoint=Number(YAxisStartingPoint);
     // no of vertical grid lines
 var NumLinesX = Math.floor(CanvasHeight/25);
 
@@ -352,7 +358,7 @@ for(i=1; i<(NumLinesY - YAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(XAxisStartingPoint.number*i, GridSize*i, 15);
+    ctx.fillText(XAxisStartingPoint*i, GridSize*i, 15);
 }
 // Ticks marks along the negative X-axis
 for(i=1; i<YAxisDistanceGridLines; i++) {
@@ -368,7 +374,7 @@ for(i=1; i<YAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-XAxisStartingPoint.number*i, -GridSize*i, 15);
+    ctx.fillText(-XAxisStartingPoint*i, -GridSize*i, 15);
 }
 
 // Ticks marks along the positive Y-axis
@@ -386,7 +392,7 @@ for(i=1; i<(NumLinesX - XAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-YAxisStartingPoint.number*i, -15,GridSize*i+3);
+    ctx.fillText(-YAxisStartingPoint*i, -15,GridSize*i+3);
 }
 
 // Ticks marks along the negative Y-axis
@@ -404,15 +410,17 @@ for(i=1; i<XAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(YAxisStartingPoint.number*i, -15, -GridSize*i+3);
+    ctx.fillText(YAxisStartingPoint*i, -15, -GridSize*i+3);
 }
 }
-function scriptForT3Dataset()
+function scriptForT3Dataset(XAxisStartingPoint,YAxisStartingPoint)
 {
     var GridSize = 30;
     var XAxisDistanceGridLines =10;
     var YAxisDistanceGridLines = 10;
     ctx.fillStyle="#000000";
+    XAxisStartingPoint=Number(XAxisStartingPoint);
+    YAxisStartingPoint=Number(YAxisStartingPoint);
      // no of vertical grid lines
 var NumLinesX = Math.floor(CanvasHeight/GridSize);
 
@@ -483,7 +491,7 @@ for(i=1; i<(NumLinesY - YAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(XAxisStartingPoint.number*i, GridSize*i, 15);
+    ctx.fillText(XAxisStartingPoint*i, GridSize*i, 15);
 }
 // Ticks marks along the negative X-axis
 for(i=1; i<YAxisDistanceGridLines; i++) {
@@ -499,7 +507,7 @@ for(i=1; i<YAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-XAxisStartingPoint.number*i, -GridSize*i, 15);
+    ctx.fillText(-XAxisStartingPoint*i, -GridSize*i, 15);
 }
 
 // Ticks marks along the positive Y-axis
@@ -517,7 +525,7 @@ for(i=1; i<(NumLinesX - XAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-YAxisStartingPoint.number*i, -15, (GridSize*i)+3);
+    ctx.fillText(-YAxisStartingPoint*i, -15, (GridSize*i)+3);
 }
 
 // Ticks marks along the negative Y-axis
@@ -535,15 +543,17 @@ for(i=1; i<XAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(YAxisStartingPoint.number*i, -15, -((GridSize*i)+3));
+    ctx.fillText(YAxisStartingPoint*i, -15, -((GridSize*i)+3));
 }
 }
-function scriptForT4Dataset()
+function scriptForT4Dataset(XAxisStartingPoint,YAxisStartingPoint)
 {
     var GridSize = 40;
     ctx.fillStyle="#000000";
     var XAxisDistanceGridLines =10;
     var YAxisDistanceGridLines = 7;
+    XAxisStartingPoint=Number(XAxisStartingPoint);
+    YAxisStartingPoint=Number(YAxisStartingPoint);
      // no of vertical grid lines
 var NumLinesX = Math.floor(CanvasHeight/GridSize);
 
@@ -614,7 +624,7 @@ for(i=1; i<(NumLinesY - YAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(XAxisStartingPoint.number*i, GridSize*i, 15);
+    ctx.fillText(XAxisStartingPoint*i, GridSize*i, 15);
 }
 // Ticks marks along the negative X-axis
 for(i=1; i<YAxisDistanceGridLines; i++) {
@@ -630,7 +640,7 @@ for(i=1; i<YAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-XAxisStartingPoint.number*i, -GridSize*i, 15);
+    ctx.fillText(-XAxisStartingPoint*i, -GridSize*i, 15);
 }
 
 // Ticks marks along the positive Y-axis
@@ -648,7 +658,7 @@ for(i=1; i<(NumLinesX - XAxisDistanceGridLines); i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(-YAxisStartingPoint.number*i, -15, (GridSize*i)+3);
+    ctx.fillText(-YAxisStartingPoint*i, -15, (GridSize*i)+3);
 }
 
 // Ticks marks along the negative Y-axis
@@ -666,8 +676,8 @@ for(i=1; i<XAxisDistanceGridLines; i++) {
     // Text value at that point
     ctx.font = "9px Arial";
     ctx.textAlign = "center";
-    ctx.fillText(YAxisStartingPoint.number*i, -15, -((GridSize*i)+3));
+    ctx.fillText(YAxisStartingPoint*i, -15, -((GridSize*i)+3));
 }
 }
-script();
+script(0.125,0.125);
 
