@@ -1,4 +1,4 @@
-﻿This is Readme file containing instruction for running the experiment: Hopfield model for pattern storage task
+﻿This is Readme file containing instruction for running the experiment: Generation of Random Variables
 
 TO RUN THE EXPERIMENT:
 1. Download the SRIP folder
