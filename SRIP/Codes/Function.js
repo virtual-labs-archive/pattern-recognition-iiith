@@ -988,8 +988,15 @@ function markpoints(event)
    meanClass2Y=(meanClass2Y+Number(YCoordinate))/pointsClass2;
    covarianceClass2=(covarianceClass2+Number((XCoordinate-Number(meanClass2X))*(YCoordinate-Number(meanClass2Y))))/pointsClass2;
   }
-  var answer="<strong>Mean and Covariance Results:-<br></strong>"+"<strong>Mean point for Class 1=</strong>"+"("+meanClass1X+","+meanClass1Y+")"+"<br>"+"<strong>Mean point for Class 2=</strong>"+"("+meanClass2X+","+meanClass2Y+")"+"<br>"+"<strong>Covariance for Class1=</strong>"+covarianceClass1+"<br>"+"<strong>Covariance for Class2=</strong>"+covarianceClass2;
-  document.getElementById("meanresult").innerHTML=answer;
+  // meanClass1X=meanClass1X.toFixed(2);
+  // meanClass1Y=meanClass1Y.toFixed(2);
+  // meanClass2X=meanClass2X.toFixed(2);
+  // meanClass2Y=meanClass2Y.toFixed(2);
+  // covarianceClass1=covarianceClass1.toFixed(2);
+  // covarianceClass2=covarianceClass2.toFixed(2);
+   // var answer="<table><tr><td colspan=3>Class1</td><td colspan=2>Class2</td></tr><tr><td>Mean</td><td>"+meanClass1X+"</td><td>"+meanClass1Y+"</td><td>"+meanClass2X+"</td><td>"+meanClass2Y+"</td></tr><tr><td>Covariance</td><td colspan=2>"+covarianceClass1+"</td><td colspan=2>"+covarianceClass2+"</td></table>";
+   var answer="<strong>Mean and Covariance Results:-<br></strong>"+"<strong>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClass 1&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspClass2<br>Mean&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</strong>("+meanClass1X.toFixed(3)+","+meanClass1Y.toFixed(3)+")"+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp("+meanClass2X.toFixed(3)+","+meanClass2Y.toFixed(3)+")"+"<br>"+"<strong>Covariance&nbsp&nbsp&nbsp</strong>"+covarianceClass1.toFixed(3)+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+covarianceClass2.toFixed(3);
+   document.getElementById("meanresult").innerHTML=answer;
   }
 }
 
