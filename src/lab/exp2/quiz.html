@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Quiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" type="text/css" href="label.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script type="text/javascript" src="evaluate.js"></script>
+</head>
+<body onload="load()" style="width:100%;height: 100%;background-color: #ffff">
+    <!-- Quiz header -->
+    <div class="container">
+        <div class="innercontainer">
+            
+                <div>
+                    <h2 id="TaskTitle"> Quiz for Cryptography </h2>
+                    <div id="result" style="visibility: hidden;">
+                        <i class="fa fa-trophy paddingClass" style="color:gold"></i>
+                    </div>
+                    <div id="startBtn" style="visibility: hidden;">
+                        <button id="startBtn" type="button" class="buttonDecor"
+                            style="margin: 4px 2px; padding: 15px 32px;" onclick="startQuiz()">Start Again
+                        </button>
+                    </div>
+                </div>
+            
+            <div id="instructions">
+                Instructions for the Quiz:-
+                <ul>
+                    <li>Quiz contains questions for the Domain Cryptography</li>
+                    <li>All the questions are refered from trusted sources</li>
+                    <li>Quiz has total 5 questions</li>
+                    <li>There is no negative marking</li>
+                    <li>After submission you can tally your answers</li>
+                    <li>Quiz can be restarted again only after submisson or on reloading.</li>
+                </ul>
+            </div>
+            <div id="startBtn" style="text-align: center">
+                <button id="startBtnInit" type="button" class="buttonDecor" style="margin: 4px 2px; padding: 15px 32px;"
+                    onclick="startQuizinit()">Test Yourself
+                </button>
+            </div>
+            <div class="quiz-contents">
+                <div>
+                    <!-- Quiz body -->
+
+                    <div id="quizBody" class="hide"></div>
+                    <br>
+                    <div id="submitBtn" style="display: none; text-align: center;">
+                        <button type="button" class="buttonDecor" onclick="submitQuiz() ">Get Score</button>
+                    </div>
+                    <!-- Quiz Result -->
+
+                    <div id="displayResult" class="hide" style="background-color: inherit"></div>
+                    </br>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
