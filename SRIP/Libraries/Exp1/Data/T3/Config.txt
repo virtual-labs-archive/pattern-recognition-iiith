@@ -1,0 +1,13 @@
+8
+9
+6
+Contrast Ratio
+Aspect Ratio
+Perimeter
+X-Symmetry
+Y-Symmetry
+Holes
+25
+25
+137
+81.0
