@@ -3,8 +3,9 @@
 <head>
 
 	<title>Pattern Recognition: Feature Representation</title>
-	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
 	<link type="text/css" href="exp1.css" rel="stylesheet">
+	<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript"></script>
     <script type="text/javascript" src="exp1.js"></script>
 	
 </head>
@@ -16,78 +17,81 @@
 		</div>
 
 		<div class = "rightcolumn">
-			<p>Dataset
-		      	<select id = "dataset">
-		      		<option></option>
-		  			<option value = "1">T1</option>
-		  			<option value = "2">T2</option>
-		  			<option value = "3">T3</option>
-		  		</select>
-		  		<button id = "load"> LOAD </button>
-		  	</p>
+			<div class="card">
+				<p>Dataset
+			      	<select id = "dataset-button">
+			      		<option></option>
+			  			<option value = "1">T1</option>
+			  			<option value = "2">T2</option>
+			  			<option value = "3">T3</option>
+			  		</select>
+			  		<button id = "load-button"> LOAD </button>
+			  	</p>
 
-	  		<p>Feature 1
-		      	<select id = "feature-1">
-		      		<option></option>
-		  			<option value = "cr">Contrast Ratio</option>
-		  			<option value = "ar">Aspect Ratio</option>
-		  			<option value = "p">Perimeter</option>
-		  			<option value = "xs">X-Symmetry</option>
-		  			<option value = "ys">Y-Symmetry</option>
-		  			<option value = "h">Holes</option>
-		  		</select>
-		  		<button id = "select-1"> SELECT </button>
-		  	</p>
+		  		<p>Feature 1
+			      	<select id = "feature-1">
+			      		<option></option>
+			  			<option value = "cr">Contrast Ratio</option>
+			  			<option value = "ar">Aspect Ratio</option>
+			  			<option value = "p">Perimeter</option>
+			  			<option value = "xs">X-Symmetry</option>
+			  			<option value = "ys">Y-Symmetry</option>
+			  			<option value = "h">Holes</option>
+			  		</select>
+			  		<button id = "select-1-button" disabled="disabled"> SELECT </button>
+			  	</p>
 
-	  		<p>Feature 2
-		      	<select id = "feature-2">
-		      		<option></option>
-		  			<option value = "cr">Contrast Ratio</option>
-		  			<option value = "ar">Aspect Ratio</option>
-		  			<option value = "p">Perimeter</option>
-		  			<option value = "xs">X-Symmetry</option>
-		  			<option value = "ys">Y-Symmetry</option>
-		  			<option value = "h">Holes</option>
-		  		</select>
-		  		<button id = "select-2"> SELECT </button>
-		  	</p>
-		  	<div>
-		  		<button id = "plot"> PLOT </button>
-			  	<button id = "test"> TEST FEATURES </button>
-	  		</div>
+		  		<p>Feature 2
+			      	<select id = "feature-2">
+			      		<option></option>
+			  			<option value = "cr">Contrast Ratio</option>
+			  			<option value = "ar">Aspect Ratio</option>
+			  			<option value = "p">Perimeter</option>
+			  			<option value = "xs">X-Symmetry</option>
+			  			<option value = "ys">Y-Symmetry</option>
+			  			<option value = "h">Holes</option>
+			  		</select>
+			  		<button id = "select-2-button" disabled="disabled"> SELECT </button>
+			  	</p>
+			  	<div>
+			  		<button id = "plot-button" disabled="disabled"> PLOT </button>
+				  	<button id = "test-button" disabled="disabled"> TEST FEATURES </button>
+		  		</div>
+		  	</div>
+		  	<div class = "card">
+		  		<p id = "target">
+		  			Target Accuracy:
+		  		</p>
 
-	  		<p>
-	  			Target Accuracy:
-	  		</p>
+		  		<p id = "current">
+		  			Current Accuracy:
+		  		</p>
 
-	  		<p>
-	  			Current Accuracy:
-	  		</p>
+		  		<p id = "maximum">
+		  			Maximum Accuracy:
+		  		</p>
 
-	  		<p>
-	  			Maximum Accuracy:
-	  		</p>
+		  		<p style = "visibility: hidden">
+		  			hellloooo
+		  		</p>
 
-	  		<p style = "visibility: hidden">
-	  			hellloooo
-	  		</p>
+		  		<p id = "class">
+		  			Class:
+		  		</p>
 
-	  		<p>
-	  			Class:
-	  		</p>
+		  		<p id = "f-1">
+		  			F1:
+		  		</p>
 
-	  		<p>
-	  			F1:
-	  		</p>
-
-	  		<p>
-	  			F2:
-	  		</p>
+		  		<p id = "f-2">
+		  			F2:
+		  		</p>
+	  	</div>
 		</div>
 	</div>
 
-	<div class = "row">
-		
+	<div class = "row" id = "table">
+		table display
 	</div>
 </body>
 </html>

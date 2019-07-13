@@ -1,6 +1,7 @@
 window.onload = function() {
     var series1 = []; //stores class 1 points and plots on chart
     var series2 = []; //stores class 2 points and plots on chart
+    var dataset = 0;
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {text: "Chart"},
         axisX:{
@@ -25,7 +26,16 @@ window.onload = function() {
             }]
         });
 
-    function plotfunction(){
+    function load(){
+        dataset = document.getElementById("dataset-button").value;
+        document.getElementById("select-1-button").disabled = false;
+        document.getElementById("select-2-button").disabled = false;
+        document.getElementById("plot-button").disabled = false;
+        document.getElementById("test-button").disabled = false;
+        document.getElementById("target").textContent = "Target Accuracy: " + dataset;
+    }
+
+    function plot(){
         var xValue = 1;
         var yValue = 2;
         series1.push({
@@ -35,8 +45,10 @@ window.onload = function() {
         chart.render();
     }
 
-    var plo = document.getElementById("plot");
-    plo.addEventListener("click", plotfunction);
+    var lo = document.getElementById("load-button");
+    lo.addEventListener("click", load);
+    var plo = document.getElementById("plot-button");
+    plo.addEventListener("click", plot);
     /*var addClass2 = document.getElementById("add-class-2");
     addClass2.addEventListener("click", addDataPointsAndRender2);
     var addClass1 = document.getElementById("add-class-1");
