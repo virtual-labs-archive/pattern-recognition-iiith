@@ -12,12 +12,12 @@
 <body> 
 	<div class = "row">
 		<div class = "leftcolumn">
-			<div id = "chartContainer" style="height: 400px; width: 600px;">
+			<div id = "chartContainer" style="height: 450px; width: 600px; padding:40px;">
 			</div> 
 		</div>
 
 		<div class = "rightcolumn">
-			<div class="card">
+			<div class = "card">
 				<p>Dataset
 			      	<select id = "dataset-button">
 			      		<option></option>
@@ -38,7 +38,7 @@
 			  			<option value = "ys">Y-Symmetry</option>
 			  			<option value = "h">Holes</option>
 			  		</select>
-			  		<button id = "select-1-button" disabled="disabled"> SELECT </button>
+			  		<button id = "select-1-button" disabled = "disabled"> SELECT </button>
 			  	</p>
 
 		  		<p>Feature 2
@@ -51,11 +51,11 @@
 			  			<option value = "ys">Y-Symmetry</option>
 			  			<option value = "h">Holes</option>
 			  		</select>
-			  		<button id = "select-2-button" disabled="disabled"> SELECT </button>
+			  		<button id = "select-2-button" disabled = "disabled"> SELECT </button>
 			  	</p>
 			  	<div>
-			  		<button id = "plot-button" disabled="disabled"> PLOT </button>
-				  	<button id = "test-button" disabled="disabled"> TEST FEATURES </button>
+			  		<button id = "plot-button" disabled = "disabled"> PLOT </button>
+				  	<button id = "test-button" disabled = "disabled"> TEST FEATURES </button>
 		  		</div>
 		  	</div>
 		  	<div class = "card">
@@ -90,8 +90,7 @@
 		</div>
 	</div>
 
-	<div class = "row" id = "table">
-		table display
+	<div class = "row" id = "table-id" style = "visibility: hidden;">
 	</div>
 </body>
 </html>
