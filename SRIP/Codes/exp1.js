@@ -1,4 +1,5 @@
 window.onload = function() {
+    var i = 0;
     var t1dataset = [["Class", "ImageID", "Contrast Ratio", "Aspect Ratio", "Perimeter", "X-Symmetry", "Y-Symmetry", "Holes"], 
     [0, 2, 0.19, 0.092, 87, 131, 137, 2],
     [0, 22, 0.204, 0.095, 86, 143, 133, 2],
@@ -42,25 +43,22 @@ window.onload = function() {
         document.getElementById("table-id").style.visibility = "visible";
         var table = document.createElement("TABLE");
         table.border = "1";
-        table.width="100%";
+        table.width = "100%";
  
-        //Get the count of columns.
         var columnCount = t1dataset[0].length;
- 
-        //Add the header row.
+
         var row = table.insertRow(-1);
-        for (var i = 0; i < columnCount; i++) {
+        for (i = 0; i < columnCount; i++) {
             var headerCell = document.createElement("TH");
-            headerCell.innerHTML = t1dataset[0][i];
+            headerCell.textContent = t1dataset[0][i];
             row.appendChild(headerCell);
         }
- 
-        //Add the data rows.
-        for (var i = 1; i < t1dataset.length; i++) {
+
+        for (i = 1; i < t1dataset.length; i++) {
             row = table.insertRow(-1);
             for (var j = 0; j < columnCount; j++) {
                 var cell = row.insertCell(-1);
-                cell.innerHTML = t1dataset[i][j];
+                cell.textContent = t1dataset[i][j];
             }
         }
  
