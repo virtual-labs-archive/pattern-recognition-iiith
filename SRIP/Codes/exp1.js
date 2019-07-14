@@ -1,3 +1,4 @@
+
 window.onload = function() {
     var i = 0;
     var j = 0;
@@ -12,6 +13,7 @@ window.onload = function() {
     var testSeries = [];
     var trainSeries = [];
     var dataset = 0;
+    var max_acc=0.0;
     //variable Dataset which is selected
     var usingDataset;
     var usingConfig;
@@ -87,6 +89,7 @@ window.onload = function() {
         var dvTable = document.getElementById("table-id");
         dvTable.textContent = "";
         dvTable.appendChild(table);
+        document.getElementById("load-button").disabled = true;
     }
 
     function onClick(e){
@@ -113,8 +116,8 @@ window.onload = function() {
         selectFeature2 = document.getElementById("feature-2").value;
 
         for(i = 1; i <= usingConfig[9] + usingConfig[10]; i++){
-            xvalue = usingDataset[i][selectFeature1];
-            yvalue = usingDataset[i][selectFeature2];
+            xvalue = usingDataset[i][selectFeature2];
+            yvalue = usingDataset[i][selectFeature1];
             if(i <= usingConfig[9]){
                 trainSeries.push([xvalue,   yvalue]);
                 if(usingDataset[i][0] == usingConfig[0]){
@@ -148,8 +151,54 @@ window.onload = function() {
     }
 
     function test(){
-        document.getElementById("test").style.visibility = "visible";
-        document.getElementById("test").textContent = usingDataset[0][selectFeature1] + " VS " + usingDataset[0][selectFeature2];
+        var positive=0;
+        document.getElementById("plot-button").disabled = true;
+        document.getElementById("test-button").disabled = true;
+        for(i = 0; i < usingConfig[10]; i++){
+
+            var mapTemp = new Map();
+            for(j = 0; j < usingConfig[9]; j++){
+                mapTemp.set(j, Math.sqrt(Math.pow((testSeries[i][0] - trainSeries[j][0]),2) + Math.pow((testSeries[i][1] - trainSeries[j][1]),2)));
+                
+            }
+            var count1=0,count2=0;
+            const mapSort = new Map([...mapTemp.entries()].sort((a, b) => a[1] - b[1])); 
+            var l = 0;
+            for (var [key, value] of mapSort.entries()) { 
+                if(usingDataset[key+1][0] == usingConfig[0]){
+                    count1++;
+                }
+                else{
+                    count2++;
+                }
+                l = l + 1;
+                if(l == 3){
+                    break;
+                }
+            }
+
+            var out;
+            if(count1 > count2){
+                out = usingConfig[0];
+            }
+            else{
+                out = usingConfig[1];
+            }
+            if(out == usingDataset[1 + i + usingConfig[9]][0]){
+                positive++;
+            }
+        }
+
+        console.log(positive);
+        var curr_acc = positive / usingConfig[10] * 100;
+        document.getElementById("current").textContent = "Current Accuracy: " + Math.round(curr_acc * 100) / 100 + " %";
+
+        if(curr_acc > max_acc){
+            max_acc = curr_acc;
+            document.getElementById("maximum").textContent = "Maximum Accuracy: " + Math.round(max_acc * 100) / 100+ " %";
+            document.getElementById("test").style.visibility = "visible";
+            document.getElementById("test").textContent = usingDataset[0][selectFeature1] + "  VS  " + usingDataset[0][selectFeature2];
+        }
     }
 
     var lo = document.getElementById("load-button");
@@ -159,3 +208,6 @@ window.onload = function() {
     var te = document.getElementById("test-button");
     te.addEventListener("click",test);
 };
+
+
+
