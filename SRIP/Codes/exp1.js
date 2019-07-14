@@ -17,7 +17,7 @@ window.onload = function() {
     var usingConfig;
     //variablle feature 1 and 2
     var selectFeature1,selectFeature2;
-    var n, n_test;
+    var n, ntest;
 
     var chart = new CanvasJS.Chart("chartContainer", {
         title: {text: "Chart"},
