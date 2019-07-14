@@ -12,7 +12,7 @@
 <body> 
 	<div class = "row">
 		<div class = "leftcolumn">
-			<div id = "chartContainer" style="height: 450px; width: 600px; padding:40px;">
+			<div id = "chartContainer" style="height: 350px; width: 600px; padding:40px;">
 			</div> 
 		</div>
 
@@ -38,6 +38,7 @@
 			  			<option value = "6">Y-Symmetry</option>
 			  			<option value = "7">Holes</option>
 			  		</select>
+			  		<input type="text" id= "feature-1-editor" style = "visibility: hidden;">
 			  	</p>
 
 		  		<p>Feature 2
@@ -50,6 +51,7 @@
 			  			<option value = "6">Y-Symmetry</option>
 			  			<option value = "7">Holes</option>
 			  		</select>
+			  		<input type="text" id= "feature-2-editor" style = "visibility: hidden;">
 			  	</p>
 			  	<div>
 			  		<button id = "plot-button" disabled = "disabled"> PLOT </button>
@@ -69,26 +71,16 @@
 		  			Maximum Accuracy:
 		  		</p>
 
-		  		<p style = "visibility: hidden">
+		  		<p id = "test" style = "visibility: hidden">
 		  			hellloooo
-		  		</p>
-
-		  		<p id = "class">
-		  			Class:
-		  		</p>
-
-		  		<p id = "f-1">
-		  			F1:
-		  		</p>
-
-		  		<p id = "f-2">
-		  			F2:
 		  		</p>
 	  	</div>
 		</div>
 	</div>
 
-	<div class = "row" id = "table-id" style="overflow-y: 10;" style = "visibility: hidden;">
+	<div class = "row">
+		<div class = "row-table" id = "table-id" style = "visibility: hidden;">
+		</div>
 	</div>
 </body>
 </html>
