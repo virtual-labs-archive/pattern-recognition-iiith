@@ -1,4 +1,3 @@
-
 window.onload = function() {
     var i = 0;
     var j = 0;
@@ -13,12 +12,12 @@ window.onload = function() {
     var testSeries = [];
     var trainSeries = [];
     var dataset = 0;
-    var max_acc=0.0;
+    var maxacc = 0.0;
     //variable Dataset which is selected
     var usingDataset;
     var usingConfig;
     //variablle feature 1 and 2
-    var selectFeature1,selectFeature2;
+    var selectFeature1, selectFeature2;
     var n, ntest;
 
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -151,7 +150,7 @@ window.onload = function() {
     }
 
     function test(){
-        var positive=0;
+        var positive = 0;
         document.getElementById("plot-button").disabled = true;
         document.getElementById("test-button").disabled = true;
         for(i = 0; i < usingConfig[10]; i++){
@@ -161,11 +160,11 @@ window.onload = function() {
                 mapTemp.set(j, Math.sqrt(Math.pow((testSeries[i][0] - trainSeries[j][0]),2) + Math.pow((testSeries[i][1] - trainSeries[j][1]),2)));
                 
             }
-            var count1=0,count2=0;
+            var count1 = 0,count2 = 0;
             const mapSort = new Map([...mapTemp.entries()].sort((a, b) => a[1] - b[1])); 
             var l = 0;
             for (var [key, value] of mapSort.entries()) { 
-                if(usingDataset[key+1][0] == usingConfig[0]){
+                if(usingDataset[key + 1][0] == usingConfig[0]){
                     count1++;
                 }
                 else{
@@ -189,13 +188,13 @@ window.onload = function() {
             }
         }
 
-        console.log(positive);
-        var curr_acc = positive / usingConfig[10] * 100;
-        document.getElementById("current").textContent = "Current Accuracy: " + Math.round(curr_acc * 100) / 100 + " %";
+        //console.log(positive);
+        var curracc = positive / usingConfig[10] * 100;
+        document.getElementById("current").textContent = "Current Accuracy: " + Math.round(curracc * 100) / 100 + " %";
 
-        if(curr_acc > max_acc){
-            max_acc = curr_acc;
-            document.getElementById("maximum").textContent = "Maximum Accuracy: " + Math.round(max_acc * 100) / 100+ " %";
+        if(curracc > maxacc){
+            maxacc = curracc;
+            document.getElementById("maximum").textContent = "Maximum Accuracy: " + Math.round(maxacc * 100) / 100+ " %";
             document.getElementById("test").style.visibility = "visible";
             document.getElementById("test").textContent = usingDataset[0][selectFeature1] + "  VS  " + usingDataset[0][selectFeature2];
         }
