@@ -1,4 +1,4 @@
-﻿This is Readme file containing instruction for running the experiment: Generation of Random Variables
+﻿This is Readme file containing instruction for running the experiment: Feature Representation
 
 TO RUN THE EXPERIMENT:
 1. Download the SRIP folder
