@@ -94,7 +94,7 @@ window.onload = function() {
     function onClick(e){
         load();
         for(i = 1; i < usingDataset.length; i++){
-            if(usingDataset[i][selectFeature1] == e.dataPoint.x && usingDataset[i][selectFeature2] == e.dataPoint.y){
+            if(usingDataset[i][selectFeature1] == e.dataPoint.y && usingDataset[i][selectFeature2] == e.dataPoint.x){
                 var x = document.getElementById("table-id").getElementsByTagName("td");
                 x[8*(i-1)].style.backgroundColor = "yellow";
                 x[8*(i-1)+1].style.backgroundColor = "yellow";
