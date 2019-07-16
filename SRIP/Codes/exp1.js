@@ -145,8 +145,6 @@ window.onload = function() {
         chart.axisY[0].set("title", usingDataset[0][selectFeature2]);
         //console.log(trainSeries);
         //console.log(testSeries);
-        series1 = [];
-        series2 = [];
     }
 
     function test(){
