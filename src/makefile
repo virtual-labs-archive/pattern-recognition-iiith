@@ -1,7 +1,10 @@
 build-dir=../build
 theme=green-icon
 
-all: ${theme}
+all:patch-analytics ${theme}
+
+patch-analytics:
+	../scripts/patch-analytics.sh
 
 green-icon:
 	mkdir ${build-dir};rsync -avC --progress lab/* themes/${theme}/* ${build-dir}
