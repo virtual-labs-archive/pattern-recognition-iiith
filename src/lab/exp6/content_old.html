@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<head></head>
-<h1 id="main-title">
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--></head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)--><h1 id="main-title">
 MLE: Learning the Classifier from Data
 </h1>
 
@@ -25,7 +29,7 @@ MLE: Learning the Classifier from Data
 	</p>
     <p>
      The MLE is an important type of estimator for the following reasons:
-	<ol>
+	</p><ol>
 	   <li> <b>1:</b> The MLE implements the likelihood principle.</li>
 	   <li> <b>2:</b> MLEs are often simple and easy to compute. </li>
 	   <li> <b>3:</b> MLEs have asymptotic optimality properties
@@ -36,7 +40,7 @@ MLE: Learning the Classifier from Data
 	        (composite hypothesis testing), MLEs are used in implementing the 
 	        generalized likelihood ratio test (GLRT).</li>
         </ol>
-    </p>
+    <p></p>
 
 </div>
 
@@ -48,29 +52,29 @@ MLE: Learning the Classifier from Data
     <p>
     Suppose there is a sample x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> of <i>n</i> iid observations, coming from a distribution 
     with an unknown pdf ƒ<sub>0</sub>(·). It is however surmised that the function ƒ<sub>0</sub> belongs to a 
-    certain family of distributions { ƒ(·|&theta;), &theta; &isin; &Theta; }, called the parametric model, so 
-    that ƒ<sub>0</sub> = ƒ(·|&theta;<sub>0</sub>). The value &theta;<sub>0</sub> is unknown and is referred to as the "true value" 
-    of the parameter. It is desirable to find some estimator <img src="images/thetahat.png"> which
-    would be as close to the true value &theta;<sub>0</sub> as possible. Both the observed variables x<sub>0</sub> 
+    certain family of distributions { ƒ(·|θ), θ ∈ Θ }, called the parametric model, so 
+    that ƒ<sub>0</sub> = ƒ(·|θ<sub>0</sub>). The value θ<sub>0</sub> is unknown and is referred to as the "true value" 
+    of the parameter. It is desirable to find some estimator <img src="images/thetahat.png"/> which
+    would be as close to the true value θ<sub>0</sub> as possible. Both the observed variables x<sub>0</sub> 
     and the parameter θ can be vectors.
     </p>
     <p>
-    To use the method of maximum likelihood, one first specifies the joint density function for all the the observations. For an Independent and Identically distributed distribution, this joint density function will be <br />
-    <img src="images/jointdistributionfunction.png"> 
+    To use the method of maximum likelihood, one first specifies the joint density function for all the the observations. For an Independent and Identically distributed distribution, this joint density function will be <br/>
+    <img src="images/jointdistributionfunction.png"/> 
     </p>
     <p>
-    Now we look at this function from a different perspective by considering the observed values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> to be fixed “parameters” of this function, whereas &theta; will be the function’s variable and allowed to vary freely. From this point of view this distribution function will be called the likelihood: 
-    </br>
-    <img src="images/likelihoodfunction.png">
-    </br>
+    Now we look at this function from a different perspective by considering the observed values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> to be fixed “parameters” of this function, whereas θ will be the function’s variable and allowed to vary freely. From this point of view this distribution function will be called the likelihood: 
+    <br/>
+    <img src="images/likelihoodfunction.png"/>
+    <br/>
     </p>
     <p>
-	In practice it is often more convenient to work with the logarithm of the likelihood function, called the log-likelihood, or its scaled version, called the average log-likelihood:</ br>
-     <img src="images/loglikelihood.png">
+	In practice it is often more convenient to work with the logarithm of the likelihood function, called the log-likelihood, or its scaled version, called the average log-likelihood:<!-- br-->
+     <img src="images/loglikelihood.png"/>
     </p>
     <p>
-    The method of maximum likelihood estimates &theta;<sub>0</sub> by finding a value of θ that maximizes <img src="images/lhat.png">. This method of estimation is a maximum likelihood estimator (MLE) of &theta;<sub>0</sub>:
-    <img src="images/mletheta.png">
+    The method of maximum likelihood estimates θ<sub>0</sub> by finding a value of θ that maximizes <img src="images/lhat.png"/>. This method of estimation is a maximum likelihood estimator (MLE) of θ<sub>0</sub>:
+    <img src="images/mletheta.png"/>
     </p>
     <p>
     A MLE estimate is the same regardless of whether we maximize the likelihood or the log-likelihood function, since log is a monotone transformation. 
@@ -90,12 +94,12 @@ See the page <a href="http://mathworld.wolfram.com/MaximumLikelihood.html" targe
 <div id="objective">
     <h2> Objective </h2>
     <p>The high level goals of the experiment are:
-        <ol>
+        </p><ol>
             <li> <b>1:</b> To understand the modelling of a class in terms of density functions and priors.</li>
             <li> <b>2:</b> To understand the estimation of the parameters of a model from a set of samples.</li>
             <li> <b>3:</b> To understand the effect of sample size on decision boundary.</li>
         </ol>
-    </p>
+    <p></p>
 </div>
 
 
@@ -137,3 +141,4 @@ See the page <a href="http://mathworld.wolfram.com/MaximumLikelihood.html" targe
     </ul>
 </div>
 
+</body></html>

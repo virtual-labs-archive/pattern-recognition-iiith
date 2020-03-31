@@ -1,30 +1,29 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
+edit --><!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--></head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
-      <img src="../images/logo.jpg" />
+      <img src="../images/logo.jpg"/>
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -45,10 +44,10 @@ edit -->
     <!-- The lab article has an header, optional navigational 
     menu, number of sections, an optional sidebar and a closing 
     footer-->
-     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     <div class="breadcrumb" id="experiment-article-breadcrumb">
      </div>
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
 	Generating Random Numbers 
@@ -58,7 +57,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -74,23 +73,20 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/introduction.jpg" />
+	    <img src="../images/introduction.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Introduction
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-	  <div id="experiment-article-section-1-content" 
-	     class="content">	
+	  <div class="content" id="experiment-article-section-1-content">	
 	     <p> Random numbers are the most important ways in which we model noise in real-world
 	     processes. The nature of randomness varies according to the actual phenomena that is
 	     causing the randomness. For example, if we roll a dice, the result can vary between
@@ -99,7 +95,7 @@ edit -->
 	     an intuitive understanding as to why this happens. The variations in randomness is
 	     modeled using probability distribution functions or probability density functions.</p>
 
-	     <img src="images/2dice.jpg" alt="Rolling 2 dice" height="400" width="500" />
+	     <img alt="Rolling 2 dice" height="400" src="images/2dice.jpg" width="500"/>
 
 	     <p> Nature has its ways of generating randomness. However, computers are designed to
 	     be deterministic and hence generating randomness is not a simple task.
@@ -115,36 +111,33 @@ edit -->
 	  <!-- Second section of the article-->
 	  <section id="experiment-article-section-2">
 
-	  <div id="experiment-article-section-2-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-2-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/theory.jpg" />
+	     <img src="../images/theory.jpg"/>
 	  </div>
 
 	  <!-- The heading for the section can be enclosed in a 
 	  div tag. -->
-	  <div id="experiment-article-section-2-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-2-heading">
 	     Theory
 	  </div>
 
 
 	  <!-- Write the section content inside a paragraph 
 	  element, we can also include images with <img> tag -->
-	  <div id="experiment-article-section-2-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-2-content">
 	     <p> As mentioned in the introduction, computers are designed to be deterministic, and
 	     cannot generate randomness. Hence to generate a random set of numbers, one of the 
 	     following approaches is used:</p>
 	     <p>
-	     <ul>
+	     </p><ul>
 		<li> Use a physical device (sensor) that captures a natural phenomenon, and convert
 		the readings to digital form.
 		</li>
 		<li> Use special functions called <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">
 		   Pseudorandom Number Generators</a> to a generate random-looking set of numbers.
-	     </ul>
-	     </p>
+	     </li></ul>
+	     <p></p>
 	     <p>
 	     The second method is easier and inexpensive, and hence is the most commonly used one.
 	     However, if one needs high quality randomness, the first method is often resorted to.
@@ -155,51 +148,45 @@ edit -->
 
 	     <p> Carefully go through the writeup provided <a href="RandomVariables.pdf">HERE</a>.
 
-	  </div>
+	  </p></div>
 	  </section>
 
 
 	  <section id="experiment-article-section-3">
 
-	  <div id="experiment-article-section-3-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-3-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/objective.jpg" />
+	     <img src="../images/objective.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-3-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-3-heading">
 	     Objective
 	  </div>
 
-	  <div id="experiment-article-section-3-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-3-content">
 	     <p>The high level goals of the experiment are:
-	     <ol>
+	     </p><ol>
 		<li> To understand the nature of randomness and how they are characterized.</li>
 		<li> To understand the difference between discrete and continuous random numbers.</li>
 		<li> To understand the process of generation of random numbers with a desired density/distribution.</li>
 		<li> To understand the practical limitations and advantages of randomness generated using algorithms.</li>
 	     </ol>
-	     </p>
+	     <p></p>
 	  </div>
 	  </section>
 
 
 	  <section id="experiment-article-section-4">
-	  <div id="experiment-article-section-4-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-4-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/simulation.jpg" />
+	     <img src="../images/simulation.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-4-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-4-heading">
 	     Experiment
 	  </div>
 
-	  <div id="experiment-article-section-4-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-4-content">
 		<p><a href="../docs/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
 	     <p>
              <a href="../experiment/compressed_files/4/Exp4.tar.gz">   Click here to open the Experiment for Linux systems</a>
@@ -234,19 +221,16 @@ edit -->
 
 	  <section id="experiment-article-section-6">
 
-	  <div id="experiment-article-section-6-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-6-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/quizzes.jpg" />
+	     <img src="../images/quizzes.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-6-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-6-heading">
 	     Quizzes
 	  </div>
 
-	  <div id="experiment-article-section-6-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-6-content">
 	     <p> Answer the questions provided at the end of the writeup <a href="RandomVariables.pdf">HERE</a>.
 	     Some of the questions require you to do minimal amount of programming. You are encouraged to
 	     try out variants of the goals mentioned in the programming questions.
@@ -255,21 +239,18 @@ edit -->
 	  </section>
 
 	  <section id="experiment-article-section-7">
-	  <div id="experiment-article-section-7-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-7-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/procedure.jpg" />
+	     <img src="../images/procedure.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-7-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-7-heading">
 	     Procedure
 	  </div>
 
-	  <div id="experiment-article-section-7-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-7-content">
 	     <p>
-	     <h3>Stage 1:</h3>
+	     </p><h3>Stage 1:</h3>
 	     <ol>
 		<li> Set the default parameters and click the generate button; Observe the
 		dataset for multiple instances of samples. </li>
@@ -293,24 +274,21 @@ edit -->
 		<li> Note down your inferences regarding the error committed if you assume the
 		distribution to be normal.</li>
 	     </ol>
-	     </p>
+	     <p></p>
 	  </div>
 	  </section>
 
 	  <section id="experiment-article-section-8">
-	  <div id="experiment-article-section-8-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-8-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/readings.jpg" />
+	     <img src="../images/readings.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-8-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-8-heading">
 	     Further Readings
 	  </div>
 
-	  <div id="experiment-article-section-8-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-8-content">
 	     <ul>
 		<li> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
 		by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001.
@@ -331,7 +309,7 @@ edit -->
        <!-- An article can have a sidebar that contain related 
        links and additional material (however it is kept optional 
        at this moment) -->
-       <aside id="lab-article-sidebar" class="default">
+       <aside class="default" id="lab-article-sidebar">
        <!-- put the content that you want to appear in the 
        sidebar -->	
        </aside>
@@ -339,21 +317,59 @@ edit -->
 
        <!-- Article footer can display related content and 
        additional links -->						
-       <footer id="lab-article-footer" class="default">
-       <!-- Put the content that you want to appear here -->
-       </footer>
+       <footer class="default" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
        </article>
 
 
        <!-- Links to other labs, about us page can be kept the lab 
        footer-->
-       <footer id="lab-footer" class="footer">
+       <footer class="footer" id="lab-footer">
        <!-- Put the content here-->
-       <a href="http://virtual-labs.ac.in/nmeict" >Sponsored by MHRD (NME-ICT) </a> | <a
-	  href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
+       <a href="http://virtual-labs.ac.in/nmeict">Sponsored by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
        </footer>
     </div>		
 
- </body>
-</html>
+ 
+
+</body></html>

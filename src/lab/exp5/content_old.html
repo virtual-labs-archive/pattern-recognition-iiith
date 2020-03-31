@@ -1,6 +1,10 @@
 <!DOCTYPE html>
-<head></head>
-<h1 id="main-title">
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--></head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)--><h1 id="main-title">
 Bayesian Classification
 </h1>
 
@@ -13,12 +17,12 @@ Bayesian Classification
     explicity model each class by their distribution or density functions. To carry out
     the classification, we compute the likelihood that a given sample belong to each of the
     candidate classes, and assign the sample to the class that is most likely. In other words,
-    we need to compute P(&#969<sub>i</sub>/x) for each class &#969<sub>i</sub>. However, the
+    we need to compute P(ω<sub>i</sub>/x) for each class ω<sub>i</sub>. However, the
     density functions provide only the likelihood of seeing a particular sample, given that
-    the sample belongs to a specific class. i.e., the density functions provide us p(x/&#969<sub>i</sub>).
+    the sample belongs to a specific class. i.e., the density functions provide us p(x/ω<sub>i</sub>).
     The Bayes rule provides us with an approach to compute the likelihood of the class for
     a given sample, from the density functions and related information.
-</div>
+</p></div>
 
 <div id="theory">
     <h2>Theory</h2>
@@ -43,17 +47,17 @@ morning is modified to become a near-certainty that the sun will always
 rise." </i></p>
 
 <span style="font-size: 10pt;"><span style="font-family: 'Times New Roman',serif;"></span></span>
-<p><span style="color: rgb(0, 0, 0);"><span>&nbsp;</span></span></p>
+<p><span style="color: rgb(0, 0, 0);"><span> </span></span></p>
 
 <p> In terms of classification, the Bayes theorem allows us to combine prior probabilities,
 along with observed evidence to arrive at the posterior probability. More or less, conditional
 probabilities represent the probability of an event occurring given evidence. To better
 understand, Bayes Theorem can be derived from the joint probability of
 A and B (i.e. <i>P</i>(<i>A,B</i>)) as
-follows:</span></p>
-<br>
-<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 217px;"><span class="WPCharBox" style="border: medium none ;"><img src="images/ole.gif" alt="ole.gif" border="0" height="101" width="217"></span></span> </span></p>
-<br>
+follows:</p>
+<br/>
+<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 217px;"><span class="WPCharBox" style="border: medium none ;"><img alt="ole.gif" border="0" height="101" src="images/ole.gif" width="217"/></span></span> </span></p>
+<br/>
 
 <p><span style="color: rgb(0, 0, 0);">where
 </span><span class="serifequation"><span style="color: rgb(0, 0, 0);"><i><span style="font-weight: bold;">P</span></i><span style="font-weight: bold;">(<i>A</i>|<i>B</i>)</span></span></span><span style="color: rgb(0, 0, 0);"> is referred to as the <i>posterior</i>;
@@ -64,16 +68,16 @@ and <i><span style="font-weight: bold;">P</span></i><span style="font-weight: bo
 is generally the <i>evidence</i> and is used as a scaling factor. Therefore, it is handy to
 remember Bayes Rule as:</span></p>
 
-<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 237px;"><span class="WPCharBox" style="border: medium none ;"><img src="images/ole1.gif" alt="ole1.gif" border="0" height="47" width="237"></span></span> </span></p>
+<p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 237px;"><span class="WPCharBox" style="border: medium none ;"><img alt="ole1.gif" border="0" height="47" src="images/ole1.gif" width="237"/></span></span> </span></p>
 
-<p><span style="color: rgb(0, 0, 0);">&nbsp;These terms will be discussed a little later.</span></p>
+<p><span style="color: rgb(0, 0, 0);"> These terms will be discussed a little later.</span></p>
 
 </div>
 
 <div id="objective">
     <h2> Objective </h2>
     <p>The high level goals of the experiment are:
-        <ol>
+        </p><ol>
             <li> <b>1:</b> To understand the computation of likelihood of a class, given a sample.</li>
             <li> <b>2:</b> To understand the the use of density/distribution functions to model a class.</li>
             <li> <b>3:</b> To understand the effect of prior probabilities in Bayesian classification.</li>
@@ -81,7 +85,7 @@ remember Bayes Rule as:</span></p>
                          decide a decision boundary between classes.</li>
             <li> <b>4:</b> To understand how the decision boundary varies based on nature of the density functions.</li>
         </ol>
-    </p>
+    <p></p>
 </div>
 
 
@@ -140,7 +144,7 @@ remember Bayes Rule as:</span></p>
     <b>Q2.</b> Describe the possible set of decision boundaries that can be generated using
     gaussian density functions in a two class problem.
     <br/><br/>
-    <input type="submit" value="Submit Answers">
+    <input type="submit" value="Submit Answers"/>
     </p>
 </div>
 
@@ -157,3 +161,4 @@ remember Bayes Rule as:</span></p>
     </ul>
 </div>
 
+</body></html>

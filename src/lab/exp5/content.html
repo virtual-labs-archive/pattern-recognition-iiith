@@ -1,30 +1,29 @@
 <!-- This file needs to be edited by the lab developer to suit
-the requirements of their lab in particular.-->
-
-<!-- Add class="default" to include any element as it is
+the requirements of their lab in particular.--><!-- Add class="default" to include any element as it is
 specified in default.html. 
 Do not include class="default" to the elements that you want to
-edit -->
-
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
+edit --><!DOCTYPE html>
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--></head>
+<body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
-      <img src="../images/logo.jpg" />
+      <img src="../images/logo.jpg"/>
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -45,10 +44,10 @@ edit -->
     <!-- The lab article has an header, optional navigational 
     menu, number of sections, an optional sidebar and a closing 
     footer-->
-     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     <div class="breadcrumb" id="experiment-article-breadcrumb">
      </div>
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
 	Bayesian Classification
@@ -58,7 +57,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -74,23 +73,20 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/introduction.jpg" />
+	    <img src="../images/introduction.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Introduction
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-	  <div id="experiment-article-section-1-content" 
-	     class="content">	
+	  <div class="content" id="experiment-article-section-1-content">	
 	     <p> Linear perceptrons allow us to learn a decision boundary that would separate
 	     two classes. They are very effective when there are only two classes, and they are
 	     well separated. Such classifiers are referred to as discriminative classifiers.</p>
@@ -98,33 +94,30 @@ edit -->
 	     explicity model each class by their distribution or density functions. To carry out
 	     the classification, we compute the likelihood that a given sample belong to each of the
 	     candidate classes, and assign the sample to the class that is most likely. In other words,
-	     we need to compute P(&#969<sub>i</sub>/x) for each class &#969<sub>i</sub>. However, the
+	     we need to compute P(ω<sub>i</sub>/x) for each class ω<sub>i</sub>. However, the
 	     density functions provide only the likelihood of seeing a particular sample, given that
-	     the sample belongs to a specific class. i.e., the density functions provide us p(x/&#969<sub>i</sub>).
+	     the sample belongs to a specific class. i.e., the density functions provide us p(x/ω<sub>i</sub>).
 	     The Bayes rule provides us with an approach to compute the likelihood of the class for
 	     a given sample, from the density functions and related information.
-	  </div>
+	  </p></div>
 	  </section>
 
 	  <!-- Second section of the article-->
 	  <section id="experiment-article-section-2">
-	  <div id="experiment-article-section-2-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-2-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/theory.jpg" />
+	     <img src="../images/theory.jpg"/>
 	  </div>
 
 	  <!-- The heading for the section can be enclosed in a 
 	  div tag. -->
-	  <div id="experiment-article-section-2-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-2-heading">
 	     Theory
 	  </div>
 
 	  <!-- Write the section content inside a paragraph 
 	  element, we can also include images with <img> tag -->
-	  <div id="experiment-article-section-2-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-2-content">
 
 	     <p>Consider the following quote from a 2000 article in the Economist on the Bayesian Approach
 	     [<a href="http://www.ai.mit.edu/%7emurphyk/Bayes/economist.html">link</a><span style="color: rgb(0, 0, 0);">]:</span>
@@ -146,17 +139,17 @@ edit -->
 		rise." </i></p>
 
 	     <span style="font-size: 10pt;"><span style="font-family: 'Times New Roman',serif;"></span></span>
-	     <p><span style="color: rgb(0, 0, 0);"><span>&nbsp;</span></span></p>
+	     <p><span style="color: rgb(0, 0, 0);"><span> </span></span></p>
 
 	     <p> In terms of classification, the Bayes theorem allows us to combine prior probabilities,
 	     along with observed evidence to arrive at the posterior probability. More or less, conditional
 	     probabilities represent the probability of an event occurring given evidence. To better
 	     understand, Bayes Theorem can be derived from the joint probability of
 	     A and B (i.e. <i>P</i>(<i>A,B</i>)) as
-	     follows:</span></p>
-	  <br>
-	  <p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 217px;"><span class="WPCharBox" style="border: medium none ;"><img src="images/ole.gif" alt="ole.gif" border="0" height="101" width="217"></span></span> </span></p>
-	  <br>
+	     follows:</p>
+	  <br/>
+	  <p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 217px;"><span class="WPCharBox" style="border: medium none ;"><img alt="ole.gif" border="0" height="101" src="images/ole.gif" width="217"/></span></span> </span></p>
+	  <br/>
 
 	  <p><span style="color: rgb(0, 0, 0);">where
 	     </span><span class="serifequation"><span style="color: rgb(0, 0, 0);"><i><span style="font-weight: bold;">P</span></i><span style="font-weight: bold;">(<i>A</i>|<i>B</i>)</span></span></span><span style="color: rgb(0, 0, 0);"> is referred to as the <i>posterior</i>;
@@ -167,28 +160,25 @@ edit -->
 	     is generally the <i>evidence</i> and is used as a scaling factor. Therefore, it is handy to
 	     remember Bayes Rule as:</span></p>
 
-	  <p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 237px;"><span class="WPCharBox" style="border: medium none ;"><img src="images/ole1.gif" alt="ole1.gif" border="0" height="47" width="237"></span></span> </span></p>
+	  <p style="text-align: center;"><span style="color: rgb(0, 0, 0);"> <span class="WPCharBoxWrapper" style="width: 237px;"><span class="WPCharBox" style="border: medium none ;"><img alt="ole1.gif" border="0" height="47" src="images/ole1.gif" width="237"/></span></span> </span></p>
 
-	  <p><span style="color: rgb(0, 0, 0);">&nbsp;These terms will be discussed a little later.</span></p>
+	  <p><span style="color: rgb(0, 0, 0);"> These terms will be discussed a little later.</span></p>
        </div>
        </section>
 
        <section id="experiment-article-section-3">
-       <div id="experiment-article-section-3-icon" 
-	     class="icon">
+       <div class="icon" id="experiment-article-section-3-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/objective.jpg" />
+	     <img src="../images/objective.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-3-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-3-heading">
 	     Objective
 	  </div>
 
-	  <div id="experiment-article-section-3-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-3-content">
 	     <p>The high level goals of the experiment are:
-	     <ol>
+	     </p><ol>
 		<li>  To understand the computation of likelihood of a class, given a sample.</li>
 		<li>  To understand the the use of density/distribution functions to model a class.</li>
 		<li>  To understand the effect of prior probabilities in Bayesian classification.</li>
@@ -196,24 +186,21 @@ edit -->
 		decide a decision boundary between classes.</li>
 		<li>  To understand how the decision boundary varies based on nature of the density functions.</li>
 	     </ol>
-	     </p>
+	     <p></p>
 	  </div>
 	  </section>
 
 	  <section id="experiment-article-section-4">
-	  <div id="experiment-article-section-4-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-4-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/simulation.jpg" />
+	     <img src="../images/simulation.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-4-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-4-heading">
 	     Experiment
 	  </div>
 
-	  <div id="experiment-article-section-4-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-4-content">
 		<p><a href="../docs/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
 	     <p>
              <a href="../experiment/compressed_files/5/Exp5.tar.gz">   Click here to open the Experiment for Linux systems</a>
@@ -248,19 +235,16 @@ edit -->
 
 	  <section id="experiment-article-section-6">
 
-	  <div id="experiment-article-section-6-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-6-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/quizzes.jpg" />
+	     <img src="../images/quizzes.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-6-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-6-heading">
 	     Quizzes
 	  </div>
 
-	  <div id="experiment-article-section-6-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-6-content">
 	     <p>
 	     <b>Q1.</b> The covariance matrix is always
 	     <br/><br/>
@@ -285,19 +269,16 @@ edit -->
 
 	  <section id="experiment-article-section-7">
 
-	  <div id="experiment-article-section-7-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-7-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/procedure.jpg" />
+	     <img src="../images/procedure.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-7-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-7-heading">
 	     Procedure
 	  </div>
 
-	  <div id="experiment-article-section-7-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-7-content">
 	     <h3>Stage 1:</h3>
 	     <ol>
 		<li> Lauch the experiment and clear the pane. Assign differnt means and covariances for each
@@ -316,7 +297,7 @@ edit -->
 
 	     <h3>Stage 3:</h3>
 	     <p>Generate the following types of decision boundaries by varying the means and covariance matrices.
-	     <ol>
+	     </p><ol>
 		<li> Straight line </li>
 		<li> Parallel Straight lines </li>
 		<li> Concentric circles </li>
@@ -324,25 +305,22 @@ edit -->
 		<li> Hyperbola </li>
 		<li> Four Quadrants </li>
 	     </ol>
-	     </p>
+	     <p></p>
 	     <p>Explain why these shapes are generated in each case.</p>
 	  </div>
 	  </section>
 
 	  <section id="experiment-article-section-8">
-	  <div id="experiment-article-section-8-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-8-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/readings.jpg" />
+	     <img src="../images/readings.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-8-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-8-heading">
 	     Further Readings
 	  </div>
 
-	  <div id="experiment-article-section-8-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-8-content">
 	     <ul>
 		<li> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
 		by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001.
@@ -363,7 +341,7 @@ edit -->
        <!-- An article can have a sidebar that contain related 
        links and additional material (however it is kept optional 
        at this moment) -->
-       <aside id="lab-article-sidebar" class="default">
+       <aside class="default" id="lab-article-sidebar">
        <!-- put the content that you want to appear in the 
        sidebar -->	
        </aside>
@@ -371,21 +349,59 @@ edit -->
 
        <!-- Article footer can display related content and 
        additional links -->						
-       <footer id="lab-article-footer" class="default">
-       <!-- Put the content that you want to appear here -->
-       </footer>
+       <footer class="default" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
        </article>
 
 
        <!-- Links to other labs, about us page can be kept the lab 
        footer-->
-       <footer id="lab-footer" class="footer">
+       <footer class="footer" id="lab-footer">
        <!-- Put the content here-->
-       <a href="http://virtual-labs.ac.in/nmeict" >Sponsored by MHRD (NME-ICT) </a> | <a
-	  href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
+       <a href="http://virtual-labs.ac.in/nmeict">Sponsored by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
        </footer>
     </div>		
 
- </body>
-</html>
+ 
+
+</body></html>

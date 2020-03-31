@@ -1,4 +1,8 @@
-﻿<!-- This file needs to be edited by the lab developer to suit
+<html><head><!--Google Tag Manager--><script class="gtm">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W59SWTR');</script><!--End Google Tag Manager--></head><body><!--Google Tag Manager (noscript)--><noscript class="gtm"><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-W59SWTR" style="display:none;visibility:hidden" width="0"></iframe></noscript><!--End Google Tag Manager (noscript)-->﻿<!-- This file needs to be edited by the lab developer to suit
 the requirements of their lab in particular.-->
 
 <!-- Add class="default" to include any element as it is
@@ -6,25 +10,25 @@ specified in default.html.
 Do not include class="default" to the elements that you want to
 edit -->
 
-<!DOCTYPE html>
-<html>
-<head></head>
-<body>
+
+
+
+
 
 <div id="experiment"> <!-- The Experiment Document Container-->
 
   <!-- The lab Header contains the logo and the name of the lab,
   usually displayed on the top of the page-->
 
-  <header id="experiment-header" class="default">
+  <header class="default" id="experiment-header">
   
-    <div id="experiment-header-logo" class="logo">
+    <div class="logo" id="experiment-header-logo">
       <!-- Enclose the logo image of your lab or write it in 
       text-->
-      <img src="../images/logo.jpg" />
+      <img src="../images/logo.jpg"/>
     </div>
 
-    <div id="experiment-header-heading" class="heading">
+    <div class="heading" id="experiment-header-heading">
       <!-- Write the name of your lab and link it to the home 
       page of your lab (h1 tag is preferred while writing your 
       lab name)-->
@@ -43,10 +47,10 @@ edit -->
     <!-- The lab article has an header, optional navigational 
     menu, number of sections, an optional sidebar and a closing 
     footer-->
-     <div id="experiment-article-breadcrumb" class="breadcrumb">
+     <div class="breadcrumb" id="experiment-article-breadcrumb">
      </div>
     
-      <header id="experiment-article-heading" class="heading">
+      <header class="heading" id="experiment-article-heading">
         <!-- You can add a welcome message or title of the 
         experiment here -->
 	MLE: Learning the Classifier from Data
@@ -56,7 +60,7 @@ edit -->
 
       <!-- Navigation menu is useful to organize the view of 
       multiple sections inside the article-->
-      <nav id="experiment-article-navigation" class="default">
+      <nav class="default" id="experiment-article-navigation">
         <ul id="experiment-article-navigation-menu">
           <!-- The menu can be dynamically generated to contain 
           the headings of your sections or instead write the 
@@ -72,23 +76,20 @@ edit -->
         <!-- First section of the article-->
         <section id="experiment-article-section-1">
           
-          <div id="experiment-article-section-1-icon" 
-          class="icon">
+          <div class="icon" id="experiment-article-section-1-icon">
 	    <!-- Enclose the icon image of your lab -->
-	    <img src="../images/introduction.jpg" />
+	    <img src="../images/introduction.jpg"/>
 	  </div>	
           
           <!-- The heading for the section can be enclosed in a 
           div tag. -->
-          <div id="experiment-article-section-1-heading" 
-          class="heading">
+          <div class="heading" id="experiment-article-section-1-heading">
             Introduction
           </div>
 
           <!-- Write the section content inside a paragraph 
           element, You can also include images with <img> tag -->
-	  <div id="experiment-article-section-1-content" 
-	     class="content">	
+	  <div class="content" id="experiment-article-section-1-content">	
 	     <p> In the previous experiment, we learned about how to generate a classifier, given
 	     models for each of the classes, using the Bayes Rule. The next goal is to learn such
 	     a classifier, automatically, given a set of labelled samples from each of the possible
@@ -108,7 +109,7 @@ edit -->
 	     </p>
 	     <p>
 	     The MLE is an important type of estimator for the following reasons:
-	     <ol>
+	     </p><ol>
 		<li>  The MLE implements the likelihood principle.</li>
 		<li>  MLEs are often simple and easy to compute. </li>
 		<li>  MLEs have asymptotic optimality properties
@@ -119,7 +120,7 @@ edit -->
 		(composite hypothesis testing), MLEs are used in implementing the 
 		generalized likelihood ratio test (GLRT).</li>
 	     </ol>
-	     </p>
+	     <p></p>
 	  </div>
 
 
@@ -128,53 +129,50 @@ edit -->
 	  <!-- Second section of the article-->
 	  <section id="experiment-article-section-2">
 
-	  <div id="experiment-article-section-2-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-2-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/theory.jpg" />
+	     <img src="../images/theory.jpg"/>
 	  </div>
 
 	  <!-- The heading for the section can be enclosed in a 
 	  div tag. -->
-	  <div id="experiment-article-section-2-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-2-heading">
 	     Theory
 	  </div>
 
 
 	  <!-- Write the section content inside a paragraph 
 	  element, we can also include images with <img> tag -->
-	  <div id="experiment-article-section-2-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-2-content">
 	     <p> As learned from the previous experiment, if we have a generative model for each of
 	     the classes, one can devlop a classifier that assigns an unknown sample to one of the
 	     possible set of classes. </p>
 	     <p>
 	     Suppose there is a sample x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> of <i>n</i> iid observations, coming from a distribution 
 	     with an unknown pdf ƒ<sub>0</sub>(·). It is however surmised that the function ƒ<sub>0</sub> belongs to a 
-	     certain family of distributions { ƒ(·|&theta;), &theta; &isin; &Theta; }, called the parametric model, so 
-	     that ƒ<sub>0</sub> = ƒ(·|&theta;<sub>0</sub>). The value &theta;<sub>0</sub> is unknown and is referred to as the "true value" 
-	     of the parameter. It is desirable to find some estimator <img src="images/thetahat.png"> which
-	     would be as close to the true value &theta;<sub>0</sub> as possible. Both the observed variables x<sub>0</sub> 
+	     certain family of distributions { ƒ(·|θ), θ ∈ Θ }, called the parametric model, so 
+	     that ƒ<sub>0</sub> = ƒ(·|θ<sub>0</sub>). The value θ<sub>0</sub> is unknown and is referred to as the "true value" 
+	     of the parameter. It is desirable to find some estimator <img src="images/thetahat.png"/> which
+	     would be as close to the true value θ<sub>0</sub> as possible. Both the observed variables x<sub>0</sub> 
 	     and the parameter θ can be vectors.
 	     </p>
 	     <p>
-	     To use the method of maximum likelihood, one first specifies the joint density function for all the the observations. For an Independent and Identically distributed distribution, this joint density function will be <br />
-	     <img src="images/jointdistributionfunction.png"> 
+	     To use the method of maximum likelihood, one first specifies the joint density function for all the the observations. For an Independent and Identically distributed distribution, this joint density function will be <br/>
+	     <img src="images/jointdistributionfunction.png"/> 
 	     </p>
 	     <p>
-	     Now we look at this function from a different perspective by considering the observed values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> to be fixed “parameters” of this function, whereas &theta; will be the function’s variable and allowed to vary freely. From this point of view this distribution function will be called the likelihood: 
-	     </br>
-	     <img src="images/likelihoodfunction.png">
-	     </br>
+	     Now we look at this function from a different perspective by considering the observed values x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>n</sub> to be fixed “parameters” of this function, whereas θ will be the function’s variable and allowed to vary freely. From this point of view this distribution function will be called the likelihood: 
+	     <br/>
+	     <img src="images/likelihoodfunction.png"/>
+	     <br/>
 	     </p>
 	     <p>
-	     In practice it is often more convenient to work with the logarithm of the likelihood function, called the log-likelihood, or its scaled version, called the average log-likelihood:</ br>
-	     <img src="images/loglikelihood.png">
+	     In practice it is often more convenient to work with the logarithm of the likelihood function, called the log-likelihood, or its scaled version, called the average log-likelihood:<!-- br-->
+	     <img src="images/loglikelihood.png"/>
 	     </p>
 	     <p>
-	     The method of maximum likelihood estimates &theta;<sub>0</sub> by finding a value of θ that maximizes <img src="images/lhat.png">. This method of estimation is a maximum likelihood estimator (MLE) of &theta;<sub>0</sub>:
-	     <img src="images/mletheta.png">
+	     The method of maximum likelihood estimates θ<sub>0</sub> by finding a value of θ that maximizes <img src="images/lhat.png"/>. This method of estimation is a maximum likelihood estimator (MLE) of θ<sub>0</sub>:
+	     <img src="images/mletheta.png"/>
 	     </p>
 	     <p>
 	     A MLE estimate is the same regardless of whether we maximize the likelihood or the log-likelihood function, since log is a monotone transformation. 
@@ -186,35 +184,32 @@ edit -->
 	     </p>
 	    
 
-	     <p><b>Example for a Normal Distribution, Bernoulli distribution and Poisson distribution:<b></p>
+	     <p><b>Example for a Normal Distribution, Bernoulli distribution and Poisson distribution:<b></b></b></p><b><b>
 	     <!--	&#402;(x<sub>1</sub>,......,x<sub>n</sub>)=&Pi;e<sup>-(x-&mu;)<sup>2</sup>/(2&sigma;<sup>2</sup>)</sup>
 	     =(2&pi;)<sup>-n/2</sup> -->
 	     <p>See the page <a href="http://mathworld.wolfram.com/MaximumLikelihood.html" target="_blank">http://mathworld.wolfram.com/MaximumLikelihood.html</a></p>
-	  </div>
-	  </section>
+	  </b></b></div><b><b>
+	  </b></b></section><b><b>
 
 
 	  <section id="experiment-article-section-3">
-	  <div id="experiment-article-section-3-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-3-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/objective.jpg" />
+	     <img src="../images/objective.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-3-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-3-heading">
 	     Objective
 	  </div>
 
-	  <div id="experiment-article-section-3-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-3-content">
 	     <p>The high level goals of the experiment are:
-	     <ol>
+	     </p><ol>
 		<li> To understand the modelling of a class in terms of density functions and priors.</li>
 		<li> To understand the estimation of the parameters of a model from a set of samples.</li>
 		<li> To understand the effect of sample size on decision boundary.</li>
 	     </ol>
-	     </p>
+	     <p></p>
 
 	  </div>
 
@@ -223,19 +218,16 @@ edit -->
 
 	  <section id="experiment-article-section-4">
 
-	  <div id="experiment-article-section-4-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-4-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/simulation.jpg" />
+	     <img src="../images/simulation.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-4-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-4-heading">
 	     Experiment
 	  </div>
 
-	  <div id="experiment-article-section-4-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-4-content">
 		<p><a href="../docs/java-and-icedtea-plugin.pdf">Install prerequisites to run the simulation</a></p>
 	     <p>
              <a href="../experiment/compressed_files/6/Exp6.tar.gz">   Click here to open the Experiment for Linux systems</a>
@@ -269,19 +261,16 @@ edit -->
 	  -->
 	  <section id="experiment-article-section-6">
 
-	  <div id="experiment-article-section-6-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-6-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/quizzes.jpg" />
+	     <img src="../images/quizzes.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-6-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-6-heading">
 	     Quizzes
 	  </div>
 
-	  <div id="experiment-article-section-6-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-6-content">
 	     <p> Answer the questions provided at the end of the writeup <a href="../exp5/RandomVariables.pdf">HERE</a>.
 	     Some of the questions require you to do minimal amount of programming. You are encouraged to
 	     try out variants of the goals mentioned in the programming questions.
@@ -293,19 +282,16 @@ edit -->
 
 	  <section id="experiment-article-section-7">
 
-	  <div id="experiment-article-section-7-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-7-icon">
 	     <!-- Enclose the icon image of your lab. -->
-	     <img src="../images/procedure.jpg" />
+	     <img src="../images/procedure.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-7-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-7-heading">
 	     Procedure
 	  </div>
 
-	  <div id="experiment-article-section-7-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-7-content">
 	     <p> In the experiment window,</p>
 	     <ol>
 		<li> Select the distribution function using the drop-down menu at top right .</li>
@@ -320,21 +306,18 @@ edit -->
 
 	  <section id="experiment-article-section-8">
 
-	  <div id="experiment-article-section-8-icon" 
-	     class="icon">
+	  <div class="icon" id="experiment-article-section-8-icon">
 	     <!-- Enclose the icon image of your lab.-->
-	     <img src="../images/readings.jpg" />
+	     <img src="../images/readings.jpg"/>
 	  </div>
 
-	  <div id="experiment-article-section-8-heading" 
-	     class="heading">
+	  <div class="heading" id="experiment-article-section-8-heading">
 	     Further Readings
 	  </div>
 
-	  <div id="experiment-article-section-8-content" 
-	     class="content">
+	  <div class="content" id="experiment-article-section-8-content">
 	     <p>
-	   <ul>
+	   </p><ul>
 	     <li> <a href="http://www.rii.ricoh.com/~stork/DHS.html">Pattern Classification</a>,
 	     by  Duda, Hart and Stork (ed). Second Edition, Wiley, 2001.
 	     </li>
@@ -343,18 +326,18 @@ edit -->
 	     <li> Article on <a href="http://en.wikipedia.org/wiki/Pseudorandom_number_generator">Pseudorandom Number Generators</a> at Wikipedia.
 	     </li>
 	  </ul>
-	</p>
+	<p></p>
        </div>
 
        </section>
 
-    </div>
+    </b></b></div><b><b>
 
 
     <!-- An article can have a sidebar that contain related 
     links and additional material (however it is kept optional 
     at this moment) -->
-    <aside id="lab-article-sidebar" class="default">
+    <aside class="default" id="lab-article-sidebar">
     <!-- put the content that you want to appear in the 
     sidebar -->	
     </aside>
@@ -362,21 +345,59 @@ edit -->
 
     <!-- Article footer can display related content and 
     additional links -->						
-    <footer id="lab-article-footer" class="default">
-    <!-- Put the content that you want to appear here -->
-    </footer>
+    <footer class="default" id="footer"><div class="footer-top" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6">
+        <h4>Community Links</h4>
+        <p>
+	  <a href="http://www.sakshat.ac.in/">Sakshat Portal</a>
+	</p>
+        <p>
+	  <a href="http://outreach.vlabs.ac.in/">Outreach Portal</a>
+	</p>
+        <p>
+	  <a href="http://vlab.co.in/faq">FAQ : Virtual Labs</a>
+	</p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <h4>Contact Us</h4>
+	<p> <strong>Phone:</strong> General Information : 011-26582050 </p>
+	<p> <strong>Email:</strong> support@vlab.co.in </p>
+      </div>
+      <div class="col-lg-4 col-md-6">
+	<h4>Follow Us</h4>
+	<div class="social-links">
+	  <a class="twitter" href="https://twitter.com/TheVirtualLabs" style="background: #55acee;">
+	    <i class="fa fa-twitter"></i>
+	  </a>
+	  <a class="facebook" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/" style="background: #3b5998;">
+	    <i class="fa fa-facebook"></i>
+	  </a>
+	  <a class="google-plus" href="https://www.youtube.com/watch?v=asxRaOgk6a0" style="background: #e52d27;">
+	    <i class="fa fa-youtube"></i>
+	  </a>
+	  <a class="linkedin" href="https://in.linkedin.com/in/virtual-labs-008ba9136" style="background: #2867B2;">
+	    <i class="fa fa-linkedin"></i>
+	  </a>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
 
-    </article>
+    </b></b></article><b><b>
 
 
     <!-- Links to other labs, about us page can be kept the lab 
     footer-->
-    <footer id="lab-footer" class="footer">
+    <footer class="footer" id="lab-footer">
     <!-- Put the content here-->
-    <a href="http://virtual-labs.ac.in/nmeict" >Sponsored by MHRD (NME-ICT) </a> | <a
-       href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
+    <a href="http://virtual-labs.ac.in/nmeict">Sponsored by MHRD (NME-ICT) </a> | <a href="http://virtual-labs.ac.in/licensing" target="_blank"> Licensing Terms </a>
     </footer>
- </div>		
+ </b></b></div><b><b>		
 
- </body>
-</html>
+ 
+
+</b></b></body></html>
