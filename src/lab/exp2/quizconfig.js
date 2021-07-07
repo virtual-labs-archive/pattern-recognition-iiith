@@ -10,11 +10,11 @@ var totalquestions=5
 
 //Enter the solutions corresponding to each question:
 var correctchoices=new Array()
-correctchoices[1]='a' //question 1 solution
-correctchoices[2]='a' //question 2 solution, and so on.
-correctchoices[3]='a'
-correctchoices[4]='c'
-correctchoices[5]='e'
+correctchoices[1]="a" //question 1 solution
+correctchoices[2]="a" //question 2 solution, and so on.
+correctchoices[3]="a"
+correctchoices[4]="c"
+correctchoices[5]="e"
 
 
 /////Don't edit beyond here//////////////////////////
@@ -24,25 +24,25 @@ var incorrect=null
 for (q=1;q<=totalquestions;q++){
 	var thequestion=eval("document.myquiz.question"+q)
 	for (c=0;c<thequestion.length;c++){
-		if (thequestion[c].checked==true)
+		if (thequestion[c].checked===true){
 		actualchoices[q]=thequestion[c].value
 		}
 		
-	if (actualchoices[q]!=correctchoices[q]){ //process an incorrect choice
-		if (incorrect==null)
-		incorrect=q
-		else
-		incorrect+="/"+q
+	if (actualchoices[q]!==correctchoices[q]){ //process an incorrect choice
+		if (incorrect==null){
+		incorrect=q}
+		else{
+		incorrect+="/"+q }
 		}
 	}
 
 if (incorrect==null)
 incorrect="a/b"
-document.cookie='q='+incorrect
-if (document.cookie=='')
-alert("Your browser does not accept cookies. Please adjust your browser settings.")
-else
-window.location="results.htm"
+document.cookie="q="+incorrect
+if (document.cookie===""){
+alert("Your browser does not accept cookies. Please adjust your browser settings.")}
+else{
+window.location="results.htm"}
 }
 
 
@@ -50,7 +50,7 @@ function showsolution(){
 var win2=window.open("","win2","width=200,height=350, scrollbars")
 win2.focus()
 win2.document.open()
-win2.document.write('<title>Solution</title>')
+win2.document.write("<title>Solution</title>")
 win2.document.write('<body bgcolor="#FFFFFF">')
 win2.document.write('<center><h3>Solution to Quiz</h3></center>')
 win2.document.write('<center><font face="Arial">')
