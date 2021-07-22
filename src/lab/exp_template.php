@@ -43,13 +43,13 @@
   <!-- These are the stylesheets used for the lab. Please don't
   edit them; If you do, you will lose the edits in subsequent 
   releases of this User Interface. -->
-  <link rel="stylesheet" href="<?php echo $css_js;?>css/default.css"/>
-  <link rel="stylesheet" href="<?php echo $css_js;?>css/style.css"/>
+  <link rel="stylesheet" href="<?php echo esc_js( $css_js );?>css/default.css"/>
+  <link rel="stylesheet" href="<?php echo esc_js( $css_js );?>css/style.css"/>
 
   <!-- Instead add your custom styles to override the defaults 
   coming from the above style sheets. -->
   
-  <link rel="stylesheet" href="<?php echo $css_js;?>css/override.css"/>
+  <link rel="stylesheet" href="<?php echo esc_js( $css_js );?>css/override.css"/>
 
   <!-- ***************************************************** -->
 
@@ -71,7 +71,7 @@
 	<div id="experiment-header-logo" class="logo">
 	<!-- Enclose the logo image of your lab or write it in 
 	text-->
-	<a href="<?php echo $vlab_url?>"><div class="imagemap">
+	<a href="<?php echo esc_url( $vlab_url )?>"><div class="imagemap">
 		<img src="http://virtual-labs.ac.in/images/virtualLabsLogo.jpg" alt="" usemap="#logos" />
 
 	
@@ -91,7 +91,7 @@
 	<!-- Write the name of your lab and link it to the home 
 	page of your lab (h1 tag is preferred while writing your 
 			lab name)-->
-	<a href="<?php echo $lab_url?>"> <?php echo $labheaderheading?></a>	
+	<a href="<?php echo esc_url($lab_url)?>"> <?php echo esc_html($labheaderheading)?></a>	
 	</div>
 
 	<!-- Add any additional element you want to add to the lab 
@@ -105,7 +105,7 @@
 	experiment content sits-->
 	<article id="experiment-article">
 
-	<div class="breadcrumb" id="experiment-article-breadcrumb"><a href="<?php echo $vlab_url?>">Home</a><a></a> &gt; <a href="<?php echo $lab_url?>">Pattern Recognition Lab</a>    </div>
+	<div class="breadcrumb" id="experiment-article-breadcrumb"><a href="<?php echo esc_url( $vlab_url )?>">Home</a><a></a> &gt; <a href="<?php echo esc_url($lab_url)?>">Pattern Recognition Lab</a>    </div>
 	  
 	<!-- The lab article has an header, optional navigational 
 	menu, number of sections, an optional sidebar and a closing 
@@ -114,7 +114,7 @@
 	<header id="experiment-article-heading" class="heading">
 	<!-- You can add a welcome message or title of the 
 	experiment here -->
-	<?php echo $labarticleheading; ?>	 
+	<?php echo esc_html($labarticleheading); ?>	 
 	<!-- Add any additional element if required with proper 
 	enclosing-->
 	</header>
@@ -132,11 +132,11 @@
 			  <li> tag as shown below-->
 				
 				<?php foreach ($nav as $n) {?>
-					<li> <a href="<?php echo $base_url."?section=".trim($n['heading']);?>">
+					<li> <a href="<?php echo esc_url($base_url)."?section=".trim($n['heading']);?>">
 				<!-- Enclose the icon image of your lab -->
-					<?php echo $n['img']?> 
+					<?php echo esc_html($n['img'])?> 
 				<br>
-				<?php echo $n['heading']?>
+				<?php echo esc_html($n['heading'])?>
 				 </a></li>
 				<?php }?>
 		
@@ -160,12 +160,12 @@
 		<!-- The heading for the section can be enclosed in a 
 		div tag. -->
 		<div id="experiment-article-section-1-heading" class="heading">
-		<?php if(isset($data['SubHeading'])) echo $data['SubHeading'] ?>
+		<?php if(isset($data['SubHeading'])) echo esc_html($data['SubHeading']) ?>
 		</div>
 		<!-- Write the section content inside a paragraph 
 		element, You can also include images with <img> tag -->
 		<div id="experiment-article-section-1-content" class="content">	
-		<?php if(isset($data['SubContent'])) echo $data['SubContent'] ?>
+		<?php if(isset($data['SubContent'])) echo esc_html($data['SubContent']) ?>
 		
 		</div>
 

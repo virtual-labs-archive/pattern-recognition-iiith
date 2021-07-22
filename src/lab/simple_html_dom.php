@@ -146,12 +146,12 @@ class simple_html_dom_node {
     {
         $lead = str_repeat('    ', $deep);
 
-        echo $lead.$this->tag;
+        echo esc_html($lead.$this->tag);
         if ($show_attr && count($this->attr)>0)
         {
             echo '(';
             foreach ($this->attr as $k=>$v)
-                echo "[$k]=>\"".$this->$k.'", ';
+                echo esc_html("[$k]=>\")".$this->$k.'", ';
             echo ')';
         }
         echo "\n";
@@ -164,7 +164,7 @@ class simple_html_dom_node {
     // Debugging function to dump a single dom node with a bunch of information about it.
     function dump_node()
     {
-        echo $this->tag;
+        echo esc_html($this->tag);
         if (count($this->attr)>0)
         {
             echo '(';
@@ -181,14 +181,14 @@ class simple_html_dom_node {
             {
                 if (is_array($v))
                 {
-                    echo "[$k]=>(";
+                    echo esc_html("[$k]=>(");
                     foreach ($v as $k2=>$v2)
                     {
-                        echo "[$k2]=>\"".$v2.'", ';
+                        echo esc_html("[$k2]=>\")".$v2.'", ';
                     }
                     echo ")";
                 } else {
-                    echo "[$k]=>\"".$v.'", ';
+                    echo esc_html("[$k]=>\")".$v.'", ';
                 }
             }
             echo ")";
@@ -196,12 +196,12 @@ class simple_html_dom_node {
 
         if (isset($this->text))
         {
-            echo " text: (" . $this->text . ")";
+            echo " text: (" . esc_html($this->text) . ")";
         }
 
         echo " children: " . count($this->children);
         echo " nodes: " . count($this->nodes);
-        echo " tag_start: " . $this->tag_start;
+        echo " tag_start: " . esc_html($this->tag_start);
         echo "\n";
 
     }
